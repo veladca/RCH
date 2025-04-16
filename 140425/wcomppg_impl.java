@@ -2,7 +2,7 @@
                File: wcomppg_impl
         Description: Seguimiento de Cuentas por Pagar
              Author: GeneXus Java Generator version 16_0_1-129648
-       Generated on: April 14, 2025 22:21:0.6
+       Generated on: April 15, 2025 19:41:58.92
        Program type: Callable routine
           Main DBMS: PostgreSQL
 */
@@ -362,6 +362,24 @@ public final  class wcomppg_impl extends GXDataArea
             AV123PMEstatus = httpContext.GetNextPar( ) ;
             A2611ESTPAGDSC = httpContext.GetNextPar( ) ;
             n2611ESTPAGDSC = false ;
+            A7789AVDSPRCIA = GXutil.lval( httpContext.GetNextPar( )) ;
+            AV61PMEmpresa_G = GXutil.lval( httpContext.GetNextPar( )) ;
+            A8295AVDSPRCPPTPC = httpContext.GetNextPar( ) ;
+            n8295AVDSPRCPPTPC = false ;
+            AV62PMTipoDoc_G = httpContext.GetNextPar( ) ;
+            A8296AVDSPRCPPNDC = GXutil.lval( httpContext.GetNextPar( )) ;
+            n8296AVDSPRCPPNDC = false ;
+            AV63PMNumDoc_G = GXutil.lval( httpContext.GetNextPar( )) ;
+            A20CNTDOCID = httpContext.GetNextPar( ) ;
+            A8255AVDSPRDOC = GXutil.lval( httpContext.GetNextPar( )) ;
+            A7790AVDSPRNDC = GXutil.lval( httpContext.GetNextPar( )) ;
+            A8242AVDSPROBS = httpContext.GetNextPar( ) ;
+            n8242AVDSPROBS = false ;
+            A7518CNDSPRCIA = GXutil.lval( httpContext.GetNextPar( )) ;
+            A7519CNDSPRTDC = httpContext.GetNextPar( ) ;
+            A7520CNDSPRNDC = GXutil.lval( httpContext.GetNextPar( )) ;
+            A7531CNDSPRALCTR = httpContext.GetNextPar( ) ;
+            n7531CNDSPRALCTR = false ;
             AV116CNUSERID = httpContext.GetNextPar( ) ;
             httpContext.setAjaxCallMode();
             if ( ! httpContext.IsValidAjaxCall( true) )
@@ -369,7 +387,7 @@ public final  class wcomppg_impl extends GXDataArea
                GxWebError = (byte)(1) ;
                return  ;
             }
-            gxgrgrid1_refresh( subGrid1_Rows, AV240AbrirBitacora, AV318renglones, A860PMEmpresa, AV100CNCIASID_F, A3295PROPAGID, AV239PROPAGID_F, A861PMTipoDoc, AV197PMTipoDoc_F, A862PMNumDoc, AV133Numero, A863PMProvId, AV108CNCDIRID_F, A864PMProyId, AV7PMCTPRID, AV111F2, A866PMFechFac, AV110F1, AV315unifCNCMNMID, A873PMMoneId, AV32CNCMNMID, AV327F6, A4090PMCXPFHTRN, AV326F5, AV113F4, A867PMFechVen, AV112F3, A2405PMEstatus, AV11Estatus, AV230Checkoc, A908PMNumDocOC, AV229PMNumDocOc_F, A2528PMFolioFac, AV159PMFolioFac_F, A905PMPoliz, AV270pmpoliz_f, A10905PMIDREL, AV351PMCXPRELID, AV353arrPMCTPRID, A865PMUngId, AV361CGUNNGID, A17416PMCargo, AV367CATCARID, AV296banload, AV350CNUSERMCXP, A2534PMUsrcap, A4599PMLayAsoc, A909PMUuid, A2871PMPDFDoc, A2718PMMonTp, A2862PMMonAmort, A898PMFechRev, AV203CNCIASMON_F, A899PMMonEx, AV316tipoCambio, A903PMMonEp, A2689PMMonPgE, A900PMMonEg, A870PMMonNg, A869PMMonNa, A902PMMonNp, A2688PMMonPgN, A872PMIva, A2520PMMonIvaN, A2954PMIVAID, A2406PMComentarios, A2521PMMonIvaE, A904PMReten, A906PMOrdenD, A907PMTipoDocOC, A2923PMCTA1, A2924PMCTA2, A2925PMCTA3, A2542PMCuentadeCargo, A3917PMObsPoliza, A4395PMPRANT, A7899PMTipoAv, A7900PMNumAv, A17105PMCuentaPR02, AV319numRenglons, A2059CNPRCMDFT, A2054CNCMNOID, AV317CNCMNOID, A2055CNCMNDID, A2076CNPRCMDVAL, A2610ESTPAGID, AV123PMEstatus, A2611ESTPAGDSC, AV116CNUSERID) ;
+            gxgrgrid1_refresh( subGrid1_Rows, AV240AbrirBitacora, AV318renglones, A860PMEmpresa, AV100CNCIASID_F, A3295PROPAGID, AV239PROPAGID_F, A861PMTipoDoc, AV197PMTipoDoc_F, A862PMNumDoc, AV133Numero, A863PMProvId, AV108CNCDIRID_F, A864PMProyId, AV7PMCTPRID, AV111F2, A866PMFechFac, AV110F1, AV315unifCNCMNMID, A873PMMoneId, AV32CNCMNMID, AV327F6, A4090PMCXPFHTRN, AV326F5, AV113F4, A867PMFechVen, AV112F3, A2405PMEstatus, AV11Estatus, AV230Checkoc, A908PMNumDocOC, AV229PMNumDocOc_F, A2528PMFolioFac, AV159PMFolioFac_F, A905PMPoliz, AV270pmpoliz_f, A10905PMIDREL, AV351PMCXPRELID, AV353arrPMCTPRID, A865PMUngId, AV361CGUNNGID, A17416PMCargo, AV367CATCARID, AV296banload, AV350CNUSERMCXP, A2534PMUsrcap, A4599PMLayAsoc, A909PMUuid, A2871PMPDFDoc, A2718PMMonTp, A2862PMMonAmort, A898PMFechRev, AV203CNCIASMON_F, A899PMMonEx, AV316tipoCambio, A903PMMonEp, A2689PMMonPgE, A900PMMonEg, A870PMMonNg, A869PMMonNa, A902PMMonNp, A2688PMMonPgN, A872PMIva, A2520PMMonIvaN, A2954PMIVAID, A2406PMComentarios, A2521PMMonIvaE, A904PMReten, A906PMOrdenD, A907PMTipoDocOC, A2923PMCTA1, A2924PMCTA2, A2925PMCTA3, A2542PMCuentadeCargo, A3917PMObsPoliza, A4395PMPRANT, A7899PMTipoAv, A7900PMNumAv, A17105PMCuentaPR02, AV319numRenglons, A2059CNPRCMDFT, A2054CNCMNOID, AV317CNCMNOID, A2055CNCMNDID, A2076CNPRCMDVAL, A2610ESTPAGID, AV123PMEstatus, A2611ESTPAGDSC, A7789AVDSPRCIA, AV61PMEmpresa_G, A8295AVDSPRCPPTPC, AV62PMTipoDoc_G, A8296AVDSPRCPPNDC, AV63PMNumDoc_G, A20CNTDOCID, A8255AVDSPRDOC, A7790AVDSPRNDC, A8242AVDSPROBS, A7518CNDSPRCIA, A7519CNDSPRTDC, A7520CNDSPRNDC, A7531CNDSPRALCTR, AV116CNUSERID) ;
             GXKey = httpContext.decrypt64( httpContext.getCookie( "GX_SESSION_ID"), context.getServerKey( )) ;
             GXKey = httpContext.decrypt64( httpContext.getCookie( "GX_SESSION_ID"), context.getServerKey( )) ;
             httpContext.GX_webresponse.addString(httpContext.getJSONResponse( ));
@@ -477,7 +495,7 @@ public final  class wcomppg_impl extends GXDataArea
       }
       httpContext.AddJavascriptSource("jquery.js", "?"+httpContext.getBuildNumber( 129648), false, true);
       httpContext.AddJavascriptSource("gxgral.js", "?"+httpContext.getBuildNumber( 129648), false, true);
-      httpContext.AddJavascriptSource("gxcfg.js", "?20254142221494", false, true);
+      httpContext.AddJavascriptSource("gxcfg.js", "?20254151942361", false, true);
       if ( httpContext.isSpaRequest( ) )
       {
          httpContext.enableOutput();
@@ -603,6 +621,17 @@ public final  class wcomppg_impl extends GXDataArea
       com.kdsproyectos.GxWebStd.gx_hidden_field( httpContext, "CNPRCMDVAL", GXutil.ltrim( localUtil.ntoc( A2076CNPRCMDVAL, (byte)(14), (byte)(7), ".", "")));
       com.kdsproyectos.GxWebStd.gx_hidden_field( httpContext, "ESTPAGID", GXutil.rtrim( A2610ESTPAGID));
       com.kdsproyectos.GxWebStd.gx_hidden_field( httpContext, "ESTPAGDSC", GXutil.rtrim( A2611ESTPAGDSC));
+      com.kdsproyectos.GxWebStd.gx_hidden_field( httpContext, "AVDSPRCIA", GXutil.ltrim( localUtil.ntoc( A7789AVDSPRCIA, (byte)(10), (byte)(0), ".", "")));
+      com.kdsproyectos.GxWebStd.gx_hidden_field( httpContext, "AVDSPRCPPTPC", GXutil.rtrim( A8295AVDSPRCPPTPC));
+      com.kdsproyectos.GxWebStd.gx_hidden_field( httpContext, "AVDSPRCPPNDC", GXutil.ltrim( localUtil.ntoc( A8296AVDSPRCPPNDC, (byte)(10), (byte)(0), ".", "")));
+      com.kdsproyectos.GxWebStd.gx_hidden_field( httpContext, "CNTDOCID", GXutil.rtrim( A20CNTDOCID));
+      com.kdsproyectos.GxWebStd.gx_hidden_field( httpContext, "AVDSPRDOC", GXutil.ltrim( localUtil.ntoc( A8255AVDSPRDOC, (byte)(10), (byte)(0), ".", "")));
+      com.kdsproyectos.GxWebStd.gx_hidden_field( httpContext, "AVDSPRNDC", GXutil.ltrim( localUtil.ntoc( A7790AVDSPRNDC, (byte)(10), (byte)(0), ".", "")));
+      com.kdsproyectos.GxWebStd.gx_hidden_field( httpContext, "AVDSPROBS", GXutil.rtrim( A8242AVDSPROBS));
+      com.kdsproyectos.GxWebStd.gx_hidden_field( httpContext, "CNDSPRCIA", GXutil.ltrim( localUtil.ntoc( A7518CNDSPRCIA, (byte)(10), (byte)(0), ".", "")));
+      com.kdsproyectos.GxWebStd.gx_hidden_field( httpContext, "CNDSPRTDC", GXutil.rtrim( A7519CNDSPRTDC));
+      com.kdsproyectos.GxWebStd.gx_hidden_field( httpContext, "CNDSPRNDC", GXutil.ltrim( localUtil.ntoc( A7520CNDSPRNDC, (byte)(10), (byte)(0), ".", "")));
+      com.kdsproyectos.GxWebStd.gx_hidden_field( httpContext, "CNDSPRALCTR", A7531CNDSPRALCTR);
       if ( httpContext.isAjaxRequest( ) )
       {
          httpContext.ajax_rsp_assign_sdt_attri("", false, "vSDTPMCUENTAXPAG", AV300sdtPMCuentaXPag);
@@ -623,7 +652,7 @@ public final  class wcomppg_impl extends GXDataArea
       com.kdsproyectos.GxWebStd.gx_hidden_field( httpContext, "PDFDOCID", GXutil.ltrim( localUtil.ntoc( A2870PDFDOCID, (byte)(15), (byte)(0), ".", "")));
       com.kdsproyectos.GxWebStd.gx_hidden_field( httpContext, "PDFDOCNAM", GXutil.rtrim( A876PDFDOCNAM));
       com.kdsproyectos.GxWebStd.gx_hidden_field( httpContext, "PDFDOCFIL", A878PDFDOCFIL);
-      com.kdsproyectos.GxWebStd.gx_hidden_field( httpContext, "vPGMNAME", GXutil.rtrim( AV378Pgmname));
+      com.kdsproyectos.GxWebStd.gx_hidden_field( httpContext, "vPGMNAME", GXutil.rtrim( AV383Pgmname));
       com.kdsproyectos.GxWebStd.gx_hidden_field( httpContext, "vTRATPOLFOL", GXutil.rtrim( AV336TratPolFol));
       com.kdsproyectos.GxWebStd.gx_hidden_field( httpContext, "CNCD01ID", GXutil.rtrim( A456CNCD01ID));
       com.kdsproyectos.GxWebStd.gx_hidden_field( httpContext, "vVALIDARUUIDREL", GXutil.rtrim( AV330ValidarUUIDRel));
@@ -1307,7 +1336,7 @@ public final  class wcomppg_impl extends GXDataArea
                               httpContext.ajax_rsp_assign_attri("", false, edtavPmfechven_g_Internalname, localUtil.format(AV68PMFechVen_G, "99/99/99"));
                            }
                            AV265GeneroPoliza = httpContext.cgiGet( edtavGeneropoliza_Internalname) ;
-                           httpContext.ajax_rsp_assign_prop("", false, edtavGeneropoliza_Internalname, "Bitmap", ((GXutil.strcmp("", AV265GeneroPoliza)==0) ? AV406Generopoliza_GXI : httpContext.convertURL( httpContext.getResourceRelative(AV265GeneroPoliza))), !bGXsfl_116_Refreshing);
+                           httpContext.ajax_rsp_assign_prop("", false, edtavGeneropoliza_Internalname, "Bitmap", ((GXutil.strcmp("", AV265GeneroPoliza)==0) ? AV413Generopoliza_GXI : httpContext.convertURL( httpContext.getResourceRelative(AV265GeneroPoliza))), !bGXsfl_116_Refreshing);
                            httpContext.ajax_rsp_assign_prop("", false, edtavGeneropoliza_Internalname, "SrcSet", context.getHttpContext().getImageSrcSet( AV265GeneroPoliza), true);
                            AV84PMUuid = httpContext.cgiGet( edtavPmuuid_Internalname) ;
                            httpContext.ajax_rsp_assign_attri("", false, edtavPmuuid_Internalname, AV84PMUuid);
@@ -2346,6 +2375,20 @@ public final  class wcomppg_impl extends GXDataArea
                                   String A2610ESTPAGID ,
                                   String AV123PMEstatus ,
                                   String A2611ESTPAGDSC ,
+                                  long A7789AVDSPRCIA ,
+                                  long AV61PMEmpresa_G ,
+                                  String A8295AVDSPRCPPTPC ,
+                                  String AV62PMTipoDoc_G ,
+                                  long A8296AVDSPRCPPNDC ,
+                                  long AV63PMNumDoc_G ,
+                                  String A20CNTDOCID ,
+                                  long A8255AVDSPRDOC ,
+                                  long A7790AVDSPRNDC ,
+                                  String A8242AVDSPROBS ,
+                                  long A7518CNDSPRCIA ,
+                                  String A7519CNDSPRTDC ,
+                                  long A7520CNDSPRNDC ,
+                                  String A7531CNDSPRALCTR ,
                                   String AV116CNUSERID )
    {
       initialize_formulas( ) ;
@@ -2544,7 +2587,7 @@ public final  class wcomppg_impl extends GXDataArea
    public void initialize_formulas( )
    {
       /* GeneXus formulas. */
-      AV378Pgmname = "wcomppg" ;
+      AV383Pgmname = "wcomppg" ;
       Gx_err = (short)(0) ;
       edtavPagina_Enabled = 0 ;
       httpContext.ajax_rsp_assign_prop("", false, edtavPagina_Internalname, "Enabled", GXutil.ltrim( GXutil.str( edtavPagina_Enabled, 5, 0)), true);
@@ -2811,7 +2854,7 @@ public final  class wcomppg_impl extends GXDataArea
       com.kdsproyectos.GxWebStd.gx_hidden_field( httpContext, "GRID1_nFirstRecordOnPage", GXutil.ltrim( localUtil.ntoc( GRID1_nFirstRecordOnPage, (byte)(15), (byte)(0), ".", "")));
       if ( isFullAjaxMode( ) )
       {
-         gxgrgrid1_refresh( subGrid1_Rows, AV240AbrirBitacora, AV318renglones, A860PMEmpresa, AV100CNCIASID_F, A3295PROPAGID, AV239PROPAGID_F, A861PMTipoDoc, AV197PMTipoDoc_F, A862PMNumDoc, AV133Numero, A863PMProvId, AV108CNCDIRID_F, A864PMProyId, AV7PMCTPRID, AV111F2, A866PMFechFac, AV110F1, AV315unifCNCMNMID, A873PMMoneId, AV32CNCMNMID, AV327F6, A4090PMCXPFHTRN, AV326F5, AV113F4, A867PMFechVen, AV112F3, A2405PMEstatus, AV11Estatus, AV230Checkoc, A908PMNumDocOC, AV229PMNumDocOc_F, A2528PMFolioFac, AV159PMFolioFac_F, A905PMPoliz, AV270pmpoliz_f, A10905PMIDREL, AV351PMCXPRELID, AV353arrPMCTPRID, A865PMUngId, AV361CGUNNGID, A17416PMCargo, AV367CATCARID, AV296banload, AV350CNUSERMCXP, A2534PMUsrcap, A4599PMLayAsoc, A909PMUuid, A2871PMPDFDoc, A2718PMMonTp, A2862PMMonAmort, A898PMFechRev, AV203CNCIASMON_F, A899PMMonEx, AV316tipoCambio, A903PMMonEp, A2689PMMonPgE, A900PMMonEg, A870PMMonNg, A869PMMonNa, A902PMMonNp, A2688PMMonPgN, A872PMIva, A2520PMMonIvaN, A2954PMIVAID, A2406PMComentarios, A2521PMMonIvaE, A904PMReten, A906PMOrdenD, A907PMTipoDocOC, A2923PMCTA1, A2924PMCTA2, A2925PMCTA3, A2542PMCuentadeCargo, A3917PMObsPoliza, A4395PMPRANT, A7899PMTipoAv, A7900PMNumAv, A17105PMCuentaPR02, AV319numRenglons, A2059CNPRCMDFT, A2054CNCMNOID, AV317CNCMNOID, A2055CNCMNDID, A2076CNPRCMDVAL, A2610ESTPAGID, AV123PMEstatus, A2611ESTPAGDSC, AV116CNUSERID) ;
+         gxgrgrid1_refresh( subGrid1_Rows, AV240AbrirBitacora, AV318renglones, A860PMEmpresa, AV100CNCIASID_F, A3295PROPAGID, AV239PROPAGID_F, A861PMTipoDoc, AV197PMTipoDoc_F, A862PMNumDoc, AV133Numero, A863PMProvId, AV108CNCDIRID_F, A864PMProyId, AV7PMCTPRID, AV111F2, A866PMFechFac, AV110F1, AV315unifCNCMNMID, A873PMMoneId, AV32CNCMNMID, AV327F6, A4090PMCXPFHTRN, AV326F5, AV113F4, A867PMFechVen, AV112F3, A2405PMEstatus, AV11Estatus, AV230Checkoc, A908PMNumDocOC, AV229PMNumDocOc_F, A2528PMFolioFac, AV159PMFolioFac_F, A905PMPoliz, AV270pmpoliz_f, A10905PMIDREL, AV351PMCXPRELID, AV353arrPMCTPRID, A865PMUngId, AV361CGUNNGID, A17416PMCargo, AV367CATCARID, AV296banload, AV350CNUSERMCXP, A2534PMUsrcap, A4599PMLayAsoc, A909PMUuid, A2871PMPDFDoc, A2718PMMonTp, A2862PMMonAmort, A898PMFechRev, AV203CNCIASMON_F, A899PMMonEx, AV316tipoCambio, A903PMMonEp, A2689PMMonPgE, A900PMMonEg, A870PMMonNg, A869PMMonNa, A902PMMonNp, A2688PMMonPgN, A872PMIva, A2520PMMonIvaN, A2954PMIVAID, A2406PMComentarios, A2521PMMonIvaE, A904PMReten, A906PMOrdenD, A907PMTipoDocOC, A2923PMCTA1, A2924PMCTA2, A2925PMCTA3, A2542PMCuentadeCargo, A3917PMObsPoliza, A4395PMPRANT, A7899PMTipoAv, A7900PMNumAv, A17105PMCuentaPR02, AV319numRenglons, A2059CNPRCMDFT, A2054CNCMNOID, AV317CNCMNOID, A2055CNCMNDID, A2076CNPRCMDVAL, A2610ESTPAGID, AV123PMEstatus, A2611ESTPAGDSC, A7789AVDSPRCIA, AV61PMEmpresa_G, A8295AVDSPRCPPTPC, AV62PMTipoDoc_G, A8296AVDSPRCPPNDC, AV63PMNumDoc_G, A20CNTDOCID, A8255AVDSPRDOC, A7790AVDSPRNDC, A8242AVDSPROBS, A7518CNDSPRCIA, A7519CNDSPRTDC, A7520CNDSPRNDC, A7531CNDSPRALCTR, AV116CNUSERID) ;
       }
       send_integrity_footer_hashes( ) ;
       return (short)(0) ;
@@ -2827,7 +2870,7 @@ public final  class wcomppg_impl extends GXDataArea
       Grid1Container.AddObjectProperty("GRID1_nFirstRecordOnPage", GRID1_nFirstRecordOnPage);
       if ( isFullAjaxMode( ) )
       {
-         gxgrgrid1_refresh( subGrid1_Rows, AV240AbrirBitacora, AV318renglones, A860PMEmpresa, AV100CNCIASID_F, A3295PROPAGID, AV239PROPAGID_F, A861PMTipoDoc, AV197PMTipoDoc_F, A862PMNumDoc, AV133Numero, A863PMProvId, AV108CNCDIRID_F, A864PMProyId, AV7PMCTPRID, AV111F2, A866PMFechFac, AV110F1, AV315unifCNCMNMID, A873PMMoneId, AV32CNCMNMID, AV327F6, A4090PMCXPFHTRN, AV326F5, AV113F4, A867PMFechVen, AV112F3, A2405PMEstatus, AV11Estatus, AV230Checkoc, A908PMNumDocOC, AV229PMNumDocOc_F, A2528PMFolioFac, AV159PMFolioFac_F, A905PMPoliz, AV270pmpoliz_f, A10905PMIDREL, AV351PMCXPRELID, AV353arrPMCTPRID, A865PMUngId, AV361CGUNNGID, A17416PMCargo, AV367CATCARID, AV296banload, AV350CNUSERMCXP, A2534PMUsrcap, A4599PMLayAsoc, A909PMUuid, A2871PMPDFDoc, A2718PMMonTp, A2862PMMonAmort, A898PMFechRev, AV203CNCIASMON_F, A899PMMonEx, AV316tipoCambio, A903PMMonEp, A2689PMMonPgE, A900PMMonEg, A870PMMonNg, A869PMMonNa, A902PMMonNp, A2688PMMonPgN, A872PMIva, A2520PMMonIvaN, A2954PMIVAID, A2406PMComentarios, A2521PMMonIvaE, A904PMReten, A906PMOrdenD, A907PMTipoDocOC, A2923PMCTA1, A2924PMCTA2, A2925PMCTA3, A2542PMCuentadeCargo, A3917PMObsPoliza, A4395PMPRANT, A7899PMTipoAv, A7900PMNumAv, A17105PMCuentaPR02, AV319numRenglons, A2059CNPRCMDFT, A2054CNCMNOID, AV317CNCMNOID, A2055CNCMNDID, A2076CNPRCMDVAL, A2610ESTPAGID, AV123PMEstatus, A2611ESTPAGDSC, AV116CNUSERID) ;
+         gxgrgrid1_refresh( subGrid1_Rows, AV240AbrirBitacora, AV318renglones, A860PMEmpresa, AV100CNCIASID_F, A3295PROPAGID, AV239PROPAGID_F, A861PMTipoDoc, AV197PMTipoDoc_F, A862PMNumDoc, AV133Numero, A863PMProvId, AV108CNCDIRID_F, A864PMProyId, AV7PMCTPRID, AV111F2, A866PMFechFac, AV110F1, AV315unifCNCMNMID, A873PMMoneId, AV32CNCMNMID, AV327F6, A4090PMCXPFHTRN, AV326F5, AV113F4, A867PMFechVen, AV112F3, A2405PMEstatus, AV11Estatus, AV230Checkoc, A908PMNumDocOC, AV229PMNumDocOc_F, A2528PMFolioFac, AV159PMFolioFac_F, A905PMPoliz, AV270pmpoliz_f, A10905PMIDREL, AV351PMCXPRELID, AV353arrPMCTPRID, A865PMUngId, AV361CGUNNGID, A17416PMCargo, AV367CATCARID, AV296banload, AV350CNUSERMCXP, A2534PMUsrcap, A4599PMLayAsoc, A909PMUuid, A2871PMPDFDoc, A2718PMMonTp, A2862PMMonAmort, A898PMFechRev, AV203CNCIASMON_F, A899PMMonEx, AV316tipoCambio, A903PMMonEp, A2689PMMonPgE, A900PMMonEg, A870PMMonNg, A869PMMonNa, A902PMMonNp, A2688PMMonPgN, A872PMIva, A2520PMMonIvaN, A2954PMIVAID, A2406PMComentarios, A2521PMMonIvaE, A904PMReten, A906PMOrdenD, A907PMTipoDocOC, A2923PMCTA1, A2924PMCTA2, A2925PMCTA3, A2542PMCuentadeCargo, A3917PMObsPoliza, A4395PMPRANT, A7899PMTipoAv, A7900PMNumAv, A17105PMCuentaPR02, AV319numRenglons, A2059CNPRCMDFT, A2054CNCMNOID, AV317CNCMNOID, A2055CNCMNDID, A2076CNPRCMDVAL, A2610ESTPAGID, AV123PMEstatus, A2611ESTPAGDSC, A7789AVDSPRCIA, AV61PMEmpresa_G, A8295AVDSPRCPPTPC, AV62PMTipoDoc_G, A8296AVDSPRCPPNDC, AV63PMNumDoc_G, A20CNTDOCID, A8255AVDSPRDOC, A7790AVDSPRNDC, A8242AVDSPROBS, A7518CNDSPRCIA, A7519CNDSPRTDC, A7520CNDSPRNDC, A7531CNDSPRALCTR, AV116CNUSERID) ;
       }
       send_integrity_footer_hashes( ) ;
       return (short)(((GRID1_nEOF==0) ? 0 : 2)) ;
@@ -2846,7 +2889,7 @@ public final  class wcomppg_impl extends GXDataArea
       com.kdsproyectos.GxWebStd.gx_hidden_field( httpContext, "GRID1_nFirstRecordOnPage", GXutil.ltrim( localUtil.ntoc( GRID1_nFirstRecordOnPage, (byte)(15), (byte)(0), ".", "")));
       if ( isFullAjaxMode( ) )
       {
-         gxgrgrid1_refresh( subGrid1_Rows, AV240AbrirBitacora, AV318renglones, A860PMEmpresa, AV100CNCIASID_F, A3295PROPAGID, AV239PROPAGID_F, A861PMTipoDoc, AV197PMTipoDoc_F, A862PMNumDoc, AV133Numero, A863PMProvId, AV108CNCDIRID_F, A864PMProyId, AV7PMCTPRID, AV111F2, A866PMFechFac, AV110F1, AV315unifCNCMNMID, A873PMMoneId, AV32CNCMNMID, AV327F6, A4090PMCXPFHTRN, AV326F5, AV113F4, A867PMFechVen, AV112F3, A2405PMEstatus, AV11Estatus, AV230Checkoc, A908PMNumDocOC, AV229PMNumDocOc_F, A2528PMFolioFac, AV159PMFolioFac_F, A905PMPoliz, AV270pmpoliz_f, A10905PMIDREL, AV351PMCXPRELID, AV353arrPMCTPRID, A865PMUngId, AV361CGUNNGID, A17416PMCargo, AV367CATCARID, AV296banload, AV350CNUSERMCXP, A2534PMUsrcap, A4599PMLayAsoc, A909PMUuid, A2871PMPDFDoc, A2718PMMonTp, A2862PMMonAmort, A898PMFechRev, AV203CNCIASMON_F, A899PMMonEx, AV316tipoCambio, A903PMMonEp, A2689PMMonPgE, A900PMMonEg, A870PMMonNg, A869PMMonNa, A902PMMonNp, A2688PMMonPgN, A872PMIva, A2520PMMonIvaN, A2954PMIVAID, A2406PMComentarios, A2521PMMonIvaE, A904PMReten, A906PMOrdenD, A907PMTipoDocOC, A2923PMCTA1, A2924PMCTA2, A2925PMCTA3, A2542PMCuentadeCargo, A3917PMObsPoliza, A4395PMPRANT, A7899PMTipoAv, A7900PMNumAv, A17105PMCuentaPR02, AV319numRenglons, A2059CNPRCMDFT, A2054CNCMNOID, AV317CNCMNOID, A2055CNCMNDID, A2076CNPRCMDVAL, A2610ESTPAGID, AV123PMEstatus, A2611ESTPAGDSC, AV116CNUSERID) ;
+         gxgrgrid1_refresh( subGrid1_Rows, AV240AbrirBitacora, AV318renglones, A860PMEmpresa, AV100CNCIASID_F, A3295PROPAGID, AV239PROPAGID_F, A861PMTipoDoc, AV197PMTipoDoc_F, A862PMNumDoc, AV133Numero, A863PMProvId, AV108CNCDIRID_F, A864PMProyId, AV7PMCTPRID, AV111F2, A866PMFechFac, AV110F1, AV315unifCNCMNMID, A873PMMoneId, AV32CNCMNMID, AV327F6, A4090PMCXPFHTRN, AV326F5, AV113F4, A867PMFechVen, AV112F3, A2405PMEstatus, AV11Estatus, AV230Checkoc, A908PMNumDocOC, AV229PMNumDocOc_F, A2528PMFolioFac, AV159PMFolioFac_F, A905PMPoliz, AV270pmpoliz_f, A10905PMIDREL, AV351PMCXPRELID, AV353arrPMCTPRID, A865PMUngId, AV361CGUNNGID, A17416PMCargo, AV367CATCARID, AV296banload, AV350CNUSERMCXP, A2534PMUsrcap, A4599PMLayAsoc, A909PMUuid, A2871PMPDFDoc, A2718PMMonTp, A2862PMMonAmort, A898PMFechRev, AV203CNCIASMON_F, A899PMMonEx, AV316tipoCambio, A903PMMonEp, A2689PMMonPgE, A900PMMonEg, A870PMMonNg, A869PMMonNa, A902PMMonNp, A2688PMMonPgN, A872PMIva, A2520PMMonIvaN, A2954PMIVAID, A2406PMComentarios, A2521PMMonIvaE, A904PMReten, A906PMOrdenD, A907PMTipoDocOC, A2923PMCTA1, A2924PMCTA2, A2925PMCTA3, A2542PMCuentadeCargo, A3917PMObsPoliza, A4395PMPRANT, A7899PMTipoAv, A7900PMNumAv, A17105PMCuentaPR02, AV319numRenglons, A2059CNPRCMDFT, A2054CNCMNOID, AV317CNCMNOID, A2055CNCMNDID, A2076CNPRCMDVAL, A2610ESTPAGID, AV123PMEstatus, A2611ESTPAGDSC, A7789AVDSPRCIA, AV61PMEmpresa_G, A8295AVDSPRCPPTPC, AV62PMTipoDoc_G, A8296AVDSPRCPPNDC, AV63PMNumDoc_G, A20CNTDOCID, A8255AVDSPRDOC, A7790AVDSPRNDC, A8242AVDSPROBS, A7518CNDSPRCIA, A7519CNDSPRTDC, A7520CNDSPRNDC, A7531CNDSPRALCTR, AV116CNUSERID) ;
       }
       send_integrity_footer_hashes( ) ;
       return (short)(0) ;
@@ -2857,7 +2900,7 @@ public final  class wcomppg_impl extends GXDataArea
       subGrid1_Islastpage = 1 ;
       if ( isFullAjaxMode( ) )
       {
-         gxgrgrid1_refresh( subGrid1_Rows, AV240AbrirBitacora, AV318renglones, A860PMEmpresa, AV100CNCIASID_F, A3295PROPAGID, AV239PROPAGID_F, A861PMTipoDoc, AV197PMTipoDoc_F, A862PMNumDoc, AV133Numero, A863PMProvId, AV108CNCDIRID_F, A864PMProyId, AV7PMCTPRID, AV111F2, A866PMFechFac, AV110F1, AV315unifCNCMNMID, A873PMMoneId, AV32CNCMNMID, AV327F6, A4090PMCXPFHTRN, AV326F5, AV113F4, A867PMFechVen, AV112F3, A2405PMEstatus, AV11Estatus, AV230Checkoc, A908PMNumDocOC, AV229PMNumDocOc_F, A2528PMFolioFac, AV159PMFolioFac_F, A905PMPoliz, AV270pmpoliz_f, A10905PMIDREL, AV351PMCXPRELID, AV353arrPMCTPRID, A865PMUngId, AV361CGUNNGID, A17416PMCargo, AV367CATCARID, AV296banload, AV350CNUSERMCXP, A2534PMUsrcap, A4599PMLayAsoc, A909PMUuid, A2871PMPDFDoc, A2718PMMonTp, A2862PMMonAmort, A898PMFechRev, AV203CNCIASMON_F, A899PMMonEx, AV316tipoCambio, A903PMMonEp, A2689PMMonPgE, A900PMMonEg, A870PMMonNg, A869PMMonNa, A902PMMonNp, A2688PMMonPgN, A872PMIva, A2520PMMonIvaN, A2954PMIVAID, A2406PMComentarios, A2521PMMonIvaE, A904PMReten, A906PMOrdenD, A907PMTipoDocOC, A2923PMCTA1, A2924PMCTA2, A2925PMCTA3, A2542PMCuentadeCargo, A3917PMObsPoliza, A4395PMPRANT, A7899PMTipoAv, A7900PMNumAv, A17105PMCuentaPR02, AV319numRenglons, A2059CNPRCMDFT, A2054CNCMNOID, AV317CNCMNOID, A2055CNCMNDID, A2076CNPRCMDVAL, A2610ESTPAGID, AV123PMEstatus, A2611ESTPAGDSC, AV116CNUSERID) ;
+         gxgrgrid1_refresh( subGrid1_Rows, AV240AbrirBitacora, AV318renglones, A860PMEmpresa, AV100CNCIASID_F, A3295PROPAGID, AV239PROPAGID_F, A861PMTipoDoc, AV197PMTipoDoc_F, A862PMNumDoc, AV133Numero, A863PMProvId, AV108CNCDIRID_F, A864PMProyId, AV7PMCTPRID, AV111F2, A866PMFechFac, AV110F1, AV315unifCNCMNMID, A873PMMoneId, AV32CNCMNMID, AV327F6, A4090PMCXPFHTRN, AV326F5, AV113F4, A867PMFechVen, AV112F3, A2405PMEstatus, AV11Estatus, AV230Checkoc, A908PMNumDocOC, AV229PMNumDocOc_F, A2528PMFolioFac, AV159PMFolioFac_F, A905PMPoliz, AV270pmpoliz_f, A10905PMIDREL, AV351PMCXPRELID, AV353arrPMCTPRID, A865PMUngId, AV361CGUNNGID, A17416PMCargo, AV367CATCARID, AV296banload, AV350CNUSERMCXP, A2534PMUsrcap, A4599PMLayAsoc, A909PMUuid, A2871PMPDFDoc, A2718PMMonTp, A2862PMMonAmort, A898PMFechRev, AV203CNCIASMON_F, A899PMMonEx, AV316tipoCambio, A903PMMonEp, A2689PMMonPgE, A900PMMonEg, A870PMMonNg, A869PMMonNa, A902PMMonNp, A2688PMMonPgN, A872PMIva, A2520PMMonIvaN, A2954PMIVAID, A2406PMComentarios, A2521PMMonIvaE, A904PMReten, A906PMOrdenD, A907PMTipoDocOC, A2923PMCTA1, A2924PMCTA2, A2925PMCTA3, A2542PMCuentadeCargo, A3917PMObsPoliza, A4395PMPRANT, A7899PMTipoAv, A7900PMNumAv, A17105PMCuentaPR02, AV319numRenglons, A2059CNPRCMDFT, A2054CNCMNOID, AV317CNCMNOID, A2055CNCMNDID, A2076CNPRCMDVAL, A2610ESTPAGID, AV123PMEstatus, A2611ESTPAGDSC, A7789AVDSPRCIA, AV61PMEmpresa_G, A8295AVDSPRCPPTPC, AV62PMTipoDoc_G, A8296AVDSPRCPPNDC, AV63PMNumDoc_G, A20CNTDOCID, A8255AVDSPRDOC, A7790AVDSPRNDC, A8242AVDSPROBS, A7518CNDSPRCIA, A7519CNDSPRTDC, A7520CNDSPRNDC, A7531CNDSPRALCTR, AV116CNUSERID) ;
       }
       send_integrity_footer_hashes( ) ;
       return (short)(0) ;
@@ -2876,7 +2919,7 @@ public final  class wcomppg_impl extends GXDataArea
       com.kdsproyectos.GxWebStd.gx_hidden_field( httpContext, "GRID1_nFirstRecordOnPage", GXutil.ltrim( localUtil.ntoc( GRID1_nFirstRecordOnPage, (byte)(15), (byte)(0), ".", "")));
       if ( isFullAjaxMode( ) )
       {
-         gxgrgrid1_refresh( subGrid1_Rows, AV240AbrirBitacora, AV318renglones, A860PMEmpresa, AV100CNCIASID_F, A3295PROPAGID, AV239PROPAGID_F, A861PMTipoDoc, AV197PMTipoDoc_F, A862PMNumDoc, AV133Numero, A863PMProvId, AV108CNCDIRID_F, A864PMProyId, AV7PMCTPRID, AV111F2, A866PMFechFac, AV110F1, AV315unifCNCMNMID, A873PMMoneId, AV32CNCMNMID, AV327F6, A4090PMCXPFHTRN, AV326F5, AV113F4, A867PMFechVen, AV112F3, A2405PMEstatus, AV11Estatus, AV230Checkoc, A908PMNumDocOC, AV229PMNumDocOc_F, A2528PMFolioFac, AV159PMFolioFac_F, A905PMPoliz, AV270pmpoliz_f, A10905PMIDREL, AV351PMCXPRELID, AV353arrPMCTPRID, A865PMUngId, AV361CGUNNGID, A17416PMCargo, AV367CATCARID, AV296banload, AV350CNUSERMCXP, A2534PMUsrcap, A4599PMLayAsoc, A909PMUuid, A2871PMPDFDoc, A2718PMMonTp, A2862PMMonAmort, A898PMFechRev, AV203CNCIASMON_F, A899PMMonEx, AV316tipoCambio, A903PMMonEp, A2689PMMonPgE, A900PMMonEg, A870PMMonNg, A869PMMonNa, A902PMMonNp, A2688PMMonPgN, A872PMIva, A2520PMMonIvaN, A2954PMIVAID, A2406PMComentarios, A2521PMMonIvaE, A904PMReten, A906PMOrdenD, A907PMTipoDocOC, A2923PMCTA1, A2924PMCTA2, A2925PMCTA3, A2542PMCuentadeCargo, A3917PMObsPoliza, A4395PMPRANT, A7899PMTipoAv, A7900PMNumAv, A17105PMCuentaPR02, AV319numRenglons, A2059CNPRCMDFT, A2054CNCMNOID, AV317CNCMNOID, A2055CNCMNDID, A2076CNPRCMDVAL, A2610ESTPAGID, AV123PMEstatus, A2611ESTPAGDSC, AV116CNUSERID) ;
+         gxgrgrid1_refresh( subGrid1_Rows, AV240AbrirBitacora, AV318renglones, A860PMEmpresa, AV100CNCIASID_F, A3295PROPAGID, AV239PROPAGID_F, A861PMTipoDoc, AV197PMTipoDoc_F, A862PMNumDoc, AV133Numero, A863PMProvId, AV108CNCDIRID_F, A864PMProyId, AV7PMCTPRID, AV111F2, A866PMFechFac, AV110F1, AV315unifCNCMNMID, A873PMMoneId, AV32CNCMNMID, AV327F6, A4090PMCXPFHTRN, AV326F5, AV113F4, A867PMFechVen, AV112F3, A2405PMEstatus, AV11Estatus, AV230Checkoc, A908PMNumDocOC, AV229PMNumDocOc_F, A2528PMFolioFac, AV159PMFolioFac_F, A905PMPoliz, AV270pmpoliz_f, A10905PMIDREL, AV351PMCXPRELID, AV353arrPMCTPRID, A865PMUngId, AV361CGUNNGID, A17416PMCargo, AV367CATCARID, AV296banload, AV350CNUSERMCXP, A2534PMUsrcap, A4599PMLayAsoc, A909PMUuid, A2871PMPDFDoc, A2718PMMonTp, A2862PMMonAmort, A898PMFechRev, AV203CNCIASMON_F, A899PMMonEx, AV316tipoCambio, A903PMMonEp, A2689PMMonPgE, A900PMMonEg, A870PMMonNg, A869PMMonNa, A902PMMonNp, A2688PMMonPgN, A872PMIva, A2520PMMonIvaN, A2954PMIVAID, A2406PMComentarios, A2521PMMonIvaE, A904PMReten, A906PMOrdenD, A907PMTipoDocOC, A2923PMCTA1, A2924PMCTA2, A2925PMCTA3, A2542PMCuentadeCargo, A3917PMObsPoliza, A4395PMPRANT, A7899PMTipoAv, A7900PMNumAv, A17105PMCuentaPR02, AV319numRenglons, A2059CNPRCMDFT, A2054CNCMNOID, AV317CNCMNOID, A2055CNCMNDID, A2076CNPRCMDVAL, A2610ESTPAGID, AV123PMEstatus, A2611ESTPAGDSC, A7789AVDSPRCIA, AV61PMEmpresa_G, A8295AVDSPRCPPTPC, AV62PMTipoDoc_G, A8296AVDSPRCPPNDC, AV63PMNumDoc_G, A20CNTDOCID, A8255AVDSPRDOC, A7790AVDSPRNDC, A8242AVDSPROBS, A7518CNDSPRCIA, A7519CNDSPRTDC, A7520CNDSPRNDC, A7531CNDSPRALCTR, AV116CNUSERID) ;
       }
       send_integrity_footer_hashes( ) ;
       return 0 ;
@@ -2885,7 +2928,7 @@ public final  class wcomppg_impl extends GXDataArea
    public void strupDZ0( )
    {
       /* Before Start, stand alone formulas. */
-      AV378Pgmname = "wcomppg" ;
+      AV383Pgmname = "wcomppg" ;
       Gx_err = (short)(0) ;
       edtavPagina_Enabled = 0 ;
       httpContext.ajax_rsp_assign_prop("", false, edtavPagina_Internalname, "Enabled", GXutil.ltrim( GXutil.str( edtavPagina_Enabled, 5, 0)), true);
@@ -3546,7 +3589,7 @@ public final  class wcomppg_impl extends GXDataArea
       httpContext.ajax_rsp_assign_prop("", false, lblSecondfilter17_Internalname, "Visible", GXutil.ltrim( GXutil.str( lblSecondfilter17_Visible, 5, 0)), true);
       GXv_char2[0] = AV293Accesso ;
       GXv_char3[0] = AV359CNESDSOP ;
-      new com.kdsproyectos.validausmnd(remoteHandle, context).execute( AV116CNUSERID, AV378Pgmname, GXv_char2, GXv_char3) ;
+      new com.kdsproyectos.validausmnd(remoteHandle, context).execute( AV116CNUSERID, AV383Pgmname, GXv_char2, GXv_char3) ;
       wcomppg_impl.this.AV293Accesso = GXv_char2[0] ;
       wcomppg_impl.this.AV359CNESDSOP = GXv_char3[0] ;
       httpContext.ajax_rsp_assign_attri("", false, "AV116CNUSERID", AV116CNUSERID);
@@ -4218,8 +4261,16 @@ public final  class wcomppg_impl extends GXDataArea
                   httpContext.ajax_rsp_assign_attri("", false, edtavPmiva_g_Internalname, GXutil.ltrim( GXutil.str( AV73PMIva_G, 17, 2)));
                   AV194GPMIVAID = A2954PMIVAID ;
                   httpContext.ajax_rsp_assign_attri("", false, edtavGpmivaid_Internalname, AV194GPMIVAID);
-                  AV126PMComentarios = A2406PMComentarios ;
+                  AV126PMComentarios = GXutil.trim( A2406PMComentarios) ;
                   httpContext.ajax_rsp_assign_attri("", false, edtavPmcomentarios_Internalname, AV126PMComentarios);
+                  /* Execute user subroutine: 'CONCEPTODSC' */
+                  S223 ();
+                  if ( returnInSub )
+                  {
+                     pr_default.close(10);
+                     returnInSub = true;
+                     if (true) return;
+                  }
                   AV131PMMonPgE = A2689PMMonPgE.multiply(AV316tipoCambio) ;
                   httpContext.ajax_rsp_assign_attri("", false, edtavPmmonpge_Internalname, GXutil.ltrim( GXutil.str( AV131PMMonPgE, 17, 2)));
                   httpContext.ajax_rsp_assign_attri("", false, "gxhash_vPMMONPGE"+"_"+sGXsfl_116_idx, getSecureSignedToken( sGXsfl_116_idx, localUtil.format( AV131PMMonPgE, "ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99")));
@@ -4448,6 +4499,60 @@ public final  class wcomppg_impl extends GXDataArea
       /*  Sending Event outputs  */
    }
 
+   public void S223( )
+   {
+      /* 'CONCEPTODSC' Routine */
+      AV376ACNTDOCID = "" ;
+      httpContext.ajax_rsp_assign_attri("", false, "AV376ACNTDOCID", AV376ACNTDOCID);
+      AV377AAVDSPRDOC = 0 ;
+      httpContext.ajax_rsp_assign_attri("", false, "AV377AAVDSPRDOC", GXutil.ltrim( GXutil.str( AV377AAVDSPRDOC, 10, 0)));
+      AV378AVDSPRNDC = 0 ;
+      AV379AVDSPROBS = "" ;
+      /* Using cursor H00DZ13 */
+      pr_default.execute(11, new Object[] {new Long(AV61PMEmpresa_G), AV62PMTipoDoc_G, new Long(AV63PMNumDoc_G)});
+      while ( (pr_default.getStatus(11) != 101) )
+      {
+         A8296AVDSPRCPPNDC = H00DZ13_A8296AVDSPRCPPNDC[0] ;
+         n8296AVDSPRCPPNDC = H00DZ13_n8296AVDSPRCPPNDC[0] ;
+         A8295AVDSPRCPPTPC = H00DZ13_A8295AVDSPRCPPTPC[0] ;
+         n8295AVDSPRCPPTPC = H00DZ13_n8295AVDSPRCPPTPC[0] ;
+         A7789AVDSPRCIA = H00DZ13_A7789AVDSPRCIA[0] ;
+         A20CNTDOCID = H00DZ13_A20CNTDOCID[0] ;
+         A8255AVDSPRDOC = H00DZ13_A8255AVDSPRDOC[0] ;
+         A7790AVDSPRNDC = H00DZ13_A7790AVDSPRNDC[0] ;
+         A8242AVDSPROBS = H00DZ13_A8242AVDSPROBS[0] ;
+         n8242AVDSPROBS = H00DZ13_n8242AVDSPROBS[0] ;
+         AV376ACNTDOCID = A20CNTDOCID ;
+         httpContext.ajax_rsp_assign_attri("", false, "AV376ACNTDOCID", AV376ACNTDOCID);
+         AV377AAVDSPRDOC = A8255AVDSPRDOC ;
+         httpContext.ajax_rsp_assign_attri("", false, "AV377AAVDSPRDOC", GXutil.ltrim( GXutil.str( AV377AAVDSPRDOC, 10, 0)));
+         AV378AVDSPRNDC = A7790AVDSPRNDC ;
+         AV379AVDSPROBS = A8242AVDSPROBS ;
+         pr_default.readNext(11);
+      }
+      pr_default.close(11);
+      AV380CNDSPRALCTR = "" ;
+      if ( AV377AAVDSPRDOC > 0 )
+      {
+         /* Using cursor H00DZ14 */
+         pr_default.execute(12, new Object[] {new Long(AV61PMEmpresa_G), AV376ACNTDOCID, new Long(AV377AAVDSPRDOC)});
+         while ( (pr_default.getStatus(12) != 101) )
+         {
+            A7520CNDSPRNDC = H00DZ14_A7520CNDSPRNDC[0] ;
+            A7519CNDSPRTDC = H00DZ14_A7519CNDSPRTDC[0] ;
+            A7518CNDSPRCIA = H00DZ14_A7518CNDSPRCIA[0] ;
+            A7531CNDSPRALCTR = H00DZ14_A7531CNDSPRALCTR[0] ;
+            n7531CNDSPRALCTR = H00DZ14_n7531CNDSPRALCTR[0] ;
+            AV380CNDSPRALCTR = A7531CNDSPRALCTR ;
+            /* Exiting from a For First loop. */
+            if (true) break;
+         }
+         pr_default.close(12);
+         AV126PMComentarios = "Registro de avance N° " + GXutil.trim( GXutil.str( AV378AVDSPRNDC, 10, 0)) + " " + GXutil.trim( AV379AVDSPROBS) + " " + GXutil.trim( AV380CNDSPRALCTR) ;
+         httpContext.ajax_rsp_assign_attri("", false, edtavPmcomentarios_Internalname, AV126PMComentarios);
+      }
+   }
+
    public void GXEnter( )
    {
       /* Execute user event: Enter */
@@ -4459,13 +4564,13 @@ public final  class wcomppg_impl extends GXDataArea
    {
       /* Enter Routine */
       /* Execute user subroutine: 'VALIDAR FILTROS OBLIGATORIOS' */
-      S222 ();
+      S232 ();
       if (returnInSub) return;
       /*  Sending Event outputs  */
       httpContext.ajax_rsp_assign_sdt_attri("", false, "AV300sdtPMCuentaXPag", AV300sdtPMCuentaXPag);
    }
 
-   public void S222( )
+   public void S232( )
    {
       /* 'VALIDAR FILTROS OBLIGATORIOS' Routine */
       AV238Valido = (byte)(1) ;
@@ -4499,10 +4604,10 @@ public final  class wcomppg_impl extends GXDataArea
          AV296banload = "S" ;
          httpContext.ajax_rsp_assign_attri("", false, "AV296banload", AV296banload);
          /* Execute user subroutine: 'CARGARDATOS' */
-         S282 ();
+         S292 ();
          if (returnInSub) return;
          subgrid1_firstpage( ) ;
-         gxgrgrid1_refresh( subGrid1_Rows, AV240AbrirBitacora, AV318renglones, A860PMEmpresa, AV100CNCIASID_F, A3295PROPAGID, AV239PROPAGID_F, A861PMTipoDoc, AV197PMTipoDoc_F, A862PMNumDoc, AV133Numero, A863PMProvId, AV108CNCDIRID_F, A864PMProyId, AV7PMCTPRID, AV111F2, A866PMFechFac, AV110F1, AV315unifCNCMNMID, A873PMMoneId, AV32CNCMNMID, AV327F6, A4090PMCXPFHTRN, AV326F5, AV113F4, A867PMFechVen, AV112F3, A2405PMEstatus, AV11Estatus, AV230Checkoc, A908PMNumDocOC, AV229PMNumDocOc_F, A2528PMFolioFac, AV159PMFolioFac_F, A905PMPoliz, AV270pmpoliz_f, A10905PMIDREL, AV351PMCXPRELID, AV353arrPMCTPRID, A865PMUngId, AV361CGUNNGID, A17416PMCargo, AV367CATCARID, AV296banload, AV350CNUSERMCXP, A2534PMUsrcap, A4599PMLayAsoc, A909PMUuid, A2871PMPDFDoc, A2718PMMonTp, A2862PMMonAmort, A898PMFechRev, AV203CNCIASMON_F, A899PMMonEx, AV316tipoCambio, A903PMMonEp, A2689PMMonPgE, A900PMMonEg, A870PMMonNg, A869PMMonNa, A902PMMonNp, A2688PMMonPgN, A872PMIva, A2520PMMonIvaN, A2954PMIVAID, A2406PMComentarios, A2521PMMonIvaE, A904PMReten, A906PMOrdenD, A907PMTipoDocOC, A2923PMCTA1, A2924PMCTA2, A2925PMCTA3, A2542PMCuentadeCargo, A3917PMObsPoliza, A4395PMPRANT, A7899PMTipoAv, A7900PMNumAv, A17105PMCuentaPR02, AV319numRenglons, A2059CNPRCMDFT, A2054CNCMNOID, AV317CNCMNOID, A2055CNCMNDID, A2076CNPRCMDVAL, A2610ESTPAGID, AV123PMEstatus, A2611ESTPAGDSC, AV116CNUSERID) ;
+         gxgrgrid1_refresh( subGrid1_Rows, AV240AbrirBitacora, AV318renglones, A860PMEmpresa, AV100CNCIASID_F, A3295PROPAGID, AV239PROPAGID_F, A861PMTipoDoc, AV197PMTipoDoc_F, A862PMNumDoc, AV133Numero, A863PMProvId, AV108CNCDIRID_F, A864PMProyId, AV7PMCTPRID, AV111F2, A866PMFechFac, AV110F1, AV315unifCNCMNMID, A873PMMoneId, AV32CNCMNMID, AV327F6, A4090PMCXPFHTRN, AV326F5, AV113F4, A867PMFechVen, AV112F3, A2405PMEstatus, AV11Estatus, AV230Checkoc, A908PMNumDocOC, AV229PMNumDocOc_F, A2528PMFolioFac, AV159PMFolioFac_F, A905PMPoliz, AV270pmpoliz_f, A10905PMIDREL, AV351PMCXPRELID, AV353arrPMCTPRID, A865PMUngId, AV361CGUNNGID, A17416PMCargo, AV367CATCARID, AV296banload, AV350CNUSERMCXP, A2534PMUsrcap, A4599PMLayAsoc, A909PMUuid, A2871PMPDFDoc, A2718PMMonTp, A2862PMMonAmort, A898PMFechRev, AV203CNCIASMON_F, A899PMMonEx, AV316tipoCambio, A903PMMonEp, A2689PMMonPgE, A900PMMonEg, A870PMMonNg, A869PMMonNa, A902PMMonNp, A2688PMMonPgN, A872PMIva, A2520PMMonIvaN, A2954PMIVAID, A2406PMComentarios, A2521PMMonIvaE, A904PMReten, A906PMOrdenD, A907PMTipoDocOC, A2923PMCTA1, A2924PMCTA2, A2925PMCTA3, A2542PMCuentadeCargo, A3917PMObsPoliza, A4395PMPRANT, A7899PMTipoAv, A7900PMNumAv, A17105PMCuentaPR02, AV319numRenglons, A2059CNPRCMDFT, A2054CNCMNOID, AV317CNCMNOID, A2055CNCMNDID, A2076CNPRCMDVAL, A2610ESTPAGID, AV123PMEstatus, A2611ESTPAGDSC, A7789AVDSPRCIA, AV61PMEmpresa_G, A8295AVDSPRCPPTPC, AV62PMTipoDoc_G, A8296AVDSPRCPPNDC, AV63PMNumDoc_G, A20CNTDOCID, A8255AVDSPRDOC, A7790AVDSPRNDC, A8242AVDSPROBS, A7518CNDSPRCIA, A7519CNDSPRTDC, A7520CNDSPRNDC, A7531CNDSPRALCTR, AV116CNUSERID) ;
       }
    }
 
@@ -4518,33 +4623,33 @@ public final  class wcomppg_impl extends GXDataArea
    {
       /* Cncdirnom_f_Isvalid Routine */
       /* Execute user subroutine: 'CONSULTA PROVEEDOR' */
-      S232 ();
+      S242 ();
       if (returnInSub) return;
       /*  Sending Event outputs  */
    }
 
-   public void S232( )
+   public void S242( )
    {
       /* 'CONSULTA PROVEEDOR' Routine */
       if ( GXutil.strcmp(AV114CNCDIRNOM_F, "") != 0 )
       {
-         AV380GXLvl529 = (byte)(0) ;
-         /* Using cursor H00DZ13 */
-         pr_default.execute(11, new Object[] {AV114CNCDIRNOM_F});
-         while ( (pr_default.getStatus(11) != 101) )
+         AV387GXLvl558 = (byte)(0) ;
+         /* Using cursor H00DZ15 */
+         pr_default.execute(13, new Object[] {AV114CNCDIRNOM_F});
+         while ( (pr_default.getStatus(13) != 101) )
          {
-            A382CNTPDRID = H00DZ13_A382CNTPDRID[0] ;
-            n382CNTPDRID = H00DZ13_n382CNTPDRID[0] ;
-            A194CNCDIRNOM = H00DZ13_A194CNCDIRNOM[0] ;
-            n194CNCDIRNOM = H00DZ13_n194CNCDIRNOM[0] ;
-            A46CNCDIRID = H00DZ13_A46CNCDIRID[0] ;
-            AV380GXLvl529 = (byte)(1) ;
+            A382CNTPDRID = H00DZ15_A382CNTPDRID[0] ;
+            n382CNTPDRID = H00DZ15_n382CNTPDRID[0] ;
+            A194CNCDIRNOM = H00DZ15_A194CNCDIRNOM[0] ;
+            n194CNCDIRNOM = H00DZ15_n194CNCDIRNOM[0] ;
+            A46CNCDIRID = H00DZ15_A46CNCDIRID[0] ;
+            AV387GXLvl558 = (byte)(1) ;
             AV108CNCDIRID_F = A46CNCDIRID ;
             httpContext.ajax_rsp_assign_attri("", false, "AV108CNCDIRID_F", GXutil.ltrim( GXutil.str( AV108CNCDIRID_F, 10, 0)));
-            pr_default.readNext(11);
+            pr_default.readNext(13);
          }
-         pr_default.close(11);
-         if ( AV380GXLvl529 == 0 )
+         pr_default.close(13);
+         if ( AV387GXLvl558 == 0 )
          {
             AV108CNCDIRID_F = 0 ;
             httpContext.ajax_rsp_assign_attri("", false, "AV108CNCDIRID_F", GXutil.ltrim( GXutil.str( AV108CNCDIRID_F, 10, 0)));
@@ -4622,19 +4727,19 @@ public final  class wcomppg_impl extends GXDataArea
    {
       /* 'Fecha Vencimiento' Routine */
       AV321PROMP = (short)(0) ;
-      /* Using cursor H00DZ14 */
-      pr_default.execute(12, new Object[] {new Long(AV61PMEmpresa_G), new Long(AV63PMNumDoc_G), AV62PMTipoDoc_G});
-      while ( (pr_default.getStatus(12) != 101) )
+      /* Using cursor H00DZ16 */
+      pr_default.execute(14, new Object[] {new Long(AV61PMEmpresa_G), new Long(AV63PMNumDoc_G), AV62PMTipoDoc_G});
+      while ( (pr_default.getStatus(14) != 101) )
       {
-         A7195MODFECVETDC = H00DZ14_A7195MODFECVETDC[0] ;
-         A7194MODFECVENDC = H00DZ14_A7194MODFECVENDC[0] ;
-         A7193MODFECVECIA = H00DZ14_A7193MODFECVECIA[0] ;
+         A7195MODFECVETDC = H00DZ16_A7195MODFECVETDC[0] ;
+         A7194MODFECVENDC = H00DZ16_A7194MODFECVENDC[0] ;
+         A7193MODFECVECIA = H00DZ16_A7193MODFECVECIA[0] ;
          AV321PROMP = (short)(1) ;
          /* Exit For each command. Update data (if necessary), close cursors & exit. */
          if (true) break;
-         pr_default.readNext(12);
+         pr_default.readNext(14);
       }
-      pr_default.close(12);
+      pr_default.close(14);
       if ( AV321PROMP == 1 )
       {
          /* Window Datatype Object Property */
@@ -4658,15 +4763,15 @@ public final  class wcomppg_impl extends GXDataArea
       httpContext.ajax_rsp_assign_attri("", false, "AV100CNCIASID_F", GXutil.ltrim( GXutil.str( AV100CNCIASID_F, 10, 0)));
       if ( GXutil.strcmp(AV84PMUuid, "") != 0 )
       {
-         /* Using cursor H00DZ15 */
-         pr_default.execute(13, new Object[] {AV84PMUuid});
-         while ( (pr_default.getStatus(13) != 101) )
+         /* Using cursor H00DZ17 */
+         pr_default.execute(15, new Object[] {AV84PMUuid});
+         while ( (pr_default.getStatus(15) != 101) )
          {
-            A838XMLDOCUUID = H00DZ15_A838XMLDOCUUID[0] ;
-            A855XMLDOCFLNM = H00DZ15_A855XMLDOCFLNM[0] ;
-            n855XMLDOCFLNM = H00DZ15_n855XMLDOCFLNM[0] ;
-            A883XMLDOCRUT = H00DZ15_A883XMLDOCRUT[0] ;
-            n883XMLDOCRUT = H00DZ15_n883XMLDOCRUT[0] ;
+            A838XMLDOCUUID = H00DZ17_A838XMLDOCUUID[0] ;
+            A855XMLDOCFLNM = H00DZ17_A855XMLDOCFLNM[0] ;
+            n855XMLDOCFLNM = H00DZ17_n855XMLDOCFLNM[0] ;
+            A883XMLDOCRUT = H00DZ17_A883XMLDOCRUT[0] ;
+            n883XMLDOCRUT = H00DZ17_n883XMLDOCRUT[0] ;
             AV166XMLDOCFLNM = A855XMLDOCFLNM ;
             AV165RUTA = A883XMLDOCRUT ;
             callWebObject(formatLink("com.kdsproyectos.apdescargarxml") + "?" + GXutil.URLEncode(GXutil.rtrim(AV166XMLDOCFLNM)) + "," + GXutil.URLEncode(GXutil.rtrim(AV165RUTA)) + "," + GXutil.URLEncode(GXutil.rtrim("XML")));
@@ -4676,7 +4781,7 @@ public final  class wcomppg_impl extends GXDataArea
             /* Exiting from a For First loop. */
             if (true) break;
          }
-         pr_default.close(13);
+         pr_default.close(15);
       }
    }
 
@@ -4691,32 +4796,32 @@ public final  class wcomppg_impl extends GXDataArea
       httpContext.ajax_rsp_assign_attri("", false, "gxhash_vPMEMPRESA_G"+"_"+sGXsfl_116_idx, getSecureSignedToken( sGXsfl_116_idx, localUtil.format( DecimalUtil.doubleToDec(AV61PMEmpresa_G), "ZZZZZZZZZ9")));
       if ( AV160PMPDFDOC != 0 )
       {
-         /* Using cursor H00DZ16 */
-         pr_default.execute(14, new Object[] {new Long(AV160PMPDFDOC)});
-         while ( (pr_default.getStatus(14) != 101) )
+         /* Using cursor H00DZ18 */
+         pr_default.execute(16, new Object[] {new Long(AV160PMPDFDOC)});
+         while ( (pr_default.getStatus(16) != 101) )
          {
-            A2870PDFDOCID = H00DZ16_A2870PDFDOCID[0] ;
-            A876PDFDOCNAM = H00DZ16_A876PDFDOCNAM[0] ;
-            n876PDFDOCNAM = H00DZ16_n876PDFDOCNAM[0] ;
+            A2870PDFDOCID = H00DZ18_A2870PDFDOCID[0] ;
+            A876PDFDOCNAM = H00DZ18_A876PDFDOCNAM[0] ;
+            n876PDFDOCNAM = H00DZ18_n876PDFDOCNAM[0] ;
             A878PDFDOCFIL_Filename = A876PDFDOCNAM ;
-            A879PDFDOCTIP = H00DZ16_A879PDFDOCTIP[0] ;
-            n879PDFDOCTIP = H00DZ16_n879PDFDOCTIP[0] ;
+            A879PDFDOCTIP = H00DZ18_A879PDFDOCTIP[0] ;
+            n879PDFDOCTIP = H00DZ18_n879PDFDOCTIP[0] ;
             A878PDFDOCFIL_Filetype = A879PDFDOCTIP ;
-            A878PDFDOCFIL = H00DZ16_A878PDFDOCFIL[0] ;
-            n878PDFDOCFIL = H00DZ16_n878PDFDOCFIL[0] ;
+            A878PDFDOCFIL = H00DZ18_A878PDFDOCFIL[0] ;
+            n878PDFDOCFIL = H00DZ18_n878PDFDOCFIL[0] ;
             AV165RUTA = GXutil.trim( AV290RutaPDF) + GXutil.trim( A876PDFDOCNAM) + ".pdf" ;
             new com.kdsproyectos.pvalidageneraarchivo(remoteHandle, context).execute( AV165RUTA, A878PDFDOCFIL) ;
             httpContext.ajax_rsp_assign_attri("", false, "A878PDFDOCFIL", A878PDFDOCFIL);
             AV166XMLDOCFLNM = A876PDFDOCNAM ;
             callWebObject(formatLink("com.kdsproyectos.apdescargarxml") + "?" + GXutil.URLEncode(GXutil.rtrim(AV166XMLDOCFLNM)) + "," + GXutil.URLEncode(GXutil.rtrim(AV165RUTA)) + "," + GXutil.URLEncode(GXutil.rtrim("PDF")));
             httpContext.wjLocDisableFrm = (byte)(0) ;
-            new com.kdsproyectos.generatxt(remoteHandle, context).execute( AV378Pgmname, "Ruta: "+GXutil.trim( AV165RUTA)+" nombre "+GXutil.trim( AV166XMLDOCFLNM)+" &PMPDFDOC: "+GXutil.str( AV160PMPDFDOC, 10, 0)+" Nom Doc "+GXutil.str( AV63PMNumDoc_G, 10, 0)) ;
+            new com.kdsproyectos.generatxt(remoteHandle, context).execute( AV383Pgmname, "Ruta: "+GXutil.trim( AV165RUTA)+" nombre "+GXutil.trim( AV166XMLDOCFLNM)+" &PMPDFDOC: "+GXutil.str( AV160PMPDFDOC, 10, 0)+" Nom Doc "+GXutil.str( AV63PMNumDoc_G, 10, 0)) ;
             /* Exit For each command. Update data (if necessary), close cursors & exit. */
             if (true) break;
             /* Exiting from a For First loop. */
             if (true) break;
          }
-         pr_default.close(14);
+         pr_default.close(16);
       }
       else
       {
@@ -4793,7 +4898,7 @@ public final  class wcomppg_impl extends GXDataArea
          else
          {
             /* Execute user subroutine: 'GENERARPOLIZA' */
-            S242 ();
+            S252 ();
             if (returnInSub) return;
          }
       }
@@ -4811,7 +4916,7 @@ public final  class wcomppg_impl extends GXDataArea
       AV345regenerarPoliza = "S" ;
       httpContext.ajax_rsp_assign_attri("", false, "AV345regenerarPoliza", AV345regenerarPoliza);
       /* Execute user subroutine: 'GENERARPOLIZA' */
-      S242 ();
+      S252 ();
       if (returnInSub) return;
       /*  Sending Event outputs  */
       httpContext.ajax_rsp_assign_sdt_attri("", false, "AV344cCGUNNGID", AV344cCGUNNGID);
@@ -4823,13 +4928,13 @@ public final  class wcomppg_impl extends GXDataArea
       AV345regenerarPoliza = "N" ;
       httpContext.ajax_rsp_assign_attri("", false, "AV345regenerarPoliza", AV345regenerarPoliza);
       /* Execute user subroutine: 'GENERARPOLIZA' */
-      S242 ();
+      S252 ();
       if (returnInSub) return;
       /*  Sending Event outputs  */
       httpContext.ajax_rsp_assign_sdt_attri("", false, "AV344cCGUNNGID", AV344cCGUNNGID);
    }
 
-   public void S242( )
+   public void S252( )
    {
       /* 'GENERARPOLIZA' Routine */
       GXt_char1 = AV179CNCIASMON ;
@@ -4841,7 +4946,7 @@ public final  class wcomppg_impl extends GXDataArea
       httpContext.ajax_rsp_assign_attri("", false, "AV179CNCIASMON", AV179CNCIASMON);
       AV334banError = "N" ;
       AV344cCGUNNGID.clear();
-      pr_default.dynParam(15, new Object[]{ new Object[]{
+      pr_default.dynParam(17, new Object[]{ new Object[]{
                                            new Long(AV239PROPAGID_F) ,
                                            AV197PMTipoDoc_F ,
                                            new Long(AV133Numero) ,
@@ -4885,67 +4990,67 @@ public final  class wcomppg_impl extends GXDataArea
                                            }
       } ) ;
       lV159PMFolioFac_F = GXutil.padr( GXutil.rtrim( AV159PMFolioFac_F), 100, "%") ;
-      /* Using cursor H00DZ17 */
-      pr_default.execute(15, new Object[] {new Long(AV100CNCIASID_F), AV335fCNCD01ID, new Long(AV239PROPAGID_F), AV197PMTipoDoc_F, new Long(AV133Numero), new Long(AV108CNCDIRID_F), AV7PMCTPRID, AV110F1, AV111F2, AV110F1, AV32CNCMNMID, AV112F3, AV113F4, AV112F3, AV326F5, AV327F6, AV326F5, AV11Estatus, new Long(AV229PMNumDocOc_F), lV159PMFolioFac_F, new Byte(AV270pmpoliz_f)});
-      while ( (pr_default.getStatus(15) != 101) )
+      /* Using cursor H00DZ19 */
+      pr_default.execute(17, new Object[] {new Long(AV100CNCIASID_F), AV335fCNCD01ID, new Long(AV239PROPAGID_F), AV197PMTipoDoc_F, new Long(AV133Numero), new Long(AV108CNCDIRID_F), AV7PMCTPRID, AV110F1, AV111F2, AV110F1, AV32CNCMNMID, AV112F3, AV113F4, AV112F3, AV326F5, AV327F6, AV326F5, AV11Estatus, new Long(AV229PMNumDocOc_F), lV159PMFolioFac_F, new Byte(AV270pmpoliz_f)});
+      while ( (pr_default.getStatus(17) != 101) )
       {
-         A456CNCD01ID = H00DZ17_A456CNCD01ID[0] ;
-         n456CNCD01ID = H00DZ17_n456CNCD01ID[0] ;
-         A905PMPoliz = H00DZ17_A905PMPoliz[0] ;
-         n905PMPoliz = H00DZ17_n905PMPoliz[0] ;
-         A2528PMFolioFac = H00DZ17_A2528PMFolioFac[0] ;
-         n2528PMFolioFac = H00DZ17_n2528PMFolioFac[0] ;
-         A908PMNumDocOC = H00DZ17_A908PMNumDocOC[0] ;
-         n908PMNumDocOC = H00DZ17_n908PMNumDocOC[0] ;
-         A2405PMEstatus = H00DZ17_A2405PMEstatus[0] ;
-         n2405PMEstatus = H00DZ17_n2405PMEstatus[0] ;
-         A898PMFechRev = H00DZ17_A898PMFechRev[0] ;
-         n898PMFechRev = H00DZ17_n898PMFechRev[0] ;
-         A867PMFechVen = H00DZ17_A867PMFechVen[0] ;
-         n867PMFechVen = H00DZ17_n867PMFechVen[0] ;
-         A873PMMoneId = H00DZ17_A873PMMoneId[0] ;
-         n873PMMoneId = H00DZ17_n873PMMoneId[0] ;
-         A866PMFechFac = H00DZ17_A866PMFechFac[0] ;
-         n866PMFechFac = H00DZ17_n866PMFechFac[0] ;
-         A864PMProyId = H00DZ17_A864PMProyId[0] ;
-         n864PMProyId = H00DZ17_n864PMProyId[0] ;
-         A863PMProvId = H00DZ17_A863PMProvId[0] ;
-         n863PMProvId = H00DZ17_n863PMProvId[0] ;
-         A862PMNumDoc = H00DZ17_A862PMNumDoc[0] ;
-         A861PMTipoDoc = H00DZ17_A861PMTipoDoc[0] ;
-         A3295PROPAGID = H00DZ17_A3295PROPAGID[0] ;
-         n3295PROPAGID = H00DZ17_n3295PROPAGID[0] ;
-         A860PMEmpresa = H00DZ17_A860PMEmpresa[0] ;
-         A900PMMonEg = H00DZ17_A900PMMonEg[0] ;
-         n900PMMonEg = H00DZ17_n900PMMonEg[0] ;
-         A2718PMMonTp = H00DZ17_A2718PMMonTp[0] ;
-         n2718PMMonTp = H00DZ17_n2718PMMonTp[0] ;
-         A2923PMCTA1 = H00DZ17_A2923PMCTA1[0] ;
-         n2923PMCTA1 = H00DZ17_n2923PMCTA1[0] ;
-         A2924PMCTA2 = H00DZ17_A2924PMCTA2[0] ;
-         n2924PMCTA2 = H00DZ17_n2924PMCTA2[0] ;
-         A2925PMCTA3 = H00DZ17_A2925PMCTA3[0] ;
-         n2925PMCTA3 = H00DZ17_n2925PMCTA3[0] ;
-         A2954PMIVAID = H00DZ17_A2954PMIVAID[0] ;
-         n2954PMIVAID = H00DZ17_n2954PMIVAID[0] ;
-         A872PMIva = H00DZ17_A872PMIva[0] ;
-         n872PMIva = H00DZ17_n872PMIva[0] ;
-         A2521PMMonIvaE = H00DZ17_A2521PMMonIvaE[0] ;
-         n2521PMMonIvaE = H00DZ17_n2521PMMonIvaE[0] ;
-         A869PMMonNa = H00DZ17_A869PMMonNa[0] ;
-         n869PMMonNa = H00DZ17_n869PMMonNa[0] ;
-         A2520PMMonIvaN = H00DZ17_A2520PMMonIvaN[0] ;
-         n2520PMMonIvaN = H00DZ17_n2520PMMonIvaN[0] ;
-         A899PMMonEx = H00DZ17_A899PMMonEx[0] ;
-         n899PMMonEx = H00DZ17_n899PMMonEx[0] ;
-         A870PMMonNg = H00DZ17_A870PMMonNg[0] ;
-         n870PMMonNg = H00DZ17_n870PMMonNg[0] ;
-         A2542PMCuentadeCargo = H00DZ17_A2542PMCuentadeCargo[0] ;
-         n2542PMCuentadeCargo = H00DZ17_n2542PMCuentadeCargo[0] ;
-         A909PMUuid = H00DZ17_A909PMUuid[0] ;
-         n909PMUuid = H00DZ17_n909PMUuid[0] ;
-         A456CNCD01ID = H00DZ17_A456CNCD01ID[0] ;
-         n456CNCD01ID = H00DZ17_n456CNCD01ID[0] ;
+         A456CNCD01ID = H00DZ19_A456CNCD01ID[0] ;
+         n456CNCD01ID = H00DZ19_n456CNCD01ID[0] ;
+         A905PMPoliz = H00DZ19_A905PMPoliz[0] ;
+         n905PMPoliz = H00DZ19_n905PMPoliz[0] ;
+         A2528PMFolioFac = H00DZ19_A2528PMFolioFac[0] ;
+         n2528PMFolioFac = H00DZ19_n2528PMFolioFac[0] ;
+         A908PMNumDocOC = H00DZ19_A908PMNumDocOC[0] ;
+         n908PMNumDocOC = H00DZ19_n908PMNumDocOC[0] ;
+         A2405PMEstatus = H00DZ19_A2405PMEstatus[0] ;
+         n2405PMEstatus = H00DZ19_n2405PMEstatus[0] ;
+         A898PMFechRev = H00DZ19_A898PMFechRev[0] ;
+         n898PMFechRev = H00DZ19_n898PMFechRev[0] ;
+         A867PMFechVen = H00DZ19_A867PMFechVen[0] ;
+         n867PMFechVen = H00DZ19_n867PMFechVen[0] ;
+         A873PMMoneId = H00DZ19_A873PMMoneId[0] ;
+         n873PMMoneId = H00DZ19_n873PMMoneId[0] ;
+         A866PMFechFac = H00DZ19_A866PMFechFac[0] ;
+         n866PMFechFac = H00DZ19_n866PMFechFac[0] ;
+         A864PMProyId = H00DZ19_A864PMProyId[0] ;
+         n864PMProyId = H00DZ19_n864PMProyId[0] ;
+         A863PMProvId = H00DZ19_A863PMProvId[0] ;
+         n863PMProvId = H00DZ19_n863PMProvId[0] ;
+         A862PMNumDoc = H00DZ19_A862PMNumDoc[0] ;
+         A861PMTipoDoc = H00DZ19_A861PMTipoDoc[0] ;
+         A3295PROPAGID = H00DZ19_A3295PROPAGID[0] ;
+         n3295PROPAGID = H00DZ19_n3295PROPAGID[0] ;
+         A860PMEmpresa = H00DZ19_A860PMEmpresa[0] ;
+         A900PMMonEg = H00DZ19_A900PMMonEg[0] ;
+         n900PMMonEg = H00DZ19_n900PMMonEg[0] ;
+         A2718PMMonTp = H00DZ19_A2718PMMonTp[0] ;
+         n2718PMMonTp = H00DZ19_n2718PMMonTp[0] ;
+         A2923PMCTA1 = H00DZ19_A2923PMCTA1[0] ;
+         n2923PMCTA1 = H00DZ19_n2923PMCTA1[0] ;
+         A2924PMCTA2 = H00DZ19_A2924PMCTA2[0] ;
+         n2924PMCTA2 = H00DZ19_n2924PMCTA2[0] ;
+         A2925PMCTA3 = H00DZ19_A2925PMCTA3[0] ;
+         n2925PMCTA3 = H00DZ19_n2925PMCTA3[0] ;
+         A2954PMIVAID = H00DZ19_A2954PMIVAID[0] ;
+         n2954PMIVAID = H00DZ19_n2954PMIVAID[0] ;
+         A872PMIva = H00DZ19_A872PMIva[0] ;
+         n872PMIva = H00DZ19_n872PMIva[0] ;
+         A2521PMMonIvaE = H00DZ19_A2521PMMonIvaE[0] ;
+         n2521PMMonIvaE = H00DZ19_n2521PMMonIvaE[0] ;
+         A869PMMonNa = H00DZ19_A869PMMonNa[0] ;
+         n869PMMonNa = H00DZ19_n869PMMonNa[0] ;
+         A2520PMMonIvaN = H00DZ19_A2520PMMonIvaN[0] ;
+         n2520PMMonIvaN = H00DZ19_n2520PMMonIvaN[0] ;
+         A899PMMonEx = H00DZ19_A899PMMonEx[0] ;
+         n899PMMonEx = H00DZ19_n899PMMonEx[0] ;
+         A870PMMonNg = H00DZ19_A870PMMonNg[0] ;
+         n870PMMonNg = H00DZ19_n870PMMonNg[0] ;
+         A2542PMCuentadeCargo = H00DZ19_A2542PMCuentadeCargo[0] ;
+         n2542PMCuentadeCargo = H00DZ19_n2542PMCuentadeCargo[0] ;
+         A909PMUuid = H00DZ19_A909PMUuid[0] ;
+         n909PMUuid = H00DZ19_n909PMUuid[0] ;
+         A456CNCD01ID = H00DZ19_A456CNCD01ID[0] ;
+         n456CNCD01ID = H00DZ19_n456CNCD01ID[0] ;
          AV241GPMEstatus = A2405PMEstatus ;
          AV268GPmPoliz = A905PMPoliz ;
          AV255GPMProvId = A863PMProvId ;
@@ -5006,11 +5111,11 @@ public final  class wcomppg_impl extends GXDataArea
                      if ( GXutil.strcmp(AV346VersionPoliza, "KY") == 0 )
                      {
                         /* Execute user subroutine: 'POLIZA' */
-                        S298 ();
+                        S3010 ();
                         if ( returnInSub )
                         {
-                           pr_default.close(15);
-                           pr_default.close(15);
+                           pr_default.close(17);
+                           pr_default.close(17);
                            returnInSub = true;
                            if (true) return;
                         }
@@ -5018,11 +5123,11 @@ public final  class wcomppg_impl extends GXDataArea
                      else if ( GXutil.strcmp(AV346VersionPoliza, "AP") == 0 )
                      {
                         /* Execute user subroutine: 'POLIZAAP' */
-                        S308 ();
+                        S3110 ();
                         if ( returnInSub )
                         {
-                           pr_default.close(15);
-                           pr_default.close(15);
+                           pr_default.close(17);
+                           pr_default.close(17);
                            returnInSub = true;
                            if (true) return;
                         }
@@ -5041,11 +5146,11 @@ public final  class wcomppg_impl extends GXDataArea
                   if ( GXutil.strcmp(AV346VersionPoliza, "KY") == 0 )
                   {
                      /* Execute user subroutine: 'POLIZA' */
-                     S298 ();
+                     S3010 ();
                      if ( returnInSub )
                      {
-                        pr_default.close(15);
-                        pr_default.close(15);
+                        pr_default.close(17);
+                        pr_default.close(17);
                         returnInSub = true;
                         if (true) return;
                      }
@@ -5053,11 +5158,11 @@ public final  class wcomppg_impl extends GXDataArea
                   else if ( GXutil.strcmp(AV346VersionPoliza, "AP") == 0 )
                   {
                      /* Execute user subroutine: 'POLIZAAP' */
-                     S308 ();
+                     S3110 ();
                      if ( returnInSub )
                      {
-                        pr_default.close(15);
-                        pr_default.close(15);
+                        pr_default.close(17);
+                        pr_default.close(17);
                         returnInSub = true;
                         if (true) return;
                      }
@@ -5065,35 +5170,35 @@ public final  class wcomppg_impl extends GXDataArea
                }
             }
          }
-         pr_default.readNext(15);
+         pr_default.readNext(17);
       }
-      pr_default.close(15);
+      pr_default.close(17);
       if ( GXutil.strcmp(AV336TratPolFol, "S") == 0 )
       {
-         AV385GXV1 = 1 ;
-         while ( AV385GXV1 <= AV344cCGUNNGID.size() )
+         AV392GXV1 = 1 ;
+         while ( AV392GXV1 <= AV344cCGUNNGID.size() )
          {
-            AV342iCGUNNGID = (String)AV344cCGUNNGID.elementAt(-1+AV385GXV1) ;
+            AV342iCGUNNGID = (String)AV344cCGUNNGID.elementAt(-1+AV392GXV1) ;
             GXv_int4[0] = 0 ;
             new com.kdsproyectos.polfol02(remoteHandle, context).execute( "UPD", AV242GPMEmpresa, AV342iCGUNNGID, GXv_int4) ;
             httpContext.ajax_rsp_assign_attri("", false, "AV242GPMEmpresa", GXutil.ltrim( GXutil.str( AV242GPMEmpresa, 10, 0)));
-            AV385GXV1 = (int)(AV385GXV1+1) ;
+            AV392GXV1 = (int)(AV392GXV1+1) ;
          }
       }
       if ( GXutil.strcmp(AV334banError, "N") == 0 )
       {
          this.executeUsercontrolMethod("", false, "MSJContainer", "ShowMessage", "", new Object[] {"Notificación","Proceso terminado."});
-         gxgrgrid1_refresh( subGrid1_Rows, AV240AbrirBitacora, AV318renglones, A860PMEmpresa, AV100CNCIASID_F, A3295PROPAGID, AV239PROPAGID_F, A861PMTipoDoc, AV197PMTipoDoc_F, A862PMNumDoc, AV133Numero, A863PMProvId, AV108CNCDIRID_F, A864PMProyId, AV7PMCTPRID, AV111F2, A866PMFechFac, AV110F1, AV315unifCNCMNMID, A873PMMoneId, AV32CNCMNMID, AV327F6, A4090PMCXPFHTRN, AV326F5, AV113F4, A867PMFechVen, AV112F3, A2405PMEstatus, AV11Estatus, AV230Checkoc, A908PMNumDocOC, AV229PMNumDocOc_F, A2528PMFolioFac, AV159PMFolioFac_F, A905PMPoliz, AV270pmpoliz_f, A10905PMIDREL, AV351PMCXPRELID, AV353arrPMCTPRID, A865PMUngId, AV361CGUNNGID, A17416PMCargo, AV367CATCARID, AV296banload, AV350CNUSERMCXP, A2534PMUsrcap, A4599PMLayAsoc, A909PMUuid, A2871PMPDFDoc, A2718PMMonTp, A2862PMMonAmort, A898PMFechRev, AV203CNCIASMON_F, A899PMMonEx, AV316tipoCambio, A903PMMonEp, A2689PMMonPgE, A900PMMonEg, A870PMMonNg, A869PMMonNa, A902PMMonNp, A2688PMMonPgN, A872PMIva, A2520PMMonIvaN, A2954PMIVAID, A2406PMComentarios, A2521PMMonIvaE, A904PMReten, A906PMOrdenD, A907PMTipoDocOC, A2923PMCTA1, A2924PMCTA2, A2925PMCTA3, A2542PMCuentadeCargo, A3917PMObsPoliza, A4395PMPRANT, A7899PMTipoAv, A7900PMNumAv, A17105PMCuentaPR02, AV319numRenglons, A2059CNPRCMDFT, A2054CNCMNOID, AV317CNCMNOID, A2055CNCMNDID, A2076CNPRCMDVAL, A2610ESTPAGID, AV123PMEstatus, A2611ESTPAGDSC, AV116CNUSERID) ;
+         gxgrgrid1_refresh( subGrid1_Rows, AV240AbrirBitacora, AV318renglones, A860PMEmpresa, AV100CNCIASID_F, A3295PROPAGID, AV239PROPAGID_F, A861PMTipoDoc, AV197PMTipoDoc_F, A862PMNumDoc, AV133Numero, A863PMProvId, AV108CNCDIRID_F, A864PMProyId, AV7PMCTPRID, AV111F2, A866PMFechFac, AV110F1, AV315unifCNCMNMID, A873PMMoneId, AV32CNCMNMID, AV327F6, A4090PMCXPFHTRN, AV326F5, AV113F4, A867PMFechVen, AV112F3, A2405PMEstatus, AV11Estatus, AV230Checkoc, A908PMNumDocOC, AV229PMNumDocOc_F, A2528PMFolioFac, AV159PMFolioFac_F, A905PMPoliz, AV270pmpoliz_f, A10905PMIDREL, AV351PMCXPRELID, AV353arrPMCTPRID, A865PMUngId, AV361CGUNNGID, A17416PMCargo, AV367CATCARID, AV296banload, AV350CNUSERMCXP, A2534PMUsrcap, A4599PMLayAsoc, A909PMUuid, A2871PMPDFDoc, A2718PMMonTp, A2862PMMonAmort, A898PMFechRev, AV203CNCIASMON_F, A899PMMonEx, AV316tipoCambio, A903PMMonEp, A2689PMMonPgE, A900PMMonEg, A870PMMonNg, A869PMMonNa, A902PMMonNp, A2688PMMonPgN, A872PMIva, A2520PMMonIvaN, A2954PMIVAID, A2406PMComentarios, A2521PMMonIvaE, A904PMReten, A906PMOrdenD, A907PMTipoDocOC, A2923PMCTA1, A2924PMCTA2, A2925PMCTA3, A2542PMCuentadeCargo, A3917PMObsPoliza, A4395PMPRANT, A7899PMTipoAv, A7900PMNumAv, A17105PMCuentaPR02, AV319numRenglons, A2059CNPRCMDFT, A2054CNCMNOID, AV317CNCMNOID, A2055CNCMNDID, A2076CNPRCMDVAL, A2610ESTPAGID, AV123PMEstatus, A2611ESTPAGDSC, A7789AVDSPRCIA, AV61PMEmpresa_G, A8295AVDSPRCPPTPC, AV62PMTipoDoc_G, A8296AVDSPRCPPNDC, AV63PMNumDoc_G, A20CNTDOCID, A8255AVDSPRDOC, A7790AVDSPRNDC, A8242AVDSPROBS, A7518CNDSPRCIA, A7519CNDSPRTDC, A7520CNDSPRNDC, A7531CNDSPRALCTR, AV116CNUSERID) ;
       }
    }
 
-   public void S298( )
+   public void S3010( )
    {
       /* 'POLIZA' Routine */
       if ( ( GXutil.strcmp(AV243GPMTipoDoc, "CPG") == 0 ) || ( GXutil.strcmp(AV243GPMTipoDoc, "ANT") == 0 ) || ( GXutil.strcmp(AV243GPMTipoDoc, "NCR") == 0 ) )
       {
          /* Execute user subroutine: 'VALIDASELECCION' */
-         S312 ();
+         S322 ();
          if (returnInSub) return;
          if ( GXutil.strcmp(AV169BanSel, "S") == 0 )
          {
@@ -5120,17 +5225,17 @@ public final  class wcomppg_impl extends GXDataArea
             }
             AV341aBoolean = false ;
             /* Execute user subroutine: 'BUSQUEDA1' */
-            S322 ();
+            S332 ();
             if (returnInSub) return;
             if ( GXutil.strcmp(AV184Afecto, "N") == 0 )
             {
                /* Execute user subroutine: 'BUSQUEDA2' */
-               S332 ();
+               S342 ();
                if (returnInSub) return;
                if ( GXutil.strcmp(AV184Afecto, "N") == 0 )
                {
                   /* Execute user subroutine: 'BUSQUEDA3' */
-                  S342 ();
+                  S352 ();
                   if (returnInSub) return;
                   if ( GXutil.strcmp(AV184Afecto, "S") == 0 )
                   {
@@ -5183,15 +5288,15 @@ public final  class wcomppg_impl extends GXDataArea
             }
             if ( ( AV341aBoolean ) && ( GXutil.strcmp(AV336TratPolFol, "S") == 0 ) )
             {
-               AV386GXV2 = 1 ;
-               while ( AV386GXV2 <= AV344cCGUNNGID.size() )
+               AV393GXV2 = 1 ;
+               while ( AV393GXV2 <= AV344cCGUNNGID.size() )
                {
-                  AV342iCGUNNGID = (String)AV344cCGUNNGID.elementAt(-1+AV386GXV2) ;
+                  AV342iCGUNNGID = (String)AV344cCGUNNGID.elementAt(-1+AV393GXV2) ;
                   if ( GXutil.strcmp(AV342iCGUNNGID, AV337aPMCTPRUNNG) == 0 )
                   {
                      AV341aBoolean = false ;
                   }
-                  AV386GXV2 = (int)(AV386GXV2+1) ;
+                  AV393GXV2 = (int)(AV393GXV2+1) ;
                }
                if ( AV341aBoolean )
                {
@@ -5202,13 +5307,13 @@ public final  class wcomppg_impl extends GXDataArea
       }
    }
 
-   public void S308( )
+   public void S3110( )
    {
       /* 'POLIZAAP' Routine */
       if ( ( GXutil.strcmp(AV243GPMTipoDoc, "CPG") == 0 ) || ( GXutil.strcmp(AV243GPMTipoDoc, "ANT") == 0 ) || ( GXutil.strcmp(AV243GPMTipoDoc, "NCR") == 0 ) )
       {
          /* Execute user subroutine: 'VALIDASELECCION' */
-         S312 ();
+         S322 ();
          if (returnInSub) return;
          if ( GXutil.strcmp(AV169BanSel, "S") == 0 )
          {
@@ -5235,17 +5340,17 @@ public final  class wcomppg_impl extends GXDataArea
             }
             AV341aBoolean = false ;
             /* Execute user subroutine: 'BUSQUEDA1AP' */
-            S352 ();
+            S362 ();
             if (returnInSub) return;
             if ( GXutil.strcmp(AV184Afecto, "N") == 0 )
             {
                /* Execute user subroutine: 'BUSQUEDA2AP' */
-               S362 ();
+               S372 ();
                if (returnInSub) return;
                if ( GXutil.strcmp(AV184Afecto, "N") == 0 )
                {
                   /* Execute user subroutine: 'BUSQUEDA3AP' */
-                  S372 ();
+                  S382 ();
                   if (returnInSub) return;
                   if ( GXutil.strcmp(AV184Afecto, "S") == 0 )
                   {
@@ -5298,15 +5403,15 @@ public final  class wcomppg_impl extends GXDataArea
             }
             if ( ( AV341aBoolean ) && ( GXutil.strcmp(AV336TratPolFol, "S") == 0 ) )
             {
-               AV387GXV3 = 1 ;
-               while ( AV387GXV3 <= AV344cCGUNNGID.size() )
+               AV394GXV3 = 1 ;
+               while ( AV394GXV3 <= AV344cCGUNNGID.size() )
                {
-                  AV342iCGUNNGID = (String)AV344cCGUNNGID.elementAt(-1+AV387GXV3) ;
+                  AV342iCGUNNGID = (String)AV344cCGUNNGID.elementAt(-1+AV394GXV3) ;
                   if ( GXutil.strcmp(AV342iCGUNNGID, AV337aPMCTPRUNNG) == 0 )
                   {
                      AV341aBoolean = false ;
                   }
-                  AV387GXV3 = (int)(AV387GXV3+1) ;
+                  AV394GXV3 = (int)(AV394GXV3+1) ;
                }
                if ( AV341aBoolean )
                {
@@ -5317,7 +5422,7 @@ public final  class wcomppg_impl extends GXDataArea
       }
    }
 
-   public void S312( )
+   public void S322( )
    {
       /* 'VALIDASELECCION' Routine */
       AV169BanSel = "S" ;
@@ -5385,7 +5490,7 @@ public final  class wcomppg_impl extends GXDataArea
       }
    }
 
-   public void S382( )
+   public void S392( )
    {
       /* 'CUENTAENPRODUCTO' Routine */
       AV184Afecto = "N" ;
@@ -5398,15 +5503,15 @@ public final  class wcomppg_impl extends GXDataArea
       httpContext.ajax_rsp_assign_attri("", false, "AV175CTA2", AV175CTA2);
       AV176CTA3 = "" ;
       httpContext.ajax_rsp_assign_attri("", false, "AV176CTA3", AV176CTA3);
-      /* Using cursor H00DZ18 */
-      pr_default.execute(16, new Object[] {new Long(AV61PMEmpresa_G), AV62PMTipoDoc_G, new Long(AV63PMNumDoc_G)});
-      while ( (pr_default.getStatus(16) != 101) )
+      /* Using cursor H00DZ20 */
+      pr_default.execute(18, new Object[] {new Long(AV61PMEmpresa_G), AV62PMTipoDoc_G, new Long(AV63PMNumDoc_G)});
+      while ( (pr_default.getStatus(18) != 101) )
       {
-         A862PMNumDoc = H00DZ18_A862PMNumDoc[0] ;
-         A861PMTipoDoc = H00DZ18_A861PMTipoDoc[0] ;
-         A860PMEmpresa = H00DZ18_A860PMEmpresa[0] ;
-         A2568PMRecepInsID = H00DZ18_A2568PMRecepInsID[0] ;
-         n2568PMRecepInsID = H00DZ18_n2568PMRecepInsID[0] ;
+         A862PMNumDoc = H00DZ20_A862PMNumDoc[0] ;
+         A861PMTipoDoc = H00DZ20_A861PMTipoDoc[0] ;
+         A860PMEmpresa = H00DZ20_A860PMEmpresa[0] ;
+         A2568PMRecepInsID = H00DZ20_A2568PMRecepInsID[0] ;
+         n2568PMRecepInsID = H00DZ20_n2568PMRecepInsID[0] ;
          AV173PMRecepInsID = A2568PMRecepInsID ;
          httpContext.ajax_rsp_assign_attri("", false, "AV173PMRecepInsID", GXutil.ltrim( GXutil.str( AV173PMRecepInsID, 10, 0)));
          if ( GXutil.strcmp(AV69PMMoneId_G, AV179CNCIASMON) != 0 )
@@ -5444,9 +5549,9 @@ public final  class wcomppg_impl extends GXDataArea
             /* Exit For each command. Update data (if necessary), close cursors & exit. */
             if (true) break;
          }
-         pr_default.readNext(16);
+         pr_default.readNext(18);
       }
-      pr_default.close(16);
+      pr_default.close(18);
       if ( GXutil.strcmp(AV329TomarSegmentoUNG, "S") == 0 )
       {
          GXt_char1 = AV332CGUNNGSEG ;
@@ -5463,7 +5568,7 @@ public final  class wcomppg_impl extends GXDataArea
       }
    }
 
-   public void S322( )
+   public void S332( )
    {
       /* 'BUSQUEDA1' Routine */
       AV235MontoEsp = DecimalUtil.ZERO ;
@@ -5537,7 +5642,7 @@ public final  class wcomppg_impl extends GXDataArea
                httpContext.ajax_rsp_assign_attri("", false, "AV176CTA3", AV176CTA3);
             }
             /* Execute user subroutine: 'RETENCIONES' */
-            S392 ();
+            S402 ();
             if (returnInSub) return;
             GXv_char8[0] = AV174CTA1 ;
             GXv_char3[0] = AV175CTA2 ;
@@ -5662,7 +5767,7 @@ public final  class wcomppg_impl extends GXDataArea
                httpContext.ajax_rsp_assign_attri("", false, "AV176CTA3", AV176CTA3);
             }
             /* Execute user subroutine: 'RETENCIONES' */
-            S392 ();
+            S402 ();
             if (returnInSub) return;
             GXv_char8[0] = AV174CTA1 ;
             GXv_char3[0] = AV175CTA2 ;
@@ -5709,7 +5814,7 @@ public final  class wcomppg_impl extends GXDataArea
       }
    }
 
-   public void S332( )
+   public void S342( )
    {
       /* 'BUSQUEDA2' Routine */
       AV235MontoEsp = DecimalUtil.ZERO ;
@@ -5721,7 +5826,7 @@ public final  class wcomppg_impl extends GXDataArea
       AV237MontoCOM = DecimalUtil.ZERO ;
       httpContext.ajax_rsp_assign_attri("", false, "AV237MontoCOM", GXutil.ltrim( GXutil.str( AV237MontoCOM, 17, 2)));
       /* Execute user subroutine: 'CUENTAENPRODUCTO' */
-      S382 ();
+      S392 ();
       if (returnInSub) return;
       if ( GXutil.strcmp(AV184Afecto, "S") == 0 )
       {
@@ -5784,7 +5889,7 @@ public final  class wcomppg_impl extends GXDataArea
                httpContext.ajax_rsp_assign_attri("", false, "AV176CTA3", AV176CTA3);
             }
             /* Execute user subroutine: 'RETENCIONES' */
-            S392 ();
+            S402 ();
             if (returnInSub) return;
             GXv_char8[0] = AV174CTA1 ;
             GXv_char3[0] = AV175CTA2 ;
@@ -5911,7 +6016,7 @@ public final  class wcomppg_impl extends GXDataArea
                httpContext.ajax_rsp_assign_attri("", false, "AV176CTA3", AV176CTA3);
             }
             /* Execute user subroutine: 'RETENCIONES' */
-            S392 ();
+            S402 ();
             if (returnInSub) return;
             GXv_char8[0] = AV174CTA1 ;
             GXv_char3[0] = AV175CTA2 ;
@@ -5957,7 +6062,7 @@ public final  class wcomppg_impl extends GXDataArea
       }
    }
 
-   public void S342( )
+   public void S352( )
    {
       /* 'BUSQUEDA3' Routine */
       AV235MontoEsp = DecimalUtil.ZERO ;
@@ -6040,7 +6145,7 @@ public final  class wcomppg_impl extends GXDataArea
                httpContext.ajax_rsp_assign_attri("", false, "AV176CTA3", AV176CTA3);
             }
             /* Execute user subroutine: 'RETENCIONES' */
-            S392 ();
+            S402 ();
             if (returnInSub) return;
             GXv_char8[0] = AV174CTA1 ;
             GXv_char3[0] = AV175CTA2 ;
@@ -6159,7 +6264,7 @@ public final  class wcomppg_impl extends GXDataArea
                httpContext.ajax_rsp_assign_attri("", false, "AV176CTA3", AV176CTA3);
             }
             /* Execute user subroutine: 'RETENCIONES' */
-            S392 ();
+            S402 ();
             if (returnInSub) return;
             GXv_char8[0] = AV174CTA1 ;
             GXv_char3[0] = AV175CTA2 ;
@@ -6205,7 +6310,7 @@ public final  class wcomppg_impl extends GXDataArea
       }
    }
 
-   public void S352( )
+   public void S362( )
    {
       /* 'BUSQUEDA1AP' Routine */
       AV235MontoEsp = DecimalUtil.ZERO ;
@@ -6281,7 +6386,7 @@ public final  class wcomppg_impl extends GXDataArea
                httpContext.ajax_rsp_assign_attri("", false, "AV176CTA3", AV176CTA3);
             }
             /* Execute user subroutine: 'RETENCIONES' */
-            S392 ();
+            S402 ();
             if (returnInSub) return;
             GXv_char8[0] = AV174CTA1 ;
             GXv_char3[0] = AV175CTA2 ;
@@ -6404,7 +6509,7 @@ public final  class wcomppg_impl extends GXDataArea
                httpContext.ajax_rsp_assign_attri("", false, "AV176CTA3", AV176CTA3);
             }
             /* Execute user subroutine: 'RETENCIONES' */
-            S392 ();
+            S402 ();
             if (returnInSub) return;
             GXv_char8[0] = AV174CTA1 ;
             GXv_char3[0] = AV175CTA2 ;
@@ -6451,7 +6556,7 @@ public final  class wcomppg_impl extends GXDataArea
       }
    }
 
-   public void S362( )
+   public void S372( )
    {
       /* 'BUSQUEDA2AP' Routine */
       AV235MontoEsp = DecimalUtil.ZERO ;
@@ -6463,7 +6568,7 @@ public final  class wcomppg_impl extends GXDataArea
       AV237MontoCOM = DecimalUtil.ZERO ;
       httpContext.ajax_rsp_assign_attri("", false, "AV237MontoCOM", GXutil.ltrim( GXutil.str( AV237MontoCOM, 17, 2)));
       /* Execute user subroutine: 'CUENTAENPRODUCTO' */
-      S382 ();
+      S392 ();
       if (returnInSub) return;
       if ( GXutil.strcmp(AV184Afecto, "S") == 0 )
       {
@@ -6528,7 +6633,7 @@ public final  class wcomppg_impl extends GXDataArea
                httpContext.ajax_rsp_assign_attri("", false, "AV176CTA3", AV176CTA3);
             }
             /* Execute user subroutine: 'RETENCIONES' */
-            S392 ();
+            S402 ();
             if (returnInSub) return;
             GXv_char8[0] = AV174CTA1 ;
             GXv_char3[0] = AV175CTA2 ;
@@ -6653,7 +6758,7 @@ public final  class wcomppg_impl extends GXDataArea
                httpContext.ajax_rsp_assign_attri("", false, "AV176CTA3", AV176CTA3);
             }
             /* Execute user subroutine: 'RETENCIONES' */
-            S392 ();
+            S402 ();
             if (returnInSub) return;
             GXv_char8[0] = AV174CTA1 ;
             GXv_char3[0] = AV175CTA2 ;
@@ -6699,7 +6804,7 @@ public final  class wcomppg_impl extends GXDataArea
       }
    }
 
-   public void S372( )
+   public void S382( )
    {
       /* 'BUSQUEDA3AP' Routine */
       AV235MontoEsp = DecimalUtil.ZERO ;
@@ -6784,7 +6889,7 @@ public final  class wcomppg_impl extends GXDataArea
                httpContext.ajax_rsp_assign_attri("", false, "AV176CTA3", AV176CTA3);
             }
             /* Execute user subroutine: 'RETENCIONES' */
-            S392 ();
+            S402 ();
             if (returnInSub) return;
             GXv_char8[0] = AV174CTA1 ;
             GXv_char3[0] = AV175CTA2 ;
@@ -6901,7 +7006,7 @@ public final  class wcomppg_impl extends GXDataArea
                httpContext.ajax_rsp_assign_attri("", false, "AV176CTA3", AV176CTA3);
             }
             /* Execute user subroutine: 'RETENCIONES' */
-            S392 ();
+            S402 ();
             if (returnInSub) return;
             GXv_char8[0] = AV174CTA1 ;
             GXv_char3[0] = AV175CTA2 ;
@@ -6947,24 +7052,24 @@ public final  class wcomppg_impl extends GXDataArea
       }
    }
 
-   public void S392( )
+   public void S402( )
    {
       /* 'RETENCIONES' Routine */
       AV195MontoRetencion = DecimalUtil.ZERO ;
       httpContext.ajax_rsp_assign_attri("", false, "AV195MontoRetencion", GXutil.ltrim( GXutil.str( AV195MontoRetencion, 15, 2)));
-      /* Using cursor H00DZ19 */
-      pr_default.execute(17, new Object[] {new Long(AV242GPMEmpresa), AV243GPMTipoDoc, new Long(AV244GPMNumDoc)});
-      while ( (pr_default.getStatus(17) != 101) )
+      /* Using cursor H00DZ21 */
+      pr_default.execute(19, new Object[] {new Long(AV242GPMEmpresa), AV243GPMTipoDoc, new Long(AV244GPMNumDoc)});
+      while ( (pr_default.getStatus(19) != 101) )
       {
-         A862PMNumDoc = H00DZ19_A862PMNumDoc[0] ;
-         A861PMTipoDoc = H00DZ19_A861PMTipoDoc[0] ;
-         A860PMEmpresa = H00DZ19_A860PMEmpresa[0] ;
-         A2878PMImpEstId = H00DZ19_A2878PMImpEstId[0] ;
-         A2879PMImpId = H00DZ19_A2879PMImpId[0] ;
-         A2880PMImpMon = H00DZ19_A2880PMImpMon[0] ;
-         n2880PMImpMon = H00DZ19_n2880PMImpMon[0] ;
-         A2881PMImpVal = H00DZ19_A2881PMImpVal[0] ;
-         n2881PMImpVal = H00DZ19_n2881PMImpVal[0] ;
+         A862PMNumDoc = H00DZ21_A862PMNumDoc[0] ;
+         A861PMTipoDoc = H00DZ21_A861PMTipoDoc[0] ;
+         A860PMEmpresa = H00DZ21_A860PMEmpresa[0] ;
+         A2878PMImpEstId = H00DZ21_A2878PMImpEstId[0] ;
+         A2879PMImpId = H00DZ21_A2879PMImpId[0] ;
+         A2880PMImpMon = H00DZ21_A2880PMImpMon[0] ;
+         n2880PMImpMon = H00DZ21_n2880PMImpMon[0] ;
+         A2881PMImpVal = H00DZ21_A2881PMImpVal[0] ;
+         n2881PMImpVal = H00DZ21_n2881PMImpVal[0] ;
          AV259GPMImpEstId = A2878PMImpEstId ;
          AV260GPMImpId = A2879PMImpId ;
          AV261GPMImpMon = A2880PMImpMon ;
@@ -6998,9 +7103,9 @@ public final  class wcomppg_impl extends GXDataArea
          httpContext.ajax_rsp_assign_attri("", false, "AV175CTA2", AV175CTA2);
          AV176CTA3 = "" ;
          httpContext.ajax_rsp_assign_attri("", false, "AV176CTA3", AV176CTA3);
-         pr_default.readNext(17);
+         pr_default.readNext(19);
       }
-      pr_default.close(17);
+      pr_default.close(19);
    }
 
    public void e15DZ2( )
@@ -7079,19 +7184,19 @@ public final  class wcomppg_impl extends GXDataArea
       /* 'MONEDA' Routine */
       if ( AV100CNCIASID_F != 0 )
       {
-         /* Using cursor H00DZ20 */
-         pr_default.execute(18, new Object[] {new Long(AV100CNCIASID_F)});
-         while ( (pr_default.getStatus(18) != 101) )
+         /* Using cursor H00DZ22 */
+         pr_default.execute(20, new Object[] {new Long(AV100CNCIASID_F)});
+         while ( (pr_default.getStatus(20) != 101) )
          {
-            A5939CNCIASID = H00DZ20_A5939CNCIASID[0] ;
-            A19CNCIASMON = H00DZ20_A19CNCIASMON[0] ;
-            n19CNCIASMON = H00DZ20_n19CNCIASMON[0] ;
+            A5939CNCIASID = H00DZ22_A5939CNCIASID[0] ;
+            A19CNCIASMON = H00DZ22_A19CNCIASMON[0] ;
+            n19CNCIASMON = H00DZ22_n19CNCIASMON[0] ;
             AV203CNCIASMON_F = A19CNCIASMON ;
             httpContext.ajax_rsp_assign_attri("", false, "AV203CNCIASMON_F", AV203CNCIASMON_F);
             /* Exiting from a For First loop. */
             if (true) break;
          }
-         pr_default.close(18);
+         pr_default.close(20);
       }
    }
 
@@ -7226,23 +7331,23 @@ public final  class wcomppg_impl extends GXDataArea
    public void S213( )
    {
       /* 'ESTATUS' Routine */
-      AV391GXLvl1557 = (byte)(0) ;
-      /* Using cursor H00DZ21 */
-      pr_default.execute(19, new Object[] {AV123PMEstatus});
-      while ( (pr_default.getStatus(19) != 101) )
+      AV398GXLvl1586 = (byte)(0) ;
+      /* Using cursor H00DZ23 */
+      pr_default.execute(21, new Object[] {AV123PMEstatus});
+      while ( (pr_default.getStatus(21) != 101) )
       {
-         A2610ESTPAGID = H00DZ21_A2610ESTPAGID[0] ;
-         A2611ESTPAGDSC = H00DZ21_A2611ESTPAGDSC[0] ;
-         n2611ESTPAGDSC = H00DZ21_n2611ESTPAGDSC[0] ;
-         AV391GXLvl1557 = (byte)(1) ;
+         A2610ESTPAGID = H00DZ23_A2610ESTPAGID[0] ;
+         A2611ESTPAGDSC = H00DZ23_A2611ESTPAGDSC[0] ;
+         n2611ESTPAGDSC = H00DZ23_n2611ESTPAGDSC[0] ;
+         AV398GXLvl1586 = (byte)(1) ;
          AV129EstatusDSC = A2611ESTPAGDSC ;
          httpContext.ajax_rsp_assign_attri("", false, edtavEstatusdsc_Internalname, AV129EstatusDSC);
          httpContext.ajax_rsp_assign_attri("", false, "gxhash_vESTATUSDSC"+"_"+sGXsfl_116_idx, getSecureSignedToken( sGXsfl_116_idx, GXutil.rtrim( localUtil.format( AV129EstatusDSC, ""))));
          /* Exiting from a For First loop. */
          if (true) break;
       }
-      pr_default.close(19);
-      if ( AV391GXLvl1557 == 0 )
+      pr_default.close(21);
+      if ( AV398GXLvl1586 == 0 )
       {
          AV129EstatusDSC = "" ;
          httpContext.ajax_rsp_assign_attri("", false, edtavEstatusdsc_Internalname, AV129EstatusDSC);
@@ -7250,39 +7355,39 @@ public final  class wcomppg_impl extends GXDataArea
       }
    }
 
-   public void S402( )
+   public void S412( )
    {
       /* 'CONSULTAROPCIONES' Routine */
       AV280CNCD01ID_F = "" ;
       httpContext.ajax_rsp_assign_attri("", false, "AV280CNCD01ID_F", AV280CNCD01ID_F);
-      /* Using cursor H00DZ22 */
-      pr_default.execute(20, new Object[] {AV116CNUSERID});
-      while ( (pr_default.getStatus(20) != 101) )
+      /* Using cursor H00DZ24 */
+      pr_default.execute(22, new Object[] {AV116CNUSERID});
+      while ( (pr_default.getStatus(22) != 101) )
       {
-         A4053PMPERFILUSR = H00DZ22_A4053PMPERFILUSR[0] ;
-         A4051PMPERFILID = H00DZ22_A4051PMPERFILID[0] ;
+         A4053PMPERFILUSR = H00DZ24_A4053PMPERFILUSR[0] ;
+         A4051PMPERFILID = H00DZ24_A4051PMPERFILID[0] ;
          AV279PMPERFILID = A4051PMPERFILID ;
          /* Exit For each command. Update data (if necessary), close cursors & exit. */
          if (true) break;
-         pr_default.readNext(20);
+         pr_default.readNext(22);
       }
-      pr_default.close(20);
-      /* Using cursor H00DZ23 */
-      pr_default.execute(21, new Object[] {AV278PROGRAMA, AV279PMPERFILID});
-      while ( (pr_default.getStatus(21) != 101) )
+      pr_default.close(22);
+      /* Using cursor H00DZ25 */
+      pr_default.execute(23, new Object[] {AV278PROGRAMA, AV279PMPERFILID});
+      while ( (pr_default.getStatus(23) != 101) )
       {
-         A4051PMPERFILID = H00DZ23_A4051PMPERFILID[0] ;
-         A4054KDSPRGID = H00DZ23_A4054KDSPRGID[0] ;
-         A4064KDSPRGLIN = H00DZ23_A4064KDSPRGLIN[0] ;
-         A4060KDSCPRPRVALCHAR = H00DZ23_A4060KDSCPRPRVALCHAR[0] ;
+         A4051PMPERFILID = H00DZ25_A4051PMPERFILID[0] ;
+         A4054KDSPRGID = H00DZ25_A4054KDSPRGID[0] ;
+         A4064KDSPRGLIN = H00DZ25_A4064KDSPRGLIN[0] ;
+         A4060KDSCPRPRVALCHAR = H00DZ25_A4060KDSCPRPRVALCHAR[0] ;
          if ( A4064KDSPRGLIN == 1 )
          {
             AV280CNCD01ID_F = A4060KDSCPRPRVALCHAR ;
             httpContext.ajax_rsp_assign_attri("", false, "AV280CNCD01ID_F", AV280CNCD01ID_F);
          }
-         pr_default.readNext(21);
+         pr_default.readNext(23);
       }
-      pr_default.close(21);
+      pr_default.close(23);
    }
 
    public void e21DZ2( )
@@ -7291,7 +7396,7 @@ public final  class wcomppg_impl extends GXDataArea
       AV347tipoRep = "GRAL" ;
       httpContext.ajax_rsp_assign_attri("", false, "AV347tipoRep", AV347tipoRep);
       /* Execute user subroutine: 'DESCARGAEXCEL' */
-      S252 ();
+      S262 ();
       if (returnInSub) return;
       /*  Sending Event outputs  */
    }
@@ -7302,12 +7407,12 @@ public final  class wcomppg_impl extends GXDataArea
       AV347tipoRep = "CONT" ;
       httpContext.ajax_rsp_assign_attri("", false, "AV347tipoRep", AV347tipoRep);
       /* Execute user subroutine: 'DESCARGAEXCEL' */
-      S252 ();
+      S262 ();
       if (returnInSub) return;
       /*  Sending Event outputs  */
    }
 
-   public void S252( )
+   public void S262( )
    {
       /* 'DESCARGAEXCEL' Routine */
       new com.kdsproyectos.reportesegcxpag(remoteHandle, context).execute( AV100CNCIASID_F, AV239PROPAGID_F, AV197PMTipoDoc_F, AV133Numero, AV110F1, AV111F2, AV112F3, AV113F4, AV7PMCTPRID, AV11Estatus, AV230Checkoc, AV229PMNumDocOc_F, AV159PMFolioFac_F, AV270pmpoliz_f, AV280CNCD01ID_F, AV32CNCMNMID, AV203CNCIASMON_F, AV326F5, AV327F6, AV108CNCDIRID_F, AV347tipoRep) ;
@@ -7337,11 +7442,11 @@ public final  class wcomppg_impl extends GXDataArea
       httpContext.ajax_rsp_assign_prop("", false, lblTxt_Internalname, "Caption", lblTxt_Caption, true);
    }
 
-   public void S282( )
+   public void S292( )
    {
       /* 'CARGARDATOS' Routine */
       AV300sdtPMCuentaXPag = new GXBaseCollection<com.kdsproyectos.SdtsdtPMCuentaXPag_sdtPMCuentaXPagItem>(com.kdsproyectos.SdtsdtPMCuentaXPag_sdtPMCuentaXPagItem.class, "sdtPMCuentaXPagItem", "KDSProyectos", remoteHandle) ;
-      pr_default.dynParam(22, new Object[]{ new Object[]{
+      pr_default.dynParam(24, new Object[]{ new Object[]{
                                            A864PMProyId ,
                                            AV353arrPMCTPRID ,
                                            new Long(AV239PROPAGID_F) ,
@@ -7394,101 +7499,101 @@ public final  class wcomppg_impl extends GXDataArea
                                            }
       } ) ;
       lV159PMFolioFac_F = GXutil.padr( GXutil.rtrim( AV159PMFolioFac_F), 100, "%") ;
-      /* Using cursor H00DZ24 */
-      pr_default.execute(22, new Object[] {new Long(AV100CNCIASID_F), AV296banload, new Long(AV239PROPAGID_F), AV197PMTipoDoc_F, new Long(AV133Numero), new Long(AV108CNCDIRID_F), AV7PMCTPRID, AV110F1, AV111F2, AV110F1, AV32CNCMNMID, AV112F3, AV113F4, AV112F3, AV11Estatus, new Long(AV229PMNumDocOc_F), lV159PMFolioFac_F, new Byte(AV270pmpoliz_f), new Long(AV351PMCXPRELID), AV361CGUNNGID, new Long(AV367CATCARID)});
-      while ( (pr_default.getStatus(22) != 101) )
+      /* Using cursor H00DZ26 */
+      pr_default.execute(24, new Object[] {new Long(AV100CNCIASID_F), AV296banload, new Long(AV239PROPAGID_F), AV197PMTipoDoc_F, new Long(AV133Numero), new Long(AV108CNCDIRID_F), AV7PMCTPRID, AV110F1, AV111F2, AV110F1, AV32CNCMNMID, AV112F3, AV113F4, AV112F3, AV11Estatus, new Long(AV229PMNumDocOc_F), lV159PMFolioFac_F, new Byte(AV270pmpoliz_f), new Long(AV351PMCXPRELID), AV361CGUNNGID, new Long(AV367CATCARID)});
+      while ( (pr_default.getStatus(24) != 101) )
       {
-         A17416PMCargo = H00DZ24_A17416PMCargo[0] ;
-         n17416PMCargo = H00DZ24_n17416PMCargo[0] ;
-         A865PMUngId = H00DZ24_A865PMUngId[0] ;
-         n865PMUngId = H00DZ24_n865PMUngId[0] ;
-         A10905PMIDREL = H00DZ24_A10905PMIDREL[0] ;
-         n10905PMIDREL = H00DZ24_n10905PMIDREL[0] ;
-         A905PMPoliz = H00DZ24_A905PMPoliz[0] ;
-         n905PMPoliz = H00DZ24_n905PMPoliz[0] ;
-         A2528PMFolioFac = H00DZ24_A2528PMFolioFac[0] ;
-         n2528PMFolioFac = H00DZ24_n2528PMFolioFac[0] ;
-         A908PMNumDocOC = H00DZ24_A908PMNumDocOC[0] ;
-         n908PMNumDocOC = H00DZ24_n908PMNumDocOC[0] ;
-         A2405PMEstatus = H00DZ24_A2405PMEstatus[0] ;
-         n2405PMEstatus = H00DZ24_n2405PMEstatus[0] ;
-         A867PMFechVen = H00DZ24_A867PMFechVen[0] ;
-         n867PMFechVen = H00DZ24_n867PMFechVen[0] ;
-         A4090PMCXPFHTRN = H00DZ24_A4090PMCXPFHTRN[0] ;
-         n4090PMCXPFHTRN = H00DZ24_n4090PMCXPFHTRN[0] ;
-         A873PMMoneId = H00DZ24_A873PMMoneId[0] ;
-         n873PMMoneId = H00DZ24_n873PMMoneId[0] ;
-         A866PMFechFac = H00DZ24_A866PMFechFac[0] ;
-         n866PMFechFac = H00DZ24_n866PMFechFac[0] ;
-         A864PMProyId = H00DZ24_A864PMProyId[0] ;
-         n864PMProyId = H00DZ24_n864PMProyId[0] ;
-         A863PMProvId = H00DZ24_A863PMProvId[0] ;
-         n863PMProvId = H00DZ24_n863PMProvId[0] ;
-         A862PMNumDoc = H00DZ24_A862PMNumDoc[0] ;
-         A861PMTipoDoc = H00DZ24_A861PMTipoDoc[0] ;
-         A3295PROPAGID = H00DZ24_A3295PROPAGID[0] ;
-         n3295PROPAGID = H00DZ24_n3295PROPAGID[0] ;
-         A860PMEmpresa = H00DZ24_A860PMEmpresa[0] ;
-         A2534PMUsrcap = H00DZ24_A2534PMUsrcap[0] ;
-         n2534PMUsrcap = H00DZ24_n2534PMUsrcap[0] ;
-         A4599PMLayAsoc = H00DZ24_A4599PMLayAsoc[0] ;
-         n4599PMLayAsoc = H00DZ24_n4599PMLayAsoc[0] ;
-         A909PMUuid = H00DZ24_A909PMUuid[0] ;
-         n909PMUuid = H00DZ24_n909PMUuid[0] ;
-         A2871PMPDFDoc = H00DZ24_A2871PMPDFDoc[0] ;
-         n2871PMPDFDoc = H00DZ24_n2871PMPDFDoc[0] ;
-         A2718PMMonTp = H00DZ24_A2718PMMonTp[0] ;
-         n2718PMMonTp = H00DZ24_n2718PMMonTp[0] ;
-         A2862PMMonAmort = H00DZ24_A2862PMMonAmort[0] ;
-         n2862PMMonAmort = H00DZ24_n2862PMMonAmort[0] ;
-         A17105PMCuentaPR02 = H00DZ24_A17105PMCuentaPR02[0] ;
-         n17105PMCuentaPR02 = H00DZ24_n17105PMCuentaPR02[0] ;
-         A869PMMonNa = H00DZ24_A869PMMonNa[0] ;
-         n869PMMonNa = H00DZ24_n869PMMonNa[0] ;
-         A870PMMonNg = H00DZ24_A870PMMonNg[0] ;
-         n870PMMonNg = H00DZ24_n870PMMonNg[0] ;
-         A902PMMonNp = H00DZ24_A902PMMonNp[0] ;
-         n902PMMonNp = H00DZ24_n902PMMonNp[0] ;
-         A2688PMMonPgN = H00DZ24_A2688PMMonPgN[0] ;
-         n2688PMMonPgN = H00DZ24_n2688PMMonPgN[0] ;
-         A2520PMMonIvaN = H00DZ24_A2520PMMonIvaN[0] ;
-         n2520PMMonIvaN = H00DZ24_n2520PMMonIvaN[0] ;
-         A899PMMonEx = H00DZ24_A899PMMonEx[0] ;
-         n899PMMonEx = H00DZ24_n899PMMonEx[0] ;
-         A900PMMonEg = H00DZ24_A900PMMonEg[0] ;
-         n900PMMonEg = H00DZ24_n900PMMonEg[0] ;
-         A2689PMMonPgE = H00DZ24_A2689PMMonPgE[0] ;
-         n2689PMMonPgE = H00DZ24_n2689PMMonPgE[0] ;
-         A903PMMonEp = H00DZ24_A903PMMonEp[0] ;
-         n903PMMonEp = H00DZ24_n903PMMonEp[0] ;
-         A2521PMMonIvaE = H00DZ24_A2521PMMonIvaE[0] ;
-         n2521PMMonIvaE = H00DZ24_n2521PMMonIvaE[0] ;
-         A872PMIva = H00DZ24_A872PMIva[0] ;
-         n872PMIva = H00DZ24_n872PMIva[0] ;
-         A2954PMIVAID = H00DZ24_A2954PMIVAID[0] ;
-         n2954PMIVAID = H00DZ24_n2954PMIVAID[0] ;
-         A898PMFechRev = H00DZ24_A898PMFechRev[0] ;
-         n898PMFechRev = H00DZ24_n898PMFechRev[0] ;
-         A2406PMComentarios = H00DZ24_A2406PMComentarios[0] ;
-         n2406PMComentarios = H00DZ24_n2406PMComentarios[0] ;
-         A904PMReten = H00DZ24_A904PMReten[0] ;
-         n904PMReten = H00DZ24_n904PMReten[0] ;
-         A906PMOrdenD = H00DZ24_A906PMOrdenD[0] ;
-         n906PMOrdenD = H00DZ24_n906PMOrdenD[0] ;
-         A907PMTipoDocOC = H00DZ24_A907PMTipoDocOC[0] ;
-         n907PMTipoDocOC = H00DZ24_n907PMTipoDocOC[0] ;
-         A2923PMCTA1 = H00DZ24_A2923PMCTA1[0] ;
-         n2923PMCTA1 = H00DZ24_n2923PMCTA1[0] ;
-         A2924PMCTA2 = H00DZ24_A2924PMCTA2[0] ;
-         n2924PMCTA2 = H00DZ24_n2924PMCTA2[0] ;
-         A2925PMCTA3 = H00DZ24_A2925PMCTA3[0] ;
-         n2925PMCTA3 = H00DZ24_n2925PMCTA3[0] ;
-         A2542PMCuentadeCargo = H00DZ24_A2542PMCuentadeCargo[0] ;
-         n2542PMCuentadeCargo = H00DZ24_n2542PMCuentadeCargo[0] ;
-         A3917PMObsPoliza = H00DZ24_A3917PMObsPoliza[0] ;
-         n3917PMObsPoliza = H00DZ24_n3917PMObsPoliza[0] ;
-         A4395PMPRANT = H00DZ24_A4395PMPRANT[0] ;
-         n4395PMPRANT = H00DZ24_n4395PMPRANT[0] ;
+         A17416PMCargo = H00DZ26_A17416PMCargo[0] ;
+         n17416PMCargo = H00DZ26_n17416PMCargo[0] ;
+         A865PMUngId = H00DZ26_A865PMUngId[0] ;
+         n865PMUngId = H00DZ26_n865PMUngId[0] ;
+         A10905PMIDREL = H00DZ26_A10905PMIDREL[0] ;
+         n10905PMIDREL = H00DZ26_n10905PMIDREL[0] ;
+         A905PMPoliz = H00DZ26_A905PMPoliz[0] ;
+         n905PMPoliz = H00DZ26_n905PMPoliz[0] ;
+         A2528PMFolioFac = H00DZ26_A2528PMFolioFac[0] ;
+         n2528PMFolioFac = H00DZ26_n2528PMFolioFac[0] ;
+         A908PMNumDocOC = H00DZ26_A908PMNumDocOC[0] ;
+         n908PMNumDocOC = H00DZ26_n908PMNumDocOC[0] ;
+         A2405PMEstatus = H00DZ26_A2405PMEstatus[0] ;
+         n2405PMEstatus = H00DZ26_n2405PMEstatus[0] ;
+         A867PMFechVen = H00DZ26_A867PMFechVen[0] ;
+         n867PMFechVen = H00DZ26_n867PMFechVen[0] ;
+         A4090PMCXPFHTRN = H00DZ26_A4090PMCXPFHTRN[0] ;
+         n4090PMCXPFHTRN = H00DZ26_n4090PMCXPFHTRN[0] ;
+         A873PMMoneId = H00DZ26_A873PMMoneId[0] ;
+         n873PMMoneId = H00DZ26_n873PMMoneId[0] ;
+         A866PMFechFac = H00DZ26_A866PMFechFac[0] ;
+         n866PMFechFac = H00DZ26_n866PMFechFac[0] ;
+         A864PMProyId = H00DZ26_A864PMProyId[0] ;
+         n864PMProyId = H00DZ26_n864PMProyId[0] ;
+         A863PMProvId = H00DZ26_A863PMProvId[0] ;
+         n863PMProvId = H00DZ26_n863PMProvId[0] ;
+         A862PMNumDoc = H00DZ26_A862PMNumDoc[0] ;
+         A861PMTipoDoc = H00DZ26_A861PMTipoDoc[0] ;
+         A3295PROPAGID = H00DZ26_A3295PROPAGID[0] ;
+         n3295PROPAGID = H00DZ26_n3295PROPAGID[0] ;
+         A860PMEmpresa = H00DZ26_A860PMEmpresa[0] ;
+         A2534PMUsrcap = H00DZ26_A2534PMUsrcap[0] ;
+         n2534PMUsrcap = H00DZ26_n2534PMUsrcap[0] ;
+         A4599PMLayAsoc = H00DZ26_A4599PMLayAsoc[0] ;
+         n4599PMLayAsoc = H00DZ26_n4599PMLayAsoc[0] ;
+         A909PMUuid = H00DZ26_A909PMUuid[0] ;
+         n909PMUuid = H00DZ26_n909PMUuid[0] ;
+         A2871PMPDFDoc = H00DZ26_A2871PMPDFDoc[0] ;
+         n2871PMPDFDoc = H00DZ26_n2871PMPDFDoc[0] ;
+         A2718PMMonTp = H00DZ26_A2718PMMonTp[0] ;
+         n2718PMMonTp = H00DZ26_n2718PMMonTp[0] ;
+         A2862PMMonAmort = H00DZ26_A2862PMMonAmort[0] ;
+         n2862PMMonAmort = H00DZ26_n2862PMMonAmort[0] ;
+         A17105PMCuentaPR02 = H00DZ26_A17105PMCuentaPR02[0] ;
+         n17105PMCuentaPR02 = H00DZ26_n17105PMCuentaPR02[0] ;
+         A869PMMonNa = H00DZ26_A869PMMonNa[0] ;
+         n869PMMonNa = H00DZ26_n869PMMonNa[0] ;
+         A870PMMonNg = H00DZ26_A870PMMonNg[0] ;
+         n870PMMonNg = H00DZ26_n870PMMonNg[0] ;
+         A902PMMonNp = H00DZ26_A902PMMonNp[0] ;
+         n902PMMonNp = H00DZ26_n902PMMonNp[0] ;
+         A2688PMMonPgN = H00DZ26_A2688PMMonPgN[0] ;
+         n2688PMMonPgN = H00DZ26_n2688PMMonPgN[0] ;
+         A2520PMMonIvaN = H00DZ26_A2520PMMonIvaN[0] ;
+         n2520PMMonIvaN = H00DZ26_n2520PMMonIvaN[0] ;
+         A899PMMonEx = H00DZ26_A899PMMonEx[0] ;
+         n899PMMonEx = H00DZ26_n899PMMonEx[0] ;
+         A900PMMonEg = H00DZ26_A900PMMonEg[0] ;
+         n900PMMonEg = H00DZ26_n900PMMonEg[0] ;
+         A2689PMMonPgE = H00DZ26_A2689PMMonPgE[0] ;
+         n2689PMMonPgE = H00DZ26_n2689PMMonPgE[0] ;
+         A903PMMonEp = H00DZ26_A903PMMonEp[0] ;
+         n903PMMonEp = H00DZ26_n903PMMonEp[0] ;
+         A2521PMMonIvaE = H00DZ26_A2521PMMonIvaE[0] ;
+         n2521PMMonIvaE = H00DZ26_n2521PMMonIvaE[0] ;
+         A872PMIva = H00DZ26_A872PMIva[0] ;
+         n872PMIva = H00DZ26_n872PMIva[0] ;
+         A2954PMIVAID = H00DZ26_A2954PMIVAID[0] ;
+         n2954PMIVAID = H00DZ26_n2954PMIVAID[0] ;
+         A898PMFechRev = H00DZ26_A898PMFechRev[0] ;
+         n898PMFechRev = H00DZ26_n898PMFechRev[0] ;
+         A2406PMComentarios = H00DZ26_A2406PMComentarios[0] ;
+         n2406PMComentarios = H00DZ26_n2406PMComentarios[0] ;
+         A904PMReten = H00DZ26_A904PMReten[0] ;
+         n904PMReten = H00DZ26_n904PMReten[0] ;
+         A906PMOrdenD = H00DZ26_A906PMOrdenD[0] ;
+         n906PMOrdenD = H00DZ26_n906PMOrdenD[0] ;
+         A907PMTipoDocOC = H00DZ26_A907PMTipoDocOC[0] ;
+         n907PMTipoDocOC = H00DZ26_n907PMTipoDocOC[0] ;
+         A2923PMCTA1 = H00DZ26_A2923PMCTA1[0] ;
+         n2923PMCTA1 = H00DZ26_n2923PMCTA1[0] ;
+         A2924PMCTA2 = H00DZ26_A2924PMCTA2[0] ;
+         n2924PMCTA2 = H00DZ26_n2924PMCTA2[0] ;
+         A2925PMCTA3 = H00DZ26_A2925PMCTA3[0] ;
+         n2925PMCTA3 = H00DZ26_n2925PMCTA3[0] ;
+         A2542PMCuentadeCargo = H00DZ26_A2542PMCuentadeCargo[0] ;
+         n2542PMCuentadeCargo = H00DZ26_n2542PMCuentadeCargo[0] ;
+         A3917PMObsPoliza = H00DZ26_A3917PMObsPoliza[0] ;
+         n3917PMObsPoliza = H00DZ26_n3917PMObsPoliza[0] ;
+         A4395PMPRANT = H00DZ26_A4395PMPRANT[0] ;
+         n4395PMPRANT = H00DZ26_n4395PMPRANT[0] ;
          if ( ! ( !( GXutil.dateCompare(AV326F5, GXutil.nullDate()) ) && !( GXutil.dateCompare(AV327F6, GXutil.nullDate()) ) ) || ( (( GXutil.resetTime( A4090PMCXPFHTRN).after( AV326F5 ) ) || ( GXutil.dateCompare(GXutil.resetTime( A4090PMCXPFHTRN), AV326F5) )) ) )
          {
             if ( ! ( !( GXutil.dateCompare(AV327F6, GXutil.nullDate()) ) && !( GXutil.dateCompare(AV326F5, GXutil.nullDate()) ) ) || ( (( GXutil.resetTime( A4090PMCXPFHTRN).before( AV327F6 ) ) || ( GXutil.dateCompare(GXutil.resetTime( A4090PMCXPFHTRN), AV327F6) )) ) )
@@ -7552,15 +7657,15 @@ public final  class wcomppg_impl extends GXDataArea
                }
             }
          }
-         pr_default.readNext(22);
+         pr_default.readNext(24);
       }
-      pr_default.close(22);
+      pr_default.close(24);
       /* Execute user subroutine: 'TOTALES' */
-      S412 ();
+      S422 ();
       if (returnInSub) return;
    }
 
-   public void S412( )
+   public void S422( )
    {
       /* 'TOTALES' Routine */
       AV310totalIndicador = DecimalUtil.ZERO ;
@@ -7573,10 +7678,10 @@ public final  class wcomppg_impl extends GXDataArea
       httpContext.ajax_rsp_assign_attri("", false, "AV371totalPendienteGrav", GXutil.ltrim( GXutil.str( AV371totalPendienteGrav, 15, 2)));
       AV373GSUBTOTAL = DecimalUtil.ZERO ;
       httpContext.ajax_rsp_assign_attri("", false, "AV373GSUBTOTAL", GXutil.ltrim( GXutil.str( AV373GSUBTOTAL, 15, 2)));
-      AV395GXV4 = 1 ;
-      while ( AV395GXV4 <= AV300sdtPMCuentaXPag.size() )
+      AV402GXV4 = 1 ;
+      while ( AV402GXV4 <= AV300sdtPMCuentaXPag.size() )
       {
-         AV301sdtPMCuentaXPagI = (com.kdsproyectos.SdtsdtPMCuentaXPag_sdtPMCuentaXPagItem)((com.kdsproyectos.SdtsdtPMCuentaXPag_sdtPMCuentaXPagItem)AV300sdtPMCuentaXPag.elementAt(-1+AV395GXV4));
+         AV301sdtPMCuentaXPagI = (com.kdsproyectos.SdtsdtPMCuentaXPag_sdtPMCuentaXPagItem)((com.kdsproyectos.SdtsdtPMCuentaXPag_sdtPMCuentaXPagItem)AV300sdtPMCuentaXPag.elementAt(-1+AV402GXV4));
          if ( GXutil.strcmp(AV301sdtPMCuentaXPagI.getgxTv_SdtsdtPMCuentaXPag_sdtPMCuentaXPagItem_Pmmoneid(), AV203CNCIASMON_F) != 0 )
          {
             AV310totalIndicador = AV310totalIndicador.add((AV301sdtPMCuentaXPagI.getgxTv_SdtsdtPMCuentaXPag_sdtPMCuentaXPagItem_Pmmonex())) ;
@@ -7605,54 +7710,54 @@ public final  class wcomppg_impl extends GXDataArea
             AV373GSUBTOTAL = AV373GSUBTOTAL.add((AV301sdtPMCuentaXPagI.getgxTv_SdtsdtPMCuentaXPag_sdtPMCuentaXPagItem_Pmmonng())) ;
             httpContext.ajax_rsp_assign_attri("", false, "AV373GSUBTOTAL", GXutil.ltrim( GXutil.str( AV373GSUBTOTAL, 15, 2)));
          }
-         AV395GXV4 = (int)(AV395GXV4+1) ;
+         AV402GXV4 = (int)(AV402GXV4+1) ;
       }
    }
 
    public void S202( )
    {
       /* 'CARGA CAMBIO MONEDA USD' Routine */
-      /* Using cursor H00DZ25 */
-      pr_default.execute(23, new Object[] {AV317CNCMNOID});
-      while ( (pr_default.getStatus(23) != 101) )
+      /* Using cursor H00DZ27 */
+      pr_default.execute(25, new Object[] {AV317CNCMNOID});
+      while ( (pr_default.getStatus(25) != 101) )
       {
-         A2055CNCMNDID = H00DZ25_A2055CNCMNDID[0] ;
-         A2054CNCMNOID = H00DZ25_A2054CNCMNOID[0] ;
-         A2076CNPRCMDVAL = H00DZ25_A2076CNPRCMDVAL[0] ;
-         n2076CNPRCMDVAL = H00DZ25_n2076CNPRCMDVAL[0] ;
-         A2059CNPRCMDFT = H00DZ25_A2059CNPRCMDFT[0] ;
+         A2055CNCMNDID = H00DZ27_A2055CNCMNDID[0] ;
+         A2054CNCMNOID = H00DZ27_A2054CNCMNOID[0] ;
+         A2076CNPRCMDVAL = H00DZ27_A2076CNPRCMDVAL[0] ;
+         n2076CNPRCMDVAL = H00DZ27_n2076CNPRCMDVAL[0] ;
+         A2059CNPRCMDFT = H00DZ27_A2059CNPRCMDFT[0] ;
          AV311CNPRCMDVAL = A2076CNPRCMDVAL ;
          httpContext.ajax_rsp_assign_attri("", false, "AV311CNPRCMDVAL", GXutil.ltrim( GXutil.str( AV311CNPRCMDVAL, 14, 7)));
          AV312CNPRCMDFT = A2059CNPRCMDFT ;
          httpContext.ajax_rsp_assign_attri("", false, "AV312CNPRCMDFT", localUtil.format(AV312CNPRCMDFT, "99/99/9999"));
          /* Exit For each command. Update data (if necessary), close cursors & exit. */
          if (true) break;
-         pr_default.readNext(23);
+         pr_default.readNext(25);
       }
-      pr_default.close(23);
+      pr_default.close(25);
    }
 
    public void S192( )
    {
       /* 'CARGA CAMBIO MONEDA EUR' Routine */
-      /* Using cursor H00DZ26 */
-      pr_default.execute(24, new Object[] {AV317CNCMNOID});
-      while ( (pr_default.getStatus(24) != 101) )
+      /* Using cursor H00DZ28 */
+      pr_default.execute(26, new Object[] {AV317CNCMNOID});
+      while ( (pr_default.getStatus(26) != 101) )
       {
-         A2055CNCMNDID = H00DZ26_A2055CNCMNDID[0] ;
-         A2054CNCMNOID = H00DZ26_A2054CNCMNOID[0] ;
-         A2076CNPRCMDVAL = H00DZ26_A2076CNPRCMDVAL[0] ;
-         n2076CNPRCMDVAL = H00DZ26_n2076CNPRCMDVAL[0] ;
-         A2059CNPRCMDFT = H00DZ26_A2059CNPRCMDFT[0] ;
+         A2055CNCMNDID = H00DZ28_A2055CNCMNDID[0] ;
+         A2054CNCMNOID = H00DZ28_A2054CNCMNOID[0] ;
+         A2076CNPRCMDVAL = H00DZ28_A2076CNPRCMDVAL[0] ;
+         n2076CNPRCMDVAL = H00DZ28_n2076CNPRCMDVAL[0] ;
+         A2059CNPRCMDFT = H00DZ28_A2059CNPRCMDFT[0] ;
          AV313CNPRCMDVAL2 = A2076CNPRCMDVAL ;
          httpContext.ajax_rsp_assign_attri("", false, "AV313CNPRCMDVAL2", GXutil.ltrim( GXutil.str( AV313CNPRCMDVAL2, 14, 7)));
          AV314CNPRCMDFT2 = A2059CNPRCMDFT ;
          httpContext.ajax_rsp_assign_attri("", false, "AV314CNPRCMDFT2", localUtil.format(AV314CNPRCMDFT2, "99/99/9999"));
          /* Exit For each command. Update data (if necessary), close cursors & exit. */
          if (true) break;
-         pr_default.readNext(24);
+         pr_default.readNext(26);
       }
-      pr_default.close(24);
+      pr_default.close(26);
    }
 
    public void e23DZ2( )
@@ -7694,7 +7799,7 @@ public final  class wcomppg_impl extends GXDataArea
       S152 ();
       if (returnInSub) return;
       /* Execute user subroutine: 'CONSULTA PROVEEDOR' */
-      S232 ();
+      S242 ();
       if (returnInSub) return;
       /*  Sending Event outputs  */
    }
@@ -7702,44 +7807,44 @@ public final  class wcomppg_impl extends GXDataArea
    public void S152( )
    {
       /* 'FILTROCNCD01ID' Routine */
-      /* Using cursor H00DZ27 */
-      pr_default.execute(25, new Object[] {AV335fCNCD01ID});
-      while ( (pr_default.getStatus(25) != 101) )
+      /* Using cursor H00DZ29 */
+      pr_default.execute(27, new Object[] {AV335fCNCD01ID});
+      while ( (pr_default.getStatus(27) != 101) )
       {
-         A456CNCD01ID = H00DZ27_A456CNCD01ID[0] ;
-         n456CNCD01ID = H00DZ27_n456CNCD01ID[0] ;
-         A2977CNCD01DSC = H00DZ27_A2977CNCD01DSC[0] ;
-         n2977CNCD01DSC = H00DZ27_n2977CNCD01DSC[0] ;
+         A456CNCD01ID = H00DZ29_A456CNCD01ID[0] ;
+         n456CNCD01ID = H00DZ29_n456CNCD01ID[0] ;
+         A2977CNCD01DSC = H00DZ29_A2977CNCD01DSC[0] ;
+         n2977CNCD01DSC = H00DZ29_n2977CNCD01DSC[0] ;
          lblTextcncd01id_Caption = A2977CNCD01DSC ;
          httpContext.ajax_rsp_assign_prop("", false, lblTextcncd01id_Internalname, "Caption", lblTextcncd01id_Caption, true);
          /* Exiting from a For First loop. */
          if (true) break;
       }
-      pr_default.close(25);
+      pr_default.close(27);
    }
 
    public void S142( )
    {
       /* 'COMBOCNCD01ID' Routine */
-      pr_default.dynParam(26, new Object[]{ new Object[]{
+      pr_default.dynParam(28, new Object[]{ new Object[]{
                                            AV280CNCD01ID_F ,
                                            A456CNCD01ID } ,
                                            new int[]{
                                            TypeConstants.STRING, TypeConstants.STRING, TypeConstants.BOOLEAN
                                            }
       } ) ;
-      /* Using cursor H00DZ28 */
-      pr_default.execute(26, new Object[] {AV280CNCD01ID_F});
-      while ( (pr_default.getStatus(26) != 101) )
+      /* Using cursor H00DZ30 */
+      pr_default.execute(28, new Object[] {AV280CNCD01ID_F});
+      while ( (pr_default.getStatus(28) != 101) )
       {
-         A456CNCD01ID = H00DZ28_A456CNCD01ID[0] ;
-         n456CNCD01ID = H00DZ28_n456CNCD01ID[0] ;
-         A2977CNCD01DSC = H00DZ28_A2977CNCD01DSC[0] ;
-         n2977CNCD01DSC = H00DZ28_n2977CNCD01DSC[0] ;
+         A456CNCD01ID = H00DZ30_A456CNCD01ID[0] ;
+         n456CNCD01ID = H00DZ30_n456CNCD01ID[0] ;
+         A2977CNCD01DSC = H00DZ30_A2977CNCD01DSC[0] ;
+         n2977CNCD01DSC = H00DZ30_n2977CNCD01DSC[0] ;
          cmbavFcncd01id.addItem(A456CNCD01ID, A2977CNCD01DSC, (short)(0));
-         pr_default.readNext(26);
+         pr_default.readNext(28);
       }
-      pr_default.close(26);
+      pr_default.close(28);
    }
 
    public void S122( )
@@ -7748,20 +7853,20 @@ public final  class wcomppg_impl extends GXDataArea
       AV350CNUSERMCXP = "N" ;
       httpContext.ajax_rsp_assign_attri("", false, "AV350CNUSERMCXP", AV350CNUSERMCXP);
       httpContext.ajax_rsp_assign_attri("", false, "gxhash_vCNUSERMCXP", getSecureSignedToken( "", GXutil.rtrim( localUtil.format( AV350CNUSERMCXP, ""))));
-      /* Using cursor H00DZ29 */
-      pr_default.execute(27, new Object[] {AV116CNUSERID});
-      while ( (pr_default.getStatus(27) != 101) )
+      /* Using cursor H00DZ31 */
+      pr_default.execute(29, new Object[] {AV116CNUSERID});
+      while ( (pr_default.getStatus(29) != 101) )
       {
-         A5940CNUSERID = H00DZ29_A5940CNUSERID[0] ;
-         A10187CNUSERMCXP = H00DZ29_A10187CNUSERMCXP[0] ;
-         n10187CNUSERMCXP = H00DZ29_n10187CNUSERMCXP[0] ;
+         A5940CNUSERID = H00DZ31_A5940CNUSERID[0] ;
+         A10187CNUSERMCXP = H00DZ31_A10187CNUSERMCXP[0] ;
+         n10187CNUSERMCXP = H00DZ31_n10187CNUSERMCXP[0] ;
          AV350CNUSERMCXP = A10187CNUSERMCXP ;
          httpContext.ajax_rsp_assign_attri("", false, "AV350CNUSERMCXP", AV350CNUSERMCXP);
          httpContext.ajax_rsp_assign_attri("", false, "gxhash_vCNUSERMCXP", getSecureSignedToken( "", GXutil.rtrim( localUtil.format( AV350CNUSERMCXP, ""))));
          /* Exiting from a For First loop. */
          if (true) break;
       }
-      pr_default.close(27);
+      pr_default.close(29);
    }
 
    public void e42DZ2( )
@@ -7805,17 +7910,17 @@ public final  class wcomppg_impl extends GXDataArea
          edtavPmctprid_Enabled = 0 ;
          httpContext.ajax_rsp_assign_prop("", false, edtavPmctprid_Internalname, "Enabled", GXutil.ltrim( GXutil.str( edtavPmctprid_Enabled, 5, 0)), true);
          AV353arrPMCTPRID.clear();
-         /* Using cursor H00DZ30 */
-         pr_default.execute(28, new Object[] {new Long(AV352CLAGPID)});
-         while ( (pr_default.getStatus(28) != 101) )
+         /* Using cursor H00DZ32 */
+         pr_default.execute(30, new Object[] {new Long(AV352CLAGPID)});
+         while ( (pr_default.getStatus(30) != 101) )
          {
-            A10868PMCTPRCLAGP = H00DZ30_A10868PMCTPRCLAGP[0] ;
-            n10868PMCTPRCLAGP = H00DZ30_n10868PMCTPRCLAGP[0] ;
-            A171PMCTPRID = H00DZ30_A171PMCTPRID[0] ;
+            A10868PMCTPRCLAGP = H00DZ32_A10868PMCTPRCLAGP[0] ;
+            n10868PMCTPRCLAGP = H00DZ32_n10868PMCTPRCLAGP[0] ;
+            A171PMCTPRID = H00DZ32_A171PMCTPRID[0] ;
             AV353arrPMCTPRID.add(A171PMCTPRID, 0);
-            pr_default.readNext(28);
+            pr_default.readNext(30);
          }
-         pr_default.close(28);
+         pr_default.close(30);
       }
       else
       {
@@ -7830,7 +7935,7 @@ public final  class wcomppg_impl extends GXDataArea
       if ( GXutil.strcmp(AV358fPMCTPRDSC, "") != 0 )
       {
          /* Execute user subroutine: 'VALIDANUMPROY' */
-         S262 ();
+         S272 ();
          if (returnInSub) return;
          if ( AV360contProy > 1 )
          {
@@ -7845,27 +7950,27 @@ public final  class wcomppg_impl extends GXDataArea
          else
          {
             lV358fPMCTPRDSC = GXutil.padr( GXutil.rtrim( AV358fPMCTPRDSC), 200, "%") ;
-            /* Using cursor H00DZ31 */
-            pr_default.execute(29, new Object[] {AV116CNUSERID, lV358fPMCTPRDSC});
-            while ( (pr_default.getStatus(29) != 101) )
+            /* Using cursor H00DZ33 */
+            pr_default.execute(31, new Object[] {AV116CNUSERID, lV358fPMCTPRDSC});
+            while ( (pr_default.getStatus(31) != 101) )
             {
-               A177SSUSPREST = H00DZ31_A177SSUSPREST[0] ;
-               A5940CNUSERID = H00DZ31_A5940CNUSERID[0] ;
-               A172PMCTPRDSC = H00DZ31_A172PMCTPRDSC[0] ;
-               n172PMCTPRDSC = H00DZ31_n172PMCTPRDSC[0] ;
-               A171PMCTPRID = H00DZ31_A171PMCTPRID[0] ;
-               A177SSUSPREST = H00DZ31_A177SSUSPREST[0] ;
-               A172PMCTPRDSC = H00DZ31_A172PMCTPRDSC[0] ;
-               n172PMCTPRDSC = H00DZ31_n172PMCTPRDSC[0] ;
+               A177SSUSPREST = H00DZ33_A177SSUSPREST[0] ;
+               A5940CNUSERID = H00DZ33_A5940CNUSERID[0] ;
+               A172PMCTPRDSC = H00DZ33_A172PMCTPRDSC[0] ;
+               n172PMCTPRDSC = H00DZ33_n172PMCTPRDSC[0] ;
+               A171PMCTPRID = H00DZ33_A171PMCTPRID[0] ;
+               A177SSUSPREST = H00DZ33_A177SSUSPREST[0] ;
+               A172PMCTPRDSC = H00DZ33_A172PMCTPRDSC[0] ;
+               n172PMCTPRDSC = H00DZ33_n172PMCTPRDSC[0] ;
                AV7PMCTPRID = A171PMCTPRID ;
                httpContext.ajax_rsp_assign_attri("", false, "AV7PMCTPRID", AV7PMCTPRID);
                AV358fPMCTPRDSC = A172PMCTPRDSC ;
                httpContext.ajax_rsp_assign_attri("", false, "AV358fPMCTPRDSC", AV358fPMCTPRDSC);
-               pr_default.readNext(29);
+               pr_default.readNext(31);
             }
-            pr_default.close(29);
+            pr_default.close(31);
             /* Execute user subroutine: 'COMBOUNG' */
-            S272 ();
+            S282 ();
             if (returnInSub) return;
          }
       }
@@ -7881,33 +7986,33 @@ public final  class wcomppg_impl extends GXDataArea
       httpContext.ajax_rsp_assign_prop("", false, cmbavCgunngid.getInternalname(), "Values", cmbavCgunngid.ToJavascriptSource(), true);
    }
 
-   public void S272( )
+   public void S282( )
    {
       /* 'COMBOUNG' Routine */
       /* Execute user subroutine: 'COMBOBOXUNG' */
-      S422 ();
+      S432 ();
       if (returnInSub) return;
    }
 
-   public void S422( )
+   public void S432( )
    {
       /* 'COMBOBOXUNG' Routine */
       cmbavCgunngid.removeAllItems();
       cmbavCgunngid.addItem("", "Seleccione", (short)(0));
-      /* Using cursor H00DZ32 */
-      pr_default.execute(30);
-      while ( (pr_default.getStatus(30) != 101) )
+      /* Using cursor H00DZ34 */
+      pr_default.execute(32);
+      while ( (pr_default.getStatus(32) != 101) )
       {
-         A336CGUNNGDSC = H00DZ32_A336CGUNNGDSC[0] ;
-         n336CGUNNGDSC = H00DZ32_n336CGUNNGDSC[0] ;
-         A93CGUNNGID = H00DZ32_A93CGUNNGID[0] ;
+         A336CGUNNGDSC = H00DZ34_A336CGUNNGDSC[0] ;
+         n336CGUNNGDSC = H00DZ34_n336CGUNNGDSC[0] ;
+         A93CGUNNGID = H00DZ34_A93CGUNNGID[0] ;
          cmbavCgunngid.addItem(A93CGUNNGID, A336CGUNNGDSC, (short)(0));
-         pr_default.readNext(30);
+         pr_default.readNext(32);
       }
-      pr_default.close(30);
+      pr_default.close(32);
    }
 
-   public void S262( )
+   public void S272( )
    {
       /* 'VALIDANUMPROY' Routine */
       AV360contProy = (short)(0) ;
@@ -7916,10 +8021,10 @@ public final  class wcomppg_impl extends GXDataArea
       httpContext.ajax_rsp_assign_attri("", false, "AV358fPMCTPRDSC", AV358fPMCTPRDSC);
       /* Optimized group. */
       lV358fPMCTPRDSC = GXutil.padr( GXutil.rtrim( AV358fPMCTPRDSC), 200, "%") ;
-      /* Using cursor H00DZ33 */
-      pr_default.execute(31, new Object[] {AV116CNUSERID, lV358fPMCTPRDSC});
-      cV360contProy = H00DZ33_AV360contProy[0] ;
-      pr_default.close(31);
+      /* Using cursor H00DZ35 */
+      pr_default.execute(33, new Object[] {AV116CNUSERID, lV358fPMCTPRDSC});
+      cV360contProy = H00DZ35_AV360contProy[0] ;
+      pr_default.close(33);
       AV360contProy = (short)(AV360contProy+cV360contProy*1) ;
       httpContext.ajax_rsp_assign_attri("", false, "AV360contProy", GXutil.ltrim( GXutil.str( AV360contProy, 4, 0)));
       /* End optimized group. */
@@ -7928,26 +8033,26 @@ public final  class wcomppg_impl extends GXDataArea
    public void e27DZ2( )
    {
       /* GlobalEvents_Continuaproy Routine */
-      /* Using cursor H00DZ34 */
-      pr_default.execute(32, new Object[] {AV116CNUSERID, AV7PMCTPRID});
-      while ( (pr_default.getStatus(32) != 101) )
+      /* Using cursor H00DZ36 */
+      pr_default.execute(34, new Object[] {AV116CNUSERID, AV7PMCTPRID});
+      while ( (pr_default.getStatus(34) != 101) )
       {
-         A177SSUSPREST = H00DZ34_A177SSUSPREST[0] ;
-         A5940CNUSERID = H00DZ34_A5940CNUSERID[0] ;
-         A171PMCTPRID = H00DZ34_A171PMCTPRID[0] ;
-         A172PMCTPRDSC = H00DZ34_A172PMCTPRDSC[0] ;
-         n172PMCTPRDSC = H00DZ34_n172PMCTPRDSC[0] ;
-         A177SSUSPREST = H00DZ34_A177SSUSPREST[0] ;
-         A172PMCTPRDSC = H00DZ34_A172PMCTPRDSC[0] ;
-         n172PMCTPRDSC = H00DZ34_n172PMCTPRDSC[0] ;
+         A177SSUSPREST = H00DZ36_A177SSUSPREST[0] ;
+         A5940CNUSERID = H00DZ36_A5940CNUSERID[0] ;
+         A171PMCTPRID = H00DZ36_A171PMCTPRID[0] ;
+         A172PMCTPRDSC = H00DZ36_A172PMCTPRDSC[0] ;
+         n172PMCTPRDSC = H00DZ36_n172PMCTPRDSC[0] ;
+         A177SSUSPREST = H00DZ36_A177SSUSPREST[0] ;
+         A172PMCTPRDSC = H00DZ36_A172PMCTPRDSC[0] ;
+         n172PMCTPRDSC = H00DZ36_n172PMCTPRDSC[0] ;
          AV358fPMCTPRDSC = A172PMCTPRDSC ;
          httpContext.ajax_rsp_assign_attri("", false, "AV358fPMCTPRDSC", AV358fPMCTPRDSC);
          /* Execute user subroutine: 'COMBOUNG' */
-         S272 ();
+         S282 ();
          if ( returnInSub )
          {
-            pr_default.close(32);
-            pr_default.close(32);
+            pr_default.close(34);
+            pr_default.close(34);
             returnInSub = true;
             if (true) return;
          }
@@ -7956,7 +8061,7 @@ public final  class wcomppg_impl extends GXDataArea
          /* Exiting from a For First loop. */
          if (true) break;
       }
-      pr_default.close(32);
+      pr_default.close(34);
       /*  Sending Event outputs  */
       cmbavCgunngid.setValue( GXutil.rtrim( AV361CGUNNGID) );
       httpContext.ajax_rsp_assign_prop("", false, cmbavCgunngid.getInternalname(), "Values", cmbavCgunngid.ToJavascriptSource(), true);
@@ -9695,7 +9800,7 @@ public final  class wcomppg_impl extends GXDataArea
       idxLst = 1 ;
       while ( idxLst <= Form.getJscriptsrc().getCount() )
       {
-         httpContext.AddJavascriptSource(GXutil.rtrim( Form.getJscriptsrc().item(idxLst)), "?20254142221393", true, true);
+         httpContext.AddJavascriptSource(GXutil.rtrim( Form.getJscriptsrc().item(idxLst)), "?202541519423611", true, true);
          idxLst = (int)(idxLst+1) ;
       }
       if ( ! outputEnabled )
@@ -9712,7 +9817,7 @@ public final  class wcomppg_impl extends GXDataArea
    {
       httpContext.AddJavascriptSource("messages.eng.js", "?"+httpContext.getCacheInvalidationToken( ), false, true);
       httpContext.AddJavascriptSource("gxdec.js", "?"+httpContext.getBuildNumber( 129648), false, true);
-      httpContext.AddJavascriptSource("wcomppg.js", "?20254142221394", false, true);
+      httpContext.AddJavascriptSource("wcomppg.js", "?202541519423611", false, true);
       httpContext.AddJavascriptSource("Shared/ext/ext-all.js", "", false, true);
       httpContext.AddJavascriptSource("KDSControls/KDSStylesDatatables/KDSStylesDatatablesRender.js", "", false, true);
       httpContext.AddJavascriptSource("Window/InNewWindowRender.js", "", false, true);
@@ -10242,8 +10347,8 @@ public final  class wcomppg_impl extends GXDataArea
          /* Static Bitmap Variable */
          ClassString = "Image" ;
          StyleString = "font-family:'Arial'; font-size:8.0pt; font-weight:normal; font-style:normal;" ;
-         AV265GeneroPoliza_IsBlob = (boolean)(((GXutil.strcmp("", AV265GeneroPoliza)==0)&&(GXutil.strcmp("", AV406Generopoliza_GXI)==0))||!(GXutil.strcmp("", AV265GeneroPoliza)==0)) ;
-         sImgUrl = ((GXutil.strcmp("", AV265GeneroPoliza)==0) ? AV406Generopoliza_GXI : httpContext.getResourceRelative(AV265GeneroPoliza)) ;
+         AV265GeneroPoliza_IsBlob = (boolean)(((GXutil.strcmp("", AV265GeneroPoliza)==0)&&(GXutil.strcmp("", AV413Generopoliza_GXI)==0))||!(GXutil.strcmp("", AV265GeneroPoliza)==0)) ;
+         sImgUrl = ((GXutil.strcmp("", AV265GeneroPoliza)==0) ? AV413Generopoliza_GXI : httpContext.getResourceRelative(AV265GeneroPoliza)) ;
          Grid1Row.AddColumnProperties("bitmap", 1, isAjaxCallMode( ), new Object[] {edtavGeneropoliza_Internalname,sImgUrl,"","","",context.getHttpContext().getTheme( ),new Integer(-1),new Integer(0),"","",new Integer(0),new Integer(-1),new Integer(0),"px",new Integer(0),"px",new Integer(0),new Integer(0),new Integer(0),"","",StyleString,ClassString,"","","","","","","",new Integer(1),new Boolean(AV265GeneroPoliza_IsBlob),new Boolean(false),context.getHttpContext().getImageSrcSet( sImgUrl)});
          /* Subfile cell */
          if ( Grid1Container.GetWrapped() == 1 )
@@ -11119,14 +11224,14 @@ public final  class wcomppg_impl extends GXDataArea
       dynavCncmnmid.setName( "vCNCMNMID" );
       dynavCncmnmid.setWebtags( "" );
       dynavCncmnmid.removeAllItems();
-      /* Using cursor H00DZ35 */
-      pr_default.execute(33);
-      while ( (pr_default.getStatus(33) != 101) )
+      /* Using cursor H00DZ37 */
+      pr_default.execute(35);
+      while ( (pr_default.getStatus(35) != 101) )
       {
-         dynavCncmnmid.addItem(H00DZ35_A50CNCMNMID[0], H00DZ35_A50CNCMNMID[0], (short)(0));
-         pr_default.readNext(33);
+         dynavCncmnmid.addItem(H00DZ37_A50CNCMNMID[0], H00DZ37_A50CNCMNMID[0], (short)(0));
+         pr_default.readNext(35);
       }
-      pr_default.close(33);
+      pr_default.close(35);
       if ( dynavCncmnmid.getItemCount() > 0 )
       {
          AV32CNCMNMID = dynavCncmnmid.getValidValue(AV32CNCMNMID) ;
@@ -11191,11 +11296,11 @@ public final  class wcomppg_impl extends GXDataArea
 
    public void initializeDynEvents( )
    {
-      setEventMetadata("REFRESH","{handler:'refresh',iparms:[{av:'GRID1_nFirstRecordOnPage'},{av:'GRID1_nEOF'},{av:'subGrid1_Rows',ctrl:'GRID1',prop:'Rows'},{av:'AV240AbrirBitacora',fld:'vABRIRBITACORA',pic:''},{av:'edtavPmctprdsc_Title',ctrl:'vPMCTPRDSC',prop:'Title'},{av:'edtavPmungid_g_Title',ctrl:'vPMUNGID_G',prop:'Title'},{av:'AV318renglones',fld:'vRENGLONES',pic:'ZZZ9'},{av:'A860PMEmpresa',fld:'PMEMPRESA',pic:'ZZZZZZZZZ9'},{av:'dynavCnciasid_f'},{av:'AV100CNCIASID_F',fld:'vCNCIASID_F',pic:'ZZZZZZZZZ9'},{av:'A3295PROPAGID',fld:'PROPAGID',pic:'ZZZZZZZZZ9'},{av:'AV239PROPAGID_F',fld:'vPROPAGID_F',pic:'ZZZZZZZZZ9'},{av:'A861PMTipoDoc',fld:'PMTIPODOC',pic:''},{av:'cmbavPmtipodoc_f'},{av:'AV197PMTipoDoc_F',fld:'vPMTIPODOC_F',pic:''},{av:'A862PMNumDoc',fld:'PMNUMDOC',pic:'ZZZZZZZZZ9'},{av:'AV133Numero',fld:'vNUMERO',pic:'ZZZZZZZZZ9'},{av:'A863PMProvId',fld:'PMPROVID',pic:'ZZZZZZZZZ9'},{av:'AV108CNCDIRID_F',fld:'vCNCDIRID_F',pic:'ZZZZZZZZZ9'},{av:'A864PMProyId',fld:'PMPROYID',pic:''},{av:'AV7PMCTPRID',fld:'vPMCTPRID',pic:''},{av:'AV111F2',fld:'vF2',pic:''},{av:'A866PMFechFac',fld:'PMFECHFAC',pic:''},{av:'AV110F1',fld:'vF1',pic:''},{av:'A873PMMoneId',fld:'PMMONEID',pic:''},{av:'AV327F6',fld:'vF6',pic:''},{av:'A4090PMCXPFHTRN',fld:'PMCXPFHTRN',pic:'99/99/99 99:99'},{av:'AV326F5',fld:'vF5',pic:''},{av:'AV113F4',fld:'vF4',pic:''},{av:'A867PMFechVen',fld:'PMFECHVEN',pic:''},{av:'AV112F3',fld:'vF3',pic:''},{av:'A2405PMEstatus',fld:'PMESTATUS',pic:''},{av:'cmbavEstatus'},{av:'AV11Estatus',fld:'vESTATUS',pic:''},{av:'AV230Checkoc',fld:'vCHECKOC',pic:'9'},{av:'A908PMNumDocOC',fld:'PMNUMDOCOC',pic:'ZZZZZZZZZ9'},{av:'AV229PMNumDocOc_F',fld:'vPMNUMDOCOC_F',pic:'ZZZZZZZZZ9'},{av:'A2528PMFolioFac',fld:'PMFOLIOFAC',pic:''},{av:'AV159PMFolioFac_F',fld:'vPMFOLIOFAC_F',pic:''},{av:'A905PMPoliz',fld:'PMPOLIZ',pic:'9'},{av:'cmbavPmpoliz_f'},{av:'AV270pmpoliz_f',fld:'vPMPOLIZ_F',pic:'9'},{av:'A10905PMIDREL',fld:'PMIDREL',pic:'ZZZZZZZZZ9'},{av:'AV353arrPMCTPRID',fld:'vARRPMCTPRID',pic:''},{av:'A865PMUngId',fld:'PMUNGID',pic:''},{av:'cmbavCgunngid'},{av:'AV361CGUNNGID',fld:'vCGUNNGID',pic:''},{av:'A17416PMCargo',fld:'PMCARGO',pic:'ZZZZZZZZZ9'},{av:'AV296banload',fld:'vBANLOAD',pic:''},{av:'A2534PMUsrcap',fld:'PMUSRCAP',pic:'ZZZZZZZZZ9'},{av:'A4599PMLayAsoc',fld:'PMLAYASOC',pic:'9'},{av:'A909PMUuid',fld:'PMUUID',pic:''},{av:'A2871PMPDFDoc',fld:'PMPDFDOC',pic:'ZZZZZZZZZ9'},{av:'A2718PMMonTp',fld:'PMMONTP',pic:'ZZZZZZZZZ9.999999'},{av:'A2862PMMonAmort',fld:'PMMONAMORT',pic:'ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A898PMFechRev',fld:'PMFECHREV',pic:''},{av:'AV203CNCIASMON_F',fld:'vCNCIASMON_F',pic:''},{av:'A899PMMonEx',fld:'PMMONEX',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'AV316tipoCambio',fld:'vTIPOCAMBIO',pic:'ZZZZZZZZZ9.999999'},{av:'A903PMMonEp',fld:'PMMONEP',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A2689PMMonPgE',fld:'PMMONPGE',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A900PMMonEg',fld:'PMMONEG',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A870PMMonNg',fld:'PMMONNG',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A869PMMonNa',fld:'PMMONNA',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A902PMMonNp',fld:'PMMONNP',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A2688PMMonPgN',fld:'PMMONPGN',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A872PMIva',fld:'PMIVA',pic:'ZZZZZZZZZZZZZ9.99'},{av:'A2520PMMonIvaN',fld:'PMMONIVAN',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A2954PMIVAID',fld:'PMIVAID',pic:''},{av:'A2406PMComentarios',fld:'PMCOMENTARIOS',pic:''},{av:'A2521PMMonIvaE',fld:'PMMONIVAE',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A904PMReten',fld:'PMRETEN',pic:'ZZZZZZZZZZZZZ9.99'},{av:'A906PMOrdenD',fld:'PMORDEND',pic:'9'},{av:'A907PMTipoDocOC',fld:'PMTIPODOCOC',pic:''},{av:'A2923PMCTA1',fld:'PMCTA1',pic:''},{av:'A2924PMCTA2',fld:'PMCTA2',pic:''},{av:'A2925PMCTA3',fld:'PMCTA3',pic:''},{av:'A2542PMCuentadeCargo',fld:'PMCUENTADECARGO',pic:''},{av:'A3917PMObsPoliza',fld:'PMOBSPOLIZA',pic:''},{av:'A4395PMPRANT',fld:'PMPRANT',pic:'ZZZZZZ9.99'},{av:'A7899PMTipoAv',fld:'PMTIPOAV',pic:''},{av:'A7900PMNumAv',fld:'PMNUMAV',pic:'ZZZZZZZZZ9'},{av:'A17105PMCuentaPR02',fld:'PMCUENTAPR02',pic:''},{av:'A2059CNPRCMDFT',fld:'CNPRCMDFT',pic:''},{av:'A2054CNCMNOID',fld:'CNCMNOID',pic:''},{av:'AV317CNCMNOID',fld:'vCNCMNOID',pic:''},{av:'A2055CNCMNDID',fld:'CNCMNDID',pic:''},{av:'A2076CNPRCMDVAL',fld:'CNPRCMDVAL',pic:'ZZZ,ZZ9.9999999'},{av:'A2610ESTPAGID',fld:'ESTPAGID',pic:''},{av:'AV123PMEstatus',fld:'vPMESTATUS',pic:'',hsh:true},{av:'A2611ESTPAGDSC',fld:'ESTPAGDSC',pic:''},{av:'AV350CNUSERMCXP',fld:'vCNUSERMCXP',pic:'',hsh:true},{av:'AV319numRenglons',fld:'vNUMRENGLONS',pic:'ZZZ9',hsh:true},{av:'AV116CNUSERID',fld:'vCNUSERID',pic:'',hsh:true},{av:'dynavCatcarid'},{av:'AV367CATCARID',fld:'vCATCARID',pic:'ZZZZZZZZZ9'},{av:'dynavPmcxprelid'},{av:'AV351PMCXPRELID',fld:'vPMCXPRELID',pic:'ZZZZZZZZZ9'},{av:'dynavUnifcncmnmid'},{av:'AV315unifCNCMNMID',fld:'vUNIFCNCMNMID',pic:''},{av:'dynavCncmnmid'},{av:'AV32CNCMNMID',fld:'vCNCMNMID',pic:''}]");
+      setEventMetadata("REFRESH","{handler:'refresh',iparms:[{av:'GRID1_nFirstRecordOnPage'},{av:'GRID1_nEOF'},{av:'subGrid1_Rows',ctrl:'GRID1',prop:'Rows'},{av:'AV240AbrirBitacora',fld:'vABRIRBITACORA',pic:''},{av:'edtavPmctprdsc_Title',ctrl:'vPMCTPRDSC',prop:'Title'},{av:'edtavPmungid_g_Title',ctrl:'vPMUNGID_G',prop:'Title'},{av:'AV318renglones',fld:'vRENGLONES',pic:'ZZZ9'},{av:'A860PMEmpresa',fld:'PMEMPRESA',pic:'ZZZZZZZZZ9'},{av:'dynavCnciasid_f'},{av:'AV100CNCIASID_F',fld:'vCNCIASID_F',pic:'ZZZZZZZZZ9'},{av:'A3295PROPAGID',fld:'PROPAGID',pic:'ZZZZZZZZZ9'},{av:'AV239PROPAGID_F',fld:'vPROPAGID_F',pic:'ZZZZZZZZZ9'},{av:'A861PMTipoDoc',fld:'PMTIPODOC',pic:''},{av:'cmbavPmtipodoc_f'},{av:'AV197PMTipoDoc_F',fld:'vPMTIPODOC_F',pic:''},{av:'A862PMNumDoc',fld:'PMNUMDOC',pic:'ZZZZZZZZZ9'},{av:'AV133Numero',fld:'vNUMERO',pic:'ZZZZZZZZZ9'},{av:'A863PMProvId',fld:'PMPROVID',pic:'ZZZZZZZZZ9'},{av:'AV108CNCDIRID_F',fld:'vCNCDIRID_F',pic:'ZZZZZZZZZ9'},{av:'A864PMProyId',fld:'PMPROYID',pic:''},{av:'AV7PMCTPRID',fld:'vPMCTPRID',pic:''},{av:'AV111F2',fld:'vF2',pic:''},{av:'A866PMFechFac',fld:'PMFECHFAC',pic:''},{av:'AV110F1',fld:'vF1',pic:''},{av:'A873PMMoneId',fld:'PMMONEID',pic:''},{av:'AV327F6',fld:'vF6',pic:''},{av:'A4090PMCXPFHTRN',fld:'PMCXPFHTRN',pic:'99/99/99 99:99'},{av:'AV326F5',fld:'vF5',pic:''},{av:'AV113F4',fld:'vF4',pic:''},{av:'A867PMFechVen',fld:'PMFECHVEN',pic:''},{av:'AV112F3',fld:'vF3',pic:''},{av:'A2405PMEstatus',fld:'PMESTATUS',pic:''},{av:'cmbavEstatus'},{av:'AV11Estatus',fld:'vESTATUS',pic:''},{av:'AV230Checkoc',fld:'vCHECKOC',pic:'9'},{av:'A908PMNumDocOC',fld:'PMNUMDOCOC',pic:'ZZZZZZZZZ9'},{av:'AV229PMNumDocOc_F',fld:'vPMNUMDOCOC_F',pic:'ZZZZZZZZZ9'},{av:'A2528PMFolioFac',fld:'PMFOLIOFAC',pic:''},{av:'AV159PMFolioFac_F',fld:'vPMFOLIOFAC_F',pic:''},{av:'A905PMPoliz',fld:'PMPOLIZ',pic:'9'},{av:'cmbavPmpoliz_f'},{av:'AV270pmpoliz_f',fld:'vPMPOLIZ_F',pic:'9'},{av:'A10905PMIDREL',fld:'PMIDREL',pic:'ZZZZZZZZZ9'},{av:'AV353arrPMCTPRID',fld:'vARRPMCTPRID',pic:''},{av:'A865PMUngId',fld:'PMUNGID',pic:''},{av:'cmbavCgunngid'},{av:'AV361CGUNNGID',fld:'vCGUNNGID',pic:''},{av:'A17416PMCargo',fld:'PMCARGO',pic:'ZZZZZZZZZ9'},{av:'AV296banload',fld:'vBANLOAD',pic:''},{av:'A2534PMUsrcap',fld:'PMUSRCAP',pic:'ZZZZZZZZZ9'},{av:'A4599PMLayAsoc',fld:'PMLAYASOC',pic:'9'},{av:'A909PMUuid',fld:'PMUUID',pic:''},{av:'A2871PMPDFDoc',fld:'PMPDFDOC',pic:'ZZZZZZZZZ9'},{av:'A2718PMMonTp',fld:'PMMONTP',pic:'ZZZZZZZZZ9.999999'},{av:'A2862PMMonAmort',fld:'PMMONAMORT',pic:'ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A898PMFechRev',fld:'PMFECHREV',pic:''},{av:'AV203CNCIASMON_F',fld:'vCNCIASMON_F',pic:''},{av:'A899PMMonEx',fld:'PMMONEX',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'AV316tipoCambio',fld:'vTIPOCAMBIO',pic:'ZZZZZZZZZ9.999999'},{av:'A903PMMonEp',fld:'PMMONEP',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A2689PMMonPgE',fld:'PMMONPGE',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A900PMMonEg',fld:'PMMONEG',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A870PMMonNg',fld:'PMMONNG',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A869PMMonNa',fld:'PMMONNA',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A902PMMonNp',fld:'PMMONNP',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A2688PMMonPgN',fld:'PMMONPGN',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A872PMIva',fld:'PMIVA',pic:'ZZZZZZZZZZZZZ9.99'},{av:'A2520PMMonIvaN',fld:'PMMONIVAN',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A2954PMIVAID',fld:'PMIVAID',pic:''},{av:'A2406PMComentarios',fld:'PMCOMENTARIOS',pic:''},{av:'A2521PMMonIvaE',fld:'PMMONIVAE',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A904PMReten',fld:'PMRETEN',pic:'ZZZZZZZZZZZZZ9.99'},{av:'A906PMOrdenD',fld:'PMORDEND',pic:'9'},{av:'A907PMTipoDocOC',fld:'PMTIPODOCOC',pic:''},{av:'A2923PMCTA1',fld:'PMCTA1',pic:''},{av:'A2924PMCTA2',fld:'PMCTA2',pic:''},{av:'A2925PMCTA3',fld:'PMCTA3',pic:''},{av:'A2542PMCuentadeCargo',fld:'PMCUENTADECARGO',pic:''},{av:'A3917PMObsPoliza',fld:'PMOBSPOLIZA',pic:''},{av:'A4395PMPRANT',fld:'PMPRANT',pic:'ZZZZZZ9.99'},{av:'A7899PMTipoAv',fld:'PMTIPOAV',pic:''},{av:'A7900PMNumAv',fld:'PMNUMAV',pic:'ZZZZZZZZZ9'},{av:'A17105PMCuentaPR02',fld:'PMCUENTAPR02',pic:''},{av:'A2059CNPRCMDFT',fld:'CNPRCMDFT',pic:''},{av:'A2054CNCMNOID',fld:'CNCMNOID',pic:''},{av:'AV317CNCMNOID',fld:'vCNCMNOID',pic:''},{av:'A2055CNCMNDID',fld:'CNCMNDID',pic:''},{av:'A2076CNPRCMDVAL',fld:'CNPRCMDVAL',pic:'ZZZ,ZZ9.9999999'},{av:'A2610ESTPAGID',fld:'ESTPAGID',pic:''},{av:'AV123PMEstatus',fld:'vPMESTATUS',pic:'',hsh:true},{av:'A2611ESTPAGDSC',fld:'ESTPAGDSC',pic:''},{av:'A7789AVDSPRCIA',fld:'AVDSPRCIA',pic:'ZZZZZZZZZ9'},{av:'AV61PMEmpresa_G',fld:'vPMEMPRESA_G',pic:'ZZZZZZZZZ9',hsh:true},{av:'A8295AVDSPRCPPTPC',fld:'AVDSPRCPPTPC',pic:''},{av:'AV62PMTipoDoc_G',fld:'vPMTIPODOC_G',pic:'',hsh:true},{av:'A8296AVDSPRCPPNDC',fld:'AVDSPRCPPNDC',pic:'ZZZZZZZZZ9'},{av:'AV63PMNumDoc_G',fld:'vPMNUMDOC_G',pic:'ZZZZZZZZZ9',hsh:true},{av:'A20CNTDOCID',fld:'CNTDOCID',pic:''},{av:'A8255AVDSPRDOC',fld:'AVDSPRDOC',pic:'ZZZZZZZZZ9'},{av:'A7790AVDSPRNDC',fld:'AVDSPRNDC',pic:'ZZZZZZZZZ9'},{av:'A8242AVDSPROBS',fld:'AVDSPROBS',pic:''},{av:'A7518CNDSPRCIA',fld:'CNDSPRCIA',pic:'ZZZZZZZZZ9'},{av:'A7519CNDSPRTDC',fld:'CNDSPRTDC',pic:''},{av:'A7520CNDSPRNDC',fld:'CNDSPRNDC',pic:'ZZZZZZZZZ9'},{av:'A7531CNDSPRALCTR',fld:'CNDSPRALCTR',pic:''},{av:'AV350CNUSERMCXP',fld:'vCNUSERMCXP',pic:'',hsh:true},{av:'AV319numRenglons',fld:'vNUMRENGLONS',pic:'ZZZ9',hsh:true},{av:'AV116CNUSERID',fld:'vCNUSERID',pic:'',hsh:true},{av:'dynavCatcarid'},{av:'AV367CATCARID',fld:'vCATCARID',pic:'ZZZZZZZZZ9'},{av:'dynavPmcxprelid'},{av:'AV351PMCXPRELID',fld:'vPMCXPRELID',pic:'ZZZZZZZZZ9'},{av:'dynavUnifcncmnmid'},{av:'AV315unifCNCMNMID',fld:'vUNIFCNCMNMID',pic:''},{av:'dynavCncmnmid'},{av:'AV32CNCMNMID',fld:'vCNCMNMID',pic:''}]");
       setEventMetadata("REFRESH",",oparms:[{av:'dynavCatcarid'},{av:'AV367CATCARID',fld:'vCATCARID',pic:'ZZZZZZZZZ9'},{av:'dynavPmcxprelid'},{av:'AV351PMCXPRELID',fld:'vPMCXPRELID',pic:'ZZZZZZZZZ9'},{av:'dynavUnifcncmnmid'},{av:'AV315unifCNCMNMID',fld:'vUNIFCNCMNMID',pic:''},{av:'dynavCncmnmid'},{av:'AV32CNCMNMID',fld:'vCNCMNMID',pic:''}]}");
-      setEventMetadata("GRID1.LOAD","{handler:'e30DZ2',iparms:[{av:'AV318renglones',fld:'vRENGLONES',pic:'ZZZ9'},{av:'A860PMEmpresa',fld:'PMEMPRESA',pic:'ZZZZZZZZZ9'},{av:'dynavCnciasid_f'},{av:'AV100CNCIASID_F',fld:'vCNCIASID_F',pic:'ZZZZZZZZZ9'},{av:'A3295PROPAGID',fld:'PROPAGID',pic:'ZZZZZZZZZ9'},{av:'AV239PROPAGID_F',fld:'vPROPAGID_F',pic:'ZZZZZZZZZ9'},{av:'A861PMTipoDoc',fld:'PMTIPODOC',pic:''},{av:'cmbavPmtipodoc_f'},{av:'AV197PMTipoDoc_F',fld:'vPMTIPODOC_F',pic:''},{av:'A862PMNumDoc',fld:'PMNUMDOC',pic:'ZZZZZZZZZ9'},{av:'AV133Numero',fld:'vNUMERO',pic:'ZZZZZZZZZ9'},{av:'A863PMProvId',fld:'PMPROVID',pic:'ZZZZZZZZZ9'},{av:'AV108CNCDIRID_F',fld:'vCNCDIRID_F',pic:'ZZZZZZZZZ9'},{av:'A864PMProyId',fld:'PMPROYID',pic:''},{av:'AV7PMCTPRID',fld:'vPMCTPRID',pic:''},{av:'AV111F2',fld:'vF2',pic:''},{av:'A866PMFechFac',fld:'PMFECHFAC',pic:''},{av:'AV110F1',fld:'vF1',pic:''},{av:'A873PMMoneId',fld:'PMMONEID',pic:''},{av:'AV327F6',fld:'vF6',pic:''},{av:'A4090PMCXPFHTRN',fld:'PMCXPFHTRN',pic:'99/99/99 99:99'},{av:'AV326F5',fld:'vF5',pic:''},{av:'AV113F4',fld:'vF4',pic:''},{av:'A867PMFechVen',fld:'PMFECHVEN',pic:''},{av:'AV112F3',fld:'vF3',pic:''},{av:'A2405PMEstatus',fld:'PMESTATUS',pic:''},{av:'cmbavEstatus'},{av:'AV11Estatus',fld:'vESTATUS',pic:''},{av:'AV230Checkoc',fld:'vCHECKOC',pic:'9'},{av:'A908PMNumDocOC',fld:'PMNUMDOCOC',pic:'ZZZZZZZZZ9'},{av:'AV229PMNumDocOc_F',fld:'vPMNUMDOCOC_F',pic:'ZZZZZZZZZ9'},{av:'A2528PMFolioFac',fld:'PMFOLIOFAC',pic:''},{av:'AV159PMFolioFac_F',fld:'vPMFOLIOFAC_F',pic:''},{av:'A905PMPoliz',fld:'PMPOLIZ',pic:'9'},{av:'cmbavPmpoliz_f'},{av:'AV270pmpoliz_f',fld:'vPMPOLIZ_F',pic:'9'},{av:'A10905PMIDREL',fld:'PMIDREL',pic:'ZZZZZZZZZ9'},{av:'AV353arrPMCTPRID',fld:'vARRPMCTPRID',pic:''},{av:'A865PMUngId',fld:'PMUNGID',pic:''},{av:'cmbavCgunngid'},{av:'AV361CGUNNGID',fld:'vCGUNNGID',pic:''},{av:'A17416PMCargo',fld:'PMCARGO',pic:'ZZZZZZZZZ9'},{av:'AV296banload',fld:'vBANLOAD',pic:''},{av:'AV350CNUSERMCXP',fld:'vCNUSERMCXP',pic:'',hsh:true},{av:'A2534PMUsrcap',fld:'PMUSRCAP',pic:'ZZZZZZZZZ9'},{av:'A4599PMLayAsoc',fld:'PMLAYASOC',pic:'9'},{av:'A909PMUuid',fld:'PMUUID',pic:''},{av:'A2871PMPDFDoc',fld:'PMPDFDOC',pic:'ZZZZZZZZZ9'},{av:'A2718PMMonTp',fld:'PMMONTP',pic:'ZZZZZZZZZ9.999999'},{av:'A2862PMMonAmort',fld:'PMMONAMORT',pic:'ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A898PMFechRev',fld:'PMFECHREV',pic:''},{av:'AV203CNCIASMON_F',fld:'vCNCIASMON_F',pic:''},{av:'A899PMMonEx',fld:'PMMONEX',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'AV316tipoCambio',fld:'vTIPOCAMBIO',pic:'ZZZZZZZZZ9.999999'},{av:'A903PMMonEp',fld:'PMMONEP',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A2689PMMonPgE',fld:'PMMONPGE',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A900PMMonEg',fld:'PMMONEG',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A870PMMonNg',fld:'PMMONNG',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A869PMMonNa',fld:'PMMONNA',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A902PMMonNp',fld:'PMMONNP',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A2688PMMonPgN',fld:'PMMONPGN',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A872PMIva',fld:'PMIVA',pic:'ZZZZZZZZZZZZZ9.99'},{av:'A2520PMMonIvaN',fld:'PMMONIVAN',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A2954PMIVAID',fld:'PMIVAID',pic:''},{av:'A2406PMComentarios',fld:'PMCOMENTARIOS',pic:''},{av:'A2521PMMonIvaE',fld:'PMMONIVAE',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A904PMReten',fld:'PMRETEN',pic:'ZZZZZZZZZZZZZ9.99'},{av:'A906PMOrdenD',fld:'PMORDEND',pic:'9'},{av:'A907PMTipoDocOC',fld:'PMTIPODOCOC',pic:''},{av:'A2923PMCTA1',fld:'PMCTA1',pic:''},{av:'A2924PMCTA2',fld:'PMCTA2',pic:''},{av:'A2925PMCTA3',fld:'PMCTA3',pic:''},{av:'A2542PMCuentadeCargo',fld:'PMCUENTADECARGO',pic:''},{av:'A3917PMObsPoliza',fld:'PMOBSPOLIZA',pic:''},{av:'A4395PMPRANT',fld:'PMPRANT',pic:'ZZZZZZ9.99'},{av:'A7899PMTipoAv',fld:'PMTIPOAV',pic:''},{av:'A7900PMNumAv',fld:'PMNUMAV',pic:'ZZZZZZZZZ9'},{av:'A17105PMCuentaPR02',fld:'PMCUENTAPR02',pic:''},{av:'tblTable3_Visible',ctrl:'TABLE3',prop:'Visible'},{av:'AV319numRenglons',fld:'vNUMRENGLONS',pic:'ZZZ9',hsh:true},{av:'A2059CNPRCMDFT',fld:'CNPRCMDFT',pic:''},{av:'A2054CNCMNOID',fld:'CNCMNOID',pic:''},{av:'AV317CNCMNOID',fld:'vCNCMNOID',pic:''},{av:'A2055CNCMNDID',fld:'CNCMNDID',pic:''},{av:'A2076CNPRCMDVAL',fld:'CNPRCMDVAL',pic:'ZZZ,ZZ9.9999999'},{av:'A2610ESTPAGID',fld:'ESTPAGID',pic:''},{av:'AV123PMEstatus',fld:'vPMESTATUS',pic:'',hsh:true},{av:'A2611ESTPAGDSC',fld:'ESTPAGDSC',pic:''},{av:'dynavCatcarid'},{av:'AV367CATCARID',fld:'vCATCARID',pic:'ZZZZZZZZZ9'},{av:'dynavPmcxprelid'},{av:'AV351PMCXPRELID',fld:'vPMCXPRELID',pic:'ZZZZZZZZZ9'},{av:'dynavUnifcncmnmid'},{av:'AV315unifCNCMNMID',fld:'vUNIFCNCMNMID',pic:''},{av:'dynavCncmnmid'},{av:'AV32CNCMNMID',fld:'vCNCMNMID',pic:''}]");
-      setEventMetadata("GRID1.LOAD",",oparms:[{av:'subGrid1_Rows',ctrl:'GRID1',prop:'Rows'},{av:'AV318renglones',fld:'vRENGLONES',pic:'ZZZ9'},{av:'AV232paginas',fld:'vPAGINAS',pic:'ZZZ9'},{av:'AV231pagina',fld:'vPAGINA',pic:'ZZZ9'},{av:'AV349modMonto',fld:'vMODMONTO',pic:''},{av:'AV125img',fld:'vIMG',pic:''},{av:'AV61PMEmpresa_G',fld:'vPMEMPRESA_G',pic:'ZZZZZZZZZ9',hsh:true},{av:'AV62PMTipoDoc_G',fld:'vPMTIPODOC_G',pic:'',hsh:true},{av:'AV282GCNTDOCDSC',fld:'vGCNTDOCDSC',pic:''},{av:'AV187cncdirnom_p',fld:'vCNCDIRNOM_P',pic:''},{av:'AV63PMNumDoc_G',fld:'vPMNUMDOC_G',pic:'ZZZZZZZZZ9',hsh:true},{av:'AV64PMProvId_G',fld:'vPMPROVID_G',pic:'ZZZZZZZZZ9',hsh:true},{av:'AV240AbrirBitacora',fld:'vABRIRBITACORA',pic:''},{av:'AV276cncd01id',fld:'vCNCD01ID',pic:''},{av:'AV30cncdirnom',fld:'vCNCDIRNOM',pic:''},{av:'AV286PMLayAsoc_G',fld:'vPMLAYASOC_G',pic:'9',hsh:true},{av:'AV284IMGXLS',fld:'vIMGXLS',pic:''},{av:'AV128PMFolioFac',fld:'vPMFOLIOFAC',pic:''},{av:'AV65PMProyId_G',fld:'vPMPROYID_G',pic:''},{av:'AV84PMUuid',fld:'vPMUUID',pic:'',hsh:true},{av:'AV160PMPDFDOC',fld:'vPMPDFDOC',pic:'ZZZZZZZZZ9',hsh:true},{av:'AV198PMMonTp_G',fld:'vPMMONTP_G',pic:'ZZZZZZZZZ9.999999'},{av:'AV200PMMonAmort_G',fld:'vPMMONAMORT_G',pic:'ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'edtavImgxml_Visible',ctrl:'vIMGXML',prop:'Visible'},{av:'AV162IMGXML',fld:'vIMGXML',pic:''},{av:'AV161IMGPDF',fld:'vIMGPDF',pic:''},{av:'AV127PMCTPRDSC',fld:'vPMCTPRDSC',pic:''},{av:'AV123PMEstatus',fld:'vPMESTATUS',pic:'',hsh:true},{av:'AV66PMUngId_G',fld:'vPMUNGID_G',pic:''},{av:'AV88PMFechRev_G',fld:'vPMFECHREV_G',pic:''},{av:'AV67PMFechFac_G',fld:'vPMFECHFAC_G',pic:''},{av:'AV68PMFechVen_G',fld:'vPMFECHVEN_G',pic:''},{av:'AV69PMMoneId_G',fld:'vPMMONEID_G',pic:'',hsh:true},{av:'AV316tipoCambio',fld:'vTIPOCAMBIO',pic:'ZZZZZZZZZ9.999999'},{av:'AV204MONTOTOT',fld:'vMONTOTOT',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'AV205MONTOPEN',fld:'vMONTOPEN',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'AV206MONTOPRO',fld:'vMONTOPRO',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'AV369Subtotalg',fld:'vSUBTOTALG',pic:'ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'AV368MONTOPENGRA',fld:'vMONTOPENGRA',pic:'ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'AV234imgamort',fld:'vIMGAMORT',pic:''},{av:'AV201PMAmorEst',fld:'vPMAMOREST',pic:''},{av:'AV70PMMonNa_G',fld:'vPMMONNA_G',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'AV180PMMonIvaN_G',fld:'vPMMONIVAN_G',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'AV78PMMonNp',fld:'vPMMONNP',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'AV130PMMonPgN',fld:'vPMMONPGN',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99',hsh:true},{av:'AV71PMMonNg_G',fld:'vPMMONNG_G',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'AV73PMIva_G',fld:'vPMIVA_G',pic:'ZZZZZZZZZZZZZ9.99'},{av:'AV194GPMIVAID',fld:'vGPMIVAID',pic:''},{av:'AV126PMComentarios',fld:'vPMCOMENTARIOS',pic:''},{av:'AV131PMMonPgE',fld:'vPMMONPGE',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99',hsh:true},{av:'AV79PMMonEp',fld:'vPMMONEP',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'AV181PMMonIvaE_G',fld:'vPMMONIVAE_G',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'AV89PMMonEx_G',fld:'vPMMONEX_G',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'AV87PMMonEx',fld:'vPMMONEX',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'AV95PMPoliz_G',fld:'vPMPOLIZ_G',pic:'ZZZ9'},{av:'AV265GeneroPoliza',fld:'vGENEROPOLIZA',pic:''},{av:'AV97PMTipoDocOC_G',fld:'vPMTIPODOCOC_G',pic:'',hsh:true},{av:'AV98PMNumDocOC_G',fld:'vPMNUMDOCOC_G',pic:'ZZZZZZZZZ9',hsh:true},{av:'AV167Doc',fld:'vDOC',pic:''},{av:'AV158can',fld:'vCAN',pic:''},{av:'AV228edi',fld:'vEDI',pic:''},{av:'edtavEdi_Visible',ctrl:'vEDI',prop:'Visible'},{av:'AV366CATCARDSC',fld:'vCATCARDSC',pic:''},{av:'AV170PMCTA1',fld:'vPMCTA1',pic:''},{av:'AV172PMCTA2',fld:'vPMCTA2',pic:''},{av:'AV171PMCTA3',fld:'vPMCTA3',pic:''},{av:'AV183PMCuentadeCargo_G',fld:'vPMCUENTADECARGO_G',pic:''},{av:'AV266PmObsPoliza',fld:'vPMOBSPOLIZA',pic:''},{av:'AV283PMPRANT',fld:'vPMPRANT',pic:'ZZZZZZ9'},{av:'AV322PMTipoAv_G',fld:'vPMTIPOAV_G',pic:''},{av:'AV323PMNumAv_G',fld:'vPMNUMAV_G',pic:'ZZZZZZZZZ9'},{av:'AV328PMCXPFHTRN',fld:'vPMCXPFHTRN',pic:''},{av:'AV313CNPRCMDVAL2',fld:'vCNPRCMDVAL2',pic:'ZZZ,ZZ9.99999'},{av:'AV314CNPRCMDFT2',fld:'vCNPRCMDFT2',pic:''},{av:'AV311CNPRCMDVAL',fld:'vCNPRCMDVAL',pic:'ZZZ,ZZ9.99999'},{av:'AV312CNPRCMDFT',fld:'vCNPRCMDFT',pic:''},{av:'AV129EstatusDSC',fld:'vESTATUSDSC',pic:'',hsh:true},{av:'dynavCatcarid'},{av:'AV367CATCARID',fld:'vCATCARID',pic:'ZZZZZZZZZ9'},{av:'dynavPmcxprelid'},{av:'AV351PMCXPRELID',fld:'vPMCXPRELID',pic:'ZZZZZZZZZ9'},{av:'dynavUnifcncmnmid'},{av:'AV315unifCNCMNMID',fld:'vUNIFCNCMNMID',pic:''},{av:'dynavCncmnmid'},{av:'AV32CNCMNMID',fld:'vCNCMNMID',pic:''}]}");
-      setEventMetadata("ENTER","{handler:'e31DZ2',iparms:[{av:'GRID1_nFirstRecordOnPage'},{av:'GRID1_nEOF'},{av:'subGrid1_Rows',ctrl:'GRID1',prop:'Rows'},{av:'AV240AbrirBitacora',fld:'vABRIRBITACORA',pic:''},{av:'edtavPmctprdsc_Title',ctrl:'vPMCTPRDSC',prop:'Title'},{av:'edtavPmungid_g_Title',ctrl:'vPMUNGID_G',prop:'Title'},{av:'AV318renglones',fld:'vRENGLONES',pic:'ZZZ9'},{av:'A860PMEmpresa',fld:'PMEMPRESA',pic:'ZZZZZZZZZ9'},{av:'dynavCnciasid_f'},{av:'AV100CNCIASID_F',fld:'vCNCIASID_F',pic:'ZZZZZZZZZ9'},{av:'A3295PROPAGID',fld:'PROPAGID',pic:'ZZZZZZZZZ9'},{av:'AV239PROPAGID_F',fld:'vPROPAGID_F',pic:'ZZZZZZZZZ9'},{av:'A861PMTipoDoc',fld:'PMTIPODOC',pic:''},{av:'cmbavPmtipodoc_f'},{av:'AV197PMTipoDoc_F',fld:'vPMTIPODOC_F',pic:''},{av:'A862PMNumDoc',fld:'PMNUMDOC',pic:'ZZZZZZZZZ9'},{av:'AV133Numero',fld:'vNUMERO',pic:'ZZZZZZZZZ9'},{av:'A863PMProvId',fld:'PMPROVID',pic:'ZZZZZZZZZ9'},{av:'AV108CNCDIRID_F',fld:'vCNCDIRID_F',pic:'ZZZZZZZZZ9'},{av:'A864PMProyId',fld:'PMPROYID',pic:''},{av:'AV7PMCTPRID',fld:'vPMCTPRID',pic:''},{av:'AV111F2',fld:'vF2',pic:''},{av:'A866PMFechFac',fld:'PMFECHFAC',pic:''},{av:'AV110F1',fld:'vF1',pic:''},{av:'A873PMMoneId',fld:'PMMONEID',pic:''},{av:'AV327F6',fld:'vF6',pic:''},{av:'A4090PMCXPFHTRN',fld:'PMCXPFHTRN',pic:'99/99/99 99:99'},{av:'AV326F5',fld:'vF5',pic:''},{av:'AV113F4',fld:'vF4',pic:''},{av:'A867PMFechVen',fld:'PMFECHVEN',pic:''},{av:'AV112F3',fld:'vF3',pic:''},{av:'A2405PMEstatus',fld:'PMESTATUS',pic:''},{av:'cmbavEstatus'},{av:'AV11Estatus',fld:'vESTATUS',pic:''},{av:'AV230Checkoc',fld:'vCHECKOC',pic:'9'},{av:'A908PMNumDocOC',fld:'PMNUMDOCOC',pic:'ZZZZZZZZZ9'},{av:'AV229PMNumDocOc_F',fld:'vPMNUMDOCOC_F',pic:'ZZZZZZZZZ9'},{av:'A2528PMFolioFac',fld:'PMFOLIOFAC',pic:''},{av:'AV159PMFolioFac_F',fld:'vPMFOLIOFAC_F',pic:''},{av:'A905PMPoliz',fld:'PMPOLIZ',pic:'9'},{av:'cmbavPmpoliz_f'},{av:'AV270pmpoliz_f',fld:'vPMPOLIZ_F',pic:'9'},{av:'A10905PMIDREL',fld:'PMIDREL',pic:'ZZZZZZZZZ9'},{av:'AV353arrPMCTPRID',fld:'vARRPMCTPRID',pic:''},{av:'A865PMUngId',fld:'PMUNGID',pic:''},{av:'cmbavCgunngid'},{av:'AV361CGUNNGID',fld:'vCGUNNGID',pic:''},{av:'A17416PMCargo',fld:'PMCARGO',pic:'ZZZZZZZZZ9'},{av:'AV296banload',fld:'vBANLOAD',pic:''},{av:'AV350CNUSERMCXP',fld:'vCNUSERMCXP',pic:'',hsh:true},{av:'A2534PMUsrcap',fld:'PMUSRCAP',pic:'ZZZZZZZZZ9'},{av:'A4599PMLayAsoc',fld:'PMLAYASOC',pic:'9'},{av:'A909PMUuid',fld:'PMUUID',pic:''},{av:'A2871PMPDFDoc',fld:'PMPDFDOC',pic:'ZZZZZZZZZ9'},{av:'A2718PMMonTp',fld:'PMMONTP',pic:'ZZZZZZZZZ9.999999'},{av:'A2862PMMonAmort',fld:'PMMONAMORT',pic:'ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A898PMFechRev',fld:'PMFECHREV',pic:''},{av:'AV203CNCIASMON_F',fld:'vCNCIASMON_F',pic:''},{av:'A899PMMonEx',fld:'PMMONEX',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'AV316tipoCambio',fld:'vTIPOCAMBIO',pic:'ZZZZZZZZZ9.999999'},{av:'A903PMMonEp',fld:'PMMONEP',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A2689PMMonPgE',fld:'PMMONPGE',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A900PMMonEg',fld:'PMMONEG',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A870PMMonNg',fld:'PMMONNG',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A869PMMonNa',fld:'PMMONNA',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A902PMMonNp',fld:'PMMONNP',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A2688PMMonPgN',fld:'PMMONPGN',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A872PMIva',fld:'PMIVA',pic:'ZZZZZZZZZZZZZ9.99'},{av:'A2520PMMonIvaN',fld:'PMMONIVAN',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A2954PMIVAID',fld:'PMIVAID',pic:''},{av:'A2406PMComentarios',fld:'PMCOMENTARIOS',pic:''},{av:'A2521PMMonIvaE',fld:'PMMONIVAE',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A904PMReten',fld:'PMRETEN',pic:'ZZZZZZZZZZZZZ9.99'},{av:'A906PMOrdenD',fld:'PMORDEND',pic:'9'},{av:'A907PMTipoDocOC',fld:'PMTIPODOCOC',pic:''},{av:'A2923PMCTA1',fld:'PMCTA1',pic:''},{av:'A2924PMCTA2',fld:'PMCTA2',pic:''},{av:'A2925PMCTA3',fld:'PMCTA3',pic:''},{av:'A2542PMCuentadeCargo',fld:'PMCUENTADECARGO',pic:''},{av:'A3917PMObsPoliza',fld:'PMOBSPOLIZA',pic:''},{av:'A4395PMPRANT',fld:'PMPRANT',pic:'ZZZZZZ9.99'},{av:'A7899PMTipoAv',fld:'PMTIPOAV',pic:''},{av:'A7900PMNumAv',fld:'PMNUMAV',pic:'ZZZZZZZZZ9'},{av:'A17105PMCuentaPR02',fld:'PMCUENTAPR02',pic:''},{av:'AV319numRenglons',fld:'vNUMRENGLONS',pic:'ZZZ9',hsh:true},{av:'A2059CNPRCMDFT',fld:'CNPRCMDFT',pic:''},{av:'A2054CNCMNOID',fld:'CNCMNOID',pic:''},{av:'AV317CNCMNOID',fld:'vCNCMNOID',pic:''},{av:'A2055CNCMNDID',fld:'CNCMNDID',pic:''},{av:'A2076CNPRCMDVAL',fld:'CNPRCMDVAL',pic:'ZZZ,ZZ9.9999999'},{av:'A2610ESTPAGID',fld:'ESTPAGID',pic:''},{av:'AV123PMEstatus',fld:'vPMESTATUS',pic:'',hsh:true},{av:'A2611ESTPAGDSC',fld:'ESTPAGDSC',pic:''},{av:'AV116CNUSERID',fld:'vCNUSERID',pic:'',hsh:true},{av:'AV310totalIndicador',fld:'vTOTALINDICADOR',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'AV303totalPendiente',fld:'vTOTALPENDIENTE',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'AV302totalProgramado',fld:'vTOTALPROGRAMADO',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'AV371totalPendienteGrav',fld:'vTOTALPENDIENTEGRAV',pic:'ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'AV373GSUBTOTAL',fld:'vGSUBTOTAL',pic:'ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'AV300sdtPMCuentaXPag',fld:'vSDTPMCUENTAXPAG',pic:''},{av:'dynavCatcarid'},{av:'AV367CATCARID',fld:'vCATCARID',pic:'ZZZZZZZZZ9'},{av:'dynavPmcxprelid'},{av:'AV351PMCXPRELID',fld:'vPMCXPRELID',pic:'ZZZZZZZZZ9'},{av:'dynavUnifcncmnmid'},{av:'AV315unifCNCMNMID',fld:'vUNIFCNCMNMID',pic:''},{av:'dynavCncmnmid'},{av:'AV32CNCMNMID',fld:'vCNCMNMID',pic:''}]");
+      setEventMetadata("GRID1.LOAD","{handler:'e30DZ2',iparms:[{av:'AV318renglones',fld:'vRENGLONES',pic:'ZZZ9'},{av:'A860PMEmpresa',fld:'PMEMPRESA',pic:'ZZZZZZZZZ9'},{av:'dynavCnciasid_f'},{av:'AV100CNCIASID_F',fld:'vCNCIASID_F',pic:'ZZZZZZZZZ9'},{av:'A3295PROPAGID',fld:'PROPAGID',pic:'ZZZZZZZZZ9'},{av:'AV239PROPAGID_F',fld:'vPROPAGID_F',pic:'ZZZZZZZZZ9'},{av:'A861PMTipoDoc',fld:'PMTIPODOC',pic:''},{av:'cmbavPmtipodoc_f'},{av:'AV197PMTipoDoc_F',fld:'vPMTIPODOC_F',pic:''},{av:'A862PMNumDoc',fld:'PMNUMDOC',pic:'ZZZZZZZZZ9'},{av:'AV133Numero',fld:'vNUMERO',pic:'ZZZZZZZZZ9'},{av:'A863PMProvId',fld:'PMPROVID',pic:'ZZZZZZZZZ9'},{av:'AV108CNCDIRID_F',fld:'vCNCDIRID_F',pic:'ZZZZZZZZZ9'},{av:'A864PMProyId',fld:'PMPROYID',pic:''},{av:'AV7PMCTPRID',fld:'vPMCTPRID',pic:''},{av:'AV111F2',fld:'vF2',pic:''},{av:'A866PMFechFac',fld:'PMFECHFAC',pic:''},{av:'AV110F1',fld:'vF1',pic:''},{av:'A873PMMoneId',fld:'PMMONEID',pic:''},{av:'AV327F6',fld:'vF6',pic:''},{av:'A4090PMCXPFHTRN',fld:'PMCXPFHTRN',pic:'99/99/99 99:99'},{av:'AV326F5',fld:'vF5',pic:''},{av:'AV113F4',fld:'vF4',pic:''},{av:'A867PMFechVen',fld:'PMFECHVEN',pic:''},{av:'AV112F3',fld:'vF3',pic:''},{av:'A2405PMEstatus',fld:'PMESTATUS',pic:''},{av:'cmbavEstatus'},{av:'AV11Estatus',fld:'vESTATUS',pic:''},{av:'AV230Checkoc',fld:'vCHECKOC',pic:'9'},{av:'A908PMNumDocOC',fld:'PMNUMDOCOC',pic:'ZZZZZZZZZ9'},{av:'AV229PMNumDocOc_F',fld:'vPMNUMDOCOC_F',pic:'ZZZZZZZZZ9'},{av:'A2528PMFolioFac',fld:'PMFOLIOFAC',pic:''},{av:'AV159PMFolioFac_F',fld:'vPMFOLIOFAC_F',pic:''},{av:'A905PMPoliz',fld:'PMPOLIZ',pic:'9'},{av:'cmbavPmpoliz_f'},{av:'AV270pmpoliz_f',fld:'vPMPOLIZ_F',pic:'9'},{av:'A10905PMIDREL',fld:'PMIDREL',pic:'ZZZZZZZZZ9'},{av:'AV353arrPMCTPRID',fld:'vARRPMCTPRID',pic:''},{av:'A865PMUngId',fld:'PMUNGID',pic:''},{av:'cmbavCgunngid'},{av:'AV361CGUNNGID',fld:'vCGUNNGID',pic:''},{av:'A17416PMCargo',fld:'PMCARGO',pic:'ZZZZZZZZZ9'},{av:'AV296banload',fld:'vBANLOAD',pic:''},{av:'AV350CNUSERMCXP',fld:'vCNUSERMCXP',pic:'',hsh:true},{av:'A2534PMUsrcap',fld:'PMUSRCAP',pic:'ZZZZZZZZZ9'},{av:'A4599PMLayAsoc',fld:'PMLAYASOC',pic:'9'},{av:'A909PMUuid',fld:'PMUUID',pic:''},{av:'A2871PMPDFDoc',fld:'PMPDFDOC',pic:'ZZZZZZZZZ9'},{av:'A2718PMMonTp',fld:'PMMONTP',pic:'ZZZZZZZZZ9.999999'},{av:'A2862PMMonAmort',fld:'PMMONAMORT',pic:'ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A898PMFechRev',fld:'PMFECHREV',pic:''},{av:'AV203CNCIASMON_F',fld:'vCNCIASMON_F',pic:''},{av:'A899PMMonEx',fld:'PMMONEX',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'AV316tipoCambio',fld:'vTIPOCAMBIO',pic:'ZZZZZZZZZ9.999999'},{av:'A903PMMonEp',fld:'PMMONEP',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A2689PMMonPgE',fld:'PMMONPGE',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A900PMMonEg',fld:'PMMONEG',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A870PMMonNg',fld:'PMMONNG',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A869PMMonNa',fld:'PMMONNA',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A902PMMonNp',fld:'PMMONNP',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A2688PMMonPgN',fld:'PMMONPGN',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A872PMIva',fld:'PMIVA',pic:'ZZZZZZZZZZZZZ9.99'},{av:'A2520PMMonIvaN',fld:'PMMONIVAN',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A2954PMIVAID',fld:'PMIVAID',pic:''},{av:'A2406PMComentarios',fld:'PMCOMENTARIOS',pic:''},{av:'A2521PMMonIvaE',fld:'PMMONIVAE',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A904PMReten',fld:'PMRETEN',pic:'ZZZZZZZZZZZZZ9.99'},{av:'A906PMOrdenD',fld:'PMORDEND',pic:'9'},{av:'A907PMTipoDocOC',fld:'PMTIPODOCOC',pic:''},{av:'A2923PMCTA1',fld:'PMCTA1',pic:''},{av:'A2924PMCTA2',fld:'PMCTA2',pic:''},{av:'A2925PMCTA3',fld:'PMCTA3',pic:''},{av:'A2542PMCuentadeCargo',fld:'PMCUENTADECARGO',pic:''},{av:'A3917PMObsPoliza',fld:'PMOBSPOLIZA',pic:''},{av:'A4395PMPRANT',fld:'PMPRANT',pic:'ZZZZZZ9.99'},{av:'A7899PMTipoAv',fld:'PMTIPOAV',pic:''},{av:'A7900PMNumAv',fld:'PMNUMAV',pic:'ZZZZZZZZZ9'},{av:'A17105PMCuentaPR02',fld:'PMCUENTAPR02',pic:''},{av:'tblTable3_Visible',ctrl:'TABLE3',prop:'Visible'},{av:'AV319numRenglons',fld:'vNUMRENGLONS',pic:'ZZZ9',hsh:true},{av:'A2059CNPRCMDFT',fld:'CNPRCMDFT',pic:''},{av:'A2054CNCMNOID',fld:'CNCMNOID',pic:''},{av:'AV317CNCMNOID',fld:'vCNCMNOID',pic:''},{av:'A2055CNCMNDID',fld:'CNCMNDID',pic:''},{av:'A2076CNPRCMDVAL',fld:'CNPRCMDVAL',pic:'ZZZ,ZZ9.9999999'},{av:'A2610ESTPAGID',fld:'ESTPAGID',pic:''},{av:'AV123PMEstatus',fld:'vPMESTATUS',pic:'',hsh:true},{av:'A2611ESTPAGDSC',fld:'ESTPAGDSC',pic:''},{av:'A7789AVDSPRCIA',fld:'AVDSPRCIA',pic:'ZZZZZZZZZ9'},{av:'AV61PMEmpresa_G',fld:'vPMEMPRESA_G',pic:'ZZZZZZZZZ9',hsh:true},{av:'A8295AVDSPRCPPTPC',fld:'AVDSPRCPPTPC',pic:''},{av:'AV62PMTipoDoc_G',fld:'vPMTIPODOC_G',pic:'',hsh:true},{av:'A8296AVDSPRCPPNDC',fld:'AVDSPRCPPNDC',pic:'ZZZZZZZZZ9'},{av:'AV63PMNumDoc_G',fld:'vPMNUMDOC_G',pic:'ZZZZZZZZZ9',hsh:true},{av:'A20CNTDOCID',fld:'CNTDOCID',pic:''},{av:'A8255AVDSPRDOC',fld:'AVDSPRDOC',pic:'ZZZZZZZZZ9'},{av:'A7790AVDSPRNDC',fld:'AVDSPRNDC',pic:'ZZZZZZZZZ9'},{av:'A8242AVDSPROBS',fld:'AVDSPROBS',pic:''},{av:'A7518CNDSPRCIA',fld:'CNDSPRCIA',pic:'ZZZZZZZZZ9'},{av:'A7519CNDSPRTDC',fld:'CNDSPRTDC',pic:''},{av:'A7520CNDSPRNDC',fld:'CNDSPRNDC',pic:'ZZZZZZZZZ9'},{av:'A7531CNDSPRALCTR',fld:'CNDSPRALCTR',pic:''},{av:'dynavCatcarid'},{av:'AV367CATCARID',fld:'vCATCARID',pic:'ZZZZZZZZZ9'},{av:'dynavPmcxprelid'},{av:'AV351PMCXPRELID',fld:'vPMCXPRELID',pic:'ZZZZZZZZZ9'},{av:'dynavUnifcncmnmid'},{av:'AV315unifCNCMNMID',fld:'vUNIFCNCMNMID',pic:''},{av:'dynavCncmnmid'},{av:'AV32CNCMNMID',fld:'vCNCMNMID',pic:''}]");
+      setEventMetadata("GRID1.LOAD",",oparms:[{av:'subGrid1_Rows',ctrl:'GRID1',prop:'Rows'},{av:'AV318renglones',fld:'vRENGLONES',pic:'ZZZ9'},{av:'AV232paginas',fld:'vPAGINAS',pic:'ZZZ9'},{av:'AV231pagina',fld:'vPAGINA',pic:'ZZZ9'},{av:'AV349modMonto',fld:'vMODMONTO',pic:''},{av:'AV125img',fld:'vIMG',pic:''},{av:'AV61PMEmpresa_G',fld:'vPMEMPRESA_G',pic:'ZZZZZZZZZ9',hsh:true},{av:'AV62PMTipoDoc_G',fld:'vPMTIPODOC_G',pic:'',hsh:true},{av:'AV282GCNTDOCDSC',fld:'vGCNTDOCDSC',pic:''},{av:'AV187cncdirnom_p',fld:'vCNCDIRNOM_P',pic:''},{av:'AV63PMNumDoc_G',fld:'vPMNUMDOC_G',pic:'ZZZZZZZZZ9',hsh:true},{av:'AV64PMProvId_G',fld:'vPMPROVID_G',pic:'ZZZZZZZZZ9',hsh:true},{av:'AV240AbrirBitacora',fld:'vABRIRBITACORA',pic:''},{av:'AV276cncd01id',fld:'vCNCD01ID',pic:''},{av:'AV30cncdirnom',fld:'vCNCDIRNOM',pic:''},{av:'AV286PMLayAsoc_G',fld:'vPMLAYASOC_G',pic:'9',hsh:true},{av:'AV284IMGXLS',fld:'vIMGXLS',pic:''},{av:'AV128PMFolioFac',fld:'vPMFOLIOFAC',pic:''},{av:'AV65PMProyId_G',fld:'vPMPROYID_G',pic:''},{av:'AV84PMUuid',fld:'vPMUUID',pic:'',hsh:true},{av:'AV160PMPDFDOC',fld:'vPMPDFDOC',pic:'ZZZZZZZZZ9',hsh:true},{av:'AV198PMMonTp_G',fld:'vPMMONTP_G',pic:'ZZZZZZZZZ9.999999'},{av:'AV200PMMonAmort_G',fld:'vPMMONAMORT_G',pic:'ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'edtavImgxml_Visible',ctrl:'vIMGXML',prop:'Visible'},{av:'AV162IMGXML',fld:'vIMGXML',pic:''},{av:'AV161IMGPDF',fld:'vIMGPDF',pic:''},{av:'AV127PMCTPRDSC',fld:'vPMCTPRDSC',pic:''},{av:'AV123PMEstatus',fld:'vPMESTATUS',pic:'',hsh:true},{av:'AV66PMUngId_G',fld:'vPMUNGID_G',pic:''},{av:'AV88PMFechRev_G',fld:'vPMFECHREV_G',pic:''},{av:'AV67PMFechFac_G',fld:'vPMFECHFAC_G',pic:''},{av:'AV68PMFechVen_G',fld:'vPMFECHVEN_G',pic:''},{av:'AV69PMMoneId_G',fld:'vPMMONEID_G',pic:'',hsh:true},{av:'AV316tipoCambio',fld:'vTIPOCAMBIO',pic:'ZZZZZZZZZ9.999999'},{av:'AV204MONTOTOT',fld:'vMONTOTOT',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'AV205MONTOPEN',fld:'vMONTOPEN',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'AV206MONTOPRO',fld:'vMONTOPRO',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'AV369Subtotalg',fld:'vSUBTOTALG',pic:'ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'AV368MONTOPENGRA',fld:'vMONTOPENGRA',pic:'ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'AV234imgamort',fld:'vIMGAMORT',pic:''},{av:'AV201PMAmorEst',fld:'vPMAMOREST',pic:''},{av:'AV70PMMonNa_G',fld:'vPMMONNA_G',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'AV180PMMonIvaN_G',fld:'vPMMONIVAN_G',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'AV78PMMonNp',fld:'vPMMONNP',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'AV130PMMonPgN',fld:'vPMMONPGN',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99',hsh:true},{av:'AV71PMMonNg_G',fld:'vPMMONNG_G',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'AV73PMIva_G',fld:'vPMIVA_G',pic:'ZZZZZZZZZZZZZ9.99'},{av:'AV194GPMIVAID',fld:'vGPMIVAID',pic:''},{av:'AV126PMComentarios',fld:'vPMCOMENTARIOS',pic:''},{av:'AV131PMMonPgE',fld:'vPMMONPGE',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99',hsh:true},{av:'AV79PMMonEp',fld:'vPMMONEP',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'AV181PMMonIvaE_G',fld:'vPMMONIVAE_G',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'AV89PMMonEx_G',fld:'vPMMONEX_G',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'AV87PMMonEx',fld:'vPMMONEX',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'AV95PMPoliz_G',fld:'vPMPOLIZ_G',pic:'ZZZ9'},{av:'AV265GeneroPoliza',fld:'vGENEROPOLIZA',pic:''},{av:'AV97PMTipoDocOC_G',fld:'vPMTIPODOCOC_G',pic:'',hsh:true},{av:'AV98PMNumDocOC_G',fld:'vPMNUMDOCOC_G',pic:'ZZZZZZZZZ9',hsh:true},{av:'AV167Doc',fld:'vDOC',pic:''},{av:'AV158can',fld:'vCAN',pic:''},{av:'AV228edi',fld:'vEDI',pic:''},{av:'edtavEdi_Visible',ctrl:'vEDI',prop:'Visible'},{av:'AV366CATCARDSC',fld:'vCATCARDSC',pic:''},{av:'AV170PMCTA1',fld:'vPMCTA1',pic:''},{av:'AV172PMCTA2',fld:'vPMCTA2',pic:''},{av:'AV171PMCTA3',fld:'vPMCTA3',pic:''},{av:'AV183PMCuentadeCargo_G',fld:'vPMCUENTADECARGO_G',pic:''},{av:'AV266PmObsPoliza',fld:'vPMOBSPOLIZA',pic:''},{av:'AV283PMPRANT',fld:'vPMPRANT',pic:'ZZZZZZ9'},{av:'AV322PMTipoAv_G',fld:'vPMTIPOAV_G',pic:''},{av:'AV323PMNumAv_G',fld:'vPMNUMAV_G',pic:'ZZZZZZZZZ9'},{av:'AV328PMCXPFHTRN',fld:'vPMCXPFHTRN',pic:''},{av:'AV313CNPRCMDVAL2',fld:'vCNPRCMDVAL2',pic:'ZZZ,ZZ9.99999'},{av:'AV314CNPRCMDFT2',fld:'vCNPRCMDFT2',pic:''},{av:'AV311CNPRCMDVAL',fld:'vCNPRCMDVAL',pic:'ZZZ,ZZ9.99999'},{av:'AV312CNPRCMDFT',fld:'vCNPRCMDFT',pic:''},{av:'AV129EstatusDSC',fld:'vESTATUSDSC',pic:'',hsh:true},{av:'AV376ACNTDOCID',fld:'vACNTDOCID',pic:''},{av:'AV377AAVDSPRDOC',fld:'vAAVDSPRDOC',pic:'ZZZZZZZZZ9'},{av:'dynavCatcarid'},{av:'AV367CATCARID',fld:'vCATCARID',pic:'ZZZZZZZZZ9'},{av:'dynavPmcxprelid'},{av:'AV351PMCXPRELID',fld:'vPMCXPRELID',pic:'ZZZZZZZZZ9'},{av:'dynavUnifcncmnmid'},{av:'AV315unifCNCMNMID',fld:'vUNIFCNCMNMID',pic:''},{av:'dynavCncmnmid'},{av:'AV32CNCMNMID',fld:'vCNCMNMID',pic:''}]}");
+      setEventMetadata("ENTER","{handler:'e31DZ2',iparms:[{av:'GRID1_nFirstRecordOnPage'},{av:'GRID1_nEOF'},{av:'subGrid1_Rows',ctrl:'GRID1',prop:'Rows'},{av:'AV240AbrirBitacora',fld:'vABRIRBITACORA',pic:''},{av:'edtavPmctprdsc_Title',ctrl:'vPMCTPRDSC',prop:'Title'},{av:'edtavPmungid_g_Title',ctrl:'vPMUNGID_G',prop:'Title'},{av:'AV318renglones',fld:'vRENGLONES',pic:'ZZZ9'},{av:'A860PMEmpresa',fld:'PMEMPRESA',pic:'ZZZZZZZZZ9'},{av:'dynavCnciasid_f'},{av:'AV100CNCIASID_F',fld:'vCNCIASID_F',pic:'ZZZZZZZZZ9'},{av:'A3295PROPAGID',fld:'PROPAGID',pic:'ZZZZZZZZZ9'},{av:'AV239PROPAGID_F',fld:'vPROPAGID_F',pic:'ZZZZZZZZZ9'},{av:'A861PMTipoDoc',fld:'PMTIPODOC',pic:''},{av:'cmbavPmtipodoc_f'},{av:'AV197PMTipoDoc_F',fld:'vPMTIPODOC_F',pic:''},{av:'A862PMNumDoc',fld:'PMNUMDOC',pic:'ZZZZZZZZZ9'},{av:'AV133Numero',fld:'vNUMERO',pic:'ZZZZZZZZZ9'},{av:'A863PMProvId',fld:'PMPROVID',pic:'ZZZZZZZZZ9'},{av:'AV108CNCDIRID_F',fld:'vCNCDIRID_F',pic:'ZZZZZZZZZ9'},{av:'A864PMProyId',fld:'PMPROYID',pic:''},{av:'AV7PMCTPRID',fld:'vPMCTPRID',pic:''},{av:'AV111F2',fld:'vF2',pic:''},{av:'A866PMFechFac',fld:'PMFECHFAC',pic:''},{av:'AV110F1',fld:'vF1',pic:''},{av:'A873PMMoneId',fld:'PMMONEID',pic:''},{av:'AV327F6',fld:'vF6',pic:''},{av:'A4090PMCXPFHTRN',fld:'PMCXPFHTRN',pic:'99/99/99 99:99'},{av:'AV326F5',fld:'vF5',pic:''},{av:'AV113F4',fld:'vF4',pic:''},{av:'A867PMFechVen',fld:'PMFECHVEN',pic:''},{av:'AV112F3',fld:'vF3',pic:''},{av:'A2405PMEstatus',fld:'PMESTATUS',pic:''},{av:'cmbavEstatus'},{av:'AV11Estatus',fld:'vESTATUS',pic:''},{av:'AV230Checkoc',fld:'vCHECKOC',pic:'9'},{av:'A908PMNumDocOC',fld:'PMNUMDOCOC',pic:'ZZZZZZZZZ9'},{av:'AV229PMNumDocOc_F',fld:'vPMNUMDOCOC_F',pic:'ZZZZZZZZZ9'},{av:'A2528PMFolioFac',fld:'PMFOLIOFAC',pic:''},{av:'AV159PMFolioFac_F',fld:'vPMFOLIOFAC_F',pic:''},{av:'A905PMPoliz',fld:'PMPOLIZ',pic:'9'},{av:'cmbavPmpoliz_f'},{av:'AV270pmpoliz_f',fld:'vPMPOLIZ_F',pic:'9'},{av:'A10905PMIDREL',fld:'PMIDREL',pic:'ZZZZZZZZZ9'},{av:'AV353arrPMCTPRID',fld:'vARRPMCTPRID',pic:''},{av:'A865PMUngId',fld:'PMUNGID',pic:''},{av:'cmbavCgunngid'},{av:'AV361CGUNNGID',fld:'vCGUNNGID',pic:''},{av:'A17416PMCargo',fld:'PMCARGO',pic:'ZZZZZZZZZ9'},{av:'AV296banload',fld:'vBANLOAD',pic:''},{av:'AV350CNUSERMCXP',fld:'vCNUSERMCXP',pic:'',hsh:true},{av:'A2534PMUsrcap',fld:'PMUSRCAP',pic:'ZZZZZZZZZ9'},{av:'A4599PMLayAsoc',fld:'PMLAYASOC',pic:'9'},{av:'A909PMUuid',fld:'PMUUID',pic:''},{av:'A2871PMPDFDoc',fld:'PMPDFDOC',pic:'ZZZZZZZZZ9'},{av:'A2718PMMonTp',fld:'PMMONTP',pic:'ZZZZZZZZZ9.999999'},{av:'A2862PMMonAmort',fld:'PMMONAMORT',pic:'ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A898PMFechRev',fld:'PMFECHREV',pic:''},{av:'AV203CNCIASMON_F',fld:'vCNCIASMON_F',pic:''},{av:'A899PMMonEx',fld:'PMMONEX',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'AV316tipoCambio',fld:'vTIPOCAMBIO',pic:'ZZZZZZZZZ9.999999'},{av:'A903PMMonEp',fld:'PMMONEP',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A2689PMMonPgE',fld:'PMMONPGE',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A900PMMonEg',fld:'PMMONEG',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A870PMMonNg',fld:'PMMONNG',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A869PMMonNa',fld:'PMMONNA',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A902PMMonNp',fld:'PMMONNP',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A2688PMMonPgN',fld:'PMMONPGN',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A872PMIva',fld:'PMIVA',pic:'ZZZZZZZZZZZZZ9.99'},{av:'A2520PMMonIvaN',fld:'PMMONIVAN',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A2954PMIVAID',fld:'PMIVAID',pic:''},{av:'A2406PMComentarios',fld:'PMCOMENTARIOS',pic:''},{av:'A2521PMMonIvaE',fld:'PMMONIVAE',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A904PMReten',fld:'PMRETEN',pic:'ZZZZZZZZZZZZZ9.99'},{av:'A906PMOrdenD',fld:'PMORDEND',pic:'9'},{av:'A907PMTipoDocOC',fld:'PMTIPODOCOC',pic:''},{av:'A2923PMCTA1',fld:'PMCTA1',pic:''},{av:'A2924PMCTA2',fld:'PMCTA2',pic:''},{av:'A2925PMCTA3',fld:'PMCTA3',pic:''},{av:'A2542PMCuentadeCargo',fld:'PMCUENTADECARGO',pic:''},{av:'A3917PMObsPoliza',fld:'PMOBSPOLIZA',pic:''},{av:'A4395PMPRANT',fld:'PMPRANT',pic:'ZZZZZZ9.99'},{av:'A7899PMTipoAv',fld:'PMTIPOAV',pic:''},{av:'A7900PMNumAv',fld:'PMNUMAV',pic:'ZZZZZZZZZ9'},{av:'A17105PMCuentaPR02',fld:'PMCUENTAPR02',pic:''},{av:'AV319numRenglons',fld:'vNUMRENGLONS',pic:'ZZZ9',hsh:true},{av:'A2059CNPRCMDFT',fld:'CNPRCMDFT',pic:''},{av:'A2054CNCMNOID',fld:'CNCMNOID',pic:''},{av:'AV317CNCMNOID',fld:'vCNCMNOID',pic:''},{av:'A2055CNCMNDID',fld:'CNCMNDID',pic:''},{av:'A2076CNPRCMDVAL',fld:'CNPRCMDVAL',pic:'ZZZ,ZZ9.9999999'},{av:'A2610ESTPAGID',fld:'ESTPAGID',pic:''},{av:'AV123PMEstatus',fld:'vPMESTATUS',pic:'',hsh:true},{av:'A2611ESTPAGDSC',fld:'ESTPAGDSC',pic:''},{av:'A7789AVDSPRCIA',fld:'AVDSPRCIA',pic:'ZZZZZZZZZ9'},{av:'AV61PMEmpresa_G',fld:'vPMEMPRESA_G',pic:'ZZZZZZZZZ9',hsh:true},{av:'A8295AVDSPRCPPTPC',fld:'AVDSPRCPPTPC',pic:''},{av:'AV62PMTipoDoc_G',fld:'vPMTIPODOC_G',pic:'',hsh:true},{av:'A8296AVDSPRCPPNDC',fld:'AVDSPRCPPNDC',pic:'ZZZZZZZZZ9'},{av:'AV63PMNumDoc_G',fld:'vPMNUMDOC_G',pic:'ZZZZZZZZZ9',hsh:true},{av:'A20CNTDOCID',fld:'CNTDOCID',pic:''},{av:'A8255AVDSPRDOC',fld:'AVDSPRDOC',pic:'ZZZZZZZZZ9'},{av:'A7790AVDSPRNDC',fld:'AVDSPRNDC',pic:'ZZZZZZZZZ9'},{av:'A8242AVDSPROBS',fld:'AVDSPROBS',pic:''},{av:'A7518CNDSPRCIA',fld:'CNDSPRCIA',pic:'ZZZZZZZZZ9'},{av:'A7519CNDSPRTDC',fld:'CNDSPRTDC',pic:''},{av:'A7520CNDSPRNDC',fld:'CNDSPRNDC',pic:'ZZZZZZZZZ9'},{av:'A7531CNDSPRALCTR',fld:'CNDSPRALCTR',pic:''},{av:'AV116CNUSERID',fld:'vCNUSERID',pic:'',hsh:true},{av:'AV310totalIndicador',fld:'vTOTALINDICADOR',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'AV303totalPendiente',fld:'vTOTALPENDIENTE',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'AV302totalProgramado',fld:'vTOTALPROGRAMADO',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'AV371totalPendienteGrav',fld:'vTOTALPENDIENTEGRAV',pic:'ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'AV373GSUBTOTAL',fld:'vGSUBTOTAL',pic:'ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'AV300sdtPMCuentaXPag',fld:'vSDTPMCUENTAXPAG',pic:''},{av:'dynavCatcarid'},{av:'AV367CATCARID',fld:'vCATCARID',pic:'ZZZZZZZZZ9'},{av:'dynavPmcxprelid'},{av:'AV351PMCXPRELID',fld:'vPMCXPRELID',pic:'ZZZZZZZZZ9'},{av:'dynavUnifcncmnmid'},{av:'AV315unifCNCMNMID',fld:'vUNIFCNCMNMID',pic:''},{av:'dynavCncmnmid'},{av:'AV32CNCMNMID',fld:'vCNCMNMID',pic:''}]");
       setEventMetadata("ENTER",",oparms:[{av:'dynavCnciasid_f'},{av:'AV232paginas',fld:'vPAGINAS',pic:'ZZZ9'},{av:'AV296banload',fld:'vBANLOAD',pic:''},{av:'AV300sdtPMCuentaXPag',fld:'vSDTPMCUENTAXPAG',pic:''},{av:'AV316tipoCambio',fld:'vTIPOCAMBIO',pic:'ZZZZZZZZZ9.999999'},{av:'AV310totalIndicador',fld:'vTOTALINDICADOR',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'AV303totalPendiente',fld:'vTOTALPENDIENTE',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'AV302totalProgramado',fld:'vTOTALPROGRAMADO',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'AV371totalPendienteGrav',fld:'vTOTALPENDIENTEGRAV',pic:'ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'AV373GSUBTOTAL',fld:'vGSUBTOTAL',pic:'ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'dynavCatcarid'},{av:'AV367CATCARID',fld:'vCATCARID',pic:'ZZZZZZZZZ9'},{av:'dynavPmcxprelid'},{av:'AV351PMCXPRELID',fld:'vPMCXPRELID',pic:'ZZZZZZZZZ9'},{av:'dynavUnifcncmnmid'},{av:'AV315unifCNCMNMID',fld:'vUNIFCNCMNMID',pic:''},{av:'dynavCncmnmid'},{av:'AV32CNCMNMID',fld:'vCNCMNMID',pic:''}]}");
       setEventMetadata("VCNCMNMID.CLICK","{handler:'e28DZ2',iparms:[{av:'dynavCatcarid'},{av:'AV367CATCARID',fld:'vCATCARID',pic:'ZZZZZZZZZ9'},{av:'dynavPmcxprelid'},{av:'AV351PMCXPRELID',fld:'vPMCXPRELID',pic:'ZZZZZZZZZ9'},{av:'dynavUnifcncmnmid'},{av:'AV315unifCNCMNMID',fld:'vUNIFCNCMNMID',pic:''},{av:'dynavCncmnmid'},{av:'AV32CNCMNMID',fld:'vCNCMNMID',pic:''}]");
       setEventMetadata("VCNCMNMID.CLICK",",oparms:[{av:'dynavCatcarid'},{av:'AV367CATCARID',fld:'vCATCARID',pic:'ZZZZZZZZZ9'},{av:'dynavPmcxprelid'},{av:'AV351PMCXPRELID',fld:'vPMCXPRELID',pic:'ZZZZZZZZZ9'},{av:'dynavUnifcncmnmid'},{av:'AV315unifCNCMNMID',fld:'vUNIFCNCMNMID',pic:''},{av:'dynavCncmnmid'},{av:'AV32CNCMNMID',fld:'vCNCMNMID',pic:''}]}");
@@ -11205,41 +11310,41 @@ public final  class wcomppg_impl extends GXDataArea
       setEventMetadata("VCNCDIRNOM_F.ISVALID",",oparms:[{av:'AV108CNCDIRID_F',fld:'vCNCDIRID_F',pic:'ZZZZZZZZZ9'},{av:'AV114CNCDIRNOM_F',fld:'vCNCDIRNOM_F',pic:''},{av:'dynavCatcarid'},{av:'AV367CATCARID',fld:'vCATCARID',pic:'ZZZZZZZZZ9'},{av:'dynavPmcxprelid'},{av:'AV351PMCXPRELID',fld:'vPMCXPRELID',pic:'ZZZZZZZZZ9'},{av:'dynavUnifcncmnmid'},{av:'AV315unifCNCMNMID',fld:'vUNIFCNCMNMID',pic:''},{av:'dynavCncmnmid'},{av:'AV32CNCMNMID',fld:'vCNCMNMID',pic:''}]}");
       setEventMetadata("'MENU'","{handler:'e44DZ1',iparms:[{av:'dynavCatcarid'},{av:'AV367CATCARID',fld:'vCATCARID',pic:'ZZZZZZZZZ9'},{av:'dynavPmcxprelid'},{av:'AV351PMCXPRELID',fld:'vPMCXPRELID',pic:'ZZZZZZZZZ9'},{av:'dynavUnifcncmnmid'},{av:'AV315unifCNCMNMID',fld:'vUNIFCNCMNMID',pic:''},{av:'dynavCncmnmid'},{av:'AV32CNCMNMID',fld:'vCNCMNMID',pic:''}]");
       setEventMetadata("'MENU'",",oparms:[{av:'lblTxt2_Caption',ctrl:'TXT2',prop:'Caption'},{av:'dynavCatcarid'},{av:'AV367CATCARID',fld:'vCATCARID',pic:'ZZZZZZZZZ9'},{av:'dynavPmcxprelid'},{av:'AV351PMCXPRELID',fld:'vPMCXPRELID',pic:'ZZZZZZZZZ9'},{av:'dynavUnifcncmnmid'},{av:'AV315unifCNCMNMID',fld:'vUNIFCNCMNMID',pic:''},{av:'dynavCncmnmid'},{av:'AV32CNCMNMID',fld:'vCNCMNMID',pic:''}]}");
-      setEventMetadata("'CANCELAR'","{handler:'e32DZ2',iparms:[{av:'GRID1_nFirstRecordOnPage'},{av:'GRID1_nEOF'},{av:'subGrid1_Rows',ctrl:'GRID1',prop:'Rows'},{av:'AV240AbrirBitacora',fld:'vABRIRBITACORA',pic:''},{av:'edtavPmctprdsc_Title',ctrl:'vPMCTPRDSC',prop:'Title'},{av:'edtavPmungid_g_Title',ctrl:'vPMUNGID_G',prop:'Title'},{av:'AV318renglones',fld:'vRENGLONES',pic:'ZZZ9'},{av:'A860PMEmpresa',fld:'PMEMPRESA',pic:'ZZZZZZZZZ9'},{av:'dynavCnciasid_f'},{av:'AV100CNCIASID_F',fld:'vCNCIASID_F',pic:'ZZZZZZZZZ9'},{av:'A3295PROPAGID',fld:'PROPAGID',pic:'ZZZZZZZZZ9'},{av:'AV239PROPAGID_F',fld:'vPROPAGID_F',pic:'ZZZZZZZZZ9'},{av:'A861PMTipoDoc',fld:'PMTIPODOC',pic:''},{av:'cmbavPmtipodoc_f'},{av:'AV197PMTipoDoc_F',fld:'vPMTIPODOC_F',pic:''},{av:'A862PMNumDoc',fld:'PMNUMDOC',pic:'ZZZZZZZZZ9'},{av:'AV133Numero',fld:'vNUMERO',pic:'ZZZZZZZZZ9'},{av:'A863PMProvId',fld:'PMPROVID',pic:'ZZZZZZZZZ9'},{av:'AV108CNCDIRID_F',fld:'vCNCDIRID_F',pic:'ZZZZZZZZZ9'},{av:'A864PMProyId',fld:'PMPROYID',pic:''},{av:'AV7PMCTPRID',fld:'vPMCTPRID',pic:''},{av:'AV111F2',fld:'vF2',pic:''},{av:'A866PMFechFac',fld:'PMFECHFAC',pic:''},{av:'AV110F1',fld:'vF1',pic:''},{av:'A873PMMoneId',fld:'PMMONEID',pic:''},{av:'AV327F6',fld:'vF6',pic:''},{av:'A4090PMCXPFHTRN',fld:'PMCXPFHTRN',pic:'99/99/99 99:99'},{av:'AV326F5',fld:'vF5',pic:''},{av:'AV113F4',fld:'vF4',pic:''},{av:'A867PMFechVen',fld:'PMFECHVEN',pic:''},{av:'AV112F3',fld:'vF3',pic:''},{av:'A2405PMEstatus',fld:'PMESTATUS',pic:''},{av:'cmbavEstatus'},{av:'AV11Estatus',fld:'vESTATUS',pic:''},{av:'AV230Checkoc',fld:'vCHECKOC',pic:'9'},{av:'A908PMNumDocOC',fld:'PMNUMDOCOC',pic:'ZZZZZZZZZ9'},{av:'AV229PMNumDocOc_F',fld:'vPMNUMDOCOC_F',pic:'ZZZZZZZZZ9'},{av:'A2528PMFolioFac',fld:'PMFOLIOFAC',pic:''},{av:'AV159PMFolioFac_F',fld:'vPMFOLIOFAC_F',pic:''},{av:'A905PMPoliz',fld:'PMPOLIZ',pic:'9'},{av:'cmbavPmpoliz_f'},{av:'AV270pmpoliz_f',fld:'vPMPOLIZ_F',pic:'9'},{av:'A10905PMIDREL',fld:'PMIDREL',pic:'ZZZZZZZZZ9'},{av:'AV353arrPMCTPRID',fld:'vARRPMCTPRID',pic:''},{av:'A865PMUngId',fld:'PMUNGID',pic:''},{av:'cmbavCgunngid'},{av:'AV361CGUNNGID',fld:'vCGUNNGID',pic:''},{av:'A17416PMCargo',fld:'PMCARGO',pic:'ZZZZZZZZZ9'},{av:'AV296banload',fld:'vBANLOAD',pic:''},{av:'AV350CNUSERMCXP',fld:'vCNUSERMCXP',pic:'',hsh:true},{av:'A2534PMUsrcap',fld:'PMUSRCAP',pic:'ZZZZZZZZZ9'},{av:'A4599PMLayAsoc',fld:'PMLAYASOC',pic:'9'},{av:'A909PMUuid',fld:'PMUUID',pic:''},{av:'A2871PMPDFDoc',fld:'PMPDFDOC',pic:'ZZZZZZZZZ9'},{av:'A2718PMMonTp',fld:'PMMONTP',pic:'ZZZZZZZZZ9.999999'},{av:'A2862PMMonAmort',fld:'PMMONAMORT',pic:'ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A898PMFechRev',fld:'PMFECHREV',pic:''},{av:'AV203CNCIASMON_F',fld:'vCNCIASMON_F',pic:''},{av:'A899PMMonEx',fld:'PMMONEX',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'AV316tipoCambio',fld:'vTIPOCAMBIO',pic:'ZZZZZZZZZ9.999999'},{av:'A903PMMonEp',fld:'PMMONEP',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A2689PMMonPgE',fld:'PMMONPGE',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A900PMMonEg',fld:'PMMONEG',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A870PMMonNg',fld:'PMMONNG',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A869PMMonNa',fld:'PMMONNA',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A902PMMonNp',fld:'PMMONNP',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A2688PMMonPgN',fld:'PMMONPGN',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A872PMIva',fld:'PMIVA',pic:'ZZZZZZZZZZZZZ9.99'},{av:'A2520PMMonIvaN',fld:'PMMONIVAN',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A2954PMIVAID',fld:'PMIVAID',pic:''},{av:'A2406PMComentarios',fld:'PMCOMENTARIOS',pic:''},{av:'A2521PMMonIvaE',fld:'PMMONIVAE',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A904PMReten',fld:'PMRETEN',pic:'ZZZZZZZZZZZZZ9.99'},{av:'A906PMOrdenD',fld:'PMORDEND',pic:'9'},{av:'A907PMTipoDocOC',fld:'PMTIPODOCOC',pic:''},{av:'A2923PMCTA1',fld:'PMCTA1',pic:''},{av:'A2924PMCTA2',fld:'PMCTA2',pic:''},{av:'A2925PMCTA3',fld:'PMCTA3',pic:''},{av:'A2542PMCuentadeCargo',fld:'PMCUENTADECARGO',pic:''},{av:'A3917PMObsPoliza',fld:'PMOBSPOLIZA',pic:''},{av:'A4395PMPRANT',fld:'PMPRANT',pic:'ZZZZZZ9.99'},{av:'A7899PMTipoAv',fld:'PMTIPOAV',pic:''},{av:'A7900PMNumAv',fld:'PMNUMAV',pic:'ZZZZZZZZZ9'},{av:'A17105PMCuentaPR02',fld:'PMCUENTAPR02',pic:''},{av:'AV319numRenglons',fld:'vNUMRENGLONS',pic:'ZZZ9',hsh:true},{av:'A2059CNPRCMDFT',fld:'CNPRCMDFT',pic:''},{av:'A2054CNCMNOID',fld:'CNCMNOID',pic:''},{av:'AV317CNCMNOID',fld:'vCNCMNOID',pic:''},{av:'A2055CNCMNDID',fld:'CNCMNDID',pic:''},{av:'A2076CNPRCMDVAL',fld:'CNPRCMDVAL',pic:'ZZZ,ZZ9.9999999'},{av:'A2610ESTPAGID',fld:'ESTPAGID',pic:''},{av:'AV123PMEstatus',fld:'vPMESTATUS',pic:'',hsh:true},{av:'A2611ESTPAGDSC',fld:'ESTPAGDSC',pic:''},{av:'AV116CNUSERID',fld:'vCNUSERID',pic:'',hsh:true},{av:'AV62PMTipoDoc_G',fld:'vPMTIPODOC_G',pic:'',hsh:true},{av:'AV130PMMonPgN',fld:'vPMMONPGN',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99',hsh:true},{av:'AV131PMMonPgE',fld:'vPMMONPGE',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99',hsh:true},{av:'AV61PMEmpresa_G',fld:'vPMEMPRESA_G',pic:'ZZZZZZZZZ9',hsh:true},{av:'AV63PMNumDoc_G',fld:'vPMNUMDOC_G',pic:'ZZZZZZZZZ9',hsh:true},{av:'dynavCatcarid'},{av:'AV367CATCARID',fld:'vCATCARID',pic:'ZZZZZZZZZ9'},{av:'dynavPmcxprelid'},{av:'AV351PMCXPRELID',fld:'vPMCXPRELID',pic:'ZZZZZZZZZ9'},{av:'dynavUnifcncmnmid'},{av:'AV315unifCNCMNMID',fld:'vUNIFCNCMNMID',pic:''},{av:'dynavCncmnmid'},{av:'AV32CNCMNMID',fld:'vCNCMNMID',pic:''}]");
+      setEventMetadata("'CANCELAR'","{handler:'e32DZ2',iparms:[{av:'GRID1_nFirstRecordOnPage'},{av:'GRID1_nEOF'},{av:'subGrid1_Rows',ctrl:'GRID1',prop:'Rows'},{av:'AV240AbrirBitacora',fld:'vABRIRBITACORA',pic:''},{av:'edtavPmctprdsc_Title',ctrl:'vPMCTPRDSC',prop:'Title'},{av:'edtavPmungid_g_Title',ctrl:'vPMUNGID_G',prop:'Title'},{av:'AV318renglones',fld:'vRENGLONES',pic:'ZZZ9'},{av:'A860PMEmpresa',fld:'PMEMPRESA',pic:'ZZZZZZZZZ9'},{av:'dynavCnciasid_f'},{av:'AV100CNCIASID_F',fld:'vCNCIASID_F',pic:'ZZZZZZZZZ9'},{av:'A3295PROPAGID',fld:'PROPAGID',pic:'ZZZZZZZZZ9'},{av:'AV239PROPAGID_F',fld:'vPROPAGID_F',pic:'ZZZZZZZZZ9'},{av:'A861PMTipoDoc',fld:'PMTIPODOC',pic:''},{av:'cmbavPmtipodoc_f'},{av:'AV197PMTipoDoc_F',fld:'vPMTIPODOC_F',pic:''},{av:'A862PMNumDoc',fld:'PMNUMDOC',pic:'ZZZZZZZZZ9'},{av:'AV133Numero',fld:'vNUMERO',pic:'ZZZZZZZZZ9'},{av:'A863PMProvId',fld:'PMPROVID',pic:'ZZZZZZZZZ9'},{av:'AV108CNCDIRID_F',fld:'vCNCDIRID_F',pic:'ZZZZZZZZZ9'},{av:'A864PMProyId',fld:'PMPROYID',pic:''},{av:'AV7PMCTPRID',fld:'vPMCTPRID',pic:''},{av:'AV111F2',fld:'vF2',pic:''},{av:'A866PMFechFac',fld:'PMFECHFAC',pic:''},{av:'AV110F1',fld:'vF1',pic:''},{av:'A873PMMoneId',fld:'PMMONEID',pic:''},{av:'AV327F6',fld:'vF6',pic:''},{av:'A4090PMCXPFHTRN',fld:'PMCXPFHTRN',pic:'99/99/99 99:99'},{av:'AV326F5',fld:'vF5',pic:''},{av:'AV113F4',fld:'vF4',pic:''},{av:'A867PMFechVen',fld:'PMFECHVEN',pic:''},{av:'AV112F3',fld:'vF3',pic:''},{av:'A2405PMEstatus',fld:'PMESTATUS',pic:''},{av:'cmbavEstatus'},{av:'AV11Estatus',fld:'vESTATUS',pic:''},{av:'AV230Checkoc',fld:'vCHECKOC',pic:'9'},{av:'A908PMNumDocOC',fld:'PMNUMDOCOC',pic:'ZZZZZZZZZ9'},{av:'AV229PMNumDocOc_F',fld:'vPMNUMDOCOC_F',pic:'ZZZZZZZZZ9'},{av:'A2528PMFolioFac',fld:'PMFOLIOFAC',pic:''},{av:'AV159PMFolioFac_F',fld:'vPMFOLIOFAC_F',pic:''},{av:'A905PMPoliz',fld:'PMPOLIZ',pic:'9'},{av:'cmbavPmpoliz_f'},{av:'AV270pmpoliz_f',fld:'vPMPOLIZ_F',pic:'9'},{av:'A10905PMIDREL',fld:'PMIDREL',pic:'ZZZZZZZZZ9'},{av:'AV353arrPMCTPRID',fld:'vARRPMCTPRID',pic:''},{av:'A865PMUngId',fld:'PMUNGID',pic:''},{av:'cmbavCgunngid'},{av:'AV361CGUNNGID',fld:'vCGUNNGID',pic:''},{av:'A17416PMCargo',fld:'PMCARGO',pic:'ZZZZZZZZZ9'},{av:'AV296banload',fld:'vBANLOAD',pic:''},{av:'AV350CNUSERMCXP',fld:'vCNUSERMCXP',pic:'',hsh:true},{av:'A2534PMUsrcap',fld:'PMUSRCAP',pic:'ZZZZZZZZZ9'},{av:'A4599PMLayAsoc',fld:'PMLAYASOC',pic:'9'},{av:'A909PMUuid',fld:'PMUUID',pic:''},{av:'A2871PMPDFDoc',fld:'PMPDFDOC',pic:'ZZZZZZZZZ9'},{av:'A2718PMMonTp',fld:'PMMONTP',pic:'ZZZZZZZZZ9.999999'},{av:'A2862PMMonAmort',fld:'PMMONAMORT',pic:'ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A898PMFechRev',fld:'PMFECHREV',pic:''},{av:'AV203CNCIASMON_F',fld:'vCNCIASMON_F',pic:''},{av:'A899PMMonEx',fld:'PMMONEX',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'AV316tipoCambio',fld:'vTIPOCAMBIO',pic:'ZZZZZZZZZ9.999999'},{av:'A903PMMonEp',fld:'PMMONEP',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A2689PMMonPgE',fld:'PMMONPGE',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A900PMMonEg',fld:'PMMONEG',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A870PMMonNg',fld:'PMMONNG',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A869PMMonNa',fld:'PMMONNA',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A902PMMonNp',fld:'PMMONNP',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A2688PMMonPgN',fld:'PMMONPGN',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A872PMIva',fld:'PMIVA',pic:'ZZZZZZZZZZZZZ9.99'},{av:'A2520PMMonIvaN',fld:'PMMONIVAN',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A2954PMIVAID',fld:'PMIVAID',pic:''},{av:'A2406PMComentarios',fld:'PMCOMENTARIOS',pic:''},{av:'A2521PMMonIvaE',fld:'PMMONIVAE',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A904PMReten',fld:'PMRETEN',pic:'ZZZZZZZZZZZZZ9.99'},{av:'A906PMOrdenD',fld:'PMORDEND',pic:'9'},{av:'A907PMTipoDocOC',fld:'PMTIPODOCOC',pic:''},{av:'A2923PMCTA1',fld:'PMCTA1',pic:''},{av:'A2924PMCTA2',fld:'PMCTA2',pic:''},{av:'A2925PMCTA3',fld:'PMCTA3',pic:''},{av:'A2542PMCuentadeCargo',fld:'PMCUENTADECARGO',pic:''},{av:'A3917PMObsPoliza',fld:'PMOBSPOLIZA',pic:''},{av:'A4395PMPRANT',fld:'PMPRANT',pic:'ZZZZZZ9.99'},{av:'A7899PMTipoAv',fld:'PMTIPOAV',pic:''},{av:'A7900PMNumAv',fld:'PMNUMAV',pic:'ZZZZZZZZZ9'},{av:'A17105PMCuentaPR02',fld:'PMCUENTAPR02',pic:''},{av:'AV319numRenglons',fld:'vNUMRENGLONS',pic:'ZZZ9',hsh:true},{av:'A2059CNPRCMDFT',fld:'CNPRCMDFT',pic:''},{av:'A2054CNCMNOID',fld:'CNCMNOID',pic:''},{av:'AV317CNCMNOID',fld:'vCNCMNOID',pic:''},{av:'A2055CNCMNDID',fld:'CNCMNDID',pic:''},{av:'A2076CNPRCMDVAL',fld:'CNPRCMDVAL',pic:'ZZZ,ZZ9.9999999'},{av:'A2610ESTPAGID',fld:'ESTPAGID',pic:''},{av:'AV123PMEstatus',fld:'vPMESTATUS',pic:'',hsh:true},{av:'A2611ESTPAGDSC',fld:'ESTPAGDSC',pic:''},{av:'A7789AVDSPRCIA',fld:'AVDSPRCIA',pic:'ZZZZZZZZZ9'},{av:'AV61PMEmpresa_G',fld:'vPMEMPRESA_G',pic:'ZZZZZZZZZ9',hsh:true},{av:'A8295AVDSPRCPPTPC',fld:'AVDSPRCPPTPC',pic:''},{av:'AV62PMTipoDoc_G',fld:'vPMTIPODOC_G',pic:'',hsh:true},{av:'A8296AVDSPRCPPNDC',fld:'AVDSPRCPPNDC',pic:'ZZZZZZZZZ9'},{av:'AV63PMNumDoc_G',fld:'vPMNUMDOC_G',pic:'ZZZZZZZZZ9',hsh:true},{av:'A20CNTDOCID',fld:'CNTDOCID',pic:''},{av:'A8255AVDSPRDOC',fld:'AVDSPRDOC',pic:'ZZZZZZZZZ9'},{av:'A7790AVDSPRNDC',fld:'AVDSPRNDC',pic:'ZZZZZZZZZ9'},{av:'A8242AVDSPROBS',fld:'AVDSPROBS',pic:''},{av:'A7518CNDSPRCIA',fld:'CNDSPRCIA',pic:'ZZZZZZZZZ9'},{av:'A7519CNDSPRTDC',fld:'CNDSPRTDC',pic:''},{av:'A7520CNDSPRNDC',fld:'CNDSPRNDC',pic:'ZZZZZZZZZ9'},{av:'A7531CNDSPRALCTR',fld:'CNDSPRALCTR',pic:''},{av:'AV116CNUSERID',fld:'vCNUSERID',pic:'',hsh:true},{av:'AV130PMMonPgN',fld:'vPMMONPGN',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99',hsh:true},{av:'AV131PMMonPgE',fld:'vPMMONPGE',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99',hsh:true},{av:'dynavCatcarid'},{av:'AV367CATCARID',fld:'vCATCARID',pic:'ZZZZZZZZZ9'},{av:'dynavPmcxprelid'},{av:'AV351PMCXPRELID',fld:'vPMCXPRELID',pic:'ZZZZZZZZZ9'},{av:'dynavUnifcncmnmid'},{av:'AV315unifCNCMNMID',fld:'vUNIFCNCMNMID',pic:''},{av:'dynavCncmnmid'},{av:'AV32CNCMNMID',fld:'vCNCMNMID',pic:''}]");
       setEventMetadata("'CANCELAR'",",oparms:[{av:'dynavCatcarid'},{av:'AV367CATCARID',fld:'vCATCARID',pic:'ZZZZZZZZZ9'},{av:'dynavPmcxprelid'},{av:'AV351PMCXPRELID',fld:'vPMCXPRELID',pic:'ZZZZZZZZZ9'},{av:'dynavUnifcncmnmid'},{av:'AV315unifCNCMNMID',fld:'vUNIFCNCMNMID',pic:''},{av:'dynavCncmnmid'},{av:'AV32CNCMNMID',fld:'vCNCMNMID',pic:''}]}");
-      setEventMetadata("'CANCELACIONES'","{handler:'e33DZ2',iparms:[{av:'GRID1_nFirstRecordOnPage'},{av:'GRID1_nEOF'},{av:'subGrid1_Rows',ctrl:'GRID1',prop:'Rows'},{av:'AV240AbrirBitacora',fld:'vABRIRBITACORA',pic:''},{av:'edtavPmctprdsc_Title',ctrl:'vPMCTPRDSC',prop:'Title'},{av:'edtavPmungid_g_Title',ctrl:'vPMUNGID_G',prop:'Title'},{av:'AV318renglones',fld:'vRENGLONES',pic:'ZZZ9'},{av:'A860PMEmpresa',fld:'PMEMPRESA',pic:'ZZZZZZZZZ9'},{av:'dynavCnciasid_f'},{av:'AV100CNCIASID_F',fld:'vCNCIASID_F',pic:'ZZZZZZZZZ9'},{av:'A3295PROPAGID',fld:'PROPAGID',pic:'ZZZZZZZZZ9'},{av:'AV239PROPAGID_F',fld:'vPROPAGID_F',pic:'ZZZZZZZZZ9'},{av:'A861PMTipoDoc',fld:'PMTIPODOC',pic:''},{av:'cmbavPmtipodoc_f'},{av:'AV197PMTipoDoc_F',fld:'vPMTIPODOC_F',pic:''},{av:'A862PMNumDoc',fld:'PMNUMDOC',pic:'ZZZZZZZZZ9'},{av:'AV133Numero',fld:'vNUMERO',pic:'ZZZZZZZZZ9'},{av:'A863PMProvId',fld:'PMPROVID',pic:'ZZZZZZZZZ9'},{av:'AV108CNCDIRID_F',fld:'vCNCDIRID_F',pic:'ZZZZZZZZZ9'},{av:'A864PMProyId',fld:'PMPROYID',pic:''},{av:'AV7PMCTPRID',fld:'vPMCTPRID',pic:''},{av:'AV111F2',fld:'vF2',pic:''},{av:'A866PMFechFac',fld:'PMFECHFAC',pic:''},{av:'AV110F1',fld:'vF1',pic:''},{av:'A873PMMoneId',fld:'PMMONEID',pic:''},{av:'AV327F6',fld:'vF6',pic:''},{av:'A4090PMCXPFHTRN',fld:'PMCXPFHTRN',pic:'99/99/99 99:99'},{av:'AV326F5',fld:'vF5',pic:''},{av:'AV113F4',fld:'vF4',pic:''},{av:'A867PMFechVen',fld:'PMFECHVEN',pic:''},{av:'AV112F3',fld:'vF3',pic:''},{av:'A2405PMEstatus',fld:'PMESTATUS',pic:''},{av:'cmbavEstatus'},{av:'AV11Estatus',fld:'vESTATUS',pic:''},{av:'AV230Checkoc',fld:'vCHECKOC',pic:'9'},{av:'A908PMNumDocOC',fld:'PMNUMDOCOC',pic:'ZZZZZZZZZ9'},{av:'AV229PMNumDocOc_F',fld:'vPMNUMDOCOC_F',pic:'ZZZZZZZZZ9'},{av:'A2528PMFolioFac',fld:'PMFOLIOFAC',pic:''},{av:'AV159PMFolioFac_F',fld:'vPMFOLIOFAC_F',pic:''},{av:'A905PMPoliz',fld:'PMPOLIZ',pic:'9'},{av:'cmbavPmpoliz_f'},{av:'AV270pmpoliz_f',fld:'vPMPOLIZ_F',pic:'9'},{av:'A10905PMIDREL',fld:'PMIDREL',pic:'ZZZZZZZZZ9'},{av:'AV353arrPMCTPRID',fld:'vARRPMCTPRID',pic:''},{av:'A865PMUngId',fld:'PMUNGID',pic:''},{av:'cmbavCgunngid'},{av:'AV361CGUNNGID',fld:'vCGUNNGID',pic:''},{av:'A17416PMCargo',fld:'PMCARGO',pic:'ZZZZZZZZZ9'},{av:'AV296banload',fld:'vBANLOAD',pic:''},{av:'AV350CNUSERMCXP',fld:'vCNUSERMCXP',pic:'',hsh:true},{av:'A2534PMUsrcap',fld:'PMUSRCAP',pic:'ZZZZZZZZZ9'},{av:'A4599PMLayAsoc',fld:'PMLAYASOC',pic:'9'},{av:'A909PMUuid',fld:'PMUUID',pic:''},{av:'A2871PMPDFDoc',fld:'PMPDFDOC',pic:'ZZZZZZZZZ9'},{av:'A2718PMMonTp',fld:'PMMONTP',pic:'ZZZZZZZZZ9.999999'},{av:'A2862PMMonAmort',fld:'PMMONAMORT',pic:'ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A898PMFechRev',fld:'PMFECHREV',pic:''},{av:'AV203CNCIASMON_F',fld:'vCNCIASMON_F',pic:''},{av:'A899PMMonEx',fld:'PMMONEX',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'AV316tipoCambio',fld:'vTIPOCAMBIO',pic:'ZZZZZZZZZ9.999999'},{av:'A903PMMonEp',fld:'PMMONEP',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A2689PMMonPgE',fld:'PMMONPGE',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A900PMMonEg',fld:'PMMONEG',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A870PMMonNg',fld:'PMMONNG',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A869PMMonNa',fld:'PMMONNA',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A902PMMonNp',fld:'PMMONNP',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A2688PMMonPgN',fld:'PMMONPGN',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A872PMIva',fld:'PMIVA',pic:'ZZZZZZZZZZZZZ9.99'},{av:'A2520PMMonIvaN',fld:'PMMONIVAN',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A2954PMIVAID',fld:'PMIVAID',pic:''},{av:'A2406PMComentarios',fld:'PMCOMENTARIOS',pic:''},{av:'A2521PMMonIvaE',fld:'PMMONIVAE',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A904PMReten',fld:'PMRETEN',pic:'ZZZZZZZZZZZZZ9.99'},{av:'A906PMOrdenD',fld:'PMORDEND',pic:'9'},{av:'A907PMTipoDocOC',fld:'PMTIPODOCOC',pic:''},{av:'A2923PMCTA1',fld:'PMCTA1',pic:''},{av:'A2924PMCTA2',fld:'PMCTA2',pic:''},{av:'A2925PMCTA3',fld:'PMCTA3',pic:''},{av:'A2542PMCuentadeCargo',fld:'PMCUENTADECARGO',pic:''},{av:'A3917PMObsPoliza',fld:'PMOBSPOLIZA',pic:''},{av:'A4395PMPRANT',fld:'PMPRANT',pic:'ZZZZZZ9.99'},{av:'A7899PMTipoAv',fld:'PMTIPOAV',pic:''},{av:'A7900PMNumAv',fld:'PMNUMAV',pic:'ZZZZZZZZZ9'},{av:'A17105PMCuentaPR02',fld:'PMCUENTAPR02',pic:''},{av:'AV319numRenglons',fld:'vNUMRENGLONS',pic:'ZZZ9',hsh:true},{av:'A2059CNPRCMDFT',fld:'CNPRCMDFT',pic:''},{av:'A2054CNCMNOID',fld:'CNCMNOID',pic:''},{av:'AV317CNCMNOID',fld:'vCNCMNOID',pic:''},{av:'A2055CNCMNDID',fld:'CNCMNDID',pic:''},{av:'A2076CNPRCMDVAL',fld:'CNPRCMDVAL',pic:'ZZZ,ZZ9.9999999'},{av:'A2610ESTPAGID',fld:'ESTPAGID',pic:''},{av:'AV123PMEstatus',fld:'vPMESTATUS',pic:'',hsh:true},{av:'A2611ESTPAGDSC',fld:'ESTPAGDSC',pic:''},{av:'AV116CNUSERID',fld:'vCNUSERID',pic:'',hsh:true},{av:'AV61PMEmpresa_G',fld:'vPMEMPRESA_G',pic:'ZZZZZZZZZ9',hsh:true},{av:'AV63PMNumDoc_G',fld:'vPMNUMDOC_G',pic:'ZZZZZZZZZ9',hsh:true},{av:'AV62PMTipoDoc_G',fld:'vPMTIPODOC_G',pic:'',hsh:true},{av:'dynavCatcarid'},{av:'AV367CATCARID',fld:'vCATCARID',pic:'ZZZZZZZZZ9'},{av:'dynavPmcxprelid'},{av:'AV351PMCXPRELID',fld:'vPMCXPRELID',pic:'ZZZZZZZZZ9'},{av:'dynavUnifcncmnmid'},{av:'AV315unifCNCMNMID',fld:'vUNIFCNCMNMID',pic:''},{av:'dynavCncmnmid'},{av:'AV32CNCMNMID',fld:'vCNCMNMID',pic:''}]");
+      setEventMetadata("'CANCELACIONES'","{handler:'e33DZ2',iparms:[{av:'GRID1_nFirstRecordOnPage'},{av:'GRID1_nEOF'},{av:'subGrid1_Rows',ctrl:'GRID1',prop:'Rows'},{av:'AV240AbrirBitacora',fld:'vABRIRBITACORA',pic:''},{av:'edtavPmctprdsc_Title',ctrl:'vPMCTPRDSC',prop:'Title'},{av:'edtavPmungid_g_Title',ctrl:'vPMUNGID_G',prop:'Title'},{av:'AV318renglones',fld:'vRENGLONES',pic:'ZZZ9'},{av:'A860PMEmpresa',fld:'PMEMPRESA',pic:'ZZZZZZZZZ9'},{av:'dynavCnciasid_f'},{av:'AV100CNCIASID_F',fld:'vCNCIASID_F',pic:'ZZZZZZZZZ9'},{av:'A3295PROPAGID',fld:'PROPAGID',pic:'ZZZZZZZZZ9'},{av:'AV239PROPAGID_F',fld:'vPROPAGID_F',pic:'ZZZZZZZZZ9'},{av:'A861PMTipoDoc',fld:'PMTIPODOC',pic:''},{av:'cmbavPmtipodoc_f'},{av:'AV197PMTipoDoc_F',fld:'vPMTIPODOC_F',pic:''},{av:'A862PMNumDoc',fld:'PMNUMDOC',pic:'ZZZZZZZZZ9'},{av:'AV133Numero',fld:'vNUMERO',pic:'ZZZZZZZZZ9'},{av:'A863PMProvId',fld:'PMPROVID',pic:'ZZZZZZZZZ9'},{av:'AV108CNCDIRID_F',fld:'vCNCDIRID_F',pic:'ZZZZZZZZZ9'},{av:'A864PMProyId',fld:'PMPROYID',pic:''},{av:'AV7PMCTPRID',fld:'vPMCTPRID',pic:''},{av:'AV111F2',fld:'vF2',pic:''},{av:'A866PMFechFac',fld:'PMFECHFAC',pic:''},{av:'AV110F1',fld:'vF1',pic:''},{av:'A873PMMoneId',fld:'PMMONEID',pic:''},{av:'AV327F6',fld:'vF6',pic:''},{av:'A4090PMCXPFHTRN',fld:'PMCXPFHTRN',pic:'99/99/99 99:99'},{av:'AV326F5',fld:'vF5',pic:''},{av:'AV113F4',fld:'vF4',pic:''},{av:'A867PMFechVen',fld:'PMFECHVEN',pic:''},{av:'AV112F3',fld:'vF3',pic:''},{av:'A2405PMEstatus',fld:'PMESTATUS',pic:''},{av:'cmbavEstatus'},{av:'AV11Estatus',fld:'vESTATUS',pic:''},{av:'AV230Checkoc',fld:'vCHECKOC',pic:'9'},{av:'A908PMNumDocOC',fld:'PMNUMDOCOC',pic:'ZZZZZZZZZ9'},{av:'AV229PMNumDocOc_F',fld:'vPMNUMDOCOC_F',pic:'ZZZZZZZZZ9'},{av:'A2528PMFolioFac',fld:'PMFOLIOFAC',pic:''},{av:'AV159PMFolioFac_F',fld:'vPMFOLIOFAC_F',pic:''},{av:'A905PMPoliz',fld:'PMPOLIZ',pic:'9'},{av:'cmbavPmpoliz_f'},{av:'AV270pmpoliz_f',fld:'vPMPOLIZ_F',pic:'9'},{av:'A10905PMIDREL',fld:'PMIDREL',pic:'ZZZZZZZZZ9'},{av:'AV353arrPMCTPRID',fld:'vARRPMCTPRID',pic:''},{av:'A865PMUngId',fld:'PMUNGID',pic:''},{av:'cmbavCgunngid'},{av:'AV361CGUNNGID',fld:'vCGUNNGID',pic:''},{av:'A17416PMCargo',fld:'PMCARGO',pic:'ZZZZZZZZZ9'},{av:'AV296banload',fld:'vBANLOAD',pic:''},{av:'AV350CNUSERMCXP',fld:'vCNUSERMCXP',pic:'',hsh:true},{av:'A2534PMUsrcap',fld:'PMUSRCAP',pic:'ZZZZZZZZZ9'},{av:'A4599PMLayAsoc',fld:'PMLAYASOC',pic:'9'},{av:'A909PMUuid',fld:'PMUUID',pic:''},{av:'A2871PMPDFDoc',fld:'PMPDFDOC',pic:'ZZZZZZZZZ9'},{av:'A2718PMMonTp',fld:'PMMONTP',pic:'ZZZZZZZZZ9.999999'},{av:'A2862PMMonAmort',fld:'PMMONAMORT',pic:'ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A898PMFechRev',fld:'PMFECHREV',pic:''},{av:'AV203CNCIASMON_F',fld:'vCNCIASMON_F',pic:''},{av:'A899PMMonEx',fld:'PMMONEX',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'AV316tipoCambio',fld:'vTIPOCAMBIO',pic:'ZZZZZZZZZ9.999999'},{av:'A903PMMonEp',fld:'PMMONEP',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A2689PMMonPgE',fld:'PMMONPGE',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A900PMMonEg',fld:'PMMONEG',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A870PMMonNg',fld:'PMMONNG',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A869PMMonNa',fld:'PMMONNA',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A902PMMonNp',fld:'PMMONNP',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A2688PMMonPgN',fld:'PMMONPGN',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A872PMIva',fld:'PMIVA',pic:'ZZZZZZZZZZZZZ9.99'},{av:'A2520PMMonIvaN',fld:'PMMONIVAN',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A2954PMIVAID',fld:'PMIVAID',pic:''},{av:'A2406PMComentarios',fld:'PMCOMENTARIOS',pic:''},{av:'A2521PMMonIvaE',fld:'PMMONIVAE',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A904PMReten',fld:'PMRETEN',pic:'ZZZZZZZZZZZZZ9.99'},{av:'A906PMOrdenD',fld:'PMORDEND',pic:'9'},{av:'A907PMTipoDocOC',fld:'PMTIPODOCOC',pic:''},{av:'A2923PMCTA1',fld:'PMCTA1',pic:''},{av:'A2924PMCTA2',fld:'PMCTA2',pic:''},{av:'A2925PMCTA3',fld:'PMCTA3',pic:''},{av:'A2542PMCuentadeCargo',fld:'PMCUENTADECARGO',pic:''},{av:'A3917PMObsPoliza',fld:'PMOBSPOLIZA',pic:''},{av:'A4395PMPRANT',fld:'PMPRANT',pic:'ZZZZZZ9.99'},{av:'A7899PMTipoAv',fld:'PMTIPOAV',pic:''},{av:'A7900PMNumAv',fld:'PMNUMAV',pic:'ZZZZZZZZZ9'},{av:'A17105PMCuentaPR02',fld:'PMCUENTAPR02',pic:''},{av:'AV319numRenglons',fld:'vNUMRENGLONS',pic:'ZZZ9',hsh:true},{av:'A2059CNPRCMDFT',fld:'CNPRCMDFT',pic:''},{av:'A2054CNCMNOID',fld:'CNCMNOID',pic:''},{av:'AV317CNCMNOID',fld:'vCNCMNOID',pic:''},{av:'A2055CNCMNDID',fld:'CNCMNDID',pic:''},{av:'A2076CNPRCMDVAL',fld:'CNPRCMDVAL',pic:'ZZZ,ZZ9.9999999'},{av:'A2610ESTPAGID',fld:'ESTPAGID',pic:''},{av:'AV123PMEstatus',fld:'vPMESTATUS',pic:'',hsh:true},{av:'A2611ESTPAGDSC',fld:'ESTPAGDSC',pic:''},{av:'A7789AVDSPRCIA',fld:'AVDSPRCIA',pic:'ZZZZZZZZZ9'},{av:'AV61PMEmpresa_G',fld:'vPMEMPRESA_G',pic:'ZZZZZZZZZ9',hsh:true},{av:'A8295AVDSPRCPPTPC',fld:'AVDSPRCPPTPC',pic:''},{av:'AV62PMTipoDoc_G',fld:'vPMTIPODOC_G',pic:'',hsh:true},{av:'A8296AVDSPRCPPNDC',fld:'AVDSPRCPPNDC',pic:'ZZZZZZZZZ9'},{av:'AV63PMNumDoc_G',fld:'vPMNUMDOC_G',pic:'ZZZZZZZZZ9',hsh:true},{av:'A20CNTDOCID',fld:'CNTDOCID',pic:''},{av:'A8255AVDSPRDOC',fld:'AVDSPRDOC',pic:'ZZZZZZZZZ9'},{av:'A7790AVDSPRNDC',fld:'AVDSPRNDC',pic:'ZZZZZZZZZ9'},{av:'A8242AVDSPROBS',fld:'AVDSPROBS',pic:''},{av:'A7518CNDSPRCIA',fld:'CNDSPRCIA',pic:'ZZZZZZZZZ9'},{av:'A7519CNDSPRTDC',fld:'CNDSPRTDC',pic:''},{av:'A7520CNDSPRNDC',fld:'CNDSPRNDC',pic:'ZZZZZZZZZ9'},{av:'A7531CNDSPRALCTR',fld:'CNDSPRALCTR',pic:''},{av:'AV116CNUSERID',fld:'vCNUSERID',pic:'',hsh:true},{av:'dynavCatcarid'},{av:'AV367CATCARID',fld:'vCATCARID',pic:'ZZZZZZZZZ9'},{av:'dynavPmcxprelid'},{av:'AV351PMCXPRELID',fld:'vPMCXPRELID',pic:'ZZZZZZZZZ9'},{av:'dynavUnifcncmnmid'},{av:'AV315unifCNCMNMID',fld:'vUNIFCNCMNMID',pic:''},{av:'dynavCncmnmid'},{av:'AV32CNCMNMID',fld:'vCNCMNMID',pic:''}]");
       setEventMetadata("'CANCELACIONES'",",oparms:[{av:'dynavCatcarid'},{av:'AV367CATCARID',fld:'vCATCARID',pic:'ZZZZZZZZZ9'},{av:'dynavPmcxprelid'},{av:'AV351PMCXPRELID',fld:'vPMCXPRELID',pic:'ZZZZZZZZZ9'},{av:'dynavUnifcncmnmid'},{av:'AV315unifCNCMNMID',fld:'vUNIFCNCMNMID',pic:''},{av:'dynavCncmnmid'},{av:'AV32CNCMNMID',fld:'vCNCMNMID',pic:''}]}");
       setEventMetadata("'FECHA VENCIMIENTO'","{handler:'e34DZ2',iparms:[{av:'A7193MODFECVECIA',fld:'MODFECVECIA',pic:'ZZZZZZZZZ9'},{av:'AV61PMEmpresa_G',fld:'vPMEMPRESA_G',pic:'ZZZZZZZZZ9',hsh:true},{av:'A7194MODFECVENDC',fld:'MODFECVENDC',pic:'ZZZZZZZZZ9'},{av:'AV63PMNumDoc_G',fld:'vPMNUMDOC_G',pic:'ZZZZZZZZZ9',hsh:true},{av:'A7195MODFECVETDC',fld:'MODFECVETDC',pic:''},{av:'AV62PMTipoDoc_G',fld:'vPMTIPODOC_G',pic:'',hsh:true},{av:'dynavCatcarid'},{av:'AV367CATCARID',fld:'vCATCARID',pic:'ZZZZZZZZZ9'},{av:'dynavPmcxprelid'},{av:'AV351PMCXPRELID',fld:'vPMCXPRELID',pic:'ZZZZZZZZZ9'},{av:'dynavUnifcncmnmid'},{av:'AV315unifCNCMNMID',fld:'vUNIFCNCMNMID',pic:''},{av:'dynavCncmnmid'},{av:'AV32CNCMNMID',fld:'vCNCMNMID',pic:''}]");
       setEventMetadata("'FECHA VENCIMIENTO'",",oparms:[{av:'dynavCatcarid'},{av:'AV367CATCARID',fld:'vCATCARID',pic:'ZZZZZZZZZ9'},{av:'dynavPmcxprelid'},{av:'AV351PMCXPRELID',fld:'vPMCXPRELID',pic:'ZZZZZZZZZ9'},{av:'dynavUnifcncmnmid'},{av:'AV315unifCNCMNMID',fld:'vUNIFCNCMNMID',pic:''},{av:'dynavCncmnmid'},{av:'AV32CNCMNMID',fld:'vCNCMNMID',pic:''}]}");
       setEventMetadata("'MOSTRAR XML'","{handler:'e35DZ2',iparms:[{av:'dynavCnciasid_f'},{av:'AV100CNCIASID_F',fld:'vCNCIASID_F',pic:'ZZZZZZZZZ9'},{av:'AV84PMUuid',fld:'vPMUUID',pic:'',hsh:true},{av:'A838XMLDOCUUID',fld:'XMLDOCUUID',pic:''},{av:'A855XMLDOCFLNM',fld:'XMLDOCFLNM',pic:''},{av:'A883XMLDOCRUT',fld:'XMLDOCRUT',pic:''},{av:'dynavCatcarid'},{av:'AV367CATCARID',fld:'vCATCARID',pic:'ZZZZZZZZZ9'},{av:'dynavPmcxprelid'},{av:'AV351PMCXPRELID',fld:'vPMCXPRELID',pic:'ZZZZZZZZZ9'},{av:'dynavUnifcncmnmid'},{av:'AV315unifCNCMNMID',fld:'vUNIFCNCMNMID',pic:''},{av:'dynavCncmnmid'},{av:'AV32CNCMNMID',fld:'vCNCMNMID',pic:''}]");
       setEventMetadata("'MOSTRAR XML'",",oparms:[{av:'dynavCatcarid'},{av:'AV367CATCARID',fld:'vCATCARID',pic:'ZZZZZZZZZ9'},{av:'dynavPmcxprelid'},{av:'AV351PMCXPRELID',fld:'vPMCXPRELID',pic:'ZZZZZZZZZ9'},{av:'dynavUnifcncmnmid'},{av:'AV315unifCNCMNMID',fld:'vUNIFCNCMNMID',pic:''},{av:'dynavCncmnmid'},{av:'AV32CNCMNMID',fld:'vCNCMNMID',pic:''}]}");
-      setEventMetadata("'MOSTRAR PDF'","{handler:'e36DZ2',iparms:[{av:'AV61PMEmpresa_G',fld:'vPMEMPRESA_G',pic:'ZZZZZZZZZ9',hsh:true},{av:'AV160PMPDFDOC',fld:'vPMPDFDOC',pic:'ZZZZZZZZZ9',hsh:true},{av:'A2870PDFDOCID',fld:'PDFDOCID',pic:'ZZZZZZZZZZZZZZ9'},{av:'A876PDFDOCNAM',fld:'PDFDOCNAM',pic:''},{av:'A878PDFDOCFIL',fld:'PDFDOCFIL',pic:''},{av:'AV378Pgmname',fld:'vPGMNAME',pic:''},{av:'AV63PMNumDoc_G',fld:'vPMNUMDOC_G',pic:'ZZZZZZZZZ9',hsh:true},{av:'AV97PMTipoDocOC_G',fld:'vPMTIPODOCOC_G',pic:'',hsh:true},{av:'AV98PMNumDocOC_G',fld:'vPMNUMDOCOC_G',pic:'ZZZZZZZZZ9',hsh:true},{av:'dynavCatcarid'},{av:'AV367CATCARID',fld:'vCATCARID',pic:'ZZZZZZZZZ9'},{av:'dynavPmcxprelid'},{av:'AV351PMCXPRELID',fld:'vPMCXPRELID',pic:'ZZZZZZZZZ9'},{av:'dynavUnifcncmnmid'},{av:'AV315unifCNCMNMID',fld:'vUNIFCNCMNMID',pic:''},{av:'dynavCncmnmid'},{av:'AV32CNCMNMID',fld:'vCNCMNMID',pic:''}]");
+      setEventMetadata("'MOSTRAR PDF'","{handler:'e36DZ2',iparms:[{av:'AV61PMEmpresa_G',fld:'vPMEMPRESA_G',pic:'ZZZZZZZZZ9',hsh:true},{av:'AV160PMPDFDOC',fld:'vPMPDFDOC',pic:'ZZZZZZZZZ9',hsh:true},{av:'A2870PDFDOCID',fld:'PDFDOCID',pic:'ZZZZZZZZZZZZZZ9'},{av:'A876PDFDOCNAM',fld:'PDFDOCNAM',pic:''},{av:'A878PDFDOCFIL',fld:'PDFDOCFIL',pic:''},{av:'AV383Pgmname',fld:'vPGMNAME',pic:''},{av:'AV63PMNumDoc_G',fld:'vPMNUMDOC_G',pic:'ZZZZZZZZZ9',hsh:true},{av:'AV97PMTipoDocOC_G',fld:'vPMTIPODOCOC_G',pic:'',hsh:true},{av:'AV98PMNumDocOC_G',fld:'vPMNUMDOCOC_G',pic:'ZZZZZZZZZ9',hsh:true},{av:'dynavCatcarid'},{av:'AV367CATCARID',fld:'vCATCARID',pic:'ZZZZZZZZZ9'},{av:'dynavPmcxprelid'},{av:'AV351PMCXPRELID',fld:'vPMCXPRELID',pic:'ZZZZZZZZZ9'},{av:'dynavUnifcncmnmid'},{av:'AV315unifCNCMNMID',fld:'vUNIFCNCMNMID',pic:''},{av:'dynavCncmnmid'},{av:'AV32CNCMNMID',fld:'vCNCMNMID',pic:''}]");
       setEventMetadata("'MOSTRAR PDF'",",oparms:[{av:'dynavCatcarid'},{av:'AV367CATCARID',fld:'vCATCARID',pic:'ZZZZZZZZZ9'},{av:'dynavPmcxprelid'},{av:'AV351PMCXPRELID',fld:'vPMCXPRELID',pic:'ZZZZZZZZZ9'},{av:'dynavUnifcncmnmid'},{av:'AV315unifCNCMNMID',fld:'vUNIFCNCMNMID',pic:''},{av:'dynavCncmnmid'},{av:'AV32CNCMNMID',fld:'vCNCMNMID',pic:''}]}");
-      setEventMetadata("'SUBIR ARCHIVOS'","{handler:'e37DZ2',iparms:[{av:'GRID1_nFirstRecordOnPage'},{av:'GRID1_nEOF'},{av:'subGrid1_Rows',ctrl:'GRID1',prop:'Rows'},{av:'AV240AbrirBitacora',fld:'vABRIRBITACORA',pic:''},{av:'edtavPmctprdsc_Title',ctrl:'vPMCTPRDSC',prop:'Title'},{av:'edtavPmungid_g_Title',ctrl:'vPMUNGID_G',prop:'Title'},{av:'AV318renglones',fld:'vRENGLONES',pic:'ZZZ9'},{av:'A860PMEmpresa',fld:'PMEMPRESA',pic:'ZZZZZZZZZ9'},{av:'dynavCnciasid_f'},{av:'AV100CNCIASID_F',fld:'vCNCIASID_F',pic:'ZZZZZZZZZ9'},{av:'A3295PROPAGID',fld:'PROPAGID',pic:'ZZZZZZZZZ9'},{av:'AV239PROPAGID_F',fld:'vPROPAGID_F',pic:'ZZZZZZZZZ9'},{av:'A861PMTipoDoc',fld:'PMTIPODOC',pic:''},{av:'cmbavPmtipodoc_f'},{av:'AV197PMTipoDoc_F',fld:'vPMTIPODOC_F',pic:''},{av:'A862PMNumDoc',fld:'PMNUMDOC',pic:'ZZZZZZZZZ9'},{av:'AV133Numero',fld:'vNUMERO',pic:'ZZZZZZZZZ9'},{av:'A863PMProvId',fld:'PMPROVID',pic:'ZZZZZZZZZ9'},{av:'AV108CNCDIRID_F',fld:'vCNCDIRID_F',pic:'ZZZZZZZZZ9'},{av:'A864PMProyId',fld:'PMPROYID',pic:''},{av:'AV7PMCTPRID',fld:'vPMCTPRID',pic:''},{av:'AV111F2',fld:'vF2',pic:''},{av:'A866PMFechFac',fld:'PMFECHFAC',pic:''},{av:'AV110F1',fld:'vF1',pic:''},{av:'A873PMMoneId',fld:'PMMONEID',pic:''},{av:'AV327F6',fld:'vF6',pic:''},{av:'A4090PMCXPFHTRN',fld:'PMCXPFHTRN',pic:'99/99/99 99:99'},{av:'AV326F5',fld:'vF5',pic:''},{av:'AV113F4',fld:'vF4',pic:''},{av:'A867PMFechVen',fld:'PMFECHVEN',pic:''},{av:'AV112F3',fld:'vF3',pic:''},{av:'A2405PMEstatus',fld:'PMESTATUS',pic:''},{av:'cmbavEstatus'},{av:'AV11Estatus',fld:'vESTATUS',pic:''},{av:'AV230Checkoc',fld:'vCHECKOC',pic:'9'},{av:'A908PMNumDocOC',fld:'PMNUMDOCOC',pic:'ZZZZZZZZZ9'},{av:'AV229PMNumDocOc_F',fld:'vPMNUMDOCOC_F',pic:'ZZZZZZZZZ9'},{av:'A2528PMFolioFac',fld:'PMFOLIOFAC',pic:''},{av:'AV159PMFolioFac_F',fld:'vPMFOLIOFAC_F',pic:''},{av:'A905PMPoliz',fld:'PMPOLIZ',pic:'9'},{av:'cmbavPmpoliz_f'},{av:'AV270pmpoliz_f',fld:'vPMPOLIZ_F',pic:'9'},{av:'A10905PMIDREL',fld:'PMIDREL',pic:'ZZZZZZZZZ9'},{av:'AV353arrPMCTPRID',fld:'vARRPMCTPRID',pic:''},{av:'A865PMUngId',fld:'PMUNGID',pic:''},{av:'cmbavCgunngid'},{av:'AV361CGUNNGID',fld:'vCGUNNGID',pic:''},{av:'A17416PMCargo',fld:'PMCARGO',pic:'ZZZZZZZZZ9'},{av:'AV296banload',fld:'vBANLOAD',pic:''},{av:'AV350CNUSERMCXP',fld:'vCNUSERMCXP',pic:'',hsh:true},{av:'A2534PMUsrcap',fld:'PMUSRCAP',pic:'ZZZZZZZZZ9'},{av:'A4599PMLayAsoc',fld:'PMLAYASOC',pic:'9'},{av:'A909PMUuid',fld:'PMUUID',pic:''},{av:'A2871PMPDFDoc',fld:'PMPDFDOC',pic:'ZZZZZZZZZ9'},{av:'A2718PMMonTp',fld:'PMMONTP',pic:'ZZZZZZZZZ9.999999'},{av:'A2862PMMonAmort',fld:'PMMONAMORT',pic:'ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A898PMFechRev',fld:'PMFECHREV',pic:''},{av:'AV203CNCIASMON_F',fld:'vCNCIASMON_F',pic:''},{av:'A899PMMonEx',fld:'PMMONEX',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'AV316tipoCambio',fld:'vTIPOCAMBIO',pic:'ZZZZZZZZZ9.999999'},{av:'A903PMMonEp',fld:'PMMONEP',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A2689PMMonPgE',fld:'PMMONPGE',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A900PMMonEg',fld:'PMMONEG',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A870PMMonNg',fld:'PMMONNG',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A869PMMonNa',fld:'PMMONNA',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A902PMMonNp',fld:'PMMONNP',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A2688PMMonPgN',fld:'PMMONPGN',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A872PMIva',fld:'PMIVA',pic:'ZZZZZZZZZZZZZ9.99'},{av:'A2520PMMonIvaN',fld:'PMMONIVAN',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A2954PMIVAID',fld:'PMIVAID',pic:''},{av:'A2406PMComentarios',fld:'PMCOMENTARIOS',pic:''},{av:'A2521PMMonIvaE',fld:'PMMONIVAE',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A904PMReten',fld:'PMRETEN',pic:'ZZZZZZZZZZZZZ9.99'},{av:'A906PMOrdenD',fld:'PMORDEND',pic:'9'},{av:'A907PMTipoDocOC',fld:'PMTIPODOCOC',pic:''},{av:'A2923PMCTA1',fld:'PMCTA1',pic:''},{av:'A2924PMCTA2',fld:'PMCTA2',pic:''},{av:'A2925PMCTA3',fld:'PMCTA3',pic:''},{av:'A2542PMCuentadeCargo',fld:'PMCUENTADECARGO',pic:''},{av:'A3917PMObsPoliza',fld:'PMOBSPOLIZA',pic:''},{av:'A4395PMPRANT',fld:'PMPRANT',pic:'ZZZZZZ9.99'},{av:'A7899PMTipoAv',fld:'PMTIPOAV',pic:''},{av:'A7900PMNumAv',fld:'PMNUMAV',pic:'ZZZZZZZZZ9'},{av:'A17105PMCuentaPR02',fld:'PMCUENTAPR02',pic:''},{av:'AV319numRenglons',fld:'vNUMRENGLONS',pic:'ZZZ9',hsh:true},{av:'A2059CNPRCMDFT',fld:'CNPRCMDFT',pic:''},{av:'A2054CNCMNOID',fld:'CNCMNOID',pic:''},{av:'AV317CNCMNOID',fld:'vCNCMNOID',pic:''},{av:'A2055CNCMNDID',fld:'CNCMNDID',pic:''},{av:'A2076CNPRCMDVAL',fld:'CNPRCMDVAL',pic:'ZZZ,ZZ9.9999999'},{av:'A2610ESTPAGID',fld:'ESTPAGID',pic:''},{av:'AV123PMEstatus',fld:'vPMESTATUS',pic:'',hsh:true},{av:'A2611ESTPAGDSC',fld:'ESTPAGDSC',pic:''},{av:'AV116CNUSERID',fld:'vCNUSERID',pic:'',hsh:true},{av:'AV61PMEmpresa_G',fld:'vPMEMPRESA_G',pic:'ZZZZZZZZZ9',hsh:true},{av:'AV63PMNumDoc_G',fld:'vPMNUMDOC_G',pic:'ZZZZZZZZZ9',hsh:true},{av:'AV62PMTipoDoc_G',fld:'vPMTIPODOC_G',pic:'',hsh:true},{av:'AV64PMProvId_G',fld:'vPMPROVID_G',pic:'ZZZZZZZZZ9',hsh:true},{av:'dynavCatcarid'},{av:'AV367CATCARID',fld:'vCATCARID',pic:'ZZZZZZZZZ9'},{av:'dynavPmcxprelid'},{av:'AV351PMCXPRELID',fld:'vPMCXPRELID',pic:'ZZZZZZZZZ9'},{av:'dynavUnifcncmnmid'},{av:'AV315unifCNCMNMID',fld:'vUNIFCNCMNMID',pic:''},{av:'dynavCncmnmid'},{av:'AV32CNCMNMID',fld:'vCNCMNMID',pic:''}]");
+      setEventMetadata("'SUBIR ARCHIVOS'","{handler:'e37DZ2',iparms:[{av:'GRID1_nFirstRecordOnPage'},{av:'GRID1_nEOF'},{av:'subGrid1_Rows',ctrl:'GRID1',prop:'Rows'},{av:'AV240AbrirBitacora',fld:'vABRIRBITACORA',pic:''},{av:'edtavPmctprdsc_Title',ctrl:'vPMCTPRDSC',prop:'Title'},{av:'edtavPmungid_g_Title',ctrl:'vPMUNGID_G',prop:'Title'},{av:'AV318renglones',fld:'vRENGLONES',pic:'ZZZ9'},{av:'A860PMEmpresa',fld:'PMEMPRESA',pic:'ZZZZZZZZZ9'},{av:'dynavCnciasid_f'},{av:'AV100CNCIASID_F',fld:'vCNCIASID_F',pic:'ZZZZZZZZZ9'},{av:'A3295PROPAGID',fld:'PROPAGID',pic:'ZZZZZZZZZ9'},{av:'AV239PROPAGID_F',fld:'vPROPAGID_F',pic:'ZZZZZZZZZ9'},{av:'A861PMTipoDoc',fld:'PMTIPODOC',pic:''},{av:'cmbavPmtipodoc_f'},{av:'AV197PMTipoDoc_F',fld:'vPMTIPODOC_F',pic:''},{av:'A862PMNumDoc',fld:'PMNUMDOC',pic:'ZZZZZZZZZ9'},{av:'AV133Numero',fld:'vNUMERO',pic:'ZZZZZZZZZ9'},{av:'A863PMProvId',fld:'PMPROVID',pic:'ZZZZZZZZZ9'},{av:'AV108CNCDIRID_F',fld:'vCNCDIRID_F',pic:'ZZZZZZZZZ9'},{av:'A864PMProyId',fld:'PMPROYID',pic:''},{av:'AV7PMCTPRID',fld:'vPMCTPRID',pic:''},{av:'AV111F2',fld:'vF2',pic:''},{av:'A866PMFechFac',fld:'PMFECHFAC',pic:''},{av:'AV110F1',fld:'vF1',pic:''},{av:'A873PMMoneId',fld:'PMMONEID',pic:''},{av:'AV327F6',fld:'vF6',pic:''},{av:'A4090PMCXPFHTRN',fld:'PMCXPFHTRN',pic:'99/99/99 99:99'},{av:'AV326F5',fld:'vF5',pic:''},{av:'AV113F4',fld:'vF4',pic:''},{av:'A867PMFechVen',fld:'PMFECHVEN',pic:''},{av:'AV112F3',fld:'vF3',pic:''},{av:'A2405PMEstatus',fld:'PMESTATUS',pic:''},{av:'cmbavEstatus'},{av:'AV11Estatus',fld:'vESTATUS',pic:''},{av:'AV230Checkoc',fld:'vCHECKOC',pic:'9'},{av:'A908PMNumDocOC',fld:'PMNUMDOCOC',pic:'ZZZZZZZZZ9'},{av:'AV229PMNumDocOc_F',fld:'vPMNUMDOCOC_F',pic:'ZZZZZZZZZ9'},{av:'A2528PMFolioFac',fld:'PMFOLIOFAC',pic:''},{av:'AV159PMFolioFac_F',fld:'vPMFOLIOFAC_F',pic:''},{av:'A905PMPoliz',fld:'PMPOLIZ',pic:'9'},{av:'cmbavPmpoliz_f'},{av:'AV270pmpoliz_f',fld:'vPMPOLIZ_F',pic:'9'},{av:'A10905PMIDREL',fld:'PMIDREL',pic:'ZZZZZZZZZ9'},{av:'AV353arrPMCTPRID',fld:'vARRPMCTPRID',pic:''},{av:'A865PMUngId',fld:'PMUNGID',pic:''},{av:'cmbavCgunngid'},{av:'AV361CGUNNGID',fld:'vCGUNNGID',pic:''},{av:'A17416PMCargo',fld:'PMCARGO',pic:'ZZZZZZZZZ9'},{av:'AV296banload',fld:'vBANLOAD',pic:''},{av:'AV350CNUSERMCXP',fld:'vCNUSERMCXP',pic:'',hsh:true},{av:'A2534PMUsrcap',fld:'PMUSRCAP',pic:'ZZZZZZZZZ9'},{av:'A4599PMLayAsoc',fld:'PMLAYASOC',pic:'9'},{av:'A909PMUuid',fld:'PMUUID',pic:''},{av:'A2871PMPDFDoc',fld:'PMPDFDOC',pic:'ZZZZZZZZZ9'},{av:'A2718PMMonTp',fld:'PMMONTP',pic:'ZZZZZZZZZ9.999999'},{av:'A2862PMMonAmort',fld:'PMMONAMORT',pic:'ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A898PMFechRev',fld:'PMFECHREV',pic:''},{av:'AV203CNCIASMON_F',fld:'vCNCIASMON_F',pic:''},{av:'A899PMMonEx',fld:'PMMONEX',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'AV316tipoCambio',fld:'vTIPOCAMBIO',pic:'ZZZZZZZZZ9.999999'},{av:'A903PMMonEp',fld:'PMMONEP',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A2689PMMonPgE',fld:'PMMONPGE',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A900PMMonEg',fld:'PMMONEG',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A870PMMonNg',fld:'PMMONNG',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A869PMMonNa',fld:'PMMONNA',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A902PMMonNp',fld:'PMMONNP',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A2688PMMonPgN',fld:'PMMONPGN',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A872PMIva',fld:'PMIVA',pic:'ZZZZZZZZZZZZZ9.99'},{av:'A2520PMMonIvaN',fld:'PMMONIVAN',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A2954PMIVAID',fld:'PMIVAID',pic:''},{av:'A2406PMComentarios',fld:'PMCOMENTARIOS',pic:''},{av:'A2521PMMonIvaE',fld:'PMMONIVAE',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A904PMReten',fld:'PMRETEN',pic:'ZZZZZZZZZZZZZ9.99'},{av:'A906PMOrdenD',fld:'PMORDEND',pic:'9'},{av:'A907PMTipoDocOC',fld:'PMTIPODOCOC',pic:''},{av:'A2923PMCTA1',fld:'PMCTA1',pic:''},{av:'A2924PMCTA2',fld:'PMCTA2',pic:''},{av:'A2925PMCTA3',fld:'PMCTA3',pic:''},{av:'A2542PMCuentadeCargo',fld:'PMCUENTADECARGO',pic:''},{av:'A3917PMObsPoliza',fld:'PMOBSPOLIZA',pic:''},{av:'A4395PMPRANT',fld:'PMPRANT',pic:'ZZZZZZ9.99'},{av:'A7899PMTipoAv',fld:'PMTIPOAV',pic:''},{av:'A7900PMNumAv',fld:'PMNUMAV',pic:'ZZZZZZZZZ9'},{av:'A17105PMCuentaPR02',fld:'PMCUENTAPR02',pic:''},{av:'AV319numRenglons',fld:'vNUMRENGLONS',pic:'ZZZ9',hsh:true},{av:'A2059CNPRCMDFT',fld:'CNPRCMDFT',pic:''},{av:'A2054CNCMNOID',fld:'CNCMNOID',pic:''},{av:'AV317CNCMNOID',fld:'vCNCMNOID',pic:''},{av:'A2055CNCMNDID',fld:'CNCMNDID',pic:''},{av:'A2076CNPRCMDVAL',fld:'CNPRCMDVAL',pic:'ZZZ,ZZ9.9999999'},{av:'A2610ESTPAGID',fld:'ESTPAGID',pic:''},{av:'AV123PMEstatus',fld:'vPMESTATUS',pic:'',hsh:true},{av:'A2611ESTPAGDSC',fld:'ESTPAGDSC',pic:''},{av:'A7789AVDSPRCIA',fld:'AVDSPRCIA',pic:'ZZZZZZZZZ9'},{av:'AV61PMEmpresa_G',fld:'vPMEMPRESA_G',pic:'ZZZZZZZZZ9',hsh:true},{av:'A8295AVDSPRCPPTPC',fld:'AVDSPRCPPTPC',pic:''},{av:'AV62PMTipoDoc_G',fld:'vPMTIPODOC_G',pic:'',hsh:true},{av:'A8296AVDSPRCPPNDC',fld:'AVDSPRCPPNDC',pic:'ZZZZZZZZZ9'},{av:'AV63PMNumDoc_G',fld:'vPMNUMDOC_G',pic:'ZZZZZZZZZ9',hsh:true},{av:'A20CNTDOCID',fld:'CNTDOCID',pic:''},{av:'A8255AVDSPRDOC',fld:'AVDSPRDOC',pic:'ZZZZZZZZZ9'},{av:'A7790AVDSPRNDC',fld:'AVDSPRNDC',pic:'ZZZZZZZZZ9'},{av:'A8242AVDSPROBS',fld:'AVDSPROBS',pic:''},{av:'A7518CNDSPRCIA',fld:'CNDSPRCIA',pic:'ZZZZZZZZZ9'},{av:'A7519CNDSPRTDC',fld:'CNDSPRTDC',pic:''},{av:'A7520CNDSPRNDC',fld:'CNDSPRNDC',pic:'ZZZZZZZZZ9'},{av:'A7531CNDSPRALCTR',fld:'CNDSPRALCTR',pic:''},{av:'AV116CNUSERID',fld:'vCNUSERID',pic:'',hsh:true},{av:'AV64PMProvId_G',fld:'vPMPROVID_G',pic:'ZZZZZZZZZ9',hsh:true},{av:'dynavCatcarid'},{av:'AV367CATCARID',fld:'vCATCARID',pic:'ZZZZZZZZZ9'},{av:'dynavPmcxprelid'},{av:'AV351PMCXPRELID',fld:'vPMCXPRELID',pic:'ZZZZZZZZZ9'},{av:'dynavUnifcncmnmid'},{av:'AV315unifCNCMNMID',fld:'vUNIFCNCMNMID',pic:''},{av:'dynavCncmnmid'},{av:'AV32CNCMNMID',fld:'vCNCMNMID',pic:''}]");
       setEventMetadata("'SUBIR ARCHIVOS'",",oparms:[{av:'dynavCatcarid'},{av:'AV367CATCARID',fld:'vCATCARID',pic:'ZZZZZZZZZ9'},{av:'dynavPmcxprelid'},{av:'AV351PMCXPRELID',fld:'vPMCXPRELID',pic:'ZZZZZZZZZ9'},{av:'dynavUnifcncmnmid'},{av:'AV315unifCNCMNMID',fld:'vUNIFCNCMNMID',pic:''},{av:'dynavCncmnmid'},{av:'AV32CNCMNMID',fld:'vCNCMNMID',pic:''}]}");
-      setEventMetadata("'SUBIR EXCEL'","{handler:'e38DZ2',iparms:[{av:'GRID1_nFirstRecordOnPage'},{av:'GRID1_nEOF'},{av:'subGrid1_Rows',ctrl:'GRID1',prop:'Rows'},{av:'AV240AbrirBitacora',fld:'vABRIRBITACORA',pic:''},{av:'edtavPmctprdsc_Title',ctrl:'vPMCTPRDSC',prop:'Title'},{av:'edtavPmungid_g_Title',ctrl:'vPMUNGID_G',prop:'Title'},{av:'AV318renglones',fld:'vRENGLONES',pic:'ZZZ9'},{av:'A860PMEmpresa',fld:'PMEMPRESA',pic:'ZZZZZZZZZ9'},{av:'dynavCnciasid_f'},{av:'AV100CNCIASID_F',fld:'vCNCIASID_F',pic:'ZZZZZZZZZ9'},{av:'A3295PROPAGID',fld:'PROPAGID',pic:'ZZZZZZZZZ9'},{av:'AV239PROPAGID_F',fld:'vPROPAGID_F',pic:'ZZZZZZZZZ9'},{av:'A861PMTipoDoc',fld:'PMTIPODOC',pic:''},{av:'cmbavPmtipodoc_f'},{av:'AV197PMTipoDoc_F',fld:'vPMTIPODOC_F',pic:''},{av:'A862PMNumDoc',fld:'PMNUMDOC',pic:'ZZZZZZZZZ9'},{av:'AV133Numero',fld:'vNUMERO',pic:'ZZZZZZZZZ9'},{av:'A863PMProvId',fld:'PMPROVID',pic:'ZZZZZZZZZ9'},{av:'AV108CNCDIRID_F',fld:'vCNCDIRID_F',pic:'ZZZZZZZZZ9'},{av:'A864PMProyId',fld:'PMPROYID',pic:''},{av:'AV7PMCTPRID',fld:'vPMCTPRID',pic:''},{av:'AV111F2',fld:'vF2',pic:''},{av:'A866PMFechFac',fld:'PMFECHFAC',pic:''},{av:'AV110F1',fld:'vF1',pic:''},{av:'A873PMMoneId',fld:'PMMONEID',pic:''},{av:'AV327F6',fld:'vF6',pic:''},{av:'A4090PMCXPFHTRN',fld:'PMCXPFHTRN',pic:'99/99/99 99:99'},{av:'AV326F5',fld:'vF5',pic:''},{av:'AV113F4',fld:'vF4',pic:''},{av:'A867PMFechVen',fld:'PMFECHVEN',pic:''},{av:'AV112F3',fld:'vF3',pic:''},{av:'A2405PMEstatus',fld:'PMESTATUS',pic:''},{av:'cmbavEstatus'},{av:'AV11Estatus',fld:'vESTATUS',pic:''},{av:'AV230Checkoc',fld:'vCHECKOC',pic:'9'},{av:'A908PMNumDocOC',fld:'PMNUMDOCOC',pic:'ZZZZZZZZZ9'},{av:'AV229PMNumDocOc_F',fld:'vPMNUMDOCOC_F',pic:'ZZZZZZZZZ9'},{av:'A2528PMFolioFac',fld:'PMFOLIOFAC',pic:''},{av:'AV159PMFolioFac_F',fld:'vPMFOLIOFAC_F',pic:''},{av:'A905PMPoliz',fld:'PMPOLIZ',pic:'9'},{av:'cmbavPmpoliz_f'},{av:'AV270pmpoliz_f',fld:'vPMPOLIZ_F',pic:'9'},{av:'A10905PMIDREL',fld:'PMIDREL',pic:'ZZZZZZZZZ9'},{av:'AV353arrPMCTPRID',fld:'vARRPMCTPRID',pic:''},{av:'A865PMUngId',fld:'PMUNGID',pic:''},{av:'cmbavCgunngid'},{av:'AV361CGUNNGID',fld:'vCGUNNGID',pic:''},{av:'A17416PMCargo',fld:'PMCARGO',pic:'ZZZZZZZZZ9'},{av:'AV296banload',fld:'vBANLOAD',pic:''},{av:'AV350CNUSERMCXP',fld:'vCNUSERMCXP',pic:'',hsh:true},{av:'A2534PMUsrcap',fld:'PMUSRCAP',pic:'ZZZZZZZZZ9'},{av:'A4599PMLayAsoc',fld:'PMLAYASOC',pic:'9'},{av:'A909PMUuid',fld:'PMUUID',pic:''},{av:'A2871PMPDFDoc',fld:'PMPDFDOC',pic:'ZZZZZZZZZ9'},{av:'A2718PMMonTp',fld:'PMMONTP',pic:'ZZZZZZZZZ9.999999'},{av:'A2862PMMonAmort',fld:'PMMONAMORT',pic:'ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A898PMFechRev',fld:'PMFECHREV',pic:''},{av:'AV203CNCIASMON_F',fld:'vCNCIASMON_F',pic:''},{av:'A899PMMonEx',fld:'PMMONEX',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'AV316tipoCambio',fld:'vTIPOCAMBIO',pic:'ZZZZZZZZZ9.999999'},{av:'A903PMMonEp',fld:'PMMONEP',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A2689PMMonPgE',fld:'PMMONPGE',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A900PMMonEg',fld:'PMMONEG',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A870PMMonNg',fld:'PMMONNG',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A869PMMonNa',fld:'PMMONNA',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A902PMMonNp',fld:'PMMONNP',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A2688PMMonPgN',fld:'PMMONPGN',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A872PMIva',fld:'PMIVA',pic:'ZZZZZZZZZZZZZ9.99'},{av:'A2520PMMonIvaN',fld:'PMMONIVAN',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A2954PMIVAID',fld:'PMIVAID',pic:''},{av:'A2406PMComentarios',fld:'PMCOMENTARIOS',pic:''},{av:'A2521PMMonIvaE',fld:'PMMONIVAE',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A904PMReten',fld:'PMRETEN',pic:'ZZZZZZZZZZZZZ9.99'},{av:'A906PMOrdenD',fld:'PMORDEND',pic:'9'},{av:'A907PMTipoDocOC',fld:'PMTIPODOCOC',pic:''},{av:'A2923PMCTA1',fld:'PMCTA1',pic:''},{av:'A2924PMCTA2',fld:'PMCTA2',pic:''},{av:'A2925PMCTA3',fld:'PMCTA3',pic:''},{av:'A2542PMCuentadeCargo',fld:'PMCUENTADECARGO',pic:''},{av:'A3917PMObsPoliza',fld:'PMOBSPOLIZA',pic:''},{av:'A4395PMPRANT',fld:'PMPRANT',pic:'ZZZZZZ9.99'},{av:'A7899PMTipoAv',fld:'PMTIPOAV',pic:''},{av:'A7900PMNumAv',fld:'PMNUMAV',pic:'ZZZZZZZZZ9'},{av:'A17105PMCuentaPR02',fld:'PMCUENTAPR02',pic:''},{av:'AV319numRenglons',fld:'vNUMRENGLONS',pic:'ZZZ9',hsh:true},{av:'A2059CNPRCMDFT',fld:'CNPRCMDFT',pic:''},{av:'A2054CNCMNOID',fld:'CNCMNOID',pic:''},{av:'AV317CNCMNOID',fld:'vCNCMNOID',pic:''},{av:'A2055CNCMNDID',fld:'CNCMNDID',pic:''},{av:'A2076CNPRCMDVAL',fld:'CNPRCMDVAL',pic:'ZZZ,ZZ9.9999999'},{av:'A2610ESTPAGID',fld:'ESTPAGID',pic:''},{av:'AV123PMEstatus',fld:'vPMESTATUS',pic:'',hsh:true},{av:'A2611ESTPAGDSC',fld:'ESTPAGDSC',pic:''},{av:'AV116CNUSERID',fld:'vCNUSERID',pic:'',hsh:true},{av:'AV286PMLayAsoc_G',fld:'vPMLAYASOC_G',pic:'9',hsh:true},{av:'AV61PMEmpresa_G',fld:'vPMEMPRESA_G',pic:'ZZZZZZZZZ9',hsh:true},{av:'AV63PMNumDoc_G',fld:'vPMNUMDOC_G',pic:'ZZZZZZZZZ9',hsh:true},{av:'AV62PMTipoDoc_G',fld:'vPMTIPODOC_G',pic:'',hsh:true},{av:'AV64PMProvId_G',fld:'vPMPROVID_G',pic:'ZZZZZZZZZ9',hsh:true},{av:'dynavCatcarid'},{av:'AV367CATCARID',fld:'vCATCARID',pic:'ZZZZZZZZZ9'},{av:'dynavPmcxprelid'},{av:'AV351PMCXPRELID',fld:'vPMCXPRELID',pic:'ZZZZZZZZZ9'},{av:'dynavUnifcncmnmid'},{av:'AV315unifCNCMNMID',fld:'vUNIFCNCMNMID',pic:''},{av:'dynavCncmnmid'},{av:'AV32CNCMNMID',fld:'vCNCMNMID',pic:''}]");
+      setEventMetadata("'SUBIR EXCEL'","{handler:'e38DZ2',iparms:[{av:'GRID1_nFirstRecordOnPage'},{av:'GRID1_nEOF'},{av:'subGrid1_Rows',ctrl:'GRID1',prop:'Rows'},{av:'AV240AbrirBitacora',fld:'vABRIRBITACORA',pic:''},{av:'edtavPmctprdsc_Title',ctrl:'vPMCTPRDSC',prop:'Title'},{av:'edtavPmungid_g_Title',ctrl:'vPMUNGID_G',prop:'Title'},{av:'AV318renglones',fld:'vRENGLONES',pic:'ZZZ9'},{av:'A860PMEmpresa',fld:'PMEMPRESA',pic:'ZZZZZZZZZ9'},{av:'dynavCnciasid_f'},{av:'AV100CNCIASID_F',fld:'vCNCIASID_F',pic:'ZZZZZZZZZ9'},{av:'A3295PROPAGID',fld:'PROPAGID',pic:'ZZZZZZZZZ9'},{av:'AV239PROPAGID_F',fld:'vPROPAGID_F',pic:'ZZZZZZZZZ9'},{av:'A861PMTipoDoc',fld:'PMTIPODOC',pic:''},{av:'cmbavPmtipodoc_f'},{av:'AV197PMTipoDoc_F',fld:'vPMTIPODOC_F',pic:''},{av:'A862PMNumDoc',fld:'PMNUMDOC',pic:'ZZZZZZZZZ9'},{av:'AV133Numero',fld:'vNUMERO',pic:'ZZZZZZZZZ9'},{av:'A863PMProvId',fld:'PMPROVID',pic:'ZZZZZZZZZ9'},{av:'AV108CNCDIRID_F',fld:'vCNCDIRID_F',pic:'ZZZZZZZZZ9'},{av:'A864PMProyId',fld:'PMPROYID',pic:''},{av:'AV7PMCTPRID',fld:'vPMCTPRID',pic:''},{av:'AV111F2',fld:'vF2',pic:''},{av:'A866PMFechFac',fld:'PMFECHFAC',pic:''},{av:'AV110F1',fld:'vF1',pic:''},{av:'A873PMMoneId',fld:'PMMONEID',pic:''},{av:'AV327F6',fld:'vF6',pic:''},{av:'A4090PMCXPFHTRN',fld:'PMCXPFHTRN',pic:'99/99/99 99:99'},{av:'AV326F5',fld:'vF5',pic:''},{av:'AV113F4',fld:'vF4',pic:''},{av:'A867PMFechVen',fld:'PMFECHVEN',pic:''},{av:'AV112F3',fld:'vF3',pic:''},{av:'A2405PMEstatus',fld:'PMESTATUS',pic:''},{av:'cmbavEstatus'},{av:'AV11Estatus',fld:'vESTATUS',pic:''},{av:'AV230Checkoc',fld:'vCHECKOC',pic:'9'},{av:'A908PMNumDocOC',fld:'PMNUMDOCOC',pic:'ZZZZZZZZZ9'},{av:'AV229PMNumDocOc_F',fld:'vPMNUMDOCOC_F',pic:'ZZZZZZZZZ9'},{av:'A2528PMFolioFac',fld:'PMFOLIOFAC',pic:''},{av:'AV159PMFolioFac_F',fld:'vPMFOLIOFAC_F',pic:''},{av:'A905PMPoliz',fld:'PMPOLIZ',pic:'9'},{av:'cmbavPmpoliz_f'},{av:'AV270pmpoliz_f',fld:'vPMPOLIZ_F',pic:'9'},{av:'A10905PMIDREL',fld:'PMIDREL',pic:'ZZZZZZZZZ9'},{av:'AV353arrPMCTPRID',fld:'vARRPMCTPRID',pic:''},{av:'A865PMUngId',fld:'PMUNGID',pic:''},{av:'cmbavCgunngid'},{av:'AV361CGUNNGID',fld:'vCGUNNGID',pic:''},{av:'A17416PMCargo',fld:'PMCARGO',pic:'ZZZZZZZZZ9'},{av:'AV296banload',fld:'vBANLOAD',pic:''},{av:'AV350CNUSERMCXP',fld:'vCNUSERMCXP',pic:'',hsh:true},{av:'A2534PMUsrcap',fld:'PMUSRCAP',pic:'ZZZZZZZZZ9'},{av:'A4599PMLayAsoc',fld:'PMLAYASOC',pic:'9'},{av:'A909PMUuid',fld:'PMUUID',pic:''},{av:'A2871PMPDFDoc',fld:'PMPDFDOC',pic:'ZZZZZZZZZ9'},{av:'A2718PMMonTp',fld:'PMMONTP',pic:'ZZZZZZZZZ9.999999'},{av:'A2862PMMonAmort',fld:'PMMONAMORT',pic:'ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A898PMFechRev',fld:'PMFECHREV',pic:''},{av:'AV203CNCIASMON_F',fld:'vCNCIASMON_F',pic:''},{av:'A899PMMonEx',fld:'PMMONEX',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'AV316tipoCambio',fld:'vTIPOCAMBIO',pic:'ZZZZZZZZZ9.999999'},{av:'A903PMMonEp',fld:'PMMONEP',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A2689PMMonPgE',fld:'PMMONPGE',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A900PMMonEg',fld:'PMMONEG',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A870PMMonNg',fld:'PMMONNG',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A869PMMonNa',fld:'PMMONNA',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A902PMMonNp',fld:'PMMONNP',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A2688PMMonPgN',fld:'PMMONPGN',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A872PMIva',fld:'PMIVA',pic:'ZZZZZZZZZZZZZ9.99'},{av:'A2520PMMonIvaN',fld:'PMMONIVAN',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A2954PMIVAID',fld:'PMIVAID',pic:''},{av:'A2406PMComentarios',fld:'PMCOMENTARIOS',pic:''},{av:'A2521PMMonIvaE',fld:'PMMONIVAE',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A904PMReten',fld:'PMRETEN',pic:'ZZZZZZZZZZZZZ9.99'},{av:'A906PMOrdenD',fld:'PMORDEND',pic:'9'},{av:'A907PMTipoDocOC',fld:'PMTIPODOCOC',pic:''},{av:'A2923PMCTA1',fld:'PMCTA1',pic:''},{av:'A2924PMCTA2',fld:'PMCTA2',pic:''},{av:'A2925PMCTA3',fld:'PMCTA3',pic:''},{av:'A2542PMCuentadeCargo',fld:'PMCUENTADECARGO',pic:''},{av:'A3917PMObsPoliza',fld:'PMOBSPOLIZA',pic:''},{av:'A4395PMPRANT',fld:'PMPRANT',pic:'ZZZZZZ9.99'},{av:'A7899PMTipoAv',fld:'PMTIPOAV',pic:''},{av:'A7900PMNumAv',fld:'PMNUMAV',pic:'ZZZZZZZZZ9'},{av:'A17105PMCuentaPR02',fld:'PMCUENTAPR02',pic:''},{av:'AV319numRenglons',fld:'vNUMRENGLONS',pic:'ZZZ9',hsh:true},{av:'A2059CNPRCMDFT',fld:'CNPRCMDFT',pic:''},{av:'A2054CNCMNOID',fld:'CNCMNOID',pic:''},{av:'AV317CNCMNOID',fld:'vCNCMNOID',pic:''},{av:'A2055CNCMNDID',fld:'CNCMNDID',pic:''},{av:'A2076CNPRCMDVAL',fld:'CNPRCMDVAL',pic:'ZZZ,ZZ9.9999999'},{av:'A2610ESTPAGID',fld:'ESTPAGID',pic:''},{av:'AV123PMEstatus',fld:'vPMESTATUS',pic:'',hsh:true},{av:'A2611ESTPAGDSC',fld:'ESTPAGDSC',pic:''},{av:'A7789AVDSPRCIA',fld:'AVDSPRCIA',pic:'ZZZZZZZZZ9'},{av:'AV61PMEmpresa_G',fld:'vPMEMPRESA_G',pic:'ZZZZZZZZZ9',hsh:true},{av:'A8295AVDSPRCPPTPC',fld:'AVDSPRCPPTPC',pic:''},{av:'AV62PMTipoDoc_G',fld:'vPMTIPODOC_G',pic:'',hsh:true},{av:'A8296AVDSPRCPPNDC',fld:'AVDSPRCPPNDC',pic:'ZZZZZZZZZ9'},{av:'AV63PMNumDoc_G',fld:'vPMNUMDOC_G',pic:'ZZZZZZZZZ9',hsh:true},{av:'A20CNTDOCID',fld:'CNTDOCID',pic:''},{av:'A8255AVDSPRDOC',fld:'AVDSPRDOC',pic:'ZZZZZZZZZ9'},{av:'A7790AVDSPRNDC',fld:'AVDSPRNDC',pic:'ZZZZZZZZZ9'},{av:'A8242AVDSPROBS',fld:'AVDSPROBS',pic:''},{av:'A7518CNDSPRCIA',fld:'CNDSPRCIA',pic:'ZZZZZZZZZ9'},{av:'A7519CNDSPRTDC',fld:'CNDSPRTDC',pic:''},{av:'A7520CNDSPRNDC',fld:'CNDSPRNDC',pic:'ZZZZZZZZZ9'},{av:'A7531CNDSPRALCTR',fld:'CNDSPRALCTR',pic:''},{av:'AV116CNUSERID',fld:'vCNUSERID',pic:'',hsh:true},{av:'AV286PMLayAsoc_G',fld:'vPMLAYASOC_G',pic:'9',hsh:true},{av:'AV64PMProvId_G',fld:'vPMPROVID_G',pic:'ZZZZZZZZZ9',hsh:true},{av:'dynavCatcarid'},{av:'AV367CATCARID',fld:'vCATCARID',pic:'ZZZZZZZZZ9'},{av:'dynavPmcxprelid'},{av:'AV351PMCXPRELID',fld:'vPMCXPRELID',pic:'ZZZZZZZZZ9'},{av:'dynavUnifcncmnmid'},{av:'AV315unifCNCMNMID',fld:'vUNIFCNCMNMID',pic:''},{av:'dynavCncmnmid'},{av:'AV32CNCMNMID',fld:'vCNCMNMID',pic:''}]");
       setEventMetadata("'SUBIR EXCEL'",",oparms:[{av:'dynavCatcarid'},{av:'AV367CATCARID',fld:'vCATCARID',pic:'ZZZZZZZZZ9'},{av:'dynavPmcxprelid'},{av:'AV351PMCXPRELID',fld:'vPMCXPRELID',pic:'ZZZZZZZZZ9'},{av:'dynavUnifcncmnmid'},{av:'AV315unifCNCMNMID',fld:'vUNIFCNCMNMID',pic:''},{av:'dynavCncmnmid'},{av:'AV32CNCMNMID',fld:'vCNCMNMID',pic:''}]}");
-      setEventMetadata("'GENERAPOLIZA'","{handler:'e14DZ2',iparms:[{av:'cmbavPmtipodoc_f'},{av:'AV197PMTipoDoc_F',fld:'vPMTIPODOC_F',pic:''},{av:'AV336TratPolFol',fld:'vTRATPOLFOL',pic:''},{av:'GRID1_nFirstRecordOnPage'},{av:'GRID1_nEOF'},{av:'subGrid1_Rows',ctrl:'GRID1',prop:'Rows'},{av:'AV240AbrirBitacora',fld:'vABRIRBITACORA',pic:''},{av:'edtavPmctprdsc_Title',ctrl:'vPMCTPRDSC',prop:'Title'},{av:'edtavPmungid_g_Title',ctrl:'vPMUNGID_G',prop:'Title'},{av:'AV318renglones',fld:'vRENGLONES',pic:'ZZZ9'},{av:'A860PMEmpresa',fld:'PMEMPRESA',pic:'ZZZZZZZZZ9'},{av:'dynavCnciasid_f'},{av:'AV100CNCIASID_F',fld:'vCNCIASID_F',pic:'ZZZZZZZZZ9'},{av:'A3295PROPAGID',fld:'PROPAGID',pic:'ZZZZZZZZZ9'},{av:'AV239PROPAGID_F',fld:'vPROPAGID_F',pic:'ZZZZZZZZZ9'},{av:'A861PMTipoDoc',fld:'PMTIPODOC',pic:''},{av:'A862PMNumDoc',fld:'PMNUMDOC',pic:'ZZZZZZZZZ9'},{av:'AV133Numero',fld:'vNUMERO',pic:'ZZZZZZZZZ9'},{av:'A863PMProvId',fld:'PMPROVID',pic:'ZZZZZZZZZ9'},{av:'AV108CNCDIRID_F',fld:'vCNCDIRID_F',pic:'ZZZZZZZZZ9'},{av:'A864PMProyId',fld:'PMPROYID',pic:''},{av:'AV7PMCTPRID',fld:'vPMCTPRID',pic:''},{av:'AV111F2',fld:'vF2',pic:''},{av:'A866PMFechFac',fld:'PMFECHFAC',pic:''},{av:'AV110F1',fld:'vF1',pic:''},{av:'A873PMMoneId',fld:'PMMONEID',pic:''},{av:'AV327F6',fld:'vF6',pic:''},{av:'A4090PMCXPFHTRN',fld:'PMCXPFHTRN',pic:'99/99/99 99:99'},{av:'AV326F5',fld:'vF5',pic:''},{av:'AV113F4',fld:'vF4',pic:''},{av:'A867PMFechVen',fld:'PMFECHVEN',pic:''},{av:'AV112F3',fld:'vF3',pic:''},{av:'A2405PMEstatus',fld:'PMESTATUS',pic:''},{av:'cmbavEstatus'},{av:'AV11Estatus',fld:'vESTATUS',pic:''},{av:'AV230Checkoc',fld:'vCHECKOC',pic:'9'},{av:'A908PMNumDocOC',fld:'PMNUMDOCOC',pic:'ZZZZZZZZZ9'},{av:'AV229PMNumDocOc_F',fld:'vPMNUMDOCOC_F',pic:'ZZZZZZZZZ9'},{av:'A2528PMFolioFac',fld:'PMFOLIOFAC',pic:''},{av:'AV159PMFolioFac_F',fld:'vPMFOLIOFAC_F',pic:''},{av:'A905PMPoliz',fld:'PMPOLIZ',pic:'9'},{av:'cmbavPmpoliz_f'},{av:'AV270pmpoliz_f',fld:'vPMPOLIZ_F',pic:'9'},{av:'A10905PMIDREL',fld:'PMIDREL',pic:'ZZZZZZZZZ9'},{av:'AV353arrPMCTPRID',fld:'vARRPMCTPRID',pic:''},{av:'A865PMUngId',fld:'PMUNGID',pic:''},{av:'cmbavCgunngid'},{av:'AV361CGUNNGID',fld:'vCGUNNGID',pic:''},{av:'A17416PMCargo',fld:'PMCARGO',pic:'ZZZZZZZZZ9'},{av:'AV296banload',fld:'vBANLOAD',pic:''},{av:'AV350CNUSERMCXP',fld:'vCNUSERMCXP',pic:'',hsh:true},{av:'A2534PMUsrcap',fld:'PMUSRCAP',pic:'ZZZZZZZZZ9'},{av:'A4599PMLayAsoc',fld:'PMLAYASOC',pic:'9'},{av:'A909PMUuid',fld:'PMUUID',pic:''},{av:'A2871PMPDFDoc',fld:'PMPDFDOC',pic:'ZZZZZZZZZ9'},{av:'A2718PMMonTp',fld:'PMMONTP',pic:'ZZZZZZZZZ9.999999'},{av:'A2862PMMonAmort',fld:'PMMONAMORT',pic:'ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A898PMFechRev',fld:'PMFECHREV',pic:''},{av:'AV203CNCIASMON_F',fld:'vCNCIASMON_F',pic:''},{av:'A899PMMonEx',fld:'PMMONEX',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'AV316tipoCambio',fld:'vTIPOCAMBIO',pic:'ZZZZZZZZZ9.999999'},{av:'A903PMMonEp',fld:'PMMONEP',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A2689PMMonPgE',fld:'PMMONPGE',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A900PMMonEg',fld:'PMMONEG',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A870PMMonNg',fld:'PMMONNG',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A869PMMonNa',fld:'PMMONNA',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A902PMMonNp',fld:'PMMONNP',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A2688PMMonPgN',fld:'PMMONPGN',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A872PMIva',fld:'PMIVA',pic:'ZZZZZZZZZZZZZ9.99'},{av:'A2520PMMonIvaN',fld:'PMMONIVAN',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A2954PMIVAID',fld:'PMIVAID',pic:''},{av:'A2406PMComentarios',fld:'PMCOMENTARIOS',pic:''},{av:'A2521PMMonIvaE',fld:'PMMONIVAE',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A904PMReten',fld:'PMRETEN',pic:'ZZZZZZZZZZZZZ9.99'},{av:'A906PMOrdenD',fld:'PMORDEND',pic:'9'},{av:'A907PMTipoDocOC',fld:'PMTIPODOCOC',pic:''},{av:'A2923PMCTA1',fld:'PMCTA1',pic:''},{av:'A2924PMCTA2',fld:'PMCTA2',pic:''},{av:'A2925PMCTA3',fld:'PMCTA3',pic:''},{av:'A2542PMCuentadeCargo',fld:'PMCUENTADECARGO',pic:''},{av:'A3917PMObsPoliza',fld:'PMOBSPOLIZA',pic:''},{av:'A4395PMPRANT',fld:'PMPRANT',pic:'ZZZZZZ9.99'},{av:'A7899PMTipoAv',fld:'PMTIPOAV',pic:''},{av:'A7900PMNumAv',fld:'PMNUMAV',pic:'ZZZZZZZZZ9'},{av:'A17105PMCuentaPR02',fld:'PMCUENTAPR02',pic:''},{av:'AV319numRenglons',fld:'vNUMRENGLONS',pic:'ZZZ9',hsh:true},{av:'A2059CNPRCMDFT',fld:'CNPRCMDFT',pic:''},{av:'A2054CNCMNOID',fld:'CNCMNOID',pic:''},{av:'AV317CNCMNOID',fld:'vCNCMNOID',pic:''},{av:'A2055CNCMNDID',fld:'CNCMNDID',pic:''},{av:'A2076CNPRCMDVAL',fld:'CNPRCMDVAL',pic:'ZZZ,ZZ9.9999999'},{av:'A2610ESTPAGID',fld:'ESTPAGID',pic:''},{av:'AV123PMEstatus',fld:'vPMESTATUS',pic:'',hsh:true},{av:'A2611ESTPAGDSC',fld:'ESTPAGDSC',pic:''},{av:'AV116CNUSERID',fld:'vCNUSERID',pic:'',hsh:true},{av:'A456CNCD01ID',fld:'CNCD01ID',pic:''},{av:'cmbavFcncd01id'},{av:'AV335fCNCD01ID',fld:'vFCNCD01ID',pic:''},{av:'AV330ValidarUUIDRel',fld:'vVALIDARUUIDREL',pic:''},{av:'AV346VersionPoliza',fld:'vVERSIONPOLIZA',pic:''},{av:'AV242GPMEmpresa',fld:'vGPMEMPRESA',pic:'ZZZZZZZZZ9'},{av:'AV243GPMTipoDoc',fld:'vGPMTIPODOC',pic:''},{av:'AV169BanSel',fld:'vBANSEL',pic:''},{av:'AV272fechaNull',fld:'vFECHANULL',pic:''},{av:'AV345regenerarPoliza',fld:'vREGENERARPOLIZA',pic:''},{av:'AV244GPMNumDoc',fld:'vGPMNUMDOC',pic:'ZZZZZZZZZ9'},{av:'AV184Afecto',fld:'vAFECTO',pic:''},{av:'AV344cCGUNNGID',fld:'vCCGUNNGID',pic:''},{av:'AV337aPMCTPRUNNG',fld:'vAPMCTPRUNNG',pic:''},{av:'AV246GPMMoneId',fld:'vGPMMONEID',pic:''},{av:'AV179CNCIASMON',fld:'vCNCIASMON',pic:''},{av:'AV255GPMProvId',fld:'vGPMPROVID',pic:'ZZZZZZZZZ9'},{av:'AV331GPMProyId',fld:'vGPMPROYID',pic:''},{av:'AV235MontoEsp',fld:'vMONTOESP',pic:'ZZZZZZZZZZZZZ9.99'},{av:'AV236MontoEspIva',fld:'vMONTOESPIVA',pic:'ZZZZZZZZZZZZZ9.99'},{av:'AV196MontoAux',fld:'vMONTOAUX',pic:'ZZZZZZZZZZZ9.99'},{av:'AV237MontoCOM',fld:'vMONTOCOM',pic:'ZZZZZZZZZZZZZ9.99'},{av:'AV245GPMCTA1',fld:'vGPMCTA1',pic:''},{av:'AV250GPMCTA2',fld:'vGPMCTA2',pic:''},{av:'AV251GPMCTA3',fld:'vGPMCTA3',pic:''},{av:'AV257GPMMonNg',fld:'vGPMMONNG',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'AV274GPMFolioFac',fld:'vGPMFOLIOFAC',pic:''},{av:'AV271GPMFechFac',fld:'vGPMFECHFAC',pic:''},{av:'AV174CTA1',fld:'vCTA1',pic:''},{av:'AV175CTA2',fld:'vCTA2',pic:''},{av:'AV176CTA3',fld:'vCTA3',pic:''},{av:'AV264GPMIva',fld:'vGPMIVA',pic:'ZZZZZZZZZZZZZ9.99'},{av:'AV252G1PMIVAID',fld:'vG1PMIVAID',pic:''},{av:'AV256GPMMonIvaN',fld:'vGPMMONIVAN',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'AV253GPMMonEx',fld:'vGPMMONEX',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'AV195MontoRetencion',fld:'vMONTORETENCION',pic:'ZZZZZZZZZZZ9.99'},{av:'AV64PMProvId_G',fld:'vPMPROVID_G',pic:'ZZZZZZZZZ9',hsh:true},{av:'AV254GPMMonNa',fld:'vGPMMONNA',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'AV338aPOLFOLCONS',fld:'vAPOLFOLCONS',pic:'ZZZZZZZZZ9'},{av:'AV62PMTipoDoc_G',fld:'vPMTIPODOC_G',pic:'',hsh:true},{av:'AV63PMNumDoc_G',fld:'vPMNUMDOC_G',pic:'ZZZZZZZZZ9',hsh:true},{av:'AV269GPMCuentadeCargo',fld:'vGPMCUENTADECARGO',pic:''},{av:'AV249GPMMonTp',fld:'vGPMMONTP',pic:'ZZZZZZZZZ9.999999'},{av:'A2878PMImpEstId',fld:'PMIMPESTID',pic:''},{av:'A2879PMImpId',fld:'PMIMPID',pic:''},{av:'A2880PMImpMon',fld:'PMIMPMON',pic:'ZZ,ZZZ,ZZ9.999999'},{av:'A2881PMImpVal',fld:'PMIMPVAL',pic:'ZZZZZZZ9.999999'},{av:'AV173PMRecepInsID',fld:'vPMRECEPINSID',pic:'ZZZZZZZZZ9'},{av:'AV61PMEmpresa_G',fld:'vPMEMPRESA_G',pic:'ZZZZZZZZZ9',hsh:true},{av:'A2568PMRecepInsID',fld:'PMRECEPINSID',pic:'ZZZZZZZZZ9'},{av:'AV69PMMoneId_G',fld:'vPMMONEID_G',pic:'',hsh:true},{av:'AV329TomarSegmentoUNG',fld:'vTOMARSEGMENTOUNG',pic:''},{av:'dynavCatcarid'},{av:'AV367CATCARID',fld:'vCATCARID',pic:'ZZZZZZZZZ9'},{av:'dynavPmcxprelid'},{av:'AV351PMCXPRELID',fld:'vPMCXPRELID',pic:'ZZZZZZZZZ9'},{av:'dynavUnifcncmnmid'},{av:'AV315unifCNCMNMID',fld:'vUNIFCNCMNMID',pic:''},{av:'dynavCncmnmid'},{av:'AV32CNCMNMID',fld:'vCNCMNMID',pic:''}]");
+      setEventMetadata("'GENERAPOLIZA'","{handler:'e14DZ2',iparms:[{av:'cmbavPmtipodoc_f'},{av:'AV197PMTipoDoc_F',fld:'vPMTIPODOC_F',pic:''},{av:'AV336TratPolFol',fld:'vTRATPOLFOL',pic:''},{av:'GRID1_nFirstRecordOnPage'},{av:'GRID1_nEOF'},{av:'subGrid1_Rows',ctrl:'GRID1',prop:'Rows'},{av:'AV240AbrirBitacora',fld:'vABRIRBITACORA',pic:''},{av:'edtavPmctprdsc_Title',ctrl:'vPMCTPRDSC',prop:'Title'},{av:'edtavPmungid_g_Title',ctrl:'vPMUNGID_G',prop:'Title'},{av:'AV318renglones',fld:'vRENGLONES',pic:'ZZZ9'},{av:'A860PMEmpresa',fld:'PMEMPRESA',pic:'ZZZZZZZZZ9'},{av:'dynavCnciasid_f'},{av:'AV100CNCIASID_F',fld:'vCNCIASID_F',pic:'ZZZZZZZZZ9'},{av:'A3295PROPAGID',fld:'PROPAGID',pic:'ZZZZZZZZZ9'},{av:'AV239PROPAGID_F',fld:'vPROPAGID_F',pic:'ZZZZZZZZZ9'},{av:'A861PMTipoDoc',fld:'PMTIPODOC',pic:''},{av:'A862PMNumDoc',fld:'PMNUMDOC',pic:'ZZZZZZZZZ9'},{av:'AV133Numero',fld:'vNUMERO',pic:'ZZZZZZZZZ9'},{av:'A863PMProvId',fld:'PMPROVID',pic:'ZZZZZZZZZ9'},{av:'AV108CNCDIRID_F',fld:'vCNCDIRID_F',pic:'ZZZZZZZZZ9'},{av:'A864PMProyId',fld:'PMPROYID',pic:''},{av:'AV7PMCTPRID',fld:'vPMCTPRID',pic:''},{av:'AV111F2',fld:'vF2',pic:''},{av:'A866PMFechFac',fld:'PMFECHFAC',pic:''},{av:'AV110F1',fld:'vF1',pic:''},{av:'A873PMMoneId',fld:'PMMONEID',pic:''},{av:'AV327F6',fld:'vF6',pic:''},{av:'A4090PMCXPFHTRN',fld:'PMCXPFHTRN',pic:'99/99/99 99:99'},{av:'AV326F5',fld:'vF5',pic:''},{av:'AV113F4',fld:'vF4',pic:''},{av:'A867PMFechVen',fld:'PMFECHVEN',pic:''},{av:'AV112F3',fld:'vF3',pic:''},{av:'A2405PMEstatus',fld:'PMESTATUS',pic:''},{av:'cmbavEstatus'},{av:'AV11Estatus',fld:'vESTATUS',pic:''},{av:'AV230Checkoc',fld:'vCHECKOC',pic:'9'},{av:'A908PMNumDocOC',fld:'PMNUMDOCOC',pic:'ZZZZZZZZZ9'},{av:'AV229PMNumDocOc_F',fld:'vPMNUMDOCOC_F',pic:'ZZZZZZZZZ9'},{av:'A2528PMFolioFac',fld:'PMFOLIOFAC',pic:''},{av:'AV159PMFolioFac_F',fld:'vPMFOLIOFAC_F',pic:''},{av:'A905PMPoliz',fld:'PMPOLIZ',pic:'9'},{av:'cmbavPmpoliz_f'},{av:'AV270pmpoliz_f',fld:'vPMPOLIZ_F',pic:'9'},{av:'A10905PMIDREL',fld:'PMIDREL',pic:'ZZZZZZZZZ9'},{av:'AV353arrPMCTPRID',fld:'vARRPMCTPRID',pic:''},{av:'A865PMUngId',fld:'PMUNGID',pic:''},{av:'cmbavCgunngid'},{av:'AV361CGUNNGID',fld:'vCGUNNGID',pic:''},{av:'A17416PMCargo',fld:'PMCARGO',pic:'ZZZZZZZZZ9'},{av:'AV296banload',fld:'vBANLOAD',pic:''},{av:'AV350CNUSERMCXP',fld:'vCNUSERMCXP',pic:'',hsh:true},{av:'A2534PMUsrcap',fld:'PMUSRCAP',pic:'ZZZZZZZZZ9'},{av:'A4599PMLayAsoc',fld:'PMLAYASOC',pic:'9'},{av:'A909PMUuid',fld:'PMUUID',pic:''},{av:'A2871PMPDFDoc',fld:'PMPDFDOC',pic:'ZZZZZZZZZ9'},{av:'A2718PMMonTp',fld:'PMMONTP',pic:'ZZZZZZZZZ9.999999'},{av:'A2862PMMonAmort',fld:'PMMONAMORT',pic:'ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A898PMFechRev',fld:'PMFECHREV',pic:''},{av:'AV203CNCIASMON_F',fld:'vCNCIASMON_F',pic:''},{av:'A899PMMonEx',fld:'PMMONEX',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'AV316tipoCambio',fld:'vTIPOCAMBIO',pic:'ZZZZZZZZZ9.999999'},{av:'A903PMMonEp',fld:'PMMONEP',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A2689PMMonPgE',fld:'PMMONPGE',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A900PMMonEg',fld:'PMMONEG',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A870PMMonNg',fld:'PMMONNG',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A869PMMonNa',fld:'PMMONNA',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A902PMMonNp',fld:'PMMONNP',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A2688PMMonPgN',fld:'PMMONPGN',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A872PMIva',fld:'PMIVA',pic:'ZZZZZZZZZZZZZ9.99'},{av:'A2520PMMonIvaN',fld:'PMMONIVAN',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A2954PMIVAID',fld:'PMIVAID',pic:''},{av:'A2406PMComentarios',fld:'PMCOMENTARIOS',pic:''},{av:'A2521PMMonIvaE',fld:'PMMONIVAE',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A904PMReten',fld:'PMRETEN',pic:'ZZZZZZZZZZZZZ9.99'},{av:'A906PMOrdenD',fld:'PMORDEND',pic:'9'},{av:'A907PMTipoDocOC',fld:'PMTIPODOCOC',pic:''},{av:'A2923PMCTA1',fld:'PMCTA1',pic:''},{av:'A2924PMCTA2',fld:'PMCTA2',pic:''},{av:'A2925PMCTA3',fld:'PMCTA3',pic:''},{av:'A2542PMCuentadeCargo',fld:'PMCUENTADECARGO',pic:''},{av:'A3917PMObsPoliza',fld:'PMOBSPOLIZA',pic:''},{av:'A4395PMPRANT',fld:'PMPRANT',pic:'ZZZZZZ9.99'},{av:'A7899PMTipoAv',fld:'PMTIPOAV',pic:''},{av:'A7900PMNumAv',fld:'PMNUMAV',pic:'ZZZZZZZZZ9'},{av:'A17105PMCuentaPR02',fld:'PMCUENTAPR02',pic:''},{av:'AV319numRenglons',fld:'vNUMRENGLONS',pic:'ZZZ9',hsh:true},{av:'A2059CNPRCMDFT',fld:'CNPRCMDFT',pic:''},{av:'A2054CNCMNOID',fld:'CNCMNOID',pic:''},{av:'AV317CNCMNOID',fld:'vCNCMNOID',pic:''},{av:'A2055CNCMNDID',fld:'CNCMNDID',pic:''},{av:'A2076CNPRCMDVAL',fld:'CNPRCMDVAL',pic:'ZZZ,ZZ9.9999999'},{av:'A2610ESTPAGID',fld:'ESTPAGID',pic:''},{av:'AV123PMEstatus',fld:'vPMESTATUS',pic:'',hsh:true},{av:'A2611ESTPAGDSC',fld:'ESTPAGDSC',pic:''},{av:'A7789AVDSPRCIA',fld:'AVDSPRCIA',pic:'ZZZZZZZZZ9'},{av:'AV61PMEmpresa_G',fld:'vPMEMPRESA_G',pic:'ZZZZZZZZZ9',hsh:true},{av:'A8295AVDSPRCPPTPC',fld:'AVDSPRCPPTPC',pic:''},{av:'AV62PMTipoDoc_G',fld:'vPMTIPODOC_G',pic:'',hsh:true},{av:'A8296AVDSPRCPPNDC',fld:'AVDSPRCPPNDC',pic:'ZZZZZZZZZ9'},{av:'AV63PMNumDoc_G',fld:'vPMNUMDOC_G',pic:'ZZZZZZZZZ9',hsh:true},{av:'A20CNTDOCID',fld:'CNTDOCID',pic:''},{av:'A8255AVDSPRDOC',fld:'AVDSPRDOC',pic:'ZZZZZZZZZ9'},{av:'A7790AVDSPRNDC',fld:'AVDSPRNDC',pic:'ZZZZZZZZZ9'},{av:'A8242AVDSPROBS',fld:'AVDSPROBS',pic:''},{av:'A7518CNDSPRCIA',fld:'CNDSPRCIA',pic:'ZZZZZZZZZ9'},{av:'A7519CNDSPRTDC',fld:'CNDSPRTDC',pic:''},{av:'A7520CNDSPRNDC',fld:'CNDSPRNDC',pic:'ZZZZZZZZZ9'},{av:'A7531CNDSPRALCTR',fld:'CNDSPRALCTR',pic:''},{av:'AV116CNUSERID',fld:'vCNUSERID',pic:'',hsh:true},{av:'A456CNCD01ID',fld:'CNCD01ID',pic:''},{av:'cmbavFcncd01id'},{av:'AV335fCNCD01ID',fld:'vFCNCD01ID',pic:''},{av:'AV330ValidarUUIDRel',fld:'vVALIDARUUIDREL',pic:''},{av:'AV346VersionPoliza',fld:'vVERSIONPOLIZA',pic:''},{av:'AV242GPMEmpresa',fld:'vGPMEMPRESA',pic:'ZZZZZZZZZ9'},{av:'AV243GPMTipoDoc',fld:'vGPMTIPODOC',pic:''},{av:'AV169BanSel',fld:'vBANSEL',pic:''},{av:'AV272fechaNull',fld:'vFECHANULL',pic:''},{av:'AV345regenerarPoliza',fld:'vREGENERARPOLIZA',pic:''},{av:'AV244GPMNumDoc',fld:'vGPMNUMDOC',pic:'ZZZZZZZZZ9'},{av:'AV184Afecto',fld:'vAFECTO',pic:''},{av:'AV344cCGUNNGID',fld:'vCCGUNNGID',pic:''},{av:'AV337aPMCTPRUNNG',fld:'vAPMCTPRUNNG',pic:''},{av:'AV246GPMMoneId',fld:'vGPMMONEID',pic:''},{av:'AV179CNCIASMON',fld:'vCNCIASMON',pic:''},{av:'AV255GPMProvId',fld:'vGPMPROVID',pic:'ZZZZZZZZZ9'},{av:'AV331GPMProyId',fld:'vGPMPROYID',pic:''},{av:'AV235MontoEsp',fld:'vMONTOESP',pic:'ZZZZZZZZZZZZZ9.99'},{av:'AV236MontoEspIva',fld:'vMONTOESPIVA',pic:'ZZZZZZZZZZZZZ9.99'},{av:'AV196MontoAux',fld:'vMONTOAUX',pic:'ZZZZZZZZZZZ9.99'},{av:'AV237MontoCOM',fld:'vMONTOCOM',pic:'ZZZZZZZZZZZZZ9.99'},{av:'AV245GPMCTA1',fld:'vGPMCTA1',pic:''},{av:'AV250GPMCTA2',fld:'vGPMCTA2',pic:''},{av:'AV251GPMCTA3',fld:'vGPMCTA3',pic:''},{av:'AV257GPMMonNg',fld:'vGPMMONNG',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'AV274GPMFolioFac',fld:'vGPMFOLIOFAC',pic:''},{av:'AV271GPMFechFac',fld:'vGPMFECHFAC',pic:''},{av:'AV174CTA1',fld:'vCTA1',pic:''},{av:'AV175CTA2',fld:'vCTA2',pic:''},{av:'AV176CTA3',fld:'vCTA3',pic:''},{av:'AV264GPMIva',fld:'vGPMIVA',pic:'ZZZZZZZZZZZZZ9.99'},{av:'AV252G1PMIVAID',fld:'vG1PMIVAID',pic:''},{av:'AV256GPMMonIvaN',fld:'vGPMMONIVAN',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'AV253GPMMonEx',fld:'vGPMMONEX',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'AV195MontoRetencion',fld:'vMONTORETENCION',pic:'ZZZZZZZZZZZ9.99'},{av:'AV64PMProvId_G',fld:'vPMPROVID_G',pic:'ZZZZZZZZZ9',hsh:true},{av:'AV254GPMMonNa',fld:'vGPMMONNA',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'AV338aPOLFOLCONS',fld:'vAPOLFOLCONS',pic:'ZZZZZZZZZ9'},{av:'AV269GPMCuentadeCargo',fld:'vGPMCUENTADECARGO',pic:''},{av:'AV249GPMMonTp',fld:'vGPMMONTP',pic:'ZZZZZZZZZ9.999999'},{av:'A2878PMImpEstId',fld:'PMIMPESTID',pic:''},{av:'A2879PMImpId',fld:'PMIMPID',pic:''},{av:'A2880PMImpMon',fld:'PMIMPMON',pic:'ZZ,ZZZ,ZZ9.999999'},{av:'A2881PMImpVal',fld:'PMIMPVAL',pic:'ZZZZZZZ9.999999'},{av:'AV173PMRecepInsID',fld:'vPMRECEPINSID',pic:'ZZZZZZZZZ9'},{av:'A2568PMRecepInsID',fld:'PMRECEPINSID',pic:'ZZZZZZZZZ9'},{av:'AV69PMMoneId_G',fld:'vPMMONEID_G',pic:'',hsh:true},{av:'AV329TomarSegmentoUNG',fld:'vTOMARSEGMENTOUNG',pic:''},{av:'dynavCatcarid'},{av:'AV367CATCARID',fld:'vCATCARID',pic:'ZZZZZZZZZ9'},{av:'dynavPmcxprelid'},{av:'AV351PMCXPRELID',fld:'vPMCXPRELID',pic:'ZZZZZZZZZ9'},{av:'dynavUnifcncmnmid'},{av:'AV315unifCNCMNMID',fld:'vUNIFCNCMNMID',pic:''},{av:'dynavCncmnmid'},{av:'AV32CNCMNMID',fld:'vCNCMNMID',pic:''}]");
       setEventMetadata("'GENERAPOLIZA'",",oparms:[{av:'Jmsg_Height',ctrl:'JMSG',prop:'Height'},{av:'Jmsg_Width',ctrl:'JMSG',prop:'Width'},{av:'Jmsg_Texto',ctrl:'JMSG',prop:'Texto'},{av:'Jmsg_Botones',ctrl:'JMSG',prop:'Botones'},{av:'Jmsg_Icono',ctrl:'JMSG',prop:'Icono'},{av:'AV179CNCIASMON',fld:'vCNCIASMON',pic:''},{av:'AV344cCGUNNGID',fld:'vCCGUNNGID',pic:''},{av:'AV255GPMProvId',fld:'vGPMPROVID',pic:'ZZZZZZZZZ9'},{av:'AV331GPMProyId',fld:'vGPMPROYID',pic:''},{av:'AV242GPMEmpresa',fld:'vGPMEMPRESA',pic:'ZZZZZZZZZ9'},{av:'AV243GPMTipoDoc',fld:'vGPMTIPODOC',pic:''},{av:'AV244GPMNumDoc',fld:'vGPMNUMDOC',pic:'ZZZZZZZZZ9'},{av:'AV249GPMMonTp',fld:'vGPMMONTP',pic:'ZZZZZZZZZ9.999999'},{av:'AV245GPMCTA1',fld:'vGPMCTA1',pic:''},{av:'AV250GPMCTA2',fld:'vGPMCTA2',pic:''},{av:'AV251GPMCTA3',fld:'vGPMCTA3',pic:''},{av:'AV252G1PMIVAID',fld:'vG1PMIVAID',pic:''},{av:'AV264GPMIva',fld:'vGPMIVA',pic:'ZZZZZZZZZZZZZ9.99'},{av:'AV254GPMMonNa',fld:'vGPMMONNA',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'AV256GPMMonIvaN',fld:'vGPMMONIVAN',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'AV253GPMMonEx',fld:'vGPMMONEX',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'AV246GPMMoneId',fld:'vGPMMONEID',pic:''},{av:'AV257GPMMonNg',fld:'vGPMMONNG',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'AV269GPMCuentadeCargo',fld:'vGPMCUENTADECARGO',pic:''},{av:'AV271GPMFechFac',fld:'vGPMFECHFAC',pic:''},{av:'AV274GPMFolioFac',fld:'vGPMFOLIOFAC',pic:''},{av:'AV272fechaNull',fld:'vFECHANULL',pic:''},{av:'AV169BanSel',fld:'vBANSEL',pic:''},{av:'AV176CTA3',fld:'vCTA3',pic:''},{av:'AV175CTA2',fld:'vCTA2',pic:''},{av:'AV174CTA1',fld:'vCTA1',pic:''},{av:'AV337aPMCTPRUNNG',fld:'vAPMCTPRUNNG',pic:''},{av:'AV338aPOLFOLCONS',fld:'vAPOLFOLCONS',pic:'ZZZZZZZZZ9'},{av:'AV235MontoEsp',fld:'vMONTOESP',pic:'ZZZZZZZZZZZZZ9.99'},{av:'AV236MontoEspIva',fld:'vMONTOESPIVA',pic:'ZZZZZZZZZZZZZ9.99'},{av:'AV196MontoAux',fld:'vMONTOAUX',pic:'ZZZZZZZZZZZ9.99'},{av:'AV237MontoCOM',fld:'vMONTOCOM',pic:'ZZZZZZZZZZZZZ9.99'},{av:'AV184Afecto',fld:'vAFECTO',pic:''},{av:'AV195MontoRetencion',fld:'vMONTORETENCION',pic:'ZZZZZZZZZZZ9.99'},{av:'AV173PMRecepInsID',fld:'vPMRECEPINSID',pic:'ZZZZZZZZZ9'},{av:'dynavCatcarid'},{av:'AV367CATCARID',fld:'vCATCARID',pic:'ZZZZZZZZZ9'},{av:'dynavPmcxprelid'},{av:'AV351PMCXPRELID',fld:'vPMCXPRELID',pic:'ZZZZZZZZZ9'},{av:'dynavUnifcncmnmid'},{av:'AV315unifCNCMNMID',fld:'vUNIFCNCMNMID',pic:''},{av:'dynavCncmnmid'},{av:'AV32CNCMNMID',fld:'vCNCMNMID',pic:''}]}");
-      setEventMetadata("JMSG.ONCLICKOK","{handler:'e11DZ2',iparms:[{av:'GRID1_nFirstRecordOnPage'},{av:'GRID1_nEOF'},{av:'subGrid1_Rows',ctrl:'GRID1',prop:'Rows'},{av:'AV240AbrirBitacora',fld:'vABRIRBITACORA',pic:''},{av:'edtavPmctprdsc_Title',ctrl:'vPMCTPRDSC',prop:'Title'},{av:'edtavPmungid_g_Title',ctrl:'vPMUNGID_G',prop:'Title'},{av:'AV318renglones',fld:'vRENGLONES',pic:'ZZZ9'},{av:'A860PMEmpresa',fld:'PMEMPRESA',pic:'ZZZZZZZZZ9'},{av:'dynavCnciasid_f'},{av:'AV100CNCIASID_F',fld:'vCNCIASID_F',pic:'ZZZZZZZZZ9'},{av:'A3295PROPAGID',fld:'PROPAGID',pic:'ZZZZZZZZZ9'},{av:'AV239PROPAGID_F',fld:'vPROPAGID_F',pic:'ZZZZZZZZZ9'},{av:'A861PMTipoDoc',fld:'PMTIPODOC',pic:''},{av:'cmbavPmtipodoc_f'},{av:'AV197PMTipoDoc_F',fld:'vPMTIPODOC_F',pic:''},{av:'A862PMNumDoc',fld:'PMNUMDOC',pic:'ZZZZZZZZZ9'},{av:'AV133Numero',fld:'vNUMERO',pic:'ZZZZZZZZZ9'},{av:'A863PMProvId',fld:'PMPROVID',pic:'ZZZZZZZZZ9'},{av:'AV108CNCDIRID_F',fld:'vCNCDIRID_F',pic:'ZZZZZZZZZ9'},{av:'A864PMProyId',fld:'PMPROYID',pic:''},{av:'AV7PMCTPRID',fld:'vPMCTPRID',pic:''},{av:'AV111F2',fld:'vF2',pic:''},{av:'A866PMFechFac',fld:'PMFECHFAC',pic:''},{av:'AV110F1',fld:'vF1',pic:''},{av:'A873PMMoneId',fld:'PMMONEID',pic:''},{av:'AV327F6',fld:'vF6',pic:''},{av:'A4090PMCXPFHTRN',fld:'PMCXPFHTRN',pic:'99/99/99 99:99'},{av:'AV326F5',fld:'vF5',pic:''},{av:'AV113F4',fld:'vF4',pic:''},{av:'A867PMFechVen',fld:'PMFECHVEN',pic:''},{av:'AV112F3',fld:'vF3',pic:''},{av:'A2405PMEstatus',fld:'PMESTATUS',pic:''},{av:'cmbavEstatus'},{av:'AV11Estatus',fld:'vESTATUS',pic:''},{av:'AV230Checkoc',fld:'vCHECKOC',pic:'9'},{av:'A908PMNumDocOC',fld:'PMNUMDOCOC',pic:'ZZZZZZZZZ9'},{av:'AV229PMNumDocOc_F',fld:'vPMNUMDOCOC_F',pic:'ZZZZZZZZZ9'},{av:'A2528PMFolioFac',fld:'PMFOLIOFAC',pic:''},{av:'AV159PMFolioFac_F',fld:'vPMFOLIOFAC_F',pic:''},{av:'A905PMPoliz',fld:'PMPOLIZ',pic:'9'},{av:'cmbavPmpoliz_f'},{av:'AV270pmpoliz_f',fld:'vPMPOLIZ_F',pic:'9'},{av:'A10905PMIDREL',fld:'PMIDREL',pic:'ZZZZZZZZZ9'},{av:'AV353arrPMCTPRID',fld:'vARRPMCTPRID',pic:''},{av:'A865PMUngId',fld:'PMUNGID',pic:''},{av:'cmbavCgunngid'},{av:'AV361CGUNNGID',fld:'vCGUNNGID',pic:''},{av:'A17416PMCargo',fld:'PMCARGO',pic:'ZZZZZZZZZ9'},{av:'AV296banload',fld:'vBANLOAD',pic:''},{av:'AV350CNUSERMCXP',fld:'vCNUSERMCXP',pic:'',hsh:true},{av:'A2534PMUsrcap',fld:'PMUSRCAP',pic:'ZZZZZZZZZ9'},{av:'A4599PMLayAsoc',fld:'PMLAYASOC',pic:'9'},{av:'A909PMUuid',fld:'PMUUID',pic:''},{av:'A2871PMPDFDoc',fld:'PMPDFDOC',pic:'ZZZZZZZZZ9'},{av:'A2718PMMonTp',fld:'PMMONTP',pic:'ZZZZZZZZZ9.999999'},{av:'A2862PMMonAmort',fld:'PMMONAMORT',pic:'ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A898PMFechRev',fld:'PMFECHREV',pic:''},{av:'AV203CNCIASMON_F',fld:'vCNCIASMON_F',pic:''},{av:'A899PMMonEx',fld:'PMMONEX',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'AV316tipoCambio',fld:'vTIPOCAMBIO',pic:'ZZZZZZZZZ9.999999'},{av:'A903PMMonEp',fld:'PMMONEP',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A2689PMMonPgE',fld:'PMMONPGE',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A900PMMonEg',fld:'PMMONEG',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A870PMMonNg',fld:'PMMONNG',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A869PMMonNa',fld:'PMMONNA',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A902PMMonNp',fld:'PMMONNP',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A2688PMMonPgN',fld:'PMMONPGN',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A872PMIva',fld:'PMIVA',pic:'ZZZZZZZZZZZZZ9.99'},{av:'A2520PMMonIvaN',fld:'PMMONIVAN',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A2954PMIVAID',fld:'PMIVAID',pic:''},{av:'A2406PMComentarios',fld:'PMCOMENTARIOS',pic:''},{av:'A2521PMMonIvaE',fld:'PMMONIVAE',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A904PMReten',fld:'PMRETEN',pic:'ZZZZZZZZZZZZZ9.99'},{av:'A906PMOrdenD',fld:'PMORDEND',pic:'9'},{av:'A907PMTipoDocOC',fld:'PMTIPODOCOC',pic:''},{av:'A2923PMCTA1',fld:'PMCTA1',pic:''},{av:'A2924PMCTA2',fld:'PMCTA2',pic:''},{av:'A2925PMCTA3',fld:'PMCTA3',pic:''},{av:'A2542PMCuentadeCargo',fld:'PMCUENTADECARGO',pic:''},{av:'A3917PMObsPoliza',fld:'PMOBSPOLIZA',pic:''},{av:'A4395PMPRANT',fld:'PMPRANT',pic:'ZZZZZZ9.99'},{av:'A7899PMTipoAv',fld:'PMTIPOAV',pic:''},{av:'A7900PMNumAv',fld:'PMNUMAV',pic:'ZZZZZZZZZ9'},{av:'A17105PMCuentaPR02',fld:'PMCUENTAPR02',pic:''},{av:'AV319numRenglons',fld:'vNUMRENGLONS',pic:'ZZZ9',hsh:true},{av:'A2059CNPRCMDFT',fld:'CNPRCMDFT',pic:''},{av:'A2054CNCMNOID',fld:'CNCMNOID',pic:''},{av:'AV317CNCMNOID',fld:'vCNCMNOID',pic:''},{av:'A2055CNCMNDID',fld:'CNCMNDID',pic:''},{av:'A2076CNPRCMDVAL',fld:'CNPRCMDVAL',pic:'ZZZ,ZZ9.9999999'},{av:'A2610ESTPAGID',fld:'ESTPAGID',pic:''},{av:'AV123PMEstatus',fld:'vPMESTATUS',pic:'',hsh:true},{av:'A2611ESTPAGDSC',fld:'ESTPAGDSC',pic:''},{av:'AV116CNUSERID',fld:'vCNUSERID',pic:'',hsh:true},{av:'A456CNCD01ID',fld:'CNCD01ID',pic:''},{av:'cmbavFcncd01id'},{av:'AV335fCNCD01ID',fld:'vFCNCD01ID',pic:''},{av:'AV330ValidarUUIDRel',fld:'vVALIDARUUIDREL',pic:''},{av:'AV346VersionPoliza',fld:'vVERSIONPOLIZA',pic:''},{av:'AV336TratPolFol',fld:'vTRATPOLFOL',pic:''},{av:'AV242GPMEmpresa',fld:'vGPMEMPRESA',pic:'ZZZZZZZZZ9'},{av:'AV243GPMTipoDoc',fld:'vGPMTIPODOC',pic:''},{av:'AV169BanSel',fld:'vBANSEL',pic:''},{av:'AV272fechaNull',fld:'vFECHANULL',pic:''},{av:'AV345regenerarPoliza',fld:'vREGENERARPOLIZA',pic:''},{av:'AV244GPMNumDoc',fld:'vGPMNUMDOC',pic:'ZZZZZZZZZ9'},{av:'AV184Afecto',fld:'vAFECTO',pic:''},{av:'AV344cCGUNNGID',fld:'vCCGUNNGID',pic:''},{av:'AV337aPMCTPRUNNG',fld:'vAPMCTPRUNNG',pic:''},{av:'AV246GPMMoneId',fld:'vGPMMONEID',pic:''},{av:'AV179CNCIASMON',fld:'vCNCIASMON',pic:''},{av:'AV255GPMProvId',fld:'vGPMPROVID',pic:'ZZZZZZZZZ9'},{av:'AV331GPMProyId',fld:'vGPMPROYID',pic:''},{av:'AV235MontoEsp',fld:'vMONTOESP',pic:'ZZZZZZZZZZZZZ9.99'},{av:'AV236MontoEspIva',fld:'vMONTOESPIVA',pic:'ZZZZZZZZZZZZZ9.99'},{av:'AV196MontoAux',fld:'vMONTOAUX',pic:'ZZZZZZZZZZZ9.99'},{av:'AV237MontoCOM',fld:'vMONTOCOM',pic:'ZZZZZZZZZZZZZ9.99'},{av:'AV245GPMCTA1',fld:'vGPMCTA1',pic:''},{av:'AV250GPMCTA2',fld:'vGPMCTA2',pic:''},{av:'AV251GPMCTA3',fld:'vGPMCTA3',pic:''},{av:'AV257GPMMonNg',fld:'vGPMMONNG',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'AV274GPMFolioFac',fld:'vGPMFOLIOFAC',pic:''},{av:'AV271GPMFechFac',fld:'vGPMFECHFAC',pic:''},{av:'AV174CTA1',fld:'vCTA1',pic:''},{av:'AV175CTA2',fld:'vCTA2',pic:''},{av:'AV176CTA3',fld:'vCTA3',pic:''},{av:'AV264GPMIva',fld:'vGPMIVA',pic:'ZZZZZZZZZZZZZ9.99'},{av:'AV252G1PMIVAID',fld:'vG1PMIVAID',pic:''},{av:'AV256GPMMonIvaN',fld:'vGPMMONIVAN',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'AV253GPMMonEx',fld:'vGPMMONEX',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'AV195MontoRetencion',fld:'vMONTORETENCION',pic:'ZZZZZZZZZZZ9.99'},{av:'AV64PMProvId_G',fld:'vPMPROVID_G',pic:'ZZZZZZZZZ9',hsh:true},{av:'AV254GPMMonNa',fld:'vGPMMONNA',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'AV338aPOLFOLCONS',fld:'vAPOLFOLCONS',pic:'ZZZZZZZZZ9'},{av:'AV62PMTipoDoc_G',fld:'vPMTIPODOC_G',pic:'',hsh:true},{av:'AV63PMNumDoc_G',fld:'vPMNUMDOC_G',pic:'ZZZZZZZZZ9',hsh:true},{av:'AV269GPMCuentadeCargo',fld:'vGPMCUENTADECARGO',pic:''},{av:'AV249GPMMonTp',fld:'vGPMMONTP',pic:'ZZZZZZZZZ9.999999'},{av:'A2878PMImpEstId',fld:'PMIMPESTID',pic:''},{av:'A2879PMImpId',fld:'PMIMPID',pic:''},{av:'A2880PMImpMon',fld:'PMIMPMON',pic:'ZZ,ZZZ,ZZ9.999999'},{av:'A2881PMImpVal',fld:'PMIMPVAL',pic:'ZZZZZZZ9.999999'},{av:'AV173PMRecepInsID',fld:'vPMRECEPINSID',pic:'ZZZZZZZZZ9'},{av:'AV61PMEmpresa_G',fld:'vPMEMPRESA_G',pic:'ZZZZZZZZZ9',hsh:true},{av:'A2568PMRecepInsID',fld:'PMRECEPINSID',pic:'ZZZZZZZZZ9'},{av:'AV69PMMoneId_G',fld:'vPMMONEID_G',pic:'',hsh:true},{av:'AV329TomarSegmentoUNG',fld:'vTOMARSEGMENTOUNG',pic:''},{av:'dynavCatcarid'},{av:'AV367CATCARID',fld:'vCATCARID',pic:'ZZZZZZZZZ9'},{av:'dynavPmcxprelid'},{av:'AV351PMCXPRELID',fld:'vPMCXPRELID',pic:'ZZZZZZZZZ9'},{av:'dynavUnifcncmnmid'},{av:'AV315unifCNCMNMID',fld:'vUNIFCNCMNMID',pic:''},{av:'dynavCncmnmid'},{av:'AV32CNCMNMID',fld:'vCNCMNMID',pic:''}]");
+      setEventMetadata("JMSG.ONCLICKOK","{handler:'e11DZ2',iparms:[{av:'GRID1_nFirstRecordOnPage'},{av:'GRID1_nEOF'},{av:'subGrid1_Rows',ctrl:'GRID1',prop:'Rows'},{av:'AV240AbrirBitacora',fld:'vABRIRBITACORA',pic:''},{av:'edtavPmctprdsc_Title',ctrl:'vPMCTPRDSC',prop:'Title'},{av:'edtavPmungid_g_Title',ctrl:'vPMUNGID_G',prop:'Title'},{av:'AV318renglones',fld:'vRENGLONES',pic:'ZZZ9'},{av:'A860PMEmpresa',fld:'PMEMPRESA',pic:'ZZZZZZZZZ9'},{av:'dynavCnciasid_f'},{av:'AV100CNCIASID_F',fld:'vCNCIASID_F',pic:'ZZZZZZZZZ9'},{av:'A3295PROPAGID',fld:'PROPAGID',pic:'ZZZZZZZZZ9'},{av:'AV239PROPAGID_F',fld:'vPROPAGID_F',pic:'ZZZZZZZZZ9'},{av:'A861PMTipoDoc',fld:'PMTIPODOC',pic:''},{av:'cmbavPmtipodoc_f'},{av:'AV197PMTipoDoc_F',fld:'vPMTIPODOC_F',pic:''},{av:'A862PMNumDoc',fld:'PMNUMDOC',pic:'ZZZZZZZZZ9'},{av:'AV133Numero',fld:'vNUMERO',pic:'ZZZZZZZZZ9'},{av:'A863PMProvId',fld:'PMPROVID',pic:'ZZZZZZZZZ9'},{av:'AV108CNCDIRID_F',fld:'vCNCDIRID_F',pic:'ZZZZZZZZZ9'},{av:'A864PMProyId',fld:'PMPROYID',pic:''},{av:'AV7PMCTPRID',fld:'vPMCTPRID',pic:''},{av:'AV111F2',fld:'vF2',pic:''},{av:'A866PMFechFac',fld:'PMFECHFAC',pic:''},{av:'AV110F1',fld:'vF1',pic:''},{av:'A873PMMoneId',fld:'PMMONEID',pic:''},{av:'AV327F6',fld:'vF6',pic:''},{av:'A4090PMCXPFHTRN',fld:'PMCXPFHTRN',pic:'99/99/99 99:99'},{av:'AV326F5',fld:'vF5',pic:''},{av:'AV113F4',fld:'vF4',pic:''},{av:'A867PMFechVen',fld:'PMFECHVEN',pic:''},{av:'AV112F3',fld:'vF3',pic:''},{av:'A2405PMEstatus',fld:'PMESTATUS',pic:''},{av:'cmbavEstatus'},{av:'AV11Estatus',fld:'vESTATUS',pic:''},{av:'AV230Checkoc',fld:'vCHECKOC',pic:'9'},{av:'A908PMNumDocOC',fld:'PMNUMDOCOC',pic:'ZZZZZZZZZ9'},{av:'AV229PMNumDocOc_F',fld:'vPMNUMDOCOC_F',pic:'ZZZZZZZZZ9'},{av:'A2528PMFolioFac',fld:'PMFOLIOFAC',pic:''},{av:'AV159PMFolioFac_F',fld:'vPMFOLIOFAC_F',pic:''},{av:'A905PMPoliz',fld:'PMPOLIZ',pic:'9'},{av:'cmbavPmpoliz_f'},{av:'AV270pmpoliz_f',fld:'vPMPOLIZ_F',pic:'9'},{av:'A10905PMIDREL',fld:'PMIDREL',pic:'ZZZZZZZZZ9'},{av:'AV353arrPMCTPRID',fld:'vARRPMCTPRID',pic:''},{av:'A865PMUngId',fld:'PMUNGID',pic:''},{av:'cmbavCgunngid'},{av:'AV361CGUNNGID',fld:'vCGUNNGID',pic:''},{av:'A17416PMCargo',fld:'PMCARGO',pic:'ZZZZZZZZZ9'},{av:'AV296banload',fld:'vBANLOAD',pic:''},{av:'AV350CNUSERMCXP',fld:'vCNUSERMCXP',pic:'',hsh:true},{av:'A2534PMUsrcap',fld:'PMUSRCAP',pic:'ZZZZZZZZZ9'},{av:'A4599PMLayAsoc',fld:'PMLAYASOC',pic:'9'},{av:'A909PMUuid',fld:'PMUUID',pic:''},{av:'A2871PMPDFDoc',fld:'PMPDFDOC',pic:'ZZZZZZZZZ9'},{av:'A2718PMMonTp',fld:'PMMONTP',pic:'ZZZZZZZZZ9.999999'},{av:'A2862PMMonAmort',fld:'PMMONAMORT',pic:'ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A898PMFechRev',fld:'PMFECHREV',pic:''},{av:'AV203CNCIASMON_F',fld:'vCNCIASMON_F',pic:''},{av:'A899PMMonEx',fld:'PMMONEX',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'AV316tipoCambio',fld:'vTIPOCAMBIO',pic:'ZZZZZZZZZ9.999999'},{av:'A903PMMonEp',fld:'PMMONEP',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A2689PMMonPgE',fld:'PMMONPGE',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A900PMMonEg',fld:'PMMONEG',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A870PMMonNg',fld:'PMMONNG',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A869PMMonNa',fld:'PMMONNA',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A902PMMonNp',fld:'PMMONNP',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A2688PMMonPgN',fld:'PMMONPGN',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A872PMIva',fld:'PMIVA',pic:'ZZZZZZZZZZZZZ9.99'},{av:'A2520PMMonIvaN',fld:'PMMONIVAN',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A2954PMIVAID',fld:'PMIVAID',pic:''},{av:'A2406PMComentarios',fld:'PMCOMENTARIOS',pic:''},{av:'A2521PMMonIvaE',fld:'PMMONIVAE',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A904PMReten',fld:'PMRETEN',pic:'ZZZZZZZZZZZZZ9.99'},{av:'A906PMOrdenD',fld:'PMORDEND',pic:'9'},{av:'A907PMTipoDocOC',fld:'PMTIPODOCOC',pic:''},{av:'A2923PMCTA1',fld:'PMCTA1',pic:''},{av:'A2924PMCTA2',fld:'PMCTA2',pic:''},{av:'A2925PMCTA3',fld:'PMCTA3',pic:''},{av:'A2542PMCuentadeCargo',fld:'PMCUENTADECARGO',pic:''},{av:'A3917PMObsPoliza',fld:'PMOBSPOLIZA',pic:''},{av:'A4395PMPRANT',fld:'PMPRANT',pic:'ZZZZZZ9.99'},{av:'A7899PMTipoAv',fld:'PMTIPOAV',pic:''},{av:'A7900PMNumAv',fld:'PMNUMAV',pic:'ZZZZZZZZZ9'},{av:'A17105PMCuentaPR02',fld:'PMCUENTAPR02',pic:''},{av:'AV319numRenglons',fld:'vNUMRENGLONS',pic:'ZZZ9',hsh:true},{av:'A2059CNPRCMDFT',fld:'CNPRCMDFT',pic:''},{av:'A2054CNCMNOID',fld:'CNCMNOID',pic:''},{av:'AV317CNCMNOID',fld:'vCNCMNOID',pic:''},{av:'A2055CNCMNDID',fld:'CNCMNDID',pic:''},{av:'A2076CNPRCMDVAL',fld:'CNPRCMDVAL',pic:'ZZZ,ZZ9.9999999'},{av:'A2610ESTPAGID',fld:'ESTPAGID',pic:''},{av:'AV123PMEstatus',fld:'vPMESTATUS',pic:'',hsh:true},{av:'A2611ESTPAGDSC',fld:'ESTPAGDSC',pic:''},{av:'A7789AVDSPRCIA',fld:'AVDSPRCIA',pic:'ZZZZZZZZZ9'},{av:'AV61PMEmpresa_G',fld:'vPMEMPRESA_G',pic:'ZZZZZZZZZ9',hsh:true},{av:'A8295AVDSPRCPPTPC',fld:'AVDSPRCPPTPC',pic:''},{av:'AV62PMTipoDoc_G',fld:'vPMTIPODOC_G',pic:'',hsh:true},{av:'A8296AVDSPRCPPNDC',fld:'AVDSPRCPPNDC',pic:'ZZZZZZZZZ9'},{av:'AV63PMNumDoc_G',fld:'vPMNUMDOC_G',pic:'ZZZZZZZZZ9',hsh:true},{av:'A20CNTDOCID',fld:'CNTDOCID',pic:''},{av:'A8255AVDSPRDOC',fld:'AVDSPRDOC',pic:'ZZZZZZZZZ9'},{av:'A7790AVDSPRNDC',fld:'AVDSPRNDC',pic:'ZZZZZZZZZ9'},{av:'A8242AVDSPROBS',fld:'AVDSPROBS',pic:''},{av:'A7518CNDSPRCIA',fld:'CNDSPRCIA',pic:'ZZZZZZZZZ9'},{av:'A7519CNDSPRTDC',fld:'CNDSPRTDC',pic:''},{av:'A7520CNDSPRNDC',fld:'CNDSPRNDC',pic:'ZZZZZZZZZ9'},{av:'A7531CNDSPRALCTR',fld:'CNDSPRALCTR',pic:''},{av:'AV116CNUSERID',fld:'vCNUSERID',pic:'',hsh:true},{av:'A456CNCD01ID',fld:'CNCD01ID',pic:''},{av:'cmbavFcncd01id'},{av:'AV335fCNCD01ID',fld:'vFCNCD01ID',pic:''},{av:'AV330ValidarUUIDRel',fld:'vVALIDARUUIDREL',pic:''},{av:'AV346VersionPoliza',fld:'vVERSIONPOLIZA',pic:''},{av:'AV336TratPolFol',fld:'vTRATPOLFOL',pic:''},{av:'AV242GPMEmpresa',fld:'vGPMEMPRESA',pic:'ZZZZZZZZZ9'},{av:'AV243GPMTipoDoc',fld:'vGPMTIPODOC',pic:''},{av:'AV169BanSel',fld:'vBANSEL',pic:''},{av:'AV272fechaNull',fld:'vFECHANULL',pic:''},{av:'AV345regenerarPoliza',fld:'vREGENERARPOLIZA',pic:''},{av:'AV244GPMNumDoc',fld:'vGPMNUMDOC',pic:'ZZZZZZZZZ9'},{av:'AV184Afecto',fld:'vAFECTO',pic:''},{av:'AV344cCGUNNGID',fld:'vCCGUNNGID',pic:''},{av:'AV337aPMCTPRUNNG',fld:'vAPMCTPRUNNG',pic:''},{av:'AV246GPMMoneId',fld:'vGPMMONEID',pic:''},{av:'AV179CNCIASMON',fld:'vCNCIASMON',pic:''},{av:'AV255GPMProvId',fld:'vGPMPROVID',pic:'ZZZZZZZZZ9'},{av:'AV331GPMProyId',fld:'vGPMPROYID',pic:''},{av:'AV235MontoEsp',fld:'vMONTOESP',pic:'ZZZZZZZZZZZZZ9.99'},{av:'AV236MontoEspIva',fld:'vMONTOESPIVA',pic:'ZZZZZZZZZZZZZ9.99'},{av:'AV196MontoAux',fld:'vMONTOAUX',pic:'ZZZZZZZZZZZ9.99'},{av:'AV237MontoCOM',fld:'vMONTOCOM',pic:'ZZZZZZZZZZZZZ9.99'},{av:'AV245GPMCTA1',fld:'vGPMCTA1',pic:''},{av:'AV250GPMCTA2',fld:'vGPMCTA2',pic:''},{av:'AV251GPMCTA3',fld:'vGPMCTA3',pic:''},{av:'AV257GPMMonNg',fld:'vGPMMONNG',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'AV274GPMFolioFac',fld:'vGPMFOLIOFAC',pic:''},{av:'AV271GPMFechFac',fld:'vGPMFECHFAC',pic:''},{av:'AV174CTA1',fld:'vCTA1',pic:''},{av:'AV175CTA2',fld:'vCTA2',pic:''},{av:'AV176CTA3',fld:'vCTA3',pic:''},{av:'AV264GPMIva',fld:'vGPMIVA',pic:'ZZZZZZZZZZZZZ9.99'},{av:'AV252G1PMIVAID',fld:'vG1PMIVAID',pic:''},{av:'AV256GPMMonIvaN',fld:'vGPMMONIVAN',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'AV253GPMMonEx',fld:'vGPMMONEX',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'AV195MontoRetencion',fld:'vMONTORETENCION',pic:'ZZZZZZZZZZZ9.99'},{av:'AV64PMProvId_G',fld:'vPMPROVID_G',pic:'ZZZZZZZZZ9',hsh:true},{av:'AV254GPMMonNa',fld:'vGPMMONNA',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'AV338aPOLFOLCONS',fld:'vAPOLFOLCONS',pic:'ZZZZZZZZZ9'},{av:'AV269GPMCuentadeCargo',fld:'vGPMCUENTADECARGO',pic:''},{av:'AV249GPMMonTp',fld:'vGPMMONTP',pic:'ZZZZZZZZZ9.999999'},{av:'A2878PMImpEstId',fld:'PMIMPESTID',pic:''},{av:'A2879PMImpId',fld:'PMIMPID',pic:''},{av:'A2880PMImpMon',fld:'PMIMPMON',pic:'ZZ,ZZZ,ZZ9.999999'},{av:'A2881PMImpVal',fld:'PMIMPVAL',pic:'ZZZZZZZ9.999999'},{av:'AV173PMRecepInsID',fld:'vPMRECEPINSID',pic:'ZZZZZZZZZ9'},{av:'A2568PMRecepInsID',fld:'PMRECEPINSID',pic:'ZZZZZZZZZ9'},{av:'AV69PMMoneId_G',fld:'vPMMONEID_G',pic:'',hsh:true},{av:'AV329TomarSegmentoUNG',fld:'vTOMARSEGMENTOUNG',pic:''},{av:'dynavCatcarid'},{av:'AV367CATCARID',fld:'vCATCARID',pic:'ZZZZZZZZZ9'},{av:'dynavPmcxprelid'},{av:'AV351PMCXPRELID',fld:'vPMCXPRELID',pic:'ZZZZZZZZZ9'},{av:'dynavUnifcncmnmid'},{av:'AV315unifCNCMNMID',fld:'vUNIFCNCMNMID',pic:''},{av:'dynavCncmnmid'},{av:'AV32CNCMNMID',fld:'vCNCMNMID',pic:''}]");
       setEventMetadata("JMSG.ONCLICKOK",",oparms:[{av:'AV345regenerarPoliza',fld:'vREGENERARPOLIZA',pic:''},{av:'AV179CNCIASMON',fld:'vCNCIASMON',pic:''},{av:'AV344cCGUNNGID',fld:'vCCGUNNGID',pic:''},{av:'AV255GPMProvId',fld:'vGPMPROVID',pic:'ZZZZZZZZZ9'},{av:'AV331GPMProyId',fld:'vGPMPROYID',pic:''},{av:'AV242GPMEmpresa',fld:'vGPMEMPRESA',pic:'ZZZZZZZZZ9'},{av:'AV243GPMTipoDoc',fld:'vGPMTIPODOC',pic:''},{av:'AV244GPMNumDoc',fld:'vGPMNUMDOC',pic:'ZZZZZZZZZ9'},{av:'AV249GPMMonTp',fld:'vGPMMONTP',pic:'ZZZZZZZZZ9.999999'},{av:'AV245GPMCTA1',fld:'vGPMCTA1',pic:''},{av:'AV250GPMCTA2',fld:'vGPMCTA2',pic:''},{av:'AV251GPMCTA3',fld:'vGPMCTA3',pic:''},{av:'AV252G1PMIVAID',fld:'vG1PMIVAID',pic:''},{av:'AV264GPMIva',fld:'vGPMIVA',pic:'ZZZZZZZZZZZZZ9.99'},{av:'AV254GPMMonNa',fld:'vGPMMONNA',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'AV256GPMMonIvaN',fld:'vGPMMONIVAN',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'AV253GPMMonEx',fld:'vGPMMONEX',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'AV246GPMMoneId',fld:'vGPMMONEID',pic:''},{av:'AV257GPMMonNg',fld:'vGPMMONNG',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'AV269GPMCuentadeCargo',fld:'vGPMCUENTADECARGO',pic:''},{av:'AV271GPMFechFac',fld:'vGPMFECHFAC',pic:''},{av:'AV274GPMFolioFac',fld:'vGPMFOLIOFAC',pic:''},{av:'AV272fechaNull',fld:'vFECHANULL',pic:''},{av:'AV169BanSel',fld:'vBANSEL',pic:''},{av:'AV176CTA3',fld:'vCTA3',pic:''},{av:'AV175CTA2',fld:'vCTA2',pic:''},{av:'AV174CTA1',fld:'vCTA1',pic:''},{av:'AV337aPMCTPRUNNG',fld:'vAPMCTPRUNNG',pic:''},{av:'AV338aPOLFOLCONS',fld:'vAPOLFOLCONS',pic:'ZZZZZZZZZ9'},{av:'AV235MontoEsp',fld:'vMONTOESP',pic:'ZZZZZZZZZZZZZ9.99'},{av:'AV236MontoEspIva',fld:'vMONTOESPIVA',pic:'ZZZZZZZZZZZZZ9.99'},{av:'AV196MontoAux',fld:'vMONTOAUX',pic:'ZZZZZZZZZZZ9.99'},{av:'AV237MontoCOM',fld:'vMONTOCOM',pic:'ZZZZZZZZZZZZZ9.99'},{av:'AV184Afecto',fld:'vAFECTO',pic:''},{av:'AV195MontoRetencion',fld:'vMONTORETENCION',pic:'ZZZZZZZZZZZ9.99'},{av:'AV173PMRecepInsID',fld:'vPMRECEPINSID',pic:'ZZZZZZZZZ9'},{av:'dynavCatcarid'},{av:'AV367CATCARID',fld:'vCATCARID',pic:'ZZZZZZZZZ9'},{av:'dynavPmcxprelid'},{av:'AV351PMCXPRELID',fld:'vPMCXPRELID',pic:'ZZZZZZZZZ9'},{av:'dynavUnifcncmnmid'},{av:'AV315unifCNCMNMID',fld:'vUNIFCNCMNMID',pic:''},{av:'dynavCncmnmid'},{av:'AV32CNCMNMID',fld:'vCNCMNMID',pic:''}]}");
-      setEventMetadata("JMSG.ONCLICKCANCEL","{handler:'e12DZ2',iparms:[{av:'GRID1_nFirstRecordOnPage'},{av:'GRID1_nEOF'},{av:'subGrid1_Rows',ctrl:'GRID1',prop:'Rows'},{av:'AV240AbrirBitacora',fld:'vABRIRBITACORA',pic:''},{av:'edtavPmctprdsc_Title',ctrl:'vPMCTPRDSC',prop:'Title'},{av:'edtavPmungid_g_Title',ctrl:'vPMUNGID_G',prop:'Title'},{av:'AV318renglones',fld:'vRENGLONES',pic:'ZZZ9'},{av:'A860PMEmpresa',fld:'PMEMPRESA',pic:'ZZZZZZZZZ9'},{av:'dynavCnciasid_f'},{av:'AV100CNCIASID_F',fld:'vCNCIASID_F',pic:'ZZZZZZZZZ9'},{av:'A3295PROPAGID',fld:'PROPAGID',pic:'ZZZZZZZZZ9'},{av:'AV239PROPAGID_F',fld:'vPROPAGID_F',pic:'ZZZZZZZZZ9'},{av:'A861PMTipoDoc',fld:'PMTIPODOC',pic:''},{av:'cmbavPmtipodoc_f'},{av:'AV197PMTipoDoc_F',fld:'vPMTIPODOC_F',pic:''},{av:'A862PMNumDoc',fld:'PMNUMDOC',pic:'ZZZZZZZZZ9'},{av:'AV133Numero',fld:'vNUMERO',pic:'ZZZZZZZZZ9'},{av:'A863PMProvId',fld:'PMPROVID',pic:'ZZZZZZZZZ9'},{av:'AV108CNCDIRID_F',fld:'vCNCDIRID_F',pic:'ZZZZZZZZZ9'},{av:'A864PMProyId',fld:'PMPROYID',pic:''},{av:'AV7PMCTPRID',fld:'vPMCTPRID',pic:''},{av:'AV111F2',fld:'vF2',pic:''},{av:'A866PMFechFac',fld:'PMFECHFAC',pic:''},{av:'AV110F1',fld:'vF1',pic:''},{av:'A873PMMoneId',fld:'PMMONEID',pic:''},{av:'AV327F6',fld:'vF6',pic:''},{av:'A4090PMCXPFHTRN',fld:'PMCXPFHTRN',pic:'99/99/99 99:99'},{av:'AV326F5',fld:'vF5',pic:''},{av:'AV113F4',fld:'vF4',pic:''},{av:'A867PMFechVen',fld:'PMFECHVEN',pic:''},{av:'AV112F3',fld:'vF3',pic:''},{av:'A2405PMEstatus',fld:'PMESTATUS',pic:''},{av:'cmbavEstatus'},{av:'AV11Estatus',fld:'vESTATUS',pic:''},{av:'AV230Checkoc',fld:'vCHECKOC',pic:'9'},{av:'A908PMNumDocOC',fld:'PMNUMDOCOC',pic:'ZZZZZZZZZ9'},{av:'AV229PMNumDocOc_F',fld:'vPMNUMDOCOC_F',pic:'ZZZZZZZZZ9'},{av:'A2528PMFolioFac',fld:'PMFOLIOFAC',pic:''},{av:'AV159PMFolioFac_F',fld:'vPMFOLIOFAC_F',pic:''},{av:'A905PMPoliz',fld:'PMPOLIZ',pic:'9'},{av:'cmbavPmpoliz_f'},{av:'AV270pmpoliz_f',fld:'vPMPOLIZ_F',pic:'9'},{av:'A10905PMIDREL',fld:'PMIDREL',pic:'ZZZZZZZZZ9'},{av:'AV353arrPMCTPRID',fld:'vARRPMCTPRID',pic:''},{av:'A865PMUngId',fld:'PMUNGID',pic:''},{av:'cmbavCgunngid'},{av:'AV361CGUNNGID',fld:'vCGUNNGID',pic:''},{av:'A17416PMCargo',fld:'PMCARGO',pic:'ZZZZZZZZZ9'},{av:'AV296banload',fld:'vBANLOAD',pic:''},{av:'AV350CNUSERMCXP',fld:'vCNUSERMCXP',pic:'',hsh:true},{av:'A2534PMUsrcap',fld:'PMUSRCAP',pic:'ZZZZZZZZZ9'},{av:'A4599PMLayAsoc',fld:'PMLAYASOC',pic:'9'},{av:'A909PMUuid',fld:'PMUUID',pic:''},{av:'A2871PMPDFDoc',fld:'PMPDFDOC',pic:'ZZZZZZZZZ9'},{av:'A2718PMMonTp',fld:'PMMONTP',pic:'ZZZZZZZZZ9.999999'},{av:'A2862PMMonAmort',fld:'PMMONAMORT',pic:'ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A898PMFechRev',fld:'PMFECHREV',pic:''},{av:'AV203CNCIASMON_F',fld:'vCNCIASMON_F',pic:''},{av:'A899PMMonEx',fld:'PMMONEX',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'AV316tipoCambio',fld:'vTIPOCAMBIO',pic:'ZZZZZZZZZ9.999999'},{av:'A903PMMonEp',fld:'PMMONEP',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A2689PMMonPgE',fld:'PMMONPGE',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A900PMMonEg',fld:'PMMONEG',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A870PMMonNg',fld:'PMMONNG',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A869PMMonNa',fld:'PMMONNA',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A902PMMonNp',fld:'PMMONNP',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A2688PMMonPgN',fld:'PMMONPGN',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A872PMIva',fld:'PMIVA',pic:'ZZZZZZZZZZZZZ9.99'},{av:'A2520PMMonIvaN',fld:'PMMONIVAN',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A2954PMIVAID',fld:'PMIVAID',pic:''},{av:'A2406PMComentarios',fld:'PMCOMENTARIOS',pic:''},{av:'A2521PMMonIvaE',fld:'PMMONIVAE',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A904PMReten',fld:'PMRETEN',pic:'ZZZZZZZZZZZZZ9.99'},{av:'A906PMOrdenD',fld:'PMORDEND',pic:'9'},{av:'A907PMTipoDocOC',fld:'PMTIPODOCOC',pic:''},{av:'A2923PMCTA1',fld:'PMCTA1',pic:''},{av:'A2924PMCTA2',fld:'PMCTA2',pic:''},{av:'A2925PMCTA3',fld:'PMCTA3',pic:''},{av:'A2542PMCuentadeCargo',fld:'PMCUENTADECARGO',pic:''},{av:'A3917PMObsPoliza',fld:'PMOBSPOLIZA',pic:''},{av:'A4395PMPRANT',fld:'PMPRANT',pic:'ZZZZZZ9.99'},{av:'A7899PMTipoAv',fld:'PMTIPOAV',pic:''},{av:'A7900PMNumAv',fld:'PMNUMAV',pic:'ZZZZZZZZZ9'},{av:'A17105PMCuentaPR02',fld:'PMCUENTAPR02',pic:''},{av:'AV319numRenglons',fld:'vNUMRENGLONS',pic:'ZZZ9',hsh:true},{av:'A2059CNPRCMDFT',fld:'CNPRCMDFT',pic:''},{av:'A2054CNCMNOID',fld:'CNCMNOID',pic:''},{av:'AV317CNCMNOID',fld:'vCNCMNOID',pic:''},{av:'A2055CNCMNDID',fld:'CNCMNDID',pic:''},{av:'A2076CNPRCMDVAL',fld:'CNPRCMDVAL',pic:'ZZZ,ZZ9.9999999'},{av:'A2610ESTPAGID',fld:'ESTPAGID',pic:''},{av:'AV123PMEstatus',fld:'vPMESTATUS',pic:'',hsh:true},{av:'A2611ESTPAGDSC',fld:'ESTPAGDSC',pic:''},{av:'AV116CNUSERID',fld:'vCNUSERID',pic:'',hsh:true},{av:'A456CNCD01ID',fld:'CNCD01ID',pic:''},{av:'cmbavFcncd01id'},{av:'AV335fCNCD01ID',fld:'vFCNCD01ID',pic:''},{av:'AV330ValidarUUIDRel',fld:'vVALIDARUUIDREL',pic:''},{av:'AV346VersionPoliza',fld:'vVERSIONPOLIZA',pic:''},{av:'AV336TratPolFol',fld:'vTRATPOLFOL',pic:''},{av:'AV242GPMEmpresa',fld:'vGPMEMPRESA',pic:'ZZZZZZZZZ9'},{av:'AV243GPMTipoDoc',fld:'vGPMTIPODOC',pic:''},{av:'AV169BanSel',fld:'vBANSEL',pic:''},{av:'AV272fechaNull',fld:'vFECHANULL',pic:''},{av:'AV345regenerarPoliza',fld:'vREGENERARPOLIZA',pic:''},{av:'AV244GPMNumDoc',fld:'vGPMNUMDOC',pic:'ZZZZZZZZZ9'},{av:'AV184Afecto',fld:'vAFECTO',pic:''},{av:'AV344cCGUNNGID',fld:'vCCGUNNGID',pic:''},{av:'AV337aPMCTPRUNNG',fld:'vAPMCTPRUNNG',pic:''},{av:'AV246GPMMoneId',fld:'vGPMMONEID',pic:''},{av:'AV179CNCIASMON',fld:'vCNCIASMON',pic:''},{av:'AV255GPMProvId',fld:'vGPMPROVID',pic:'ZZZZZZZZZ9'},{av:'AV331GPMProyId',fld:'vGPMPROYID',pic:''},{av:'AV235MontoEsp',fld:'vMONTOESP',pic:'ZZZZZZZZZZZZZ9.99'},{av:'AV236MontoEspIva',fld:'vMONTOESPIVA',pic:'ZZZZZZZZZZZZZ9.99'},{av:'AV196MontoAux',fld:'vMONTOAUX',pic:'ZZZZZZZZZZZ9.99'},{av:'AV237MontoCOM',fld:'vMONTOCOM',pic:'ZZZZZZZZZZZZZ9.99'},{av:'AV245GPMCTA1',fld:'vGPMCTA1',pic:''},{av:'AV250GPMCTA2',fld:'vGPMCTA2',pic:''},{av:'AV251GPMCTA3',fld:'vGPMCTA3',pic:''},{av:'AV257GPMMonNg',fld:'vGPMMONNG',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'AV274GPMFolioFac',fld:'vGPMFOLIOFAC',pic:''},{av:'AV271GPMFechFac',fld:'vGPMFECHFAC',pic:''},{av:'AV174CTA1',fld:'vCTA1',pic:''},{av:'AV175CTA2',fld:'vCTA2',pic:''},{av:'AV176CTA3',fld:'vCTA3',pic:''},{av:'AV264GPMIva',fld:'vGPMIVA',pic:'ZZZZZZZZZZZZZ9.99'},{av:'AV252G1PMIVAID',fld:'vG1PMIVAID',pic:''},{av:'AV256GPMMonIvaN',fld:'vGPMMONIVAN',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'AV253GPMMonEx',fld:'vGPMMONEX',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'AV195MontoRetencion',fld:'vMONTORETENCION',pic:'ZZZZZZZZZZZ9.99'},{av:'AV64PMProvId_G',fld:'vPMPROVID_G',pic:'ZZZZZZZZZ9',hsh:true},{av:'AV254GPMMonNa',fld:'vGPMMONNA',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'AV338aPOLFOLCONS',fld:'vAPOLFOLCONS',pic:'ZZZZZZZZZ9'},{av:'AV62PMTipoDoc_G',fld:'vPMTIPODOC_G',pic:'',hsh:true},{av:'AV63PMNumDoc_G',fld:'vPMNUMDOC_G',pic:'ZZZZZZZZZ9',hsh:true},{av:'AV269GPMCuentadeCargo',fld:'vGPMCUENTADECARGO',pic:''},{av:'AV249GPMMonTp',fld:'vGPMMONTP',pic:'ZZZZZZZZZ9.999999'},{av:'A2878PMImpEstId',fld:'PMIMPESTID',pic:''},{av:'A2879PMImpId',fld:'PMIMPID',pic:''},{av:'A2880PMImpMon',fld:'PMIMPMON',pic:'ZZ,ZZZ,ZZ9.999999'},{av:'A2881PMImpVal',fld:'PMIMPVAL',pic:'ZZZZZZZ9.999999'},{av:'AV173PMRecepInsID',fld:'vPMRECEPINSID',pic:'ZZZZZZZZZ9'},{av:'AV61PMEmpresa_G',fld:'vPMEMPRESA_G',pic:'ZZZZZZZZZ9',hsh:true},{av:'A2568PMRecepInsID',fld:'PMRECEPINSID',pic:'ZZZZZZZZZ9'},{av:'AV69PMMoneId_G',fld:'vPMMONEID_G',pic:'',hsh:true},{av:'AV329TomarSegmentoUNG',fld:'vTOMARSEGMENTOUNG',pic:''},{av:'dynavCatcarid'},{av:'AV367CATCARID',fld:'vCATCARID',pic:'ZZZZZZZZZ9'},{av:'dynavPmcxprelid'},{av:'AV351PMCXPRELID',fld:'vPMCXPRELID',pic:'ZZZZZZZZZ9'},{av:'dynavUnifcncmnmid'},{av:'AV315unifCNCMNMID',fld:'vUNIFCNCMNMID',pic:''},{av:'dynavCncmnmid'},{av:'AV32CNCMNMID',fld:'vCNCMNMID',pic:''}]");
+      setEventMetadata("JMSG.ONCLICKCANCEL","{handler:'e12DZ2',iparms:[{av:'GRID1_nFirstRecordOnPage'},{av:'GRID1_nEOF'},{av:'subGrid1_Rows',ctrl:'GRID1',prop:'Rows'},{av:'AV240AbrirBitacora',fld:'vABRIRBITACORA',pic:''},{av:'edtavPmctprdsc_Title',ctrl:'vPMCTPRDSC',prop:'Title'},{av:'edtavPmungid_g_Title',ctrl:'vPMUNGID_G',prop:'Title'},{av:'AV318renglones',fld:'vRENGLONES',pic:'ZZZ9'},{av:'A860PMEmpresa',fld:'PMEMPRESA',pic:'ZZZZZZZZZ9'},{av:'dynavCnciasid_f'},{av:'AV100CNCIASID_F',fld:'vCNCIASID_F',pic:'ZZZZZZZZZ9'},{av:'A3295PROPAGID',fld:'PROPAGID',pic:'ZZZZZZZZZ9'},{av:'AV239PROPAGID_F',fld:'vPROPAGID_F',pic:'ZZZZZZZZZ9'},{av:'A861PMTipoDoc',fld:'PMTIPODOC',pic:''},{av:'cmbavPmtipodoc_f'},{av:'AV197PMTipoDoc_F',fld:'vPMTIPODOC_F',pic:''},{av:'A862PMNumDoc',fld:'PMNUMDOC',pic:'ZZZZZZZZZ9'},{av:'AV133Numero',fld:'vNUMERO',pic:'ZZZZZZZZZ9'},{av:'A863PMProvId',fld:'PMPROVID',pic:'ZZZZZZZZZ9'},{av:'AV108CNCDIRID_F',fld:'vCNCDIRID_F',pic:'ZZZZZZZZZ9'},{av:'A864PMProyId',fld:'PMPROYID',pic:''},{av:'AV7PMCTPRID',fld:'vPMCTPRID',pic:''},{av:'AV111F2',fld:'vF2',pic:''},{av:'A866PMFechFac',fld:'PMFECHFAC',pic:''},{av:'AV110F1',fld:'vF1',pic:''},{av:'A873PMMoneId',fld:'PMMONEID',pic:''},{av:'AV327F6',fld:'vF6',pic:''},{av:'A4090PMCXPFHTRN',fld:'PMCXPFHTRN',pic:'99/99/99 99:99'},{av:'AV326F5',fld:'vF5',pic:''},{av:'AV113F4',fld:'vF4',pic:''},{av:'A867PMFechVen',fld:'PMFECHVEN',pic:''},{av:'AV112F3',fld:'vF3',pic:''},{av:'A2405PMEstatus',fld:'PMESTATUS',pic:''},{av:'cmbavEstatus'},{av:'AV11Estatus',fld:'vESTATUS',pic:''},{av:'AV230Checkoc',fld:'vCHECKOC',pic:'9'},{av:'A908PMNumDocOC',fld:'PMNUMDOCOC',pic:'ZZZZZZZZZ9'},{av:'AV229PMNumDocOc_F',fld:'vPMNUMDOCOC_F',pic:'ZZZZZZZZZ9'},{av:'A2528PMFolioFac',fld:'PMFOLIOFAC',pic:''},{av:'AV159PMFolioFac_F',fld:'vPMFOLIOFAC_F',pic:''},{av:'A905PMPoliz',fld:'PMPOLIZ',pic:'9'},{av:'cmbavPmpoliz_f'},{av:'AV270pmpoliz_f',fld:'vPMPOLIZ_F',pic:'9'},{av:'A10905PMIDREL',fld:'PMIDREL',pic:'ZZZZZZZZZ9'},{av:'AV353arrPMCTPRID',fld:'vARRPMCTPRID',pic:''},{av:'A865PMUngId',fld:'PMUNGID',pic:''},{av:'cmbavCgunngid'},{av:'AV361CGUNNGID',fld:'vCGUNNGID',pic:''},{av:'A17416PMCargo',fld:'PMCARGO',pic:'ZZZZZZZZZ9'},{av:'AV296banload',fld:'vBANLOAD',pic:''},{av:'AV350CNUSERMCXP',fld:'vCNUSERMCXP',pic:'',hsh:true},{av:'A2534PMUsrcap',fld:'PMUSRCAP',pic:'ZZZZZZZZZ9'},{av:'A4599PMLayAsoc',fld:'PMLAYASOC',pic:'9'},{av:'A909PMUuid',fld:'PMUUID',pic:''},{av:'A2871PMPDFDoc',fld:'PMPDFDOC',pic:'ZZZZZZZZZ9'},{av:'A2718PMMonTp',fld:'PMMONTP',pic:'ZZZZZZZZZ9.999999'},{av:'A2862PMMonAmort',fld:'PMMONAMORT',pic:'ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A898PMFechRev',fld:'PMFECHREV',pic:''},{av:'AV203CNCIASMON_F',fld:'vCNCIASMON_F',pic:''},{av:'A899PMMonEx',fld:'PMMONEX',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'AV316tipoCambio',fld:'vTIPOCAMBIO',pic:'ZZZZZZZZZ9.999999'},{av:'A903PMMonEp',fld:'PMMONEP',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A2689PMMonPgE',fld:'PMMONPGE',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A900PMMonEg',fld:'PMMONEG',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A870PMMonNg',fld:'PMMONNG',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A869PMMonNa',fld:'PMMONNA',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A902PMMonNp',fld:'PMMONNP',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A2688PMMonPgN',fld:'PMMONPGN',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A872PMIva',fld:'PMIVA',pic:'ZZZZZZZZZZZZZ9.99'},{av:'A2520PMMonIvaN',fld:'PMMONIVAN',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A2954PMIVAID',fld:'PMIVAID',pic:''},{av:'A2406PMComentarios',fld:'PMCOMENTARIOS',pic:''},{av:'A2521PMMonIvaE',fld:'PMMONIVAE',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A904PMReten',fld:'PMRETEN',pic:'ZZZZZZZZZZZZZ9.99'},{av:'A906PMOrdenD',fld:'PMORDEND',pic:'9'},{av:'A907PMTipoDocOC',fld:'PMTIPODOCOC',pic:''},{av:'A2923PMCTA1',fld:'PMCTA1',pic:''},{av:'A2924PMCTA2',fld:'PMCTA2',pic:''},{av:'A2925PMCTA3',fld:'PMCTA3',pic:''},{av:'A2542PMCuentadeCargo',fld:'PMCUENTADECARGO',pic:''},{av:'A3917PMObsPoliza',fld:'PMOBSPOLIZA',pic:''},{av:'A4395PMPRANT',fld:'PMPRANT',pic:'ZZZZZZ9.99'},{av:'A7899PMTipoAv',fld:'PMTIPOAV',pic:''},{av:'A7900PMNumAv',fld:'PMNUMAV',pic:'ZZZZZZZZZ9'},{av:'A17105PMCuentaPR02',fld:'PMCUENTAPR02',pic:''},{av:'AV319numRenglons',fld:'vNUMRENGLONS',pic:'ZZZ9',hsh:true},{av:'A2059CNPRCMDFT',fld:'CNPRCMDFT',pic:''},{av:'A2054CNCMNOID',fld:'CNCMNOID',pic:''},{av:'AV317CNCMNOID',fld:'vCNCMNOID',pic:''},{av:'A2055CNCMNDID',fld:'CNCMNDID',pic:''},{av:'A2076CNPRCMDVAL',fld:'CNPRCMDVAL',pic:'ZZZ,ZZ9.9999999'},{av:'A2610ESTPAGID',fld:'ESTPAGID',pic:''},{av:'AV123PMEstatus',fld:'vPMESTATUS',pic:'',hsh:true},{av:'A2611ESTPAGDSC',fld:'ESTPAGDSC',pic:''},{av:'A7789AVDSPRCIA',fld:'AVDSPRCIA',pic:'ZZZZZZZZZ9'},{av:'AV61PMEmpresa_G',fld:'vPMEMPRESA_G',pic:'ZZZZZZZZZ9',hsh:true},{av:'A8295AVDSPRCPPTPC',fld:'AVDSPRCPPTPC',pic:''},{av:'AV62PMTipoDoc_G',fld:'vPMTIPODOC_G',pic:'',hsh:true},{av:'A8296AVDSPRCPPNDC',fld:'AVDSPRCPPNDC',pic:'ZZZZZZZZZ9'},{av:'AV63PMNumDoc_G',fld:'vPMNUMDOC_G',pic:'ZZZZZZZZZ9',hsh:true},{av:'A20CNTDOCID',fld:'CNTDOCID',pic:''},{av:'A8255AVDSPRDOC',fld:'AVDSPRDOC',pic:'ZZZZZZZZZ9'},{av:'A7790AVDSPRNDC',fld:'AVDSPRNDC',pic:'ZZZZZZZZZ9'},{av:'A8242AVDSPROBS',fld:'AVDSPROBS',pic:''},{av:'A7518CNDSPRCIA',fld:'CNDSPRCIA',pic:'ZZZZZZZZZ9'},{av:'A7519CNDSPRTDC',fld:'CNDSPRTDC',pic:''},{av:'A7520CNDSPRNDC',fld:'CNDSPRNDC',pic:'ZZZZZZZZZ9'},{av:'A7531CNDSPRALCTR',fld:'CNDSPRALCTR',pic:''},{av:'AV116CNUSERID',fld:'vCNUSERID',pic:'',hsh:true},{av:'A456CNCD01ID',fld:'CNCD01ID',pic:''},{av:'cmbavFcncd01id'},{av:'AV335fCNCD01ID',fld:'vFCNCD01ID',pic:''},{av:'AV330ValidarUUIDRel',fld:'vVALIDARUUIDREL',pic:''},{av:'AV346VersionPoliza',fld:'vVERSIONPOLIZA',pic:''},{av:'AV336TratPolFol',fld:'vTRATPOLFOL',pic:''},{av:'AV242GPMEmpresa',fld:'vGPMEMPRESA',pic:'ZZZZZZZZZ9'},{av:'AV243GPMTipoDoc',fld:'vGPMTIPODOC',pic:''},{av:'AV169BanSel',fld:'vBANSEL',pic:''},{av:'AV272fechaNull',fld:'vFECHANULL',pic:''},{av:'AV345regenerarPoliza',fld:'vREGENERARPOLIZA',pic:''},{av:'AV244GPMNumDoc',fld:'vGPMNUMDOC',pic:'ZZZZZZZZZ9'},{av:'AV184Afecto',fld:'vAFECTO',pic:''},{av:'AV344cCGUNNGID',fld:'vCCGUNNGID',pic:''},{av:'AV337aPMCTPRUNNG',fld:'vAPMCTPRUNNG',pic:''},{av:'AV246GPMMoneId',fld:'vGPMMONEID',pic:''},{av:'AV179CNCIASMON',fld:'vCNCIASMON',pic:''},{av:'AV255GPMProvId',fld:'vGPMPROVID',pic:'ZZZZZZZZZ9'},{av:'AV331GPMProyId',fld:'vGPMPROYID',pic:''},{av:'AV235MontoEsp',fld:'vMONTOESP',pic:'ZZZZZZZZZZZZZ9.99'},{av:'AV236MontoEspIva',fld:'vMONTOESPIVA',pic:'ZZZZZZZZZZZZZ9.99'},{av:'AV196MontoAux',fld:'vMONTOAUX',pic:'ZZZZZZZZZZZ9.99'},{av:'AV237MontoCOM',fld:'vMONTOCOM',pic:'ZZZZZZZZZZZZZ9.99'},{av:'AV245GPMCTA1',fld:'vGPMCTA1',pic:''},{av:'AV250GPMCTA2',fld:'vGPMCTA2',pic:''},{av:'AV251GPMCTA3',fld:'vGPMCTA3',pic:''},{av:'AV257GPMMonNg',fld:'vGPMMONNG',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'AV274GPMFolioFac',fld:'vGPMFOLIOFAC',pic:''},{av:'AV271GPMFechFac',fld:'vGPMFECHFAC',pic:''},{av:'AV174CTA1',fld:'vCTA1',pic:''},{av:'AV175CTA2',fld:'vCTA2',pic:''},{av:'AV176CTA3',fld:'vCTA3',pic:''},{av:'AV264GPMIva',fld:'vGPMIVA',pic:'ZZZZZZZZZZZZZ9.99'},{av:'AV252G1PMIVAID',fld:'vG1PMIVAID',pic:''},{av:'AV256GPMMonIvaN',fld:'vGPMMONIVAN',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'AV253GPMMonEx',fld:'vGPMMONEX',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'AV195MontoRetencion',fld:'vMONTORETENCION',pic:'ZZZZZZZZZZZ9.99'},{av:'AV64PMProvId_G',fld:'vPMPROVID_G',pic:'ZZZZZZZZZ9',hsh:true},{av:'AV254GPMMonNa',fld:'vGPMMONNA',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'AV338aPOLFOLCONS',fld:'vAPOLFOLCONS',pic:'ZZZZZZZZZ9'},{av:'AV269GPMCuentadeCargo',fld:'vGPMCUENTADECARGO',pic:''},{av:'AV249GPMMonTp',fld:'vGPMMONTP',pic:'ZZZZZZZZZ9.999999'},{av:'A2878PMImpEstId',fld:'PMIMPESTID',pic:''},{av:'A2879PMImpId',fld:'PMIMPID',pic:''},{av:'A2880PMImpMon',fld:'PMIMPMON',pic:'ZZ,ZZZ,ZZ9.999999'},{av:'A2881PMImpVal',fld:'PMIMPVAL',pic:'ZZZZZZZ9.999999'},{av:'AV173PMRecepInsID',fld:'vPMRECEPINSID',pic:'ZZZZZZZZZ9'},{av:'A2568PMRecepInsID',fld:'PMRECEPINSID',pic:'ZZZZZZZZZ9'},{av:'AV69PMMoneId_G',fld:'vPMMONEID_G',pic:'',hsh:true},{av:'AV329TomarSegmentoUNG',fld:'vTOMARSEGMENTOUNG',pic:''},{av:'dynavCatcarid'},{av:'AV367CATCARID',fld:'vCATCARID',pic:'ZZZZZZZZZ9'},{av:'dynavPmcxprelid'},{av:'AV351PMCXPRELID',fld:'vPMCXPRELID',pic:'ZZZZZZZZZ9'},{av:'dynavUnifcncmnmid'},{av:'AV315unifCNCMNMID',fld:'vUNIFCNCMNMID',pic:''},{av:'dynavCncmnmid'},{av:'AV32CNCMNMID',fld:'vCNCMNMID',pic:''}]");
       setEventMetadata("JMSG.ONCLICKCANCEL",",oparms:[{av:'AV345regenerarPoliza',fld:'vREGENERARPOLIZA',pic:''},{av:'AV179CNCIASMON',fld:'vCNCIASMON',pic:''},{av:'AV344cCGUNNGID',fld:'vCCGUNNGID',pic:''},{av:'AV255GPMProvId',fld:'vGPMPROVID',pic:'ZZZZZZZZZ9'},{av:'AV331GPMProyId',fld:'vGPMPROYID',pic:''},{av:'AV242GPMEmpresa',fld:'vGPMEMPRESA',pic:'ZZZZZZZZZ9'},{av:'AV243GPMTipoDoc',fld:'vGPMTIPODOC',pic:''},{av:'AV244GPMNumDoc',fld:'vGPMNUMDOC',pic:'ZZZZZZZZZ9'},{av:'AV249GPMMonTp',fld:'vGPMMONTP',pic:'ZZZZZZZZZ9.999999'},{av:'AV245GPMCTA1',fld:'vGPMCTA1',pic:''},{av:'AV250GPMCTA2',fld:'vGPMCTA2',pic:''},{av:'AV251GPMCTA3',fld:'vGPMCTA3',pic:''},{av:'AV252G1PMIVAID',fld:'vG1PMIVAID',pic:''},{av:'AV264GPMIva',fld:'vGPMIVA',pic:'ZZZZZZZZZZZZZ9.99'},{av:'AV254GPMMonNa',fld:'vGPMMONNA',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'AV256GPMMonIvaN',fld:'vGPMMONIVAN',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'AV253GPMMonEx',fld:'vGPMMONEX',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'AV246GPMMoneId',fld:'vGPMMONEID',pic:''},{av:'AV257GPMMonNg',fld:'vGPMMONNG',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'AV269GPMCuentadeCargo',fld:'vGPMCUENTADECARGO',pic:''},{av:'AV271GPMFechFac',fld:'vGPMFECHFAC',pic:''},{av:'AV274GPMFolioFac',fld:'vGPMFOLIOFAC',pic:''},{av:'AV272fechaNull',fld:'vFECHANULL',pic:''},{av:'AV169BanSel',fld:'vBANSEL',pic:''},{av:'AV176CTA3',fld:'vCTA3',pic:''},{av:'AV175CTA2',fld:'vCTA2',pic:''},{av:'AV174CTA1',fld:'vCTA1',pic:''},{av:'AV337aPMCTPRUNNG',fld:'vAPMCTPRUNNG',pic:''},{av:'AV338aPOLFOLCONS',fld:'vAPOLFOLCONS',pic:'ZZZZZZZZZ9'},{av:'AV235MontoEsp',fld:'vMONTOESP',pic:'ZZZZZZZZZZZZZ9.99'},{av:'AV236MontoEspIva',fld:'vMONTOESPIVA',pic:'ZZZZZZZZZZZZZ9.99'},{av:'AV196MontoAux',fld:'vMONTOAUX',pic:'ZZZZZZZZZZZ9.99'},{av:'AV237MontoCOM',fld:'vMONTOCOM',pic:'ZZZZZZZZZZZZZ9.99'},{av:'AV184Afecto',fld:'vAFECTO',pic:''},{av:'AV195MontoRetencion',fld:'vMONTORETENCION',pic:'ZZZZZZZZZZZ9.99'},{av:'AV173PMRecepInsID',fld:'vPMRECEPINSID',pic:'ZZZZZZZZZ9'},{av:'dynavCatcarid'},{av:'AV367CATCARID',fld:'vCATCARID',pic:'ZZZZZZZZZ9'},{av:'dynavPmcxprelid'},{av:'AV351PMCXPRELID',fld:'vPMCXPRELID',pic:'ZZZZZZZZZ9'},{av:'dynavUnifcncmnmid'},{av:'AV315unifCNCMNMID',fld:'vUNIFCNCMNMID',pic:''},{av:'dynavCncmnmid'},{av:'AV32CNCMNMID',fld:'vCNCMNMID',pic:''}]}");
       setEventMetadata("VCNCIASID_F.CLICK","{handler:'e15DZ2',iparms:[{av:'dynavCnciasid_f'},{av:'AV100CNCIASID_F',fld:'vCNCIASID_F',pic:'ZZZZZZZZZ9'},{av:'A5939CNCIASID',fld:'CNCIASID',pic:'ZZZZZZZZZ9'},{av:'A19CNCIASMON',fld:'CNCIASMON',pic:''},{av:'AV203CNCIASMON_F',fld:'vCNCIASMON_F',pic:''},{av:'A2059CNPRCMDFT',fld:'CNPRCMDFT',pic:''},{av:'A2054CNCMNOID',fld:'CNCMNOID',pic:''},{av:'AV317CNCMNOID',fld:'vCNCMNOID',pic:''},{av:'A2055CNCMNDID',fld:'CNCMNDID',pic:''},{av:'A2076CNPRCMDVAL',fld:'CNPRCMDVAL',pic:'ZZZ,ZZ9.9999999'},{av:'dynavCatcarid'},{av:'AV367CATCARID',fld:'vCATCARID',pic:'ZZZZZZZZZ9'},{av:'dynavPmcxprelid'},{av:'AV351PMCXPRELID',fld:'vPMCXPRELID',pic:'ZZZZZZZZZ9'},{av:'dynavUnifcncmnmid'},{av:'AV315unifCNCMNMID',fld:'vUNIFCNCMNMID',pic:''},{av:'dynavCncmnmid'},{av:'AV32CNCMNMID',fld:'vCNCMNMID',pic:''}]");
       setEventMetadata("VCNCIASID_F.CLICK",",oparms:[{av:'AV329TomarSegmentoUNG',fld:'vTOMARSEGMENTOUNG',pic:''},{av:'AV330ValidarUUIDRel',fld:'vVALIDARUUIDREL',pic:''},{av:'AV336TratPolFol',fld:'vTRATPOLFOL',pic:''},{av:'AV346VersionPoliza',fld:'vVERSIONPOLIZA',pic:''},{av:'AV203CNCIASMON_F',fld:'vCNCIASMON_F',pic:''},{av:'dynavCnciasid_f'},{av:'AV317CNCMNOID',fld:'vCNCMNOID',pic:''},{av:'AV313CNPRCMDVAL2',fld:'vCNPRCMDVAL2',pic:'ZZZ,ZZ9.99999'},{av:'AV314CNPRCMDFT2',fld:'vCNPRCMDFT2',pic:''},{av:'AV311CNPRCMDVAL',fld:'vCNPRCMDVAL',pic:'ZZZ,ZZ9.99999'},{av:'AV312CNPRCMDFT',fld:'vCNPRCMDFT',pic:''},{av:'dynavCatcarid'},{av:'AV367CATCARID',fld:'vCATCARID',pic:'ZZZZZZZZZ9'},{av:'dynavPmcxprelid'},{av:'AV351PMCXPRELID',fld:'vPMCXPRELID',pic:'ZZZZZZZZZ9'},{av:'dynavUnifcncmnmid'},{av:'AV315unifCNCMNMID',fld:'vUNIFCNCMNMID',pic:''},{av:'dynavCncmnmid'},{av:'AV32CNCMNMID',fld:'vCNCMNMID',pic:''}]}");
-      setEventMetadata("'EDITAR'","{handler:'e39DZ2',iparms:[{av:'GRID1_nFirstRecordOnPage'},{av:'GRID1_nEOF'},{av:'subGrid1_Rows',ctrl:'GRID1',prop:'Rows'},{av:'AV240AbrirBitacora',fld:'vABRIRBITACORA',pic:''},{av:'edtavPmctprdsc_Title',ctrl:'vPMCTPRDSC',prop:'Title'},{av:'edtavPmungid_g_Title',ctrl:'vPMUNGID_G',prop:'Title'},{av:'AV318renglones',fld:'vRENGLONES',pic:'ZZZ9'},{av:'A860PMEmpresa',fld:'PMEMPRESA',pic:'ZZZZZZZZZ9'},{av:'dynavCnciasid_f'},{av:'AV100CNCIASID_F',fld:'vCNCIASID_F',pic:'ZZZZZZZZZ9'},{av:'A3295PROPAGID',fld:'PROPAGID',pic:'ZZZZZZZZZ9'},{av:'AV239PROPAGID_F',fld:'vPROPAGID_F',pic:'ZZZZZZZZZ9'},{av:'A861PMTipoDoc',fld:'PMTIPODOC',pic:''},{av:'cmbavPmtipodoc_f'},{av:'AV197PMTipoDoc_F',fld:'vPMTIPODOC_F',pic:''},{av:'A862PMNumDoc',fld:'PMNUMDOC',pic:'ZZZZZZZZZ9'},{av:'AV133Numero',fld:'vNUMERO',pic:'ZZZZZZZZZ9'},{av:'A863PMProvId',fld:'PMPROVID',pic:'ZZZZZZZZZ9'},{av:'AV108CNCDIRID_F',fld:'vCNCDIRID_F',pic:'ZZZZZZZZZ9'},{av:'A864PMProyId',fld:'PMPROYID',pic:''},{av:'AV7PMCTPRID',fld:'vPMCTPRID',pic:''},{av:'AV111F2',fld:'vF2',pic:''},{av:'A866PMFechFac',fld:'PMFECHFAC',pic:''},{av:'AV110F1',fld:'vF1',pic:''},{av:'A873PMMoneId',fld:'PMMONEID',pic:''},{av:'AV327F6',fld:'vF6',pic:''},{av:'A4090PMCXPFHTRN',fld:'PMCXPFHTRN',pic:'99/99/99 99:99'},{av:'AV326F5',fld:'vF5',pic:''},{av:'AV113F4',fld:'vF4',pic:''},{av:'A867PMFechVen',fld:'PMFECHVEN',pic:''},{av:'AV112F3',fld:'vF3',pic:''},{av:'A2405PMEstatus',fld:'PMESTATUS',pic:''},{av:'cmbavEstatus'},{av:'AV11Estatus',fld:'vESTATUS',pic:''},{av:'AV230Checkoc',fld:'vCHECKOC',pic:'9'},{av:'A908PMNumDocOC',fld:'PMNUMDOCOC',pic:'ZZZZZZZZZ9'},{av:'AV229PMNumDocOc_F',fld:'vPMNUMDOCOC_F',pic:'ZZZZZZZZZ9'},{av:'A2528PMFolioFac',fld:'PMFOLIOFAC',pic:''},{av:'AV159PMFolioFac_F',fld:'vPMFOLIOFAC_F',pic:''},{av:'A905PMPoliz',fld:'PMPOLIZ',pic:'9'},{av:'cmbavPmpoliz_f'},{av:'AV270pmpoliz_f',fld:'vPMPOLIZ_F',pic:'9'},{av:'A10905PMIDREL',fld:'PMIDREL',pic:'ZZZZZZZZZ9'},{av:'AV353arrPMCTPRID',fld:'vARRPMCTPRID',pic:''},{av:'A865PMUngId',fld:'PMUNGID',pic:''},{av:'cmbavCgunngid'},{av:'AV361CGUNNGID',fld:'vCGUNNGID',pic:''},{av:'A17416PMCargo',fld:'PMCARGO',pic:'ZZZZZZZZZ9'},{av:'AV296banload',fld:'vBANLOAD',pic:''},{av:'AV350CNUSERMCXP',fld:'vCNUSERMCXP',pic:'',hsh:true},{av:'A2534PMUsrcap',fld:'PMUSRCAP',pic:'ZZZZZZZZZ9'},{av:'A4599PMLayAsoc',fld:'PMLAYASOC',pic:'9'},{av:'A909PMUuid',fld:'PMUUID',pic:''},{av:'A2871PMPDFDoc',fld:'PMPDFDOC',pic:'ZZZZZZZZZ9'},{av:'A2718PMMonTp',fld:'PMMONTP',pic:'ZZZZZZZZZ9.999999'},{av:'A2862PMMonAmort',fld:'PMMONAMORT',pic:'ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A898PMFechRev',fld:'PMFECHREV',pic:''},{av:'AV203CNCIASMON_F',fld:'vCNCIASMON_F',pic:''},{av:'A899PMMonEx',fld:'PMMONEX',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'AV316tipoCambio',fld:'vTIPOCAMBIO',pic:'ZZZZZZZZZ9.999999'},{av:'A903PMMonEp',fld:'PMMONEP',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A2689PMMonPgE',fld:'PMMONPGE',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A900PMMonEg',fld:'PMMONEG',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A870PMMonNg',fld:'PMMONNG',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A869PMMonNa',fld:'PMMONNA',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A902PMMonNp',fld:'PMMONNP',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A2688PMMonPgN',fld:'PMMONPGN',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A872PMIva',fld:'PMIVA',pic:'ZZZZZZZZZZZZZ9.99'},{av:'A2520PMMonIvaN',fld:'PMMONIVAN',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A2954PMIVAID',fld:'PMIVAID',pic:''},{av:'A2406PMComentarios',fld:'PMCOMENTARIOS',pic:''},{av:'A2521PMMonIvaE',fld:'PMMONIVAE',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A904PMReten',fld:'PMRETEN',pic:'ZZZZZZZZZZZZZ9.99'},{av:'A906PMOrdenD',fld:'PMORDEND',pic:'9'},{av:'A907PMTipoDocOC',fld:'PMTIPODOCOC',pic:''},{av:'A2923PMCTA1',fld:'PMCTA1',pic:''},{av:'A2924PMCTA2',fld:'PMCTA2',pic:''},{av:'A2925PMCTA3',fld:'PMCTA3',pic:''},{av:'A2542PMCuentadeCargo',fld:'PMCUENTADECARGO',pic:''},{av:'A3917PMObsPoliza',fld:'PMOBSPOLIZA',pic:''},{av:'A4395PMPRANT',fld:'PMPRANT',pic:'ZZZZZZ9.99'},{av:'A7899PMTipoAv',fld:'PMTIPOAV',pic:''},{av:'A7900PMNumAv',fld:'PMNUMAV',pic:'ZZZZZZZZZ9'},{av:'A17105PMCuentaPR02',fld:'PMCUENTAPR02',pic:''},{av:'AV319numRenglons',fld:'vNUMRENGLONS',pic:'ZZZ9',hsh:true},{av:'A2059CNPRCMDFT',fld:'CNPRCMDFT',pic:''},{av:'A2054CNCMNOID',fld:'CNCMNOID',pic:''},{av:'AV317CNCMNOID',fld:'vCNCMNOID',pic:''},{av:'A2055CNCMNDID',fld:'CNCMNDID',pic:''},{av:'A2076CNPRCMDVAL',fld:'CNPRCMDVAL',pic:'ZZZ,ZZ9.9999999'},{av:'A2610ESTPAGID',fld:'ESTPAGID',pic:''},{av:'AV123PMEstatus',fld:'vPMESTATUS',pic:'',hsh:true},{av:'A2611ESTPAGDSC',fld:'ESTPAGDSC',pic:''},{av:'AV116CNUSERID',fld:'vCNUSERID',pic:'',hsh:true},{av:'AV61PMEmpresa_G',fld:'vPMEMPRESA_G',pic:'ZZZZZZZZZ9',hsh:true},{av:'AV62PMTipoDoc_G',fld:'vPMTIPODOC_G',pic:'',hsh:true},{av:'AV63PMNumDoc_G',fld:'vPMNUMDOC_G',pic:'ZZZZZZZZZ9',hsh:true},{av:'AV65PMProyId_G',fld:'vPMPROYID_G',pic:''},{av:'dynavCatcarid'},{av:'AV367CATCARID',fld:'vCATCARID',pic:'ZZZZZZZZZ9'},{av:'dynavPmcxprelid'},{av:'AV351PMCXPRELID',fld:'vPMCXPRELID',pic:'ZZZZZZZZZ9'},{av:'dynavUnifcncmnmid'},{av:'AV315unifCNCMNMID',fld:'vUNIFCNCMNMID',pic:''},{av:'dynavCncmnmid'},{av:'AV32CNCMNMID',fld:'vCNCMNMID',pic:''}]");
+      setEventMetadata("'EDITAR'","{handler:'e39DZ2',iparms:[{av:'GRID1_nFirstRecordOnPage'},{av:'GRID1_nEOF'},{av:'subGrid1_Rows',ctrl:'GRID1',prop:'Rows'},{av:'AV240AbrirBitacora',fld:'vABRIRBITACORA',pic:''},{av:'edtavPmctprdsc_Title',ctrl:'vPMCTPRDSC',prop:'Title'},{av:'edtavPmungid_g_Title',ctrl:'vPMUNGID_G',prop:'Title'},{av:'AV318renglones',fld:'vRENGLONES',pic:'ZZZ9'},{av:'A860PMEmpresa',fld:'PMEMPRESA',pic:'ZZZZZZZZZ9'},{av:'dynavCnciasid_f'},{av:'AV100CNCIASID_F',fld:'vCNCIASID_F',pic:'ZZZZZZZZZ9'},{av:'A3295PROPAGID',fld:'PROPAGID',pic:'ZZZZZZZZZ9'},{av:'AV239PROPAGID_F',fld:'vPROPAGID_F',pic:'ZZZZZZZZZ9'},{av:'A861PMTipoDoc',fld:'PMTIPODOC',pic:''},{av:'cmbavPmtipodoc_f'},{av:'AV197PMTipoDoc_F',fld:'vPMTIPODOC_F',pic:''},{av:'A862PMNumDoc',fld:'PMNUMDOC',pic:'ZZZZZZZZZ9'},{av:'AV133Numero',fld:'vNUMERO',pic:'ZZZZZZZZZ9'},{av:'A863PMProvId',fld:'PMPROVID',pic:'ZZZZZZZZZ9'},{av:'AV108CNCDIRID_F',fld:'vCNCDIRID_F',pic:'ZZZZZZZZZ9'},{av:'A864PMProyId',fld:'PMPROYID',pic:''},{av:'AV7PMCTPRID',fld:'vPMCTPRID',pic:''},{av:'AV111F2',fld:'vF2',pic:''},{av:'A866PMFechFac',fld:'PMFECHFAC',pic:''},{av:'AV110F1',fld:'vF1',pic:''},{av:'A873PMMoneId',fld:'PMMONEID',pic:''},{av:'AV327F6',fld:'vF6',pic:''},{av:'A4090PMCXPFHTRN',fld:'PMCXPFHTRN',pic:'99/99/99 99:99'},{av:'AV326F5',fld:'vF5',pic:''},{av:'AV113F4',fld:'vF4',pic:''},{av:'A867PMFechVen',fld:'PMFECHVEN',pic:''},{av:'AV112F3',fld:'vF3',pic:''},{av:'A2405PMEstatus',fld:'PMESTATUS',pic:''},{av:'cmbavEstatus'},{av:'AV11Estatus',fld:'vESTATUS',pic:''},{av:'AV230Checkoc',fld:'vCHECKOC',pic:'9'},{av:'A908PMNumDocOC',fld:'PMNUMDOCOC',pic:'ZZZZZZZZZ9'},{av:'AV229PMNumDocOc_F',fld:'vPMNUMDOCOC_F',pic:'ZZZZZZZZZ9'},{av:'A2528PMFolioFac',fld:'PMFOLIOFAC',pic:''},{av:'AV159PMFolioFac_F',fld:'vPMFOLIOFAC_F',pic:''},{av:'A905PMPoliz',fld:'PMPOLIZ',pic:'9'},{av:'cmbavPmpoliz_f'},{av:'AV270pmpoliz_f',fld:'vPMPOLIZ_F',pic:'9'},{av:'A10905PMIDREL',fld:'PMIDREL',pic:'ZZZZZZZZZ9'},{av:'AV353arrPMCTPRID',fld:'vARRPMCTPRID',pic:''},{av:'A865PMUngId',fld:'PMUNGID',pic:''},{av:'cmbavCgunngid'},{av:'AV361CGUNNGID',fld:'vCGUNNGID',pic:''},{av:'A17416PMCargo',fld:'PMCARGO',pic:'ZZZZZZZZZ9'},{av:'AV296banload',fld:'vBANLOAD',pic:''},{av:'AV350CNUSERMCXP',fld:'vCNUSERMCXP',pic:'',hsh:true},{av:'A2534PMUsrcap',fld:'PMUSRCAP',pic:'ZZZZZZZZZ9'},{av:'A4599PMLayAsoc',fld:'PMLAYASOC',pic:'9'},{av:'A909PMUuid',fld:'PMUUID',pic:''},{av:'A2871PMPDFDoc',fld:'PMPDFDOC',pic:'ZZZZZZZZZ9'},{av:'A2718PMMonTp',fld:'PMMONTP',pic:'ZZZZZZZZZ9.999999'},{av:'A2862PMMonAmort',fld:'PMMONAMORT',pic:'ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A898PMFechRev',fld:'PMFECHREV',pic:''},{av:'AV203CNCIASMON_F',fld:'vCNCIASMON_F',pic:''},{av:'A899PMMonEx',fld:'PMMONEX',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'AV316tipoCambio',fld:'vTIPOCAMBIO',pic:'ZZZZZZZZZ9.999999'},{av:'A903PMMonEp',fld:'PMMONEP',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A2689PMMonPgE',fld:'PMMONPGE',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A900PMMonEg',fld:'PMMONEG',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A870PMMonNg',fld:'PMMONNG',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A869PMMonNa',fld:'PMMONNA',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A902PMMonNp',fld:'PMMONNP',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A2688PMMonPgN',fld:'PMMONPGN',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A872PMIva',fld:'PMIVA',pic:'ZZZZZZZZZZZZZ9.99'},{av:'A2520PMMonIvaN',fld:'PMMONIVAN',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A2954PMIVAID',fld:'PMIVAID',pic:''},{av:'A2406PMComentarios',fld:'PMCOMENTARIOS',pic:''},{av:'A2521PMMonIvaE',fld:'PMMONIVAE',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A904PMReten',fld:'PMRETEN',pic:'ZZZZZZZZZZZZZ9.99'},{av:'A906PMOrdenD',fld:'PMORDEND',pic:'9'},{av:'A907PMTipoDocOC',fld:'PMTIPODOCOC',pic:''},{av:'A2923PMCTA1',fld:'PMCTA1',pic:''},{av:'A2924PMCTA2',fld:'PMCTA2',pic:''},{av:'A2925PMCTA3',fld:'PMCTA3',pic:''},{av:'A2542PMCuentadeCargo',fld:'PMCUENTADECARGO',pic:''},{av:'A3917PMObsPoliza',fld:'PMOBSPOLIZA',pic:''},{av:'A4395PMPRANT',fld:'PMPRANT',pic:'ZZZZZZ9.99'},{av:'A7899PMTipoAv',fld:'PMTIPOAV',pic:''},{av:'A7900PMNumAv',fld:'PMNUMAV',pic:'ZZZZZZZZZ9'},{av:'A17105PMCuentaPR02',fld:'PMCUENTAPR02',pic:''},{av:'AV319numRenglons',fld:'vNUMRENGLONS',pic:'ZZZ9',hsh:true},{av:'A2059CNPRCMDFT',fld:'CNPRCMDFT',pic:''},{av:'A2054CNCMNOID',fld:'CNCMNOID',pic:''},{av:'AV317CNCMNOID',fld:'vCNCMNOID',pic:''},{av:'A2055CNCMNDID',fld:'CNCMNDID',pic:''},{av:'A2076CNPRCMDVAL',fld:'CNPRCMDVAL',pic:'ZZZ,ZZ9.9999999'},{av:'A2610ESTPAGID',fld:'ESTPAGID',pic:''},{av:'AV123PMEstatus',fld:'vPMESTATUS',pic:'',hsh:true},{av:'A2611ESTPAGDSC',fld:'ESTPAGDSC',pic:''},{av:'A7789AVDSPRCIA',fld:'AVDSPRCIA',pic:'ZZZZZZZZZ9'},{av:'AV61PMEmpresa_G',fld:'vPMEMPRESA_G',pic:'ZZZZZZZZZ9',hsh:true},{av:'A8295AVDSPRCPPTPC',fld:'AVDSPRCPPTPC',pic:''},{av:'AV62PMTipoDoc_G',fld:'vPMTIPODOC_G',pic:'',hsh:true},{av:'A8296AVDSPRCPPNDC',fld:'AVDSPRCPPNDC',pic:'ZZZZZZZZZ9'},{av:'AV63PMNumDoc_G',fld:'vPMNUMDOC_G',pic:'ZZZZZZZZZ9',hsh:true},{av:'A20CNTDOCID',fld:'CNTDOCID',pic:''},{av:'A8255AVDSPRDOC',fld:'AVDSPRDOC',pic:'ZZZZZZZZZ9'},{av:'A7790AVDSPRNDC',fld:'AVDSPRNDC',pic:'ZZZZZZZZZ9'},{av:'A8242AVDSPROBS',fld:'AVDSPROBS',pic:''},{av:'A7518CNDSPRCIA',fld:'CNDSPRCIA',pic:'ZZZZZZZZZ9'},{av:'A7519CNDSPRTDC',fld:'CNDSPRTDC',pic:''},{av:'A7520CNDSPRNDC',fld:'CNDSPRNDC',pic:'ZZZZZZZZZ9'},{av:'A7531CNDSPRALCTR',fld:'CNDSPRALCTR',pic:''},{av:'AV116CNUSERID',fld:'vCNUSERID',pic:'',hsh:true},{av:'AV65PMProyId_G',fld:'vPMPROYID_G',pic:''},{av:'dynavCatcarid'},{av:'AV367CATCARID',fld:'vCATCARID',pic:'ZZZZZZZZZ9'},{av:'dynavPmcxprelid'},{av:'AV351PMCXPRELID',fld:'vPMCXPRELID',pic:'ZZZZZZZZZ9'},{av:'dynavUnifcncmnmid'},{av:'AV315unifCNCMNMID',fld:'vUNIFCNCMNMID',pic:''},{av:'dynavCncmnmid'},{av:'AV32CNCMNMID',fld:'vCNCMNMID',pic:''}]");
       setEventMetadata("'EDITAR'",",oparms:[{av:'dynavCatcarid'},{av:'AV367CATCARID',fld:'vCATCARID',pic:'ZZZZZZZZZ9'},{av:'dynavPmcxprelid'},{av:'AV351PMCXPRELID',fld:'vPMCXPRELID',pic:'ZZZZZZZZZ9'},{av:'dynavUnifcncmnmid'},{av:'AV315unifCNCMNMID',fld:'vUNIFCNCMNMID',pic:''},{av:'dynavCncmnmid'},{av:'AV32CNCMNMID',fld:'vCNCMNMID',pic:''}]}");
-      setEventMetadata("'DESAMORTIZAR'","{handler:'e40DZ2',iparms:[{av:'GRID1_nFirstRecordOnPage'},{av:'GRID1_nEOF'},{av:'subGrid1_Rows',ctrl:'GRID1',prop:'Rows'},{av:'AV240AbrirBitacora',fld:'vABRIRBITACORA',pic:''},{av:'edtavPmctprdsc_Title',ctrl:'vPMCTPRDSC',prop:'Title'},{av:'edtavPmungid_g_Title',ctrl:'vPMUNGID_G',prop:'Title'},{av:'AV318renglones',fld:'vRENGLONES',pic:'ZZZ9'},{av:'A860PMEmpresa',fld:'PMEMPRESA',pic:'ZZZZZZZZZ9'},{av:'dynavCnciasid_f'},{av:'AV100CNCIASID_F',fld:'vCNCIASID_F',pic:'ZZZZZZZZZ9'},{av:'A3295PROPAGID',fld:'PROPAGID',pic:'ZZZZZZZZZ9'},{av:'AV239PROPAGID_F',fld:'vPROPAGID_F',pic:'ZZZZZZZZZ9'},{av:'A861PMTipoDoc',fld:'PMTIPODOC',pic:''},{av:'cmbavPmtipodoc_f'},{av:'AV197PMTipoDoc_F',fld:'vPMTIPODOC_F',pic:''},{av:'A862PMNumDoc',fld:'PMNUMDOC',pic:'ZZZZZZZZZ9'},{av:'AV133Numero',fld:'vNUMERO',pic:'ZZZZZZZZZ9'},{av:'A863PMProvId',fld:'PMPROVID',pic:'ZZZZZZZZZ9'},{av:'AV108CNCDIRID_F',fld:'vCNCDIRID_F',pic:'ZZZZZZZZZ9'},{av:'A864PMProyId',fld:'PMPROYID',pic:''},{av:'AV7PMCTPRID',fld:'vPMCTPRID',pic:''},{av:'AV111F2',fld:'vF2',pic:''},{av:'A866PMFechFac',fld:'PMFECHFAC',pic:''},{av:'AV110F1',fld:'vF1',pic:''},{av:'A873PMMoneId',fld:'PMMONEID',pic:''},{av:'AV327F6',fld:'vF6',pic:''},{av:'A4090PMCXPFHTRN',fld:'PMCXPFHTRN',pic:'99/99/99 99:99'},{av:'AV326F5',fld:'vF5',pic:''},{av:'AV113F4',fld:'vF4',pic:''},{av:'A867PMFechVen',fld:'PMFECHVEN',pic:''},{av:'AV112F3',fld:'vF3',pic:''},{av:'A2405PMEstatus',fld:'PMESTATUS',pic:''},{av:'cmbavEstatus'},{av:'AV11Estatus',fld:'vESTATUS',pic:''},{av:'AV230Checkoc',fld:'vCHECKOC',pic:'9'},{av:'A908PMNumDocOC',fld:'PMNUMDOCOC',pic:'ZZZZZZZZZ9'},{av:'AV229PMNumDocOc_F',fld:'vPMNUMDOCOC_F',pic:'ZZZZZZZZZ9'},{av:'A2528PMFolioFac',fld:'PMFOLIOFAC',pic:''},{av:'AV159PMFolioFac_F',fld:'vPMFOLIOFAC_F',pic:''},{av:'A905PMPoliz',fld:'PMPOLIZ',pic:'9'},{av:'cmbavPmpoliz_f'},{av:'AV270pmpoliz_f',fld:'vPMPOLIZ_F',pic:'9'},{av:'A10905PMIDREL',fld:'PMIDREL',pic:'ZZZZZZZZZ9'},{av:'AV353arrPMCTPRID',fld:'vARRPMCTPRID',pic:''},{av:'A865PMUngId',fld:'PMUNGID',pic:''},{av:'cmbavCgunngid'},{av:'AV361CGUNNGID',fld:'vCGUNNGID',pic:''},{av:'A17416PMCargo',fld:'PMCARGO',pic:'ZZZZZZZZZ9'},{av:'AV296banload',fld:'vBANLOAD',pic:''},{av:'AV350CNUSERMCXP',fld:'vCNUSERMCXP',pic:'',hsh:true},{av:'A2534PMUsrcap',fld:'PMUSRCAP',pic:'ZZZZZZZZZ9'},{av:'A4599PMLayAsoc',fld:'PMLAYASOC',pic:'9'},{av:'A909PMUuid',fld:'PMUUID',pic:''},{av:'A2871PMPDFDoc',fld:'PMPDFDOC',pic:'ZZZZZZZZZ9'},{av:'A2718PMMonTp',fld:'PMMONTP',pic:'ZZZZZZZZZ9.999999'},{av:'A2862PMMonAmort',fld:'PMMONAMORT',pic:'ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A898PMFechRev',fld:'PMFECHREV',pic:''},{av:'AV203CNCIASMON_F',fld:'vCNCIASMON_F',pic:''},{av:'A899PMMonEx',fld:'PMMONEX',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'AV316tipoCambio',fld:'vTIPOCAMBIO',pic:'ZZZZZZZZZ9.999999'},{av:'A903PMMonEp',fld:'PMMONEP',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A2689PMMonPgE',fld:'PMMONPGE',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A900PMMonEg',fld:'PMMONEG',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A870PMMonNg',fld:'PMMONNG',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A869PMMonNa',fld:'PMMONNA',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A902PMMonNp',fld:'PMMONNP',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A2688PMMonPgN',fld:'PMMONPGN',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A872PMIva',fld:'PMIVA',pic:'ZZZZZZZZZZZZZ9.99'},{av:'A2520PMMonIvaN',fld:'PMMONIVAN',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A2954PMIVAID',fld:'PMIVAID',pic:''},{av:'A2406PMComentarios',fld:'PMCOMENTARIOS',pic:''},{av:'A2521PMMonIvaE',fld:'PMMONIVAE',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A904PMReten',fld:'PMRETEN',pic:'ZZZZZZZZZZZZZ9.99'},{av:'A906PMOrdenD',fld:'PMORDEND',pic:'9'},{av:'A907PMTipoDocOC',fld:'PMTIPODOCOC',pic:''},{av:'A2923PMCTA1',fld:'PMCTA1',pic:''},{av:'A2924PMCTA2',fld:'PMCTA2',pic:''},{av:'A2925PMCTA3',fld:'PMCTA3',pic:''},{av:'A2542PMCuentadeCargo',fld:'PMCUENTADECARGO',pic:''},{av:'A3917PMObsPoliza',fld:'PMOBSPOLIZA',pic:''},{av:'A4395PMPRANT',fld:'PMPRANT',pic:'ZZZZZZ9.99'},{av:'A7899PMTipoAv',fld:'PMTIPOAV',pic:''},{av:'A7900PMNumAv',fld:'PMNUMAV',pic:'ZZZZZZZZZ9'},{av:'A17105PMCuentaPR02',fld:'PMCUENTAPR02',pic:''},{av:'AV319numRenglons',fld:'vNUMRENGLONS',pic:'ZZZ9',hsh:true},{av:'A2059CNPRCMDFT',fld:'CNPRCMDFT',pic:''},{av:'A2054CNCMNOID',fld:'CNCMNOID',pic:''},{av:'AV317CNCMNOID',fld:'vCNCMNOID',pic:''},{av:'A2055CNCMNDID',fld:'CNCMNDID',pic:''},{av:'A2076CNPRCMDVAL',fld:'CNPRCMDVAL',pic:'ZZZ,ZZ9.9999999'},{av:'A2610ESTPAGID',fld:'ESTPAGID',pic:''},{av:'AV123PMEstatus',fld:'vPMESTATUS',pic:'',hsh:true},{av:'A2611ESTPAGDSC',fld:'ESTPAGDSC',pic:''},{av:'AV116CNUSERID',fld:'vCNUSERID',pic:'',hsh:true},{av:'AV62PMTipoDoc_G',fld:'vPMTIPODOC_G',pic:'',hsh:true},{av:'AV61PMEmpresa_G',fld:'vPMEMPRESA_G',pic:'ZZZZZZZZZ9',hsh:true},{av:'AV63PMNumDoc_G',fld:'vPMNUMDOC_G',pic:'ZZZZZZZZZ9',hsh:true},{av:'dynavCatcarid'},{av:'AV367CATCARID',fld:'vCATCARID',pic:'ZZZZZZZZZ9'},{av:'dynavPmcxprelid'},{av:'AV351PMCXPRELID',fld:'vPMCXPRELID',pic:'ZZZZZZZZZ9'},{av:'dynavUnifcncmnmid'},{av:'AV315unifCNCMNMID',fld:'vUNIFCNCMNMID',pic:''},{av:'dynavCncmnmid'},{av:'AV32CNCMNMID',fld:'vCNCMNMID',pic:''}]");
+      setEventMetadata("'DESAMORTIZAR'","{handler:'e40DZ2',iparms:[{av:'GRID1_nFirstRecordOnPage'},{av:'GRID1_nEOF'},{av:'subGrid1_Rows',ctrl:'GRID1',prop:'Rows'},{av:'AV240AbrirBitacora',fld:'vABRIRBITACORA',pic:''},{av:'edtavPmctprdsc_Title',ctrl:'vPMCTPRDSC',prop:'Title'},{av:'edtavPmungid_g_Title',ctrl:'vPMUNGID_G',prop:'Title'},{av:'AV318renglones',fld:'vRENGLONES',pic:'ZZZ9'},{av:'A860PMEmpresa',fld:'PMEMPRESA',pic:'ZZZZZZZZZ9'},{av:'dynavCnciasid_f'},{av:'AV100CNCIASID_F',fld:'vCNCIASID_F',pic:'ZZZZZZZZZ9'},{av:'A3295PROPAGID',fld:'PROPAGID',pic:'ZZZZZZZZZ9'},{av:'AV239PROPAGID_F',fld:'vPROPAGID_F',pic:'ZZZZZZZZZ9'},{av:'A861PMTipoDoc',fld:'PMTIPODOC',pic:''},{av:'cmbavPmtipodoc_f'},{av:'AV197PMTipoDoc_F',fld:'vPMTIPODOC_F',pic:''},{av:'A862PMNumDoc',fld:'PMNUMDOC',pic:'ZZZZZZZZZ9'},{av:'AV133Numero',fld:'vNUMERO',pic:'ZZZZZZZZZ9'},{av:'A863PMProvId',fld:'PMPROVID',pic:'ZZZZZZZZZ9'},{av:'AV108CNCDIRID_F',fld:'vCNCDIRID_F',pic:'ZZZZZZZZZ9'},{av:'A864PMProyId',fld:'PMPROYID',pic:''},{av:'AV7PMCTPRID',fld:'vPMCTPRID',pic:''},{av:'AV111F2',fld:'vF2',pic:''},{av:'A866PMFechFac',fld:'PMFECHFAC',pic:''},{av:'AV110F1',fld:'vF1',pic:''},{av:'A873PMMoneId',fld:'PMMONEID',pic:''},{av:'AV327F6',fld:'vF6',pic:''},{av:'A4090PMCXPFHTRN',fld:'PMCXPFHTRN',pic:'99/99/99 99:99'},{av:'AV326F5',fld:'vF5',pic:''},{av:'AV113F4',fld:'vF4',pic:''},{av:'A867PMFechVen',fld:'PMFECHVEN',pic:''},{av:'AV112F3',fld:'vF3',pic:''},{av:'A2405PMEstatus',fld:'PMESTATUS',pic:''},{av:'cmbavEstatus'},{av:'AV11Estatus',fld:'vESTATUS',pic:''},{av:'AV230Checkoc',fld:'vCHECKOC',pic:'9'},{av:'A908PMNumDocOC',fld:'PMNUMDOCOC',pic:'ZZZZZZZZZ9'},{av:'AV229PMNumDocOc_F',fld:'vPMNUMDOCOC_F',pic:'ZZZZZZZZZ9'},{av:'A2528PMFolioFac',fld:'PMFOLIOFAC',pic:''},{av:'AV159PMFolioFac_F',fld:'vPMFOLIOFAC_F',pic:''},{av:'A905PMPoliz',fld:'PMPOLIZ',pic:'9'},{av:'cmbavPmpoliz_f'},{av:'AV270pmpoliz_f',fld:'vPMPOLIZ_F',pic:'9'},{av:'A10905PMIDREL',fld:'PMIDREL',pic:'ZZZZZZZZZ9'},{av:'AV353arrPMCTPRID',fld:'vARRPMCTPRID',pic:''},{av:'A865PMUngId',fld:'PMUNGID',pic:''},{av:'cmbavCgunngid'},{av:'AV361CGUNNGID',fld:'vCGUNNGID',pic:''},{av:'A17416PMCargo',fld:'PMCARGO',pic:'ZZZZZZZZZ9'},{av:'AV296banload',fld:'vBANLOAD',pic:''},{av:'AV350CNUSERMCXP',fld:'vCNUSERMCXP',pic:'',hsh:true},{av:'A2534PMUsrcap',fld:'PMUSRCAP',pic:'ZZZZZZZZZ9'},{av:'A4599PMLayAsoc',fld:'PMLAYASOC',pic:'9'},{av:'A909PMUuid',fld:'PMUUID',pic:''},{av:'A2871PMPDFDoc',fld:'PMPDFDOC',pic:'ZZZZZZZZZ9'},{av:'A2718PMMonTp',fld:'PMMONTP',pic:'ZZZZZZZZZ9.999999'},{av:'A2862PMMonAmort',fld:'PMMONAMORT',pic:'ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A898PMFechRev',fld:'PMFECHREV',pic:''},{av:'AV203CNCIASMON_F',fld:'vCNCIASMON_F',pic:''},{av:'A899PMMonEx',fld:'PMMONEX',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'AV316tipoCambio',fld:'vTIPOCAMBIO',pic:'ZZZZZZZZZ9.999999'},{av:'A903PMMonEp',fld:'PMMONEP',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A2689PMMonPgE',fld:'PMMONPGE',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A900PMMonEg',fld:'PMMONEG',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A870PMMonNg',fld:'PMMONNG',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A869PMMonNa',fld:'PMMONNA',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A902PMMonNp',fld:'PMMONNP',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A2688PMMonPgN',fld:'PMMONPGN',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A872PMIva',fld:'PMIVA',pic:'ZZZZZZZZZZZZZ9.99'},{av:'A2520PMMonIvaN',fld:'PMMONIVAN',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A2954PMIVAID',fld:'PMIVAID',pic:''},{av:'A2406PMComentarios',fld:'PMCOMENTARIOS',pic:''},{av:'A2521PMMonIvaE',fld:'PMMONIVAE',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A904PMReten',fld:'PMRETEN',pic:'ZZZZZZZZZZZZZ9.99'},{av:'A906PMOrdenD',fld:'PMORDEND',pic:'9'},{av:'A907PMTipoDocOC',fld:'PMTIPODOCOC',pic:''},{av:'A2923PMCTA1',fld:'PMCTA1',pic:''},{av:'A2924PMCTA2',fld:'PMCTA2',pic:''},{av:'A2925PMCTA3',fld:'PMCTA3',pic:''},{av:'A2542PMCuentadeCargo',fld:'PMCUENTADECARGO',pic:''},{av:'A3917PMObsPoliza',fld:'PMOBSPOLIZA',pic:''},{av:'A4395PMPRANT',fld:'PMPRANT',pic:'ZZZZZZ9.99'},{av:'A7899PMTipoAv',fld:'PMTIPOAV',pic:''},{av:'A7900PMNumAv',fld:'PMNUMAV',pic:'ZZZZZZZZZ9'},{av:'A17105PMCuentaPR02',fld:'PMCUENTAPR02',pic:''},{av:'AV319numRenglons',fld:'vNUMRENGLONS',pic:'ZZZ9',hsh:true},{av:'A2059CNPRCMDFT',fld:'CNPRCMDFT',pic:''},{av:'A2054CNCMNOID',fld:'CNCMNOID',pic:''},{av:'AV317CNCMNOID',fld:'vCNCMNOID',pic:''},{av:'A2055CNCMNDID',fld:'CNCMNDID',pic:''},{av:'A2076CNPRCMDVAL',fld:'CNPRCMDVAL',pic:'ZZZ,ZZ9.9999999'},{av:'A2610ESTPAGID',fld:'ESTPAGID',pic:''},{av:'AV123PMEstatus',fld:'vPMESTATUS',pic:'',hsh:true},{av:'A2611ESTPAGDSC',fld:'ESTPAGDSC',pic:''},{av:'A7789AVDSPRCIA',fld:'AVDSPRCIA',pic:'ZZZZZZZZZ9'},{av:'AV61PMEmpresa_G',fld:'vPMEMPRESA_G',pic:'ZZZZZZZZZ9',hsh:true},{av:'A8295AVDSPRCPPTPC',fld:'AVDSPRCPPTPC',pic:''},{av:'AV62PMTipoDoc_G',fld:'vPMTIPODOC_G',pic:'',hsh:true},{av:'A8296AVDSPRCPPNDC',fld:'AVDSPRCPPNDC',pic:'ZZZZZZZZZ9'},{av:'AV63PMNumDoc_G',fld:'vPMNUMDOC_G',pic:'ZZZZZZZZZ9',hsh:true},{av:'A20CNTDOCID',fld:'CNTDOCID',pic:''},{av:'A8255AVDSPRDOC',fld:'AVDSPRDOC',pic:'ZZZZZZZZZ9'},{av:'A7790AVDSPRNDC',fld:'AVDSPRNDC',pic:'ZZZZZZZZZ9'},{av:'A8242AVDSPROBS',fld:'AVDSPROBS',pic:''},{av:'A7518CNDSPRCIA',fld:'CNDSPRCIA',pic:'ZZZZZZZZZ9'},{av:'A7519CNDSPRTDC',fld:'CNDSPRTDC',pic:''},{av:'A7520CNDSPRNDC',fld:'CNDSPRNDC',pic:'ZZZZZZZZZ9'},{av:'A7531CNDSPRALCTR',fld:'CNDSPRALCTR',pic:''},{av:'AV116CNUSERID',fld:'vCNUSERID',pic:'',hsh:true},{av:'dynavCatcarid'},{av:'AV367CATCARID',fld:'vCATCARID',pic:'ZZZZZZZZZ9'},{av:'dynavPmcxprelid'},{av:'AV351PMCXPRELID',fld:'vPMCXPRELID',pic:'ZZZZZZZZZ9'},{av:'dynavUnifcncmnmid'},{av:'AV315unifCNCMNMID',fld:'vUNIFCNCMNMID',pic:''},{av:'dynavCncmnmid'},{av:'AV32CNCMNMID',fld:'vCNCMNMID',pic:''}]");
       setEventMetadata("'DESAMORTIZAR'",",oparms:[{av:'dynavCatcarid'},{av:'AV367CATCARID',fld:'vCATCARID',pic:'ZZZZZZZZZ9'},{av:'dynavPmcxprelid'},{av:'AV351PMCXPRELID',fld:'vPMCXPRELID',pic:'ZZZZZZZZZ9'},{av:'dynavUnifcncmnmid'},{av:'AV315unifCNCMNMID',fld:'vUNIFCNCMNMID',pic:''},{av:'dynavCncmnmid'},{av:'AV32CNCMNMID',fld:'vCNCMNMID',pic:''}]}");
-      setEventMetadata("'SIG'","{handler:'e16DZ2',iparms:[{av:'GRID1_nFirstRecordOnPage'},{av:'GRID1_nEOF'},{av:'subGrid1_Rows',ctrl:'GRID1',prop:'Rows'},{av:'AV240AbrirBitacora',fld:'vABRIRBITACORA',pic:''},{av:'edtavPmctprdsc_Title',ctrl:'vPMCTPRDSC',prop:'Title'},{av:'edtavPmungid_g_Title',ctrl:'vPMUNGID_G',prop:'Title'},{av:'AV318renglones',fld:'vRENGLONES',pic:'ZZZ9'},{av:'A860PMEmpresa',fld:'PMEMPRESA',pic:'ZZZZZZZZZ9'},{av:'dynavCnciasid_f'},{av:'AV100CNCIASID_F',fld:'vCNCIASID_F',pic:'ZZZZZZZZZ9'},{av:'A3295PROPAGID',fld:'PROPAGID',pic:'ZZZZZZZZZ9'},{av:'AV239PROPAGID_F',fld:'vPROPAGID_F',pic:'ZZZZZZZZZ9'},{av:'A861PMTipoDoc',fld:'PMTIPODOC',pic:''},{av:'cmbavPmtipodoc_f'},{av:'AV197PMTipoDoc_F',fld:'vPMTIPODOC_F',pic:''},{av:'A862PMNumDoc',fld:'PMNUMDOC',pic:'ZZZZZZZZZ9'},{av:'AV133Numero',fld:'vNUMERO',pic:'ZZZZZZZZZ9'},{av:'A863PMProvId',fld:'PMPROVID',pic:'ZZZZZZZZZ9'},{av:'AV108CNCDIRID_F',fld:'vCNCDIRID_F',pic:'ZZZZZZZZZ9'},{av:'A864PMProyId',fld:'PMPROYID',pic:''},{av:'AV7PMCTPRID',fld:'vPMCTPRID',pic:''},{av:'AV111F2',fld:'vF2',pic:''},{av:'A866PMFechFac',fld:'PMFECHFAC',pic:''},{av:'AV110F1',fld:'vF1',pic:''},{av:'A873PMMoneId',fld:'PMMONEID',pic:''},{av:'AV327F6',fld:'vF6',pic:''},{av:'A4090PMCXPFHTRN',fld:'PMCXPFHTRN',pic:'99/99/99 99:99'},{av:'AV326F5',fld:'vF5',pic:''},{av:'AV113F4',fld:'vF4',pic:''},{av:'A867PMFechVen',fld:'PMFECHVEN',pic:''},{av:'AV112F3',fld:'vF3',pic:''},{av:'A2405PMEstatus',fld:'PMESTATUS',pic:''},{av:'cmbavEstatus'},{av:'AV11Estatus',fld:'vESTATUS',pic:''},{av:'AV230Checkoc',fld:'vCHECKOC',pic:'9'},{av:'A908PMNumDocOC',fld:'PMNUMDOCOC',pic:'ZZZZZZZZZ9'},{av:'AV229PMNumDocOc_F',fld:'vPMNUMDOCOC_F',pic:'ZZZZZZZZZ9'},{av:'A2528PMFolioFac',fld:'PMFOLIOFAC',pic:''},{av:'AV159PMFolioFac_F',fld:'vPMFOLIOFAC_F',pic:''},{av:'A905PMPoliz',fld:'PMPOLIZ',pic:'9'},{av:'cmbavPmpoliz_f'},{av:'AV270pmpoliz_f',fld:'vPMPOLIZ_F',pic:'9'},{av:'A10905PMIDREL',fld:'PMIDREL',pic:'ZZZZZZZZZ9'},{av:'AV353arrPMCTPRID',fld:'vARRPMCTPRID',pic:''},{av:'A865PMUngId',fld:'PMUNGID',pic:''},{av:'cmbavCgunngid'},{av:'AV361CGUNNGID',fld:'vCGUNNGID',pic:''},{av:'A17416PMCargo',fld:'PMCARGO',pic:'ZZZZZZZZZ9'},{av:'AV296banload',fld:'vBANLOAD',pic:''},{av:'AV350CNUSERMCXP',fld:'vCNUSERMCXP',pic:'',hsh:true},{av:'A2534PMUsrcap',fld:'PMUSRCAP',pic:'ZZZZZZZZZ9'},{av:'A4599PMLayAsoc',fld:'PMLAYASOC',pic:'9'},{av:'A909PMUuid',fld:'PMUUID',pic:''},{av:'A2871PMPDFDoc',fld:'PMPDFDOC',pic:'ZZZZZZZZZ9'},{av:'A2718PMMonTp',fld:'PMMONTP',pic:'ZZZZZZZZZ9.999999'},{av:'A2862PMMonAmort',fld:'PMMONAMORT',pic:'ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A898PMFechRev',fld:'PMFECHREV',pic:''},{av:'AV203CNCIASMON_F',fld:'vCNCIASMON_F',pic:''},{av:'A899PMMonEx',fld:'PMMONEX',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'AV316tipoCambio',fld:'vTIPOCAMBIO',pic:'ZZZZZZZZZ9.999999'},{av:'A903PMMonEp',fld:'PMMONEP',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A2689PMMonPgE',fld:'PMMONPGE',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A900PMMonEg',fld:'PMMONEG',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A870PMMonNg',fld:'PMMONNG',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A869PMMonNa',fld:'PMMONNA',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A902PMMonNp',fld:'PMMONNP',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A2688PMMonPgN',fld:'PMMONPGN',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A872PMIva',fld:'PMIVA',pic:'ZZZZZZZZZZZZZ9.99'},{av:'A2520PMMonIvaN',fld:'PMMONIVAN',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A2954PMIVAID',fld:'PMIVAID',pic:''},{av:'A2406PMComentarios',fld:'PMCOMENTARIOS',pic:''},{av:'A2521PMMonIvaE',fld:'PMMONIVAE',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A904PMReten',fld:'PMRETEN',pic:'ZZZZZZZZZZZZZ9.99'},{av:'A906PMOrdenD',fld:'PMORDEND',pic:'9'},{av:'A907PMTipoDocOC',fld:'PMTIPODOCOC',pic:''},{av:'A2923PMCTA1',fld:'PMCTA1',pic:''},{av:'A2924PMCTA2',fld:'PMCTA2',pic:''},{av:'A2925PMCTA3',fld:'PMCTA3',pic:''},{av:'A2542PMCuentadeCargo',fld:'PMCUENTADECARGO',pic:''},{av:'A3917PMObsPoliza',fld:'PMOBSPOLIZA',pic:''},{av:'A4395PMPRANT',fld:'PMPRANT',pic:'ZZZZZZ9.99'},{av:'A7899PMTipoAv',fld:'PMTIPOAV',pic:''},{av:'A7900PMNumAv',fld:'PMNUMAV',pic:'ZZZZZZZZZ9'},{av:'A17105PMCuentaPR02',fld:'PMCUENTAPR02',pic:''},{av:'AV319numRenglons',fld:'vNUMRENGLONS',pic:'ZZZ9',hsh:true},{av:'A2059CNPRCMDFT',fld:'CNPRCMDFT',pic:''},{av:'A2054CNCMNOID',fld:'CNCMNOID',pic:''},{av:'AV317CNCMNOID',fld:'vCNCMNOID',pic:''},{av:'A2055CNCMNDID',fld:'CNCMNDID',pic:''},{av:'A2076CNPRCMDVAL',fld:'CNPRCMDVAL',pic:'ZZZ,ZZ9.9999999'},{av:'A2610ESTPAGID',fld:'ESTPAGID',pic:''},{av:'AV123PMEstatus',fld:'vPMESTATUS',pic:'',hsh:true},{av:'A2611ESTPAGDSC',fld:'ESTPAGDSC',pic:''},{av:'AV116CNUSERID',fld:'vCNUSERID',pic:'',hsh:true},{av:'AV231pagina',fld:'vPAGINA',pic:'ZZZ9'},{av:'AV232paginas',fld:'vPAGINAS',pic:'ZZZ9'},{av:'dynavCatcarid'},{av:'AV367CATCARID',fld:'vCATCARID',pic:'ZZZZZZZZZ9'},{av:'dynavPmcxprelid'},{av:'AV351PMCXPRELID',fld:'vPMCXPRELID',pic:'ZZZZZZZZZ9'},{av:'dynavUnifcncmnmid'},{av:'AV315unifCNCMNMID',fld:'vUNIFCNCMNMID',pic:''},{av:'dynavCncmnmid'},{av:'AV32CNCMNMID',fld:'vCNCMNMID',pic:''}]");
+      setEventMetadata("'SIG'","{handler:'e16DZ2',iparms:[{av:'GRID1_nFirstRecordOnPage'},{av:'GRID1_nEOF'},{av:'subGrid1_Rows',ctrl:'GRID1',prop:'Rows'},{av:'AV240AbrirBitacora',fld:'vABRIRBITACORA',pic:''},{av:'edtavPmctprdsc_Title',ctrl:'vPMCTPRDSC',prop:'Title'},{av:'edtavPmungid_g_Title',ctrl:'vPMUNGID_G',prop:'Title'},{av:'AV318renglones',fld:'vRENGLONES',pic:'ZZZ9'},{av:'A860PMEmpresa',fld:'PMEMPRESA',pic:'ZZZZZZZZZ9'},{av:'dynavCnciasid_f'},{av:'AV100CNCIASID_F',fld:'vCNCIASID_F',pic:'ZZZZZZZZZ9'},{av:'A3295PROPAGID',fld:'PROPAGID',pic:'ZZZZZZZZZ9'},{av:'AV239PROPAGID_F',fld:'vPROPAGID_F',pic:'ZZZZZZZZZ9'},{av:'A861PMTipoDoc',fld:'PMTIPODOC',pic:''},{av:'cmbavPmtipodoc_f'},{av:'AV197PMTipoDoc_F',fld:'vPMTIPODOC_F',pic:''},{av:'A862PMNumDoc',fld:'PMNUMDOC',pic:'ZZZZZZZZZ9'},{av:'AV133Numero',fld:'vNUMERO',pic:'ZZZZZZZZZ9'},{av:'A863PMProvId',fld:'PMPROVID',pic:'ZZZZZZZZZ9'},{av:'AV108CNCDIRID_F',fld:'vCNCDIRID_F',pic:'ZZZZZZZZZ9'},{av:'A864PMProyId',fld:'PMPROYID',pic:''},{av:'AV7PMCTPRID',fld:'vPMCTPRID',pic:''},{av:'AV111F2',fld:'vF2',pic:''},{av:'A866PMFechFac',fld:'PMFECHFAC',pic:''},{av:'AV110F1',fld:'vF1',pic:''},{av:'A873PMMoneId',fld:'PMMONEID',pic:''},{av:'AV327F6',fld:'vF6',pic:''},{av:'A4090PMCXPFHTRN',fld:'PMCXPFHTRN',pic:'99/99/99 99:99'},{av:'AV326F5',fld:'vF5',pic:''},{av:'AV113F4',fld:'vF4',pic:''},{av:'A867PMFechVen',fld:'PMFECHVEN',pic:''},{av:'AV112F3',fld:'vF3',pic:''},{av:'A2405PMEstatus',fld:'PMESTATUS',pic:''},{av:'cmbavEstatus'},{av:'AV11Estatus',fld:'vESTATUS',pic:''},{av:'AV230Checkoc',fld:'vCHECKOC',pic:'9'},{av:'A908PMNumDocOC',fld:'PMNUMDOCOC',pic:'ZZZZZZZZZ9'},{av:'AV229PMNumDocOc_F',fld:'vPMNUMDOCOC_F',pic:'ZZZZZZZZZ9'},{av:'A2528PMFolioFac',fld:'PMFOLIOFAC',pic:''},{av:'AV159PMFolioFac_F',fld:'vPMFOLIOFAC_F',pic:''},{av:'A905PMPoliz',fld:'PMPOLIZ',pic:'9'},{av:'cmbavPmpoliz_f'},{av:'AV270pmpoliz_f',fld:'vPMPOLIZ_F',pic:'9'},{av:'A10905PMIDREL',fld:'PMIDREL',pic:'ZZZZZZZZZ9'},{av:'AV353arrPMCTPRID',fld:'vARRPMCTPRID',pic:''},{av:'A865PMUngId',fld:'PMUNGID',pic:''},{av:'cmbavCgunngid'},{av:'AV361CGUNNGID',fld:'vCGUNNGID',pic:''},{av:'A17416PMCargo',fld:'PMCARGO',pic:'ZZZZZZZZZ9'},{av:'AV296banload',fld:'vBANLOAD',pic:''},{av:'AV350CNUSERMCXP',fld:'vCNUSERMCXP',pic:'',hsh:true},{av:'A2534PMUsrcap',fld:'PMUSRCAP',pic:'ZZZZZZZZZ9'},{av:'A4599PMLayAsoc',fld:'PMLAYASOC',pic:'9'},{av:'A909PMUuid',fld:'PMUUID',pic:''},{av:'A2871PMPDFDoc',fld:'PMPDFDOC',pic:'ZZZZZZZZZ9'},{av:'A2718PMMonTp',fld:'PMMONTP',pic:'ZZZZZZZZZ9.999999'},{av:'A2862PMMonAmort',fld:'PMMONAMORT',pic:'ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A898PMFechRev',fld:'PMFECHREV',pic:''},{av:'AV203CNCIASMON_F',fld:'vCNCIASMON_F',pic:''},{av:'A899PMMonEx',fld:'PMMONEX',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'AV316tipoCambio',fld:'vTIPOCAMBIO',pic:'ZZZZZZZZZ9.999999'},{av:'A903PMMonEp',fld:'PMMONEP',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A2689PMMonPgE',fld:'PMMONPGE',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A900PMMonEg',fld:'PMMONEG',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A870PMMonNg',fld:'PMMONNG',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A869PMMonNa',fld:'PMMONNA',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A902PMMonNp',fld:'PMMONNP',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A2688PMMonPgN',fld:'PMMONPGN',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A872PMIva',fld:'PMIVA',pic:'ZZZZZZZZZZZZZ9.99'},{av:'A2520PMMonIvaN',fld:'PMMONIVAN',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A2954PMIVAID',fld:'PMIVAID',pic:''},{av:'A2406PMComentarios',fld:'PMCOMENTARIOS',pic:''},{av:'A2521PMMonIvaE',fld:'PMMONIVAE',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A904PMReten',fld:'PMRETEN',pic:'ZZZZZZZZZZZZZ9.99'},{av:'A906PMOrdenD',fld:'PMORDEND',pic:'9'},{av:'A907PMTipoDocOC',fld:'PMTIPODOCOC',pic:''},{av:'A2923PMCTA1',fld:'PMCTA1',pic:''},{av:'A2924PMCTA2',fld:'PMCTA2',pic:''},{av:'A2925PMCTA3',fld:'PMCTA3',pic:''},{av:'A2542PMCuentadeCargo',fld:'PMCUENTADECARGO',pic:''},{av:'A3917PMObsPoliza',fld:'PMOBSPOLIZA',pic:''},{av:'A4395PMPRANT',fld:'PMPRANT',pic:'ZZZZZZ9.99'},{av:'A7899PMTipoAv',fld:'PMTIPOAV',pic:''},{av:'A7900PMNumAv',fld:'PMNUMAV',pic:'ZZZZZZZZZ9'},{av:'A17105PMCuentaPR02',fld:'PMCUENTAPR02',pic:''},{av:'AV319numRenglons',fld:'vNUMRENGLONS',pic:'ZZZ9',hsh:true},{av:'A2059CNPRCMDFT',fld:'CNPRCMDFT',pic:''},{av:'A2054CNCMNOID',fld:'CNCMNOID',pic:''},{av:'AV317CNCMNOID',fld:'vCNCMNOID',pic:''},{av:'A2055CNCMNDID',fld:'CNCMNDID',pic:''},{av:'A2076CNPRCMDVAL',fld:'CNPRCMDVAL',pic:'ZZZ,ZZ9.9999999'},{av:'A2610ESTPAGID',fld:'ESTPAGID',pic:''},{av:'AV123PMEstatus',fld:'vPMESTATUS',pic:'',hsh:true},{av:'A2611ESTPAGDSC',fld:'ESTPAGDSC',pic:''},{av:'A7789AVDSPRCIA',fld:'AVDSPRCIA',pic:'ZZZZZZZZZ9'},{av:'AV61PMEmpresa_G',fld:'vPMEMPRESA_G',pic:'ZZZZZZZZZ9',hsh:true},{av:'A8295AVDSPRCPPTPC',fld:'AVDSPRCPPTPC',pic:''},{av:'AV62PMTipoDoc_G',fld:'vPMTIPODOC_G',pic:'',hsh:true},{av:'A8296AVDSPRCPPNDC',fld:'AVDSPRCPPNDC',pic:'ZZZZZZZZZ9'},{av:'AV63PMNumDoc_G',fld:'vPMNUMDOC_G',pic:'ZZZZZZZZZ9',hsh:true},{av:'A20CNTDOCID',fld:'CNTDOCID',pic:''},{av:'A8255AVDSPRDOC',fld:'AVDSPRDOC',pic:'ZZZZZZZZZ9'},{av:'A7790AVDSPRNDC',fld:'AVDSPRNDC',pic:'ZZZZZZZZZ9'},{av:'A8242AVDSPROBS',fld:'AVDSPROBS',pic:''},{av:'A7518CNDSPRCIA',fld:'CNDSPRCIA',pic:'ZZZZZZZZZ9'},{av:'A7519CNDSPRTDC',fld:'CNDSPRTDC',pic:''},{av:'A7520CNDSPRNDC',fld:'CNDSPRNDC',pic:'ZZZZZZZZZ9'},{av:'A7531CNDSPRALCTR',fld:'CNDSPRALCTR',pic:''},{av:'AV116CNUSERID',fld:'vCNUSERID',pic:'',hsh:true},{av:'AV231pagina',fld:'vPAGINA',pic:'ZZZ9'},{av:'AV232paginas',fld:'vPAGINAS',pic:'ZZZ9'},{av:'dynavCatcarid'},{av:'AV367CATCARID',fld:'vCATCARID',pic:'ZZZZZZZZZ9'},{av:'dynavPmcxprelid'},{av:'AV351PMCXPRELID',fld:'vPMCXPRELID',pic:'ZZZZZZZZZ9'},{av:'dynavUnifcncmnmid'},{av:'AV315unifCNCMNMID',fld:'vUNIFCNCMNMID',pic:''},{av:'dynavCncmnmid'},{av:'AV32CNCMNMID',fld:'vCNCMNMID',pic:''}]");
       setEventMetadata("'SIG'",",oparms:[{av:'AV231pagina',fld:'vPAGINA',pic:'ZZZ9'},{av:'dynavCatcarid'},{av:'AV367CATCARID',fld:'vCATCARID',pic:'ZZZZZZZZZ9'},{av:'dynavPmcxprelid'},{av:'AV351PMCXPRELID',fld:'vPMCXPRELID',pic:'ZZZZZZZZZ9'},{av:'dynavUnifcncmnmid'},{av:'AV315unifCNCMNMID',fld:'vUNIFCNCMNMID',pic:''},{av:'dynavCncmnmid'},{av:'AV32CNCMNMID',fld:'vCNCMNMID',pic:''}]}");
-      setEventMetadata("'ANT'","{handler:'e17DZ2',iparms:[{av:'GRID1_nFirstRecordOnPage'},{av:'GRID1_nEOF'},{av:'subGrid1_Rows',ctrl:'GRID1',prop:'Rows'},{av:'AV240AbrirBitacora',fld:'vABRIRBITACORA',pic:''},{av:'edtavPmctprdsc_Title',ctrl:'vPMCTPRDSC',prop:'Title'},{av:'edtavPmungid_g_Title',ctrl:'vPMUNGID_G',prop:'Title'},{av:'AV318renglones',fld:'vRENGLONES',pic:'ZZZ9'},{av:'A860PMEmpresa',fld:'PMEMPRESA',pic:'ZZZZZZZZZ9'},{av:'dynavCnciasid_f'},{av:'AV100CNCIASID_F',fld:'vCNCIASID_F',pic:'ZZZZZZZZZ9'},{av:'A3295PROPAGID',fld:'PROPAGID',pic:'ZZZZZZZZZ9'},{av:'AV239PROPAGID_F',fld:'vPROPAGID_F',pic:'ZZZZZZZZZ9'},{av:'A861PMTipoDoc',fld:'PMTIPODOC',pic:''},{av:'cmbavPmtipodoc_f'},{av:'AV197PMTipoDoc_F',fld:'vPMTIPODOC_F',pic:''},{av:'A862PMNumDoc',fld:'PMNUMDOC',pic:'ZZZZZZZZZ9'},{av:'AV133Numero',fld:'vNUMERO',pic:'ZZZZZZZZZ9'},{av:'A863PMProvId',fld:'PMPROVID',pic:'ZZZZZZZZZ9'},{av:'AV108CNCDIRID_F',fld:'vCNCDIRID_F',pic:'ZZZZZZZZZ9'},{av:'A864PMProyId',fld:'PMPROYID',pic:''},{av:'AV7PMCTPRID',fld:'vPMCTPRID',pic:''},{av:'AV111F2',fld:'vF2',pic:''},{av:'A866PMFechFac',fld:'PMFECHFAC',pic:''},{av:'AV110F1',fld:'vF1',pic:''},{av:'A873PMMoneId',fld:'PMMONEID',pic:''},{av:'AV327F6',fld:'vF6',pic:''},{av:'A4090PMCXPFHTRN',fld:'PMCXPFHTRN',pic:'99/99/99 99:99'},{av:'AV326F5',fld:'vF5',pic:''},{av:'AV113F4',fld:'vF4',pic:''},{av:'A867PMFechVen',fld:'PMFECHVEN',pic:''},{av:'AV112F3',fld:'vF3',pic:''},{av:'A2405PMEstatus',fld:'PMESTATUS',pic:''},{av:'cmbavEstatus'},{av:'AV11Estatus',fld:'vESTATUS',pic:''},{av:'AV230Checkoc',fld:'vCHECKOC',pic:'9'},{av:'A908PMNumDocOC',fld:'PMNUMDOCOC',pic:'ZZZZZZZZZ9'},{av:'AV229PMNumDocOc_F',fld:'vPMNUMDOCOC_F',pic:'ZZZZZZZZZ9'},{av:'A2528PMFolioFac',fld:'PMFOLIOFAC',pic:''},{av:'AV159PMFolioFac_F',fld:'vPMFOLIOFAC_F',pic:''},{av:'A905PMPoliz',fld:'PMPOLIZ',pic:'9'},{av:'cmbavPmpoliz_f'},{av:'AV270pmpoliz_f',fld:'vPMPOLIZ_F',pic:'9'},{av:'A10905PMIDREL',fld:'PMIDREL',pic:'ZZZZZZZZZ9'},{av:'AV353arrPMCTPRID',fld:'vARRPMCTPRID',pic:''},{av:'A865PMUngId',fld:'PMUNGID',pic:''},{av:'cmbavCgunngid'},{av:'AV361CGUNNGID',fld:'vCGUNNGID',pic:''},{av:'A17416PMCargo',fld:'PMCARGO',pic:'ZZZZZZZZZ9'},{av:'AV296banload',fld:'vBANLOAD',pic:''},{av:'AV350CNUSERMCXP',fld:'vCNUSERMCXP',pic:'',hsh:true},{av:'A2534PMUsrcap',fld:'PMUSRCAP',pic:'ZZZZZZZZZ9'},{av:'A4599PMLayAsoc',fld:'PMLAYASOC',pic:'9'},{av:'A909PMUuid',fld:'PMUUID',pic:''},{av:'A2871PMPDFDoc',fld:'PMPDFDOC',pic:'ZZZZZZZZZ9'},{av:'A2718PMMonTp',fld:'PMMONTP',pic:'ZZZZZZZZZ9.999999'},{av:'A2862PMMonAmort',fld:'PMMONAMORT',pic:'ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A898PMFechRev',fld:'PMFECHREV',pic:''},{av:'AV203CNCIASMON_F',fld:'vCNCIASMON_F',pic:''},{av:'A899PMMonEx',fld:'PMMONEX',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'AV316tipoCambio',fld:'vTIPOCAMBIO',pic:'ZZZZZZZZZ9.999999'},{av:'A903PMMonEp',fld:'PMMONEP',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A2689PMMonPgE',fld:'PMMONPGE',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A900PMMonEg',fld:'PMMONEG',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A870PMMonNg',fld:'PMMONNG',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A869PMMonNa',fld:'PMMONNA',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A902PMMonNp',fld:'PMMONNP',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A2688PMMonPgN',fld:'PMMONPGN',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A872PMIva',fld:'PMIVA',pic:'ZZZZZZZZZZZZZ9.99'},{av:'A2520PMMonIvaN',fld:'PMMONIVAN',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A2954PMIVAID',fld:'PMIVAID',pic:''},{av:'A2406PMComentarios',fld:'PMCOMENTARIOS',pic:''},{av:'A2521PMMonIvaE',fld:'PMMONIVAE',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A904PMReten',fld:'PMRETEN',pic:'ZZZZZZZZZZZZZ9.99'},{av:'A906PMOrdenD',fld:'PMORDEND',pic:'9'},{av:'A907PMTipoDocOC',fld:'PMTIPODOCOC',pic:''},{av:'A2923PMCTA1',fld:'PMCTA1',pic:''},{av:'A2924PMCTA2',fld:'PMCTA2',pic:''},{av:'A2925PMCTA3',fld:'PMCTA3',pic:''},{av:'A2542PMCuentadeCargo',fld:'PMCUENTADECARGO',pic:''},{av:'A3917PMObsPoliza',fld:'PMOBSPOLIZA',pic:''},{av:'A4395PMPRANT',fld:'PMPRANT',pic:'ZZZZZZ9.99'},{av:'A7899PMTipoAv',fld:'PMTIPOAV',pic:''},{av:'A7900PMNumAv',fld:'PMNUMAV',pic:'ZZZZZZZZZ9'},{av:'A17105PMCuentaPR02',fld:'PMCUENTAPR02',pic:''},{av:'AV319numRenglons',fld:'vNUMRENGLONS',pic:'ZZZ9',hsh:true},{av:'A2059CNPRCMDFT',fld:'CNPRCMDFT',pic:''},{av:'A2054CNCMNOID',fld:'CNCMNOID',pic:''},{av:'AV317CNCMNOID',fld:'vCNCMNOID',pic:''},{av:'A2055CNCMNDID',fld:'CNCMNDID',pic:''},{av:'A2076CNPRCMDVAL',fld:'CNPRCMDVAL',pic:'ZZZ,ZZ9.9999999'},{av:'A2610ESTPAGID',fld:'ESTPAGID',pic:''},{av:'AV123PMEstatus',fld:'vPMESTATUS',pic:'',hsh:true},{av:'A2611ESTPAGDSC',fld:'ESTPAGDSC',pic:''},{av:'AV116CNUSERID',fld:'vCNUSERID',pic:'',hsh:true},{av:'AV231pagina',fld:'vPAGINA',pic:'ZZZ9'},{av:'dynavCatcarid'},{av:'AV367CATCARID',fld:'vCATCARID',pic:'ZZZZZZZZZ9'},{av:'dynavPmcxprelid'},{av:'AV351PMCXPRELID',fld:'vPMCXPRELID',pic:'ZZZZZZZZZ9'},{av:'dynavUnifcncmnmid'},{av:'AV315unifCNCMNMID',fld:'vUNIFCNCMNMID',pic:''},{av:'dynavCncmnmid'},{av:'AV32CNCMNMID',fld:'vCNCMNMID',pic:''}]");
+      setEventMetadata("'ANT'","{handler:'e17DZ2',iparms:[{av:'GRID1_nFirstRecordOnPage'},{av:'GRID1_nEOF'},{av:'subGrid1_Rows',ctrl:'GRID1',prop:'Rows'},{av:'AV240AbrirBitacora',fld:'vABRIRBITACORA',pic:''},{av:'edtavPmctprdsc_Title',ctrl:'vPMCTPRDSC',prop:'Title'},{av:'edtavPmungid_g_Title',ctrl:'vPMUNGID_G',prop:'Title'},{av:'AV318renglones',fld:'vRENGLONES',pic:'ZZZ9'},{av:'A860PMEmpresa',fld:'PMEMPRESA',pic:'ZZZZZZZZZ9'},{av:'dynavCnciasid_f'},{av:'AV100CNCIASID_F',fld:'vCNCIASID_F',pic:'ZZZZZZZZZ9'},{av:'A3295PROPAGID',fld:'PROPAGID',pic:'ZZZZZZZZZ9'},{av:'AV239PROPAGID_F',fld:'vPROPAGID_F',pic:'ZZZZZZZZZ9'},{av:'A861PMTipoDoc',fld:'PMTIPODOC',pic:''},{av:'cmbavPmtipodoc_f'},{av:'AV197PMTipoDoc_F',fld:'vPMTIPODOC_F',pic:''},{av:'A862PMNumDoc',fld:'PMNUMDOC',pic:'ZZZZZZZZZ9'},{av:'AV133Numero',fld:'vNUMERO',pic:'ZZZZZZZZZ9'},{av:'A863PMProvId',fld:'PMPROVID',pic:'ZZZZZZZZZ9'},{av:'AV108CNCDIRID_F',fld:'vCNCDIRID_F',pic:'ZZZZZZZZZ9'},{av:'A864PMProyId',fld:'PMPROYID',pic:''},{av:'AV7PMCTPRID',fld:'vPMCTPRID',pic:''},{av:'AV111F2',fld:'vF2',pic:''},{av:'A866PMFechFac',fld:'PMFECHFAC',pic:''},{av:'AV110F1',fld:'vF1',pic:''},{av:'A873PMMoneId',fld:'PMMONEID',pic:''},{av:'AV327F6',fld:'vF6',pic:''},{av:'A4090PMCXPFHTRN',fld:'PMCXPFHTRN',pic:'99/99/99 99:99'},{av:'AV326F5',fld:'vF5',pic:''},{av:'AV113F4',fld:'vF4',pic:''},{av:'A867PMFechVen',fld:'PMFECHVEN',pic:''},{av:'AV112F3',fld:'vF3',pic:''},{av:'A2405PMEstatus',fld:'PMESTATUS',pic:''},{av:'cmbavEstatus'},{av:'AV11Estatus',fld:'vESTATUS',pic:''},{av:'AV230Checkoc',fld:'vCHECKOC',pic:'9'},{av:'A908PMNumDocOC',fld:'PMNUMDOCOC',pic:'ZZZZZZZZZ9'},{av:'AV229PMNumDocOc_F',fld:'vPMNUMDOCOC_F',pic:'ZZZZZZZZZ9'},{av:'A2528PMFolioFac',fld:'PMFOLIOFAC',pic:''},{av:'AV159PMFolioFac_F',fld:'vPMFOLIOFAC_F',pic:''},{av:'A905PMPoliz',fld:'PMPOLIZ',pic:'9'},{av:'cmbavPmpoliz_f'},{av:'AV270pmpoliz_f',fld:'vPMPOLIZ_F',pic:'9'},{av:'A10905PMIDREL',fld:'PMIDREL',pic:'ZZZZZZZZZ9'},{av:'AV353arrPMCTPRID',fld:'vARRPMCTPRID',pic:''},{av:'A865PMUngId',fld:'PMUNGID',pic:''},{av:'cmbavCgunngid'},{av:'AV361CGUNNGID',fld:'vCGUNNGID',pic:''},{av:'A17416PMCargo',fld:'PMCARGO',pic:'ZZZZZZZZZ9'},{av:'AV296banload',fld:'vBANLOAD',pic:''},{av:'AV350CNUSERMCXP',fld:'vCNUSERMCXP',pic:'',hsh:true},{av:'A2534PMUsrcap',fld:'PMUSRCAP',pic:'ZZZZZZZZZ9'},{av:'A4599PMLayAsoc',fld:'PMLAYASOC',pic:'9'},{av:'A909PMUuid',fld:'PMUUID',pic:''},{av:'A2871PMPDFDoc',fld:'PMPDFDOC',pic:'ZZZZZZZZZ9'},{av:'A2718PMMonTp',fld:'PMMONTP',pic:'ZZZZZZZZZ9.999999'},{av:'A2862PMMonAmort',fld:'PMMONAMORT',pic:'ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A898PMFechRev',fld:'PMFECHREV',pic:''},{av:'AV203CNCIASMON_F',fld:'vCNCIASMON_F',pic:''},{av:'A899PMMonEx',fld:'PMMONEX',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'AV316tipoCambio',fld:'vTIPOCAMBIO',pic:'ZZZZZZZZZ9.999999'},{av:'A903PMMonEp',fld:'PMMONEP',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A2689PMMonPgE',fld:'PMMONPGE',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A900PMMonEg',fld:'PMMONEG',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A870PMMonNg',fld:'PMMONNG',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A869PMMonNa',fld:'PMMONNA',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A902PMMonNp',fld:'PMMONNP',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A2688PMMonPgN',fld:'PMMONPGN',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A872PMIva',fld:'PMIVA',pic:'ZZZZZZZZZZZZZ9.99'},{av:'A2520PMMonIvaN',fld:'PMMONIVAN',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A2954PMIVAID',fld:'PMIVAID',pic:''},{av:'A2406PMComentarios',fld:'PMCOMENTARIOS',pic:''},{av:'A2521PMMonIvaE',fld:'PMMONIVAE',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A904PMReten',fld:'PMRETEN',pic:'ZZZZZZZZZZZZZ9.99'},{av:'A906PMOrdenD',fld:'PMORDEND',pic:'9'},{av:'A907PMTipoDocOC',fld:'PMTIPODOCOC',pic:''},{av:'A2923PMCTA1',fld:'PMCTA1',pic:''},{av:'A2924PMCTA2',fld:'PMCTA2',pic:''},{av:'A2925PMCTA3',fld:'PMCTA3',pic:''},{av:'A2542PMCuentadeCargo',fld:'PMCUENTADECARGO',pic:''},{av:'A3917PMObsPoliza',fld:'PMOBSPOLIZA',pic:''},{av:'A4395PMPRANT',fld:'PMPRANT',pic:'ZZZZZZ9.99'},{av:'A7899PMTipoAv',fld:'PMTIPOAV',pic:''},{av:'A7900PMNumAv',fld:'PMNUMAV',pic:'ZZZZZZZZZ9'},{av:'A17105PMCuentaPR02',fld:'PMCUENTAPR02',pic:''},{av:'AV319numRenglons',fld:'vNUMRENGLONS',pic:'ZZZ9',hsh:true},{av:'A2059CNPRCMDFT',fld:'CNPRCMDFT',pic:''},{av:'A2054CNCMNOID',fld:'CNCMNOID',pic:''},{av:'AV317CNCMNOID',fld:'vCNCMNOID',pic:''},{av:'A2055CNCMNDID',fld:'CNCMNDID',pic:''},{av:'A2076CNPRCMDVAL',fld:'CNPRCMDVAL',pic:'ZZZ,ZZ9.9999999'},{av:'A2610ESTPAGID',fld:'ESTPAGID',pic:''},{av:'AV123PMEstatus',fld:'vPMESTATUS',pic:'',hsh:true},{av:'A2611ESTPAGDSC',fld:'ESTPAGDSC',pic:''},{av:'A7789AVDSPRCIA',fld:'AVDSPRCIA',pic:'ZZZZZZZZZ9'},{av:'AV61PMEmpresa_G',fld:'vPMEMPRESA_G',pic:'ZZZZZZZZZ9',hsh:true},{av:'A8295AVDSPRCPPTPC',fld:'AVDSPRCPPTPC',pic:''},{av:'AV62PMTipoDoc_G',fld:'vPMTIPODOC_G',pic:'',hsh:true},{av:'A8296AVDSPRCPPNDC',fld:'AVDSPRCPPNDC',pic:'ZZZZZZZZZ9'},{av:'AV63PMNumDoc_G',fld:'vPMNUMDOC_G',pic:'ZZZZZZZZZ9',hsh:true},{av:'A20CNTDOCID',fld:'CNTDOCID',pic:''},{av:'A8255AVDSPRDOC',fld:'AVDSPRDOC',pic:'ZZZZZZZZZ9'},{av:'A7790AVDSPRNDC',fld:'AVDSPRNDC',pic:'ZZZZZZZZZ9'},{av:'A8242AVDSPROBS',fld:'AVDSPROBS',pic:''},{av:'A7518CNDSPRCIA',fld:'CNDSPRCIA',pic:'ZZZZZZZZZ9'},{av:'A7519CNDSPRTDC',fld:'CNDSPRTDC',pic:''},{av:'A7520CNDSPRNDC',fld:'CNDSPRNDC',pic:'ZZZZZZZZZ9'},{av:'A7531CNDSPRALCTR',fld:'CNDSPRALCTR',pic:''},{av:'AV116CNUSERID',fld:'vCNUSERID',pic:'',hsh:true},{av:'AV231pagina',fld:'vPAGINA',pic:'ZZZ9'},{av:'dynavCatcarid'},{av:'AV367CATCARID',fld:'vCATCARID',pic:'ZZZZZZZZZ9'},{av:'dynavPmcxprelid'},{av:'AV351PMCXPRELID',fld:'vPMCXPRELID',pic:'ZZZZZZZZZ9'},{av:'dynavUnifcncmnmid'},{av:'AV315unifCNCMNMID',fld:'vUNIFCNCMNMID',pic:''},{av:'dynavCncmnmid'},{av:'AV32CNCMNMID',fld:'vCNCMNMID',pic:''}]");
       setEventMetadata("'ANT'",",oparms:[{av:'AV231pagina',fld:'vPAGINA',pic:'ZZZ9'},{av:'dynavCatcarid'},{av:'AV367CATCARID',fld:'vCATCARID',pic:'ZZZZZZZZZ9'},{av:'dynavPmcxprelid'},{av:'AV351PMCXPRELID',fld:'vPMCXPRELID',pic:'ZZZZZZZZZ9'},{av:'dynavUnifcncmnmid'},{av:'AV315unifCNCMNMID',fld:'vUNIFCNCMNMID',pic:''},{av:'dynavCncmnmid'},{av:'AV32CNCMNMID',fld:'vCNCMNMID',pic:''}]}");
-      setEventMetadata("'CARPAG'","{handler:'e18DZ2',iparms:[{av:'GRID1_nFirstRecordOnPage'},{av:'GRID1_nEOF'},{av:'subGrid1_Rows',ctrl:'GRID1',prop:'Rows'},{av:'AV240AbrirBitacora',fld:'vABRIRBITACORA',pic:''},{av:'edtavPmctprdsc_Title',ctrl:'vPMCTPRDSC',prop:'Title'},{av:'edtavPmungid_g_Title',ctrl:'vPMUNGID_G',prop:'Title'},{av:'AV318renglones',fld:'vRENGLONES',pic:'ZZZ9'},{av:'A860PMEmpresa',fld:'PMEMPRESA',pic:'ZZZZZZZZZ9'},{av:'dynavCnciasid_f'},{av:'AV100CNCIASID_F',fld:'vCNCIASID_F',pic:'ZZZZZZZZZ9'},{av:'A3295PROPAGID',fld:'PROPAGID',pic:'ZZZZZZZZZ9'},{av:'AV239PROPAGID_F',fld:'vPROPAGID_F',pic:'ZZZZZZZZZ9'},{av:'A861PMTipoDoc',fld:'PMTIPODOC',pic:''},{av:'cmbavPmtipodoc_f'},{av:'AV197PMTipoDoc_F',fld:'vPMTIPODOC_F',pic:''},{av:'A862PMNumDoc',fld:'PMNUMDOC',pic:'ZZZZZZZZZ9'},{av:'AV133Numero',fld:'vNUMERO',pic:'ZZZZZZZZZ9'},{av:'A863PMProvId',fld:'PMPROVID',pic:'ZZZZZZZZZ9'},{av:'AV108CNCDIRID_F',fld:'vCNCDIRID_F',pic:'ZZZZZZZZZ9'},{av:'A864PMProyId',fld:'PMPROYID',pic:''},{av:'AV7PMCTPRID',fld:'vPMCTPRID',pic:''},{av:'AV111F2',fld:'vF2',pic:''},{av:'A866PMFechFac',fld:'PMFECHFAC',pic:''},{av:'AV110F1',fld:'vF1',pic:''},{av:'A873PMMoneId',fld:'PMMONEID',pic:''},{av:'AV327F6',fld:'vF6',pic:''},{av:'A4090PMCXPFHTRN',fld:'PMCXPFHTRN',pic:'99/99/99 99:99'},{av:'AV326F5',fld:'vF5',pic:''},{av:'AV113F4',fld:'vF4',pic:''},{av:'A867PMFechVen',fld:'PMFECHVEN',pic:''},{av:'AV112F3',fld:'vF3',pic:''},{av:'A2405PMEstatus',fld:'PMESTATUS',pic:''},{av:'cmbavEstatus'},{av:'AV11Estatus',fld:'vESTATUS',pic:''},{av:'AV230Checkoc',fld:'vCHECKOC',pic:'9'},{av:'A908PMNumDocOC',fld:'PMNUMDOCOC',pic:'ZZZZZZZZZ9'},{av:'AV229PMNumDocOc_F',fld:'vPMNUMDOCOC_F',pic:'ZZZZZZZZZ9'},{av:'A2528PMFolioFac',fld:'PMFOLIOFAC',pic:''},{av:'AV159PMFolioFac_F',fld:'vPMFOLIOFAC_F',pic:''},{av:'A905PMPoliz',fld:'PMPOLIZ',pic:'9'},{av:'cmbavPmpoliz_f'},{av:'AV270pmpoliz_f',fld:'vPMPOLIZ_F',pic:'9'},{av:'A10905PMIDREL',fld:'PMIDREL',pic:'ZZZZZZZZZ9'},{av:'AV353arrPMCTPRID',fld:'vARRPMCTPRID',pic:''},{av:'A865PMUngId',fld:'PMUNGID',pic:''},{av:'cmbavCgunngid'},{av:'AV361CGUNNGID',fld:'vCGUNNGID',pic:''},{av:'A17416PMCargo',fld:'PMCARGO',pic:'ZZZZZZZZZ9'},{av:'AV296banload',fld:'vBANLOAD',pic:''},{av:'AV350CNUSERMCXP',fld:'vCNUSERMCXP',pic:'',hsh:true},{av:'A2534PMUsrcap',fld:'PMUSRCAP',pic:'ZZZZZZZZZ9'},{av:'A4599PMLayAsoc',fld:'PMLAYASOC',pic:'9'},{av:'A909PMUuid',fld:'PMUUID',pic:''},{av:'A2871PMPDFDoc',fld:'PMPDFDOC',pic:'ZZZZZZZZZ9'},{av:'A2718PMMonTp',fld:'PMMONTP',pic:'ZZZZZZZZZ9.999999'},{av:'A2862PMMonAmort',fld:'PMMONAMORT',pic:'ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A898PMFechRev',fld:'PMFECHREV',pic:''},{av:'AV203CNCIASMON_F',fld:'vCNCIASMON_F',pic:''},{av:'A899PMMonEx',fld:'PMMONEX',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'AV316tipoCambio',fld:'vTIPOCAMBIO',pic:'ZZZZZZZZZ9.999999'},{av:'A903PMMonEp',fld:'PMMONEP',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A2689PMMonPgE',fld:'PMMONPGE',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A900PMMonEg',fld:'PMMONEG',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A870PMMonNg',fld:'PMMONNG',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A869PMMonNa',fld:'PMMONNA',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A902PMMonNp',fld:'PMMONNP',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A2688PMMonPgN',fld:'PMMONPGN',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A872PMIva',fld:'PMIVA',pic:'ZZZZZZZZZZZZZ9.99'},{av:'A2520PMMonIvaN',fld:'PMMONIVAN',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A2954PMIVAID',fld:'PMIVAID',pic:''},{av:'A2406PMComentarios',fld:'PMCOMENTARIOS',pic:''},{av:'A2521PMMonIvaE',fld:'PMMONIVAE',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A904PMReten',fld:'PMRETEN',pic:'ZZZZZZZZZZZZZ9.99'},{av:'A906PMOrdenD',fld:'PMORDEND',pic:'9'},{av:'A907PMTipoDocOC',fld:'PMTIPODOCOC',pic:''},{av:'A2923PMCTA1',fld:'PMCTA1',pic:''},{av:'A2924PMCTA2',fld:'PMCTA2',pic:''},{av:'A2925PMCTA3',fld:'PMCTA3',pic:''},{av:'A2542PMCuentadeCargo',fld:'PMCUENTADECARGO',pic:''},{av:'A3917PMObsPoliza',fld:'PMOBSPOLIZA',pic:''},{av:'A4395PMPRANT',fld:'PMPRANT',pic:'ZZZZZZ9.99'},{av:'A7899PMTipoAv',fld:'PMTIPOAV',pic:''},{av:'A7900PMNumAv',fld:'PMNUMAV',pic:'ZZZZZZZZZ9'},{av:'A17105PMCuentaPR02',fld:'PMCUENTAPR02',pic:''},{av:'AV319numRenglons',fld:'vNUMRENGLONS',pic:'ZZZ9',hsh:true},{av:'A2059CNPRCMDFT',fld:'CNPRCMDFT',pic:''},{av:'A2054CNCMNOID',fld:'CNCMNOID',pic:''},{av:'AV317CNCMNOID',fld:'vCNCMNOID',pic:''},{av:'A2055CNCMNDID',fld:'CNCMNDID',pic:''},{av:'A2076CNPRCMDVAL',fld:'CNPRCMDVAL',pic:'ZZZ,ZZ9.9999999'},{av:'A2610ESTPAGID',fld:'ESTPAGID',pic:''},{av:'AV123PMEstatus',fld:'vPMESTATUS',pic:'',hsh:true},{av:'A2611ESTPAGDSC',fld:'ESTPAGDSC',pic:''},{av:'AV116CNUSERID',fld:'vCNUSERID',pic:'',hsh:true},{av:'AV233paginaN',fld:'vPAGINAN',pic:'ZZZ9'},{av:'dynavCatcarid'},{av:'AV367CATCARID',fld:'vCATCARID',pic:'ZZZZZZZZZ9'},{av:'dynavPmcxprelid'},{av:'AV351PMCXPRELID',fld:'vPMCXPRELID',pic:'ZZZZZZZZZ9'},{av:'dynavUnifcncmnmid'},{av:'AV315unifCNCMNMID',fld:'vUNIFCNCMNMID',pic:''},{av:'dynavCncmnmid'},{av:'AV32CNCMNMID',fld:'vCNCMNMID',pic:''}]");
+      setEventMetadata("'CARPAG'","{handler:'e18DZ2',iparms:[{av:'GRID1_nFirstRecordOnPage'},{av:'GRID1_nEOF'},{av:'subGrid1_Rows',ctrl:'GRID1',prop:'Rows'},{av:'AV240AbrirBitacora',fld:'vABRIRBITACORA',pic:''},{av:'edtavPmctprdsc_Title',ctrl:'vPMCTPRDSC',prop:'Title'},{av:'edtavPmungid_g_Title',ctrl:'vPMUNGID_G',prop:'Title'},{av:'AV318renglones',fld:'vRENGLONES',pic:'ZZZ9'},{av:'A860PMEmpresa',fld:'PMEMPRESA',pic:'ZZZZZZZZZ9'},{av:'dynavCnciasid_f'},{av:'AV100CNCIASID_F',fld:'vCNCIASID_F',pic:'ZZZZZZZZZ9'},{av:'A3295PROPAGID',fld:'PROPAGID',pic:'ZZZZZZZZZ9'},{av:'AV239PROPAGID_F',fld:'vPROPAGID_F',pic:'ZZZZZZZZZ9'},{av:'A861PMTipoDoc',fld:'PMTIPODOC',pic:''},{av:'cmbavPmtipodoc_f'},{av:'AV197PMTipoDoc_F',fld:'vPMTIPODOC_F',pic:''},{av:'A862PMNumDoc',fld:'PMNUMDOC',pic:'ZZZZZZZZZ9'},{av:'AV133Numero',fld:'vNUMERO',pic:'ZZZZZZZZZ9'},{av:'A863PMProvId',fld:'PMPROVID',pic:'ZZZZZZZZZ9'},{av:'AV108CNCDIRID_F',fld:'vCNCDIRID_F',pic:'ZZZZZZZZZ9'},{av:'A864PMProyId',fld:'PMPROYID',pic:''},{av:'AV7PMCTPRID',fld:'vPMCTPRID',pic:''},{av:'AV111F2',fld:'vF2',pic:''},{av:'A866PMFechFac',fld:'PMFECHFAC',pic:''},{av:'AV110F1',fld:'vF1',pic:''},{av:'A873PMMoneId',fld:'PMMONEID',pic:''},{av:'AV327F6',fld:'vF6',pic:''},{av:'A4090PMCXPFHTRN',fld:'PMCXPFHTRN',pic:'99/99/99 99:99'},{av:'AV326F5',fld:'vF5',pic:''},{av:'AV113F4',fld:'vF4',pic:''},{av:'A867PMFechVen',fld:'PMFECHVEN',pic:''},{av:'AV112F3',fld:'vF3',pic:''},{av:'A2405PMEstatus',fld:'PMESTATUS',pic:''},{av:'cmbavEstatus'},{av:'AV11Estatus',fld:'vESTATUS',pic:''},{av:'AV230Checkoc',fld:'vCHECKOC',pic:'9'},{av:'A908PMNumDocOC',fld:'PMNUMDOCOC',pic:'ZZZZZZZZZ9'},{av:'AV229PMNumDocOc_F',fld:'vPMNUMDOCOC_F',pic:'ZZZZZZZZZ9'},{av:'A2528PMFolioFac',fld:'PMFOLIOFAC',pic:''},{av:'AV159PMFolioFac_F',fld:'vPMFOLIOFAC_F',pic:''},{av:'A905PMPoliz',fld:'PMPOLIZ',pic:'9'},{av:'cmbavPmpoliz_f'},{av:'AV270pmpoliz_f',fld:'vPMPOLIZ_F',pic:'9'},{av:'A10905PMIDREL',fld:'PMIDREL',pic:'ZZZZZZZZZ9'},{av:'AV353arrPMCTPRID',fld:'vARRPMCTPRID',pic:''},{av:'A865PMUngId',fld:'PMUNGID',pic:''},{av:'cmbavCgunngid'},{av:'AV361CGUNNGID',fld:'vCGUNNGID',pic:''},{av:'A17416PMCargo',fld:'PMCARGO',pic:'ZZZZZZZZZ9'},{av:'AV296banload',fld:'vBANLOAD',pic:''},{av:'AV350CNUSERMCXP',fld:'vCNUSERMCXP',pic:'',hsh:true},{av:'A2534PMUsrcap',fld:'PMUSRCAP',pic:'ZZZZZZZZZ9'},{av:'A4599PMLayAsoc',fld:'PMLAYASOC',pic:'9'},{av:'A909PMUuid',fld:'PMUUID',pic:''},{av:'A2871PMPDFDoc',fld:'PMPDFDOC',pic:'ZZZZZZZZZ9'},{av:'A2718PMMonTp',fld:'PMMONTP',pic:'ZZZZZZZZZ9.999999'},{av:'A2862PMMonAmort',fld:'PMMONAMORT',pic:'ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A898PMFechRev',fld:'PMFECHREV',pic:''},{av:'AV203CNCIASMON_F',fld:'vCNCIASMON_F',pic:''},{av:'A899PMMonEx',fld:'PMMONEX',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'AV316tipoCambio',fld:'vTIPOCAMBIO',pic:'ZZZZZZZZZ9.999999'},{av:'A903PMMonEp',fld:'PMMONEP',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A2689PMMonPgE',fld:'PMMONPGE',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A900PMMonEg',fld:'PMMONEG',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A870PMMonNg',fld:'PMMONNG',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A869PMMonNa',fld:'PMMONNA',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A902PMMonNp',fld:'PMMONNP',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A2688PMMonPgN',fld:'PMMONPGN',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A872PMIva',fld:'PMIVA',pic:'ZZZZZZZZZZZZZ9.99'},{av:'A2520PMMonIvaN',fld:'PMMONIVAN',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A2954PMIVAID',fld:'PMIVAID',pic:''},{av:'A2406PMComentarios',fld:'PMCOMENTARIOS',pic:''},{av:'A2521PMMonIvaE',fld:'PMMONIVAE',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A904PMReten',fld:'PMRETEN',pic:'ZZZZZZZZZZZZZ9.99'},{av:'A906PMOrdenD',fld:'PMORDEND',pic:'9'},{av:'A907PMTipoDocOC',fld:'PMTIPODOCOC',pic:''},{av:'A2923PMCTA1',fld:'PMCTA1',pic:''},{av:'A2924PMCTA2',fld:'PMCTA2',pic:''},{av:'A2925PMCTA3',fld:'PMCTA3',pic:''},{av:'A2542PMCuentadeCargo',fld:'PMCUENTADECARGO',pic:''},{av:'A3917PMObsPoliza',fld:'PMOBSPOLIZA',pic:''},{av:'A4395PMPRANT',fld:'PMPRANT',pic:'ZZZZZZ9.99'},{av:'A7899PMTipoAv',fld:'PMTIPOAV',pic:''},{av:'A7900PMNumAv',fld:'PMNUMAV',pic:'ZZZZZZZZZ9'},{av:'A17105PMCuentaPR02',fld:'PMCUENTAPR02',pic:''},{av:'AV319numRenglons',fld:'vNUMRENGLONS',pic:'ZZZ9',hsh:true},{av:'A2059CNPRCMDFT',fld:'CNPRCMDFT',pic:''},{av:'A2054CNCMNOID',fld:'CNCMNOID',pic:''},{av:'AV317CNCMNOID',fld:'vCNCMNOID',pic:''},{av:'A2055CNCMNDID',fld:'CNCMNDID',pic:''},{av:'A2076CNPRCMDVAL',fld:'CNPRCMDVAL',pic:'ZZZ,ZZ9.9999999'},{av:'A2610ESTPAGID',fld:'ESTPAGID',pic:''},{av:'AV123PMEstatus',fld:'vPMESTATUS',pic:'',hsh:true},{av:'A2611ESTPAGDSC',fld:'ESTPAGDSC',pic:''},{av:'A7789AVDSPRCIA',fld:'AVDSPRCIA',pic:'ZZZZZZZZZ9'},{av:'AV61PMEmpresa_G',fld:'vPMEMPRESA_G',pic:'ZZZZZZZZZ9',hsh:true},{av:'A8295AVDSPRCPPTPC',fld:'AVDSPRCPPTPC',pic:''},{av:'AV62PMTipoDoc_G',fld:'vPMTIPODOC_G',pic:'',hsh:true},{av:'A8296AVDSPRCPPNDC',fld:'AVDSPRCPPNDC',pic:'ZZZZZZZZZ9'},{av:'AV63PMNumDoc_G',fld:'vPMNUMDOC_G',pic:'ZZZZZZZZZ9',hsh:true},{av:'A20CNTDOCID',fld:'CNTDOCID',pic:''},{av:'A8255AVDSPRDOC',fld:'AVDSPRDOC',pic:'ZZZZZZZZZ9'},{av:'A7790AVDSPRNDC',fld:'AVDSPRNDC',pic:'ZZZZZZZZZ9'},{av:'A8242AVDSPROBS',fld:'AVDSPROBS',pic:''},{av:'A7518CNDSPRCIA',fld:'CNDSPRCIA',pic:'ZZZZZZZZZ9'},{av:'A7519CNDSPRTDC',fld:'CNDSPRTDC',pic:''},{av:'A7520CNDSPRNDC',fld:'CNDSPRNDC',pic:'ZZZZZZZZZ9'},{av:'A7531CNDSPRALCTR',fld:'CNDSPRALCTR',pic:''},{av:'AV116CNUSERID',fld:'vCNUSERID',pic:'',hsh:true},{av:'AV233paginaN',fld:'vPAGINAN',pic:'ZZZ9'},{av:'dynavCatcarid'},{av:'AV367CATCARID',fld:'vCATCARID',pic:'ZZZZZZZZZ9'},{av:'dynavPmcxprelid'},{av:'AV351PMCXPRELID',fld:'vPMCXPRELID',pic:'ZZZZZZZZZ9'},{av:'dynavUnifcncmnmid'},{av:'AV315unifCNCMNMID',fld:'vUNIFCNCMNMID',pic:''},{av:'dynavCncmnmid'},{av:'AV32CNCMNMID',fld:'vCNCMNMID',pic:''}]");
       setEventMetadata("'CARPAG'",",oparms:[{av:'AV231pagina',fld:'vPAGINA',pic:'ZZZ9'},{av:'dynavCatcarid'},{av:'AV367CATCARID',fld:'vCATCARID',pic:'ZZZZZZZZZ9'},{av:'dynavPmcxprelid'},{av:'AV351PMCXPRELID',fld:'vPMCXPRELID',pic:'ZZZZZZZZZ9'},{av:'dynavUnifcncmnmid'},{av:'AV315unifCNCMNMID',fld:'vUNIFCNCMNMID',pic:''},{av:'dynavCncmnmid'},{av:'AV32CNCMNMID',fld:'vCNCMNMID',pic:''}]}");
-      setEventMetadata("'PRI'","{handler:'e19DZ2',iparms:[{av:'GRID1_nFirstRecordOnPage'},{av:'GRID1_nEOF'},{av:'subGrid1_Rows',ctrl:'GRID1',prop:'Rows'},{av:'AV240AbrirBitacora',fld:'vABRIRBITACORA',pic:''},{av:'edtavPmctprdsc_Title',ctrl:'vPMCTPRDSC',prop:'Title'},{av:'edtavPmungid_g_Title',ctrl:'vPMUNGID_G',prop:'Title'},{av:'AV318renglones',fld:'vRENGLONES',pic:'ZZZ9'},{av:'A860PMEmpresa',fld:'PMEMPRESA',pic:'ZZZZZZZZZ9'},{av:'dynavCnciasid_f'},{av:'AV100CNCIASID_F',fld:'vCNCIASID_F',pic:'ZZZZZZZZZ9'},{av:'A3295PROPAGID',fld:'PROPAGID',pic:'ZZZZZZZZZ9'},{av:'AV239PROPAGID_F',fld:'vPROPAGID_F',pic:'ZZZZZZZZZ9'},{av:'A861PMTipoDoc',fld:'PMTIPODOC',pic:''},{av:'cmbavPmtipodoc_f'},{av:'AV197PMTipoDoc_F',fld:'vPMTIPODOC_F',pic:''},{av:'A862PMNumDoc',fld:'PMNUMDOC',pic:'ZZZZZZZZZ9'},{av:'AV133Numero',fld:'vNUMERO',pic:'ZZZZZZZZZ9'},{av:'A863PMProvId',fld:'PMPROVID',pic:'ZZZZZZZZZ9'},{av:'AV108CNCDIRID_F',fld:'vCNCDIRID_F',pic:'ZZZZZZZZZ9'},{av:'A864PMProyId',fld:'PMPROYID',pic:''},{av:'AV7PMCTPRID',fld:'vPMCTPRID',pic:''},{av:'AV111F2',fld:'vF2',pic:''},{av:'A866PMFechFac',fld:'PMFECHFAC',pic:''},{av:'AV110F1',fld:'vF1',pic:''},{av:'A873PMMoneId',fld:'PMMONEID',pic:''},{av:'AV327F6',fld:'vF6',pic:''},{av:'A4090PMCXPFHTRN',fld:'PMCXPFHTRN',pic:'99/99/99 99:99'},{av:'AV326F5',fld:'vF5',pic:''},{av:'AV113F4',fld:'vF4',pic:''},{av:'A867PMFechVen',fld:'PMFECHVEN',pic:''},{av:'AV112F3',fld:'vF3',pic:''},{av:'A2405PMEstatus',fld:'PMESTATUS',pic:''},{av:'cmbavEstatus'},{av:'AV11Estatus',fld:'vESTATUS',pic:''},{av:'AV230Checkoc',fld:'vCHECKOC',pic:'9'},{av:'A908PMNumDocOC',fld:'PMNUMDOCOC',pic:'ZZZZZZZZZ9'},{av:'AV229PMNumDocOc_F',fld:'vPMNUMDOCOC_F',pic:'ZZZZZZZZZ9'},{av:'A2528PMFolioFac',fld:'PMFOLIOFAC',pic:''},{av:'AV159PMFolioFac_F',fld:'vPMFOLIOFAC_F',pic:''},{av:'A905PMPoliz',fld:'PMPOLIZ',pic:'9'},{av:'cmbavPmpoliz_f'},{av:'AV270pmpoliz_f',fld:'vPMPOLIZ_F',pic:'9'},{av:'A10905PMIDREL',fld:'PMIDREL',pic:'ZZZZZZZZZ9'},{av:'AV353arrPMCTPRID',fld:'vARRPMCTPRID',pic:''},{av:'A865PMUngId',fld:'PMUNGID',pic:''},{av:'cmbavCgunngid'},{av:'AV361CGUNNGID',fld:'vCGUNNGID',pic:''},{av:'A17416PMCargo',fld:'PMCARGO',pic:'ZZZZZZZZZ9'},{av:'AV296banload',fld:'vBANLOAD',pic:''},{av:'AV350CNUSERMCXP',fld:'vCNUSERMCXP',pic:'',hsh:true},{av:'A2534PMUsrcap',fld:'PMUSRCAP',pic:'ZZZZZZZZZ9'},{av:'A4599PMLayAsoc',fld:'PMLAYASOC',pic:'9'},{av:'A909PMUuid',fld:'PMUUID',pic:''},{av:'A2871PMPDFDoc',fld:'PMPDFDOC',pic:'ZZZZZZZZZ9'},{av:'A2718PMMonTp',fld:'PMMONTP',pic:'ZZZZZZZZZ9.999999'},{av:'A2862PMMonAmort',fld:'PMMONAMORT',pic:'ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A898PMFechRev',fld:'PMFECHREV',pic:''},{av:'AV203CNCIASMON_F',fld:'vCNCIASMON_F',pic:''},{av:'A899PMMonEx',fld:'PMMONEX',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'AV316tipoCambio',fld:'vTIPOCAMBIO',pic:'ZZZZZZZZZ9.999999'},{av:'A903PMMonEp',fld:'PMMONEP',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A2689PMMonPgE',fld:'PMMONPGE',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A900PMMonEg',fld:'PMMONEG',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A870PMMonNg',fld:'PMMONNG',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A869PMMonNa',fld:'PMMONNA',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A902PMMonNp',fld:'PMMONNP',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A2688PMMonPgN',fld:'PMMONPGN',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A872PMIva',fld:'PMIVA',pic:'ZZZZZZZZZZZZZ9.99'},{av:'A2520PMMonIvaN',fld:'PMMONIVAN',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A2954PMIVAID',fld:'PMIVAID',pic:''},{av:'A2406PMComentarios',fld:'PMCOMENTARIOS',pic:''},{av:'A2521PMMonIvaE',fld:'PMMONIVAE',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A904PMReten',fld:'PMRETEN',pic:'ZZZZZZZZZZZZZ9.99'},{av:'A906PMOrdenD',fld:'PMORDEND',pic:'9'},{av:'A907PMTipoDocOC',fld:'PMTIPODOCOC',pic:''},{av:'A2923PMCTA1',fld:'PMCTA1',pic:''},{av:'A2924PMCTA2',fld:'PMCTA2',pic:''},{av:'A2925PMCTA3',fld:'PMCTA3',pic:''},{av:'A2542PMCuentadeCargo',fld:'PMCUENTADECARGO',pic:''},{av:'A3917PMObsPoliza',fld:'PMOBSPOLIZA',pic:''},{av:'A4395PMPRANT',fld:'PMPRANT',pic:'ZZZZZZ9.99'},{av:'A7899PMTipoAv',fld:'PMTIPOAV',pic:''},{av:'A7900PMNumAv',fld:'PMNUMAV',pic:'ZZZZZZZZZ9'},{av:'A17105PMCuentaPR02',fld:'PMCUENTAPR02',pic:''},{av:'AV319numRenglons',fld:'vNUMRENGLONS',pic:'ZZZ9',hsh:true},{av:'A2059CNPRCMDFT',fld:'CNPRCMDFT',pic:''},{av:'A2054CNCMNOID',fld:'CNCMNOID',pic:''},{av:'AV317CNCMNOID',fld:'vCNCMNOID',pic:''},{av:'A2055CNCMNDID',fld:'CNCMNDID',pic:''},{av:'A2076CNPRCMDVAL',fld:'CNPRCMDVAL',pic:'ZZZ,ZZ9.9999999'},{av:'A2610ESTPAGID',fld:'ESTPAGID',pic:''},{av:'AV123PMEstatus',fld:'vPMESTATUS',pic:'',hsh:true},{av:'A2611ESTPAGDSC',fld:'ESTPAGDSC',pic:''},{av:'AV116CNUSERID',fld:'vCNUSERID',pic:'',hsh:true},{av:'dynavCatcarid'},{av:'AV367CATCARID',fld:'vCATCARID',pic:'ZZZZZZZZZ9'},{av:'dynavPmcxprelid'},{av:'AV351PMCXPRELID',fld:'vPMCXPRELID',pic:'ZZZZZZZZZ9'},{av:'dynavUnifcncmnmid'},{av:'AV315unifCNCMNMID',fld:'vUNIFCNCMNMID',pic:''},{av:'dynavCncmnmid'},{av:'AV32CNCMNMID',fld:'vCNCMNMID',pic:''}]");
+      setEventMetadata("'PRI'","{handler:'e19DZ2',iparms:[{av:'GRID1_nFirstRecordOnPage'},{av:'GRID1_nEOF'},{av:'subGrid1_Rows',ctrl:'GRID1',prop:'Rows'},{av:'AV240AbrirBitacora',fld:'vABRIRBITACORA',pic:''},{av:'edtavPmctprdsc_Title',ctrl:'vPMCTPRDSC',prop:'Title'},{av:'edtavPmungid_g_Title',ctrl:'vPMUNGID_G',prop:'Title'},{av:'AV318renglones',fld:'vRENGLONES',pic:'ZZZ9'},{av:'A860PMEmpresa',fld:'PMEMPRESA',pic:'ZZZZZZZZZ9'},{av:'dynavCnciasid_f'},{av:'AV100CNCIASID_F',fld:'vCNCIASID_F',pic:'ZZZZZZZZZ9'},{av:'A3295PROPAGID',fld:'PROPAGID',pic:'ZZZZZZZZZ9'},{av:'AV239PROPAGID_F',fld:'vPROPAGID_F',pic:'ZZZZZZZZZ9'},{av:'A861PMTipoDoc',fld:'PMTIPODOC',pic:''},{av:'cmbavPmtipodoc_f'},{av:'AV197PMTipoDoc_F',fld:'vPMTIPODOC_F',pic:''},{av:'A862PMNumDoc',fld:'PMNUMDOC',pic:'ZZZZZZZZZ9'},{av:'AV133Numero',fld:'vNUMERO',pic:'ZZZZZZZZZ9'},{av:'A863PMProvId',fld:'PMPROVID',pic:'ZZZZZZZZZ9'},{av:'AV108CNCDIRID_F',fld:'vCNCDIRID_F',pic:'ZZZZZZZZZ9'},{av:'A864PMProyId',fld:'PMPROYID',pic:''},{av:'AV7PMCTPRID',fld:'vPMCTPRID',pic:''},{av:'AV111F2',fld:'vF2',pic:''},{av:'A866PMFechFac',fld:'PMFECHFAC',pic:''},{av:'AV110F1',fld:'vF1',pic:''},{av:'A873PMMoneId',fld:'PMMONEID',pic:''},{av:'AV327F6',fld:'vF6',pic:''},{av:'A4090PMCXPFHTRN',fld:'PMCXPFHTRN',pic:'99/99/99 99:99'},{av:'AV326F5',fld:'vF5',pic:''},{av:'AV113F4',fld:'vF4',pic:''},{av:'A867PMFechVen',fld:'PMFECHVEN',pic:''},{av:'AV112F3',fld:'vF3',pic:''},{av:'A2405PMEstatus',fld:'PMESTATUS',pic:''},{av:'cmbavEstatus'},{av:'AV11Estatus',fld:'vESTATUS',pic:''},{av:'AV230Checkoc',fld:'vCHECKOC',pic:'9'},{av:'A908PMNumDocOC',fld:'PMNUMDOCOC',pic:'ZZZZZZZZZ9'},{av:'AV229PMNumDocOc_F',fld:'vPMNUMDOCOC_F',pic:'ZZZZZZZZZ9'},{av:'A2528PMFolioFac',fld:'PMFOLIOFAC',pic:''},{av:'AV159PMFolioFac_F',fld:'vPMFOLIOFAC_F',pic:''},{av:'A905PMPoliz',fld:'PMPOLIZ',pic:'9'},{av:'cmbavPmpoliz_f'},{av:'AV270pmpoliz_f',fld:'vPMPOLIZ_F',pic:'9'},{av:'A10905PMIDREL',fld:'PMIDREL',pic:'ZZZZZZZZZ9'},{av:'AV353arrPMCTPRID',fld:'vARRPMCTPRID',pic:''},{av:'A865PMUngId',fld:'PMUNGID',pic:''},{av:'cmbavCgunngid'},{av:'AV361CGUNNGID',fld:'vCGUNNGID',pic:''},{av:'A17416PMCargo',fld:'PMCARGO',pic:'ZZZZZZZZZ9'},{av:'AV296banload',fld:'vBANLOAD',pic:''},{av:'AV350CNUSERMCXP',fld:'vCNUSERMCXP',pic:'',hsh:true},{av:'A2534PMUsrcap',fld:'PMUSRCAP',pic:'ZZZZZZZZZ9'},{av:'A4599PMLayAsoc',fld:'PMLAYASOC',pic:'9'},{av:'A909PMUuid',fld:'PMUUID',pic:''},{av:'A2871PMPDFDoc',fld:'PMPDFDOC',pic:'ZZZZZZZZZ9'},{av:'A2718PMMonTp',fld:'PMMONTP',pic:'ZZZZZZZZZ9.999999'},{av:'A2862PMMonAmort',fld:'PMMONAMORT',pic:'ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A898PMFechRev',fld:'PMFECHREV',pic:''},{av:'AV203CNCIASMON_F',fld:'vCNCIASMON_F',pic:''},{av:'A899PMMonEx',fld:'PMMONEX',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'AV316tipoCambio',fld:'vTIPOCAMBIO',pic:'ZZZZZZZZZ9.999999'},{av:'A903PMMonEp',fld:'PMMONEP',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A2689PMMonPgE',fld:'PMMONPGE',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A900PMMonEg',fld:'PMMONEG',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A870PMMonNg',fld:'PMMONNG',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A869PMMonNa',fld:'PMMONNA',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A902PMMonNp',fld:'PMMONNP',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A2688PMMonPgN',fld:'PMMONPGN',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A872PMIva',fld:'PMIVA',pic:'ZZZZZZZZZZZZZ9.99'},{av:'A2520PMMonIvaN',fld:'PMMONIVAN',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A2954PMIVAID',fld:'PMIVAID',pic:''},{av:'A2406PMComentarios',fld:'PMCOMENTARIOS',pic:''},{av:'A2521PMMonIvaE',fld:'PMMONIVAE',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A904PMReten',fld:'PMRETEN',pic:'ZZZZZZZZZZZZZ9.99'},{av:'A906PMOrdenD',fld:'PMORDEND',pic:'9'},{av:'A907PMTipoDocOC',fld:'PMTIPODOCOC',pic:''},{av:'A2923PMCTA1',fld:'PMCTA1',pic:''},{av:'A2924PMCTA2',fld:'PMCTA2',pic:''},{av:'A2925PMCTA3',fld:'PMCTA3',pic:''},{av:'A2542PMCuentadeCargo',fld:'PMCUENTADECARGO',pic:''},{av:'A3917PMObsPoliza',fld:'PMOBSPOLIZA',pic:''},{av:'A4395PMPRANT',fld:'PMPRANT',pic:'ZZZZZZ9.99'},{av:'A7899PMTipoAv',fld:'PMTIPOAV',pic:''},{av:'A7900PMNumAv',fld:'PMNUMAV',pic:'ZZZZZZZZZ9'},{av:'A17105PMCuentaPR02',fld:'PMCUENTAPR02',pic:''},{av:'AV319numRenglons',fld:'vNUMRENGLONS',pic:'ZZZ9',hsh:true},{av:'A2059CNPRCMDFT',fld:'CNPRCMDFT',pic:''},{av:'A2054CNCMNOID',fld:'CNCMNOID',pic:''},{av:'AV317CNCMNOID',fld:'vCNCMNOID',pic:''},{av:'A2055CNCMNDID',fld:'CNCMNDID',pic:''},{av:'A2076CNPRCMDVAL',fld:'CNPRCMDVAL',pic:'ZZZ,ZZ9.9999999'},{av:'A2610ESTPAGID',fld:'ESTPAGID',pic:''},{av:'AV123PMEstatus',fld:'vPMESTATUS',pic:'',hsh:true},{av:'A2611ESTPAGDSC',fld:'ESTPAGDSC',pic:''},{av:'A7789AVDSPRCIA',fld:'AVDSPRCIA',pic:'ZZZZZZZZZ9'},{av:'AV61PMEmpresa_G',fld:'vPMEMPRESA_G',pic:'ZZZZZZZZZ9',hsh:true},{av:'A8295AVDSPRCPPTPC',fld:'AVDSPRCPPTPC',pic:''},{av:'AV62PMTipoDoc_G',fld:'vPMTIPODOC_G',pic:'',hsh:true},{av:'A8296AVDSPRCPPNDC',fld:'AVDSPRCPPNDC',pic:'ZZZZZZZZZ9'},{av:'AV63PMNumDoc_G',fld:'vPMNUMDOC_G',pic:'ZZZZZZZZZ9',hsh:true},{av:'A20CNTDOCID',fld:'CNTDOCID',pic:''},{av:'A8255AVDSPRDOC',fld:'AVDSPRDOC',pic:'ZZZZZZZZZ9'},{av:'A7790AVDSPRNDC',fld:'AVDSPRNDC',pic:'ZZZZZZZZZ9'},{av:'A8242AVDSPROBS',fld:'AVDSPROBS',pic:''},{av:'A7518CNDSPRCIA',fld:'CNDSPRCIA',pic:'ZZZZZZZZZ9'},{av:'A7519CNDSPRTDC',fld:'CNDSPRTDC',pic:''},{av:'A7520CNDSPRNDC',fld:'CNDSPRNDC',pic:'ZZZZZZZZZ9'},{av:'A7531CNDSPRALCTR',fld:'CNDSPRALCTR',pic:''},{av:'AV116CNUSERID',fld:'vCNUSERID',pic:'',hsh:true},{av:'dynavCatcarid'},{av:'AV367CATCARID',fld:'vCATCARID',pic:'ZZZZZZZZZ9'},{av:'dynavPmcxprelid'},{av:'AV351PMCXPRELID',fld:'vPMCXPRELID',pic:'ZZZZZZZZZ9'},{av:'dynavUnifcncmnmid'},{av:'AV315unifCNCMNMID',fld:'vUNIFCNCMNMID',pic:''},{av:'dynavCncmnmid'},{av:'AV32CNCMNMID',fld:'vCNCMNMID',pic:''}]");
       setEventMetadata("'PRI'",",oparms:[{av:'AV231pagina',fld:'vPAGINA',pic:'ZZZ9'},{av:'dynavCatcarid'},{av:'AV367CATCARID',fld:'vCATCARID',pic:'ZZZZZZZZZ9'},{av:'dynavPmcxprelid'},{av:'AV351PMCXPRELID',fld:'vPMCXPRELID',pic:'ZZZZZZZZZ9'},{av:'dynavUnifcncmnmid'},{av:'AV315unifCNCMNMID',fld:'vUNIFCNCMNMID',pic:''},{av:'dynavCncmnmid'},{av:'AV32CNCMNMID',fld:'vCNCMNMID',pic:''}]}");
-      setEventMetadata("'ULT'","{handler:'e20DZ2',iparms:[{av:'GRID1_nFirstRecordOnPage'},{av:'GRID1_nEOF'},{av:'subGrid1_Rows',ctrl:'GRID1',prop:'Rows'},{av:'AV240AbrirBitacora',fld:'vABRIRBITACORA',pic:''},{av:'edtavPmctprdsc_Title',ctrl:'vPMCTPRDSC',prop:'Title'},{av:'edtavPmungid_g_Title',ctrl:'vPMUNGID_G',prop:'Title'},{av:'AV318renglones',fld:'vRENGLONES',pic:'ZZZ9'},{av:'A860PMEmpresa',fld:'PMEMPRESA',pic:'ZZZZZZZZZ9'},{av:'dynavCnciasid_f'},{av:'AV100CNCIASID_F',fld:'vCNCIASID_F',pic:'ZZZZZZZZZ9'},{av:'A3295PROPAGID',fld:'PROPAGID',pic:'ZZZZZZZZZ9'},{av:'AV239PROPAGID_F',fld:'vPROPAGID_F',pic:'ZZZZZZZZZ9'},{av:'A861PMTipoDoc',fld:'PMTIPODOC',pic:''},{av:'cmbavPmtipodoc_f'},{av:'AV197PMTipoDoc_F',fld:'vPMTIPODOC_F',pic:''},{av:'A862PMNumDoc',fld:'PMNUMDOC',pic:'ZZZZZZZZZ9'},{av:'AV133Numero',fld:'vNUMERO',pic:'ZZZZZZZZZ9'},{av:'A863PMProvId',fld:'PMPROVID',pic:'ZZZZZZZZZ9'},{av:'AV108CNCDIRID_F',fld:'vCNCDIRID_F',pic:'ZZZZZZZZZ9'},{av:'A864PMProyId',fld:'PMPROYID',pic:''},{av:'AV7PMCTPRID',fld:'vPMCTPRID',pic:''},{av:'AV111F2',fld:'vF2',pic:''},{av:'A866PMFechFac',fld:'PMFECHFAC',pic:''},{av:'AV110F1',fld:'vF1',pic:''},{av:'A873PMMoneId',fld:'PMMONEID',pic:''},{av:'AV327F6',fld:'vF6',pic:''},{av:'A4090PMCXPFHTRN',fld:'PMCXPFHTRN',pic:'99/99/99 99:99'},{av:'AV326F5',fld:'vF5',pic:''},{av:'AV113F4',fld:'vF4',pic:''},{av:'A867PMFechVen',fld:'PMFECHVEN',pic:''},{av:'AV112F3',fld:'vF3',pic:''},{av:'A2405PMEstatus',fld:'PMESTATUS',pic:''},{av:'cmbavEstatus'},{av:'AV11Estatus',fld:'vESTATUS',pic:''},{av:'AV230Checkoc',fld:'vCHECKOC',pic:'9'},{av:'A908PMNumDocOC',fld:'PMNUMDOCOC',pic:'ZZZZZZZZZ9'},{av:'AV229PMNumDocOc_F',fld:'vPMNUMDOCOC_F',pic:'ZZZZZZZZZ9'},{av:'A2528PMFolioFac',fld:'PMFOLIOFAC',pic:''},{av:'AV159PMFolioFac_F',fld:'vPMFOLIOFAC_F',pic:''},{av:'A905PMPoliz',fld:'PMPOLIZ',pic:'9'},{av:'cmbavPmpoliz_f'},{av:'AV270pmpoliz_f',fld:'vPMPOLIZ_F',pic:'9'},{av:'A10905PMIDREL',fld:'PMIDREL',pic:'ZZZZZZZZZ9'},{av:'AV353arrPMCTPRID',fld:'vARRPMCTPRID',pic:''},{av:'A865PMUngId',fld:'PMUNGID',pic:''},{av:'cmbavCgunngid'},{av:'AV361CGUNNGID',fld:'vCGUNNGID',pic:''},{av:'A17416PMCargo',fld:'PMCARGO',pic:'ZZZZZZZZZ9'},{av:'AV296banload',fld:'vBANLOAD',pic:''},{av:'AV350CNUSERMCXP',fld:'vCNUSERMCXP',pic:'',hsh:true},{av:'A2534PMUsrcap',fld:'PMUSRCAP',pic:'ZZZZZZZZZ9'},{av:'A4599PMLayAsoc',fld:'PMLAYASOC',pic:'9'},{av:'A909PMUuid',fld:'PMUUID',pic:''},{av:'A2871PMPDFDoc',fld:'PMPDFDOC',pic:'ZZZZZZZZZ9'},{av:'A2718PMMonTp',fld:'PMMONTP',pic:'ZZZZZZZZZ9.999999'},{av:'A2862PMMonAmort',fld:'PMMONAMORT',pic:'ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A898PMFechRev',fld:'PMFECHREV',pic:''},{av:'AV203CNCIASMON_F',fld:'vCNCIASMON_F',pic:''},{av:'A899PMMonEx',fld:'PMMONEX',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'AV316tipoCambio',fld:'vTIPOCAMBIO',pic:'ZZZZZZZZZ9.999999'},{av:'A903PMMonEp',fld:'PMMONEP',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A2689PMMonPgE',fld:'PMMONPGE',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A900PMMonEg',fld:'PMMONEG',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A870PMMonNg',fld:'PMMONNG',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A869PMMonNa',fld:'PMMONNA',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A902PMMonNp',fld:'PMMONNP',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A2688PMMonPgN',fld:'PMMONPGN',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A872PMIva',fld:'PMIVA',pic:'ZZZZZZZZZZZZZ9.99'},{av:'A2520PMMonIvaN',fld:'PMMONIVAN',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A2954PMIVAID',fld:'PMIVAID',pic:''},{av:'A2406PMComentarios',fld:'PMCOMENTARIOS',pic:''},{av:'A2521PMMonIvaE',fld:'PMMONIVAE',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A904PMReten',fld:'PMRETEN',pic:'ZZZZZZZZZZZZZ9.99'},{av:'A906PMOrdenD',fld:'PMORDEND',pic:'9'},{av:'A907PMTipoDocOC',fld:'PMTIPODOCOC',pic:''},{av:'A2923PMCTA1',fld:'PMCTA1',pic:''},{av:'A2924PMCTA2',fld:'PMCTA2',pic:''},{av:'A2925PMCTA3',fld:'PMCTA3',pic:''},{av:'A2542PMCuentadeCargo',fld:'PMCUENTADECARGO',pic:''},{av:'A3917PMObsPoliza',fld:'PMOBSPOLIZA',pic:''},{av:'A4395PMPRANT',fld:'PMPRANT',pic:'ZZZZZZ9.99'},{av:'A7899PMTipoAv',fld:'PMTIPOAV',pic:''},{av:'A7900PMNumAv',fld:'PMNUMAV',pic:'ZZZZZZZZZ9'},{av:'A17105PMCuentaPR02',fld:'PMCUENTAPR02',pic:''},{av:'AV319numRenglons',fld:'vNUMRENGLONS',pic:'ZZZ9',hsh:true},{av:'A2059CNPRCMDFT',fld:'CNPRCMDFT',pic:''},{av:'A2054CNCMNOID',fld:'CNCMNOID',pic:''},{av:'AV317CNCMNOID',fld:'vCNCMNOID',pic:''},{av:'A2055CNCMNDID',fld:'CNCMNDID',pic:''},{av:'A2076CNPRCMDVAL',fld:'CNPRCMDVAL',pic:'ZZZ,ZZ9.9999999'},{av:'A2610ESTPAGID',fld:'ESTPAGID',pic:''},{av:'AV123PMEstatus',fld:'vPMESTATUS',pic:'',hsh:true},{av:'A2611ESTPAGDSC',fld:'ESTPAGDSC',pic:''},{av:'AV116CNUSERID',fld:'vCNUSERID',pic:'',hsh:true},{av:'AV232paginas',fld:'vPAGINAS',pic:'ZZZ9'},{av:'dynavCatcarid'},{av:'AV367CATCARID',fld:'vCATCARID',pic:'ZZZZZZZZZ9'},{av:'dynavPmcxprelid'},{av:'AV351PMCXPRELID',fld:'vPMCXPRELID',pic:'ZZZZZZZZZ9'},{av:'dynavUnifcncmnmid'},{av:'AV315unifCNCMNMID',fld:'vUNIFCNCMNMID',pic:''},{av:'dynavCncmnmid'},{av:'AV32CNCMNMID',fld:'vCNCMNMID',pic:''}]");
+      setEventMetadata("'ULT'","{handler:'e20DZ2',iparms:[{av:'GRID1_nFirstRecordOnPage'},{av:'GRID1_nEOF'},{av:'subGrid1_Rows',ctrl:'GRID1',prop:'Rows'},{av:'AV240AbrirBitacora',fld:'vABRIRBITACORA',pic:''},{av:'edtavPmctprdsc_Title',ctrl:'vPMCTPRDSC',prop:'Title'},{av:'edtavPmungid_g_Title',ctrl:'vPMUNGID_G',prop:'Title'},{av:'AV318renglones',fld:'vRENGLONES',pic:'ZZZ9'},{av:'A860PMEmpresa',fld:'PMEMPRESA',pic:'ZZZZZZZZZ9'},{av:'dynavCnciasid_f'},{av:'AV100CNCIASID_F',fld:'vCNCIASID_F',pic:'ZZZZZZZZZ9'},{av:'A3295PROPAGID',fld:'PROPAGID',pic:'ZZZZZZZZZ9'},{av:'AV239PROPAGID_F',fld:'vPROPAGID_F',pic:'ZZZZZZZZZ9'},{av:'A861PMTipoDoc',fld:'PMTIPODOC',pic:''},{av:'cmbavPmtipodoc_f'},{av:'AV197PMTipoDoc_F',fld:'vPMTIPODOC_F',pic:''},{av:'A862PMNumDoc',fld:'PMNUMDOC',pic:'ZZZZZZZZZ9'},{av:'AV133Numero',fld:'vNUMERO',pic:'ZZZZZZZZZ9'},{av:'A863PMProvId',fld:'PMPROVID',pic:'ZZZZZZZZZ9'},{av:'AV108CNCDIRID_F',fld:'vCNCDIRID_F',pic:'ZZZZZZZZZ9'},{av:'A864PMProyId',fld:'PMPROYID',pic:''},{av:'AV7PMCTPRID',fld:'vPMCTPRID',pic:''},{av:'AV111F2',fld:'vF2',pic:''},{av:'A866PMFechFac',fld:'PMFECHFAC',pic:''},{av:'AV110F1',fld:'vF1',pic:''},{av:'A873PMMoneId',fld:'PMMONEID',pic:''},{av:'AV327F6',fld:'vF6',pic:''},{av:'A4090PMCXPFHTRN',fld:'PMCXPFHTRN',pic:'99/99/99 99:99'},{av:'AV326F5',fld:'vF5',pic:''},{av:'AV113F4',fld:'vF4',pic:''},{av:'A867PMFechVen',fld:'PMFECHVEN',pic:''},{av:'AV112F3',fld:'vF3',pic:''},{av:'A2405PMEstatus',fld:'PMESTATUS',pic:''},{av:'cmbavEstatus'},{av:'AV11Estatus',fld:'vESTATUS',pic:''},{av:'AV230Checkoc',fld:'vCHECKOC',pic:'9'},{av:'A908PMNumDocOC',fld:'PMNUMDOCOC',pic:'ZZZZZZZZZ9'},{av:'AV229PMNumDocOc_F',fld:'vPMNUMDOCOC_F',pic:'ZZZZZZZZZ9'},{av:'A2528PMFolioFac',fld:'PMFOLIOFAC',pic:''},{av:'AV159PMFolioFac_F',fld:'vPMFOLIOFAC_F',pic:''},{av:'A905PMPoliz',fld:'PMPOLIZ',pic:'9'},{av:'cmbavPmpoliz_f'},{av:'AV270pmpoliz_f',fld:'vPMPOLIZ_F',pic:'9'},{av:'A10905PMIDREL',fld:'PMIDREL',pic:'ZZZZZZZZZ9'},{av:'AV353arrPMCTPRID',fld:'vARRPMCTPRID',pic:''},{av:'A865PMUngId',fld:'PMUNGID',pic:''},{av:'cmbavCgunngid'},{av:'AV361CGUNNGID',fld:'vCGUNNGID',pic:''},{av:'A17416PMCargo',fld:'PMCARGO',pic:'ZZZZZZZZZ9'},{av:'AV296banload',fld:'vBANLOAD',pic:''},{av:'AV350CNUSERMCXP',fld:'vCNUSERMCXP',pic:'',hsh:true},{av:'A2534PMUsrcap',fld:'PMUSRCAP',pic:'ZZZZZZZZZ9'},{av:'A4599PMLayAsoc',fld:'PMLAYASOC',pic:'9'},{av:'A909PMUuid',fld:'PMUUID',pic:''},{av:'A2871PMPDFDoc',fld:'PMPDFDOC',pic:'ZZZZZZZZZ9'},{av:'A2718PMMonTp',fld:'PMMONTP',pic:'ZZZZZZZZZ9.999999'},{av:'A2862PMMonAmort',fld:'PMMONAMORT',pic:'ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A898PMFechRev',fld:'PMFECHREV',pic:''},{av:'AV203CNCIASMON_F',fld:'vCNCIASMON_F',pic:''},{av:'A899PMMonEx',fld:'PMMONEX',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'AV316tipoCambio',fld:'vTIPOCAMBIO',pic:'ZZZZZZZZZ9.999999'},{av:'A903PMMonEp',fld:'PMMONEP',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A2689PMMonPgE',fld:'PMMONPGE',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A900PMMonEg',fld:'PMMONEG',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A870PMMonNg',fld:'PMMONNG',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A869PMMonNa',fld:'PMMONNA',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A902PMMonNp',fld:'PMMONNP',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A2688PMMonPgN',fld:'PMMONPGN',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A872PMIva',fld:'PMIVA',pic:'ZZZZZZZZZZZZZ9.99'},{av:'A2520PMMonIvaN',fld:'PMMONIVAN',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A2954PMIVAID',fld:'PMIVAID',pic:''},{av:'A2406PMComentarios',fld:'PMCOMENTARIOS',pic:''},{av:'A2521PMMonIvaE',fld:'PMMONIVAE',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A904PMReten',fld:'PMRETEN',pic:'ZZZZZZZZZZZZZ9.99'},{av:'A906PMOrdenD',fld:'PMORDEND',pic:'9'},{av:'A907PMTipoDocOC',fld:'PMTIPODOCOC',pic:''},{av:'A2923PMCTA1',fld:'PMCTA1',pic:''},{av:'A2924PMCTA2',fld:'PMCTA2',pic:''},{av:'A2925PMCTA3',fld:'PMCTA3',pic:''},{av:'A2542PMCuentadeCargo',fld:'PMCUENTADECARGO',pic:''},{av:'A3917PMObsPoliza',fld:'PMOBSPOLIZA',pic:''},{av:'A4395PMPRANT',fld:'PMPRANT',pic:'ZZZZZZ9.99'},{av:'A7899PMTipoAv',fld:'PMTIPOAV',pic:''},{av:'A7900PMNumAv',fld:'PMNUMAV',pic:'ZZZZZZZZZ9'},{av:'A17105PMCuentaPR02',fld:'PMCUENTAPR02',pic:''},{av:'AV319numRenglons',fld:'vNUMRENGLONS',pic:'ZZZ9',hsh:true},{av:'A2059CNPRCMDFT',fld:'CNPRCMDFT',pic:''},{av:'A2054CNCMNOID',fld:'CNCMNOID',pic:''},{av:'AV317CNCMNOID',fld:'vCNCMNOID',pic:''},{av:'A2055CNCMNDID',fld:'CNCMNDID',pic:''},{av:'A2076CNPRCMDVAL',fld:'CNPRCMDVAL',pic:'ZZZ,ZZ9.9999999'},{av:'A2610ESTPAGID',fld:'ESTPAGID',pic:''},{av:'AV123PMEstatus',fld:'vPMESTATUS',pic:'',hsh:true},{av:'A2611ESTPAGDSC',fld:'ESTPAGDSC',pic:''},{av:'A7789AVDSPRCIA',fld:'AVDSPRCIA',pic:'ZZZZZZZZZ9'},{av:'AV61PMEmpresa_G',fld:'vPMEMPRESA_G',pic:'ZZZZZZZZZ9',hsh:true},{av:'A8295AVDSPRCPPTPC',fld:'AVDSPRCPPTPC',pic:''},{av:'AV62PMTipoDoc_G',fld:'vPMTIPODOC_G',pic:'',hsh:true},{av:'A8296AVDSPRCPPNDC',fld:'AVDSPRCPPNDC',pic:'ZZZZZZZZZ9'},{av:'AV63PMNumDoc_G',fld:'vPMNUMDOC_G',pic:'ZZZZZZZZZ9',hsh:true},{av:'A20CNTDOCID',fld:'CNTDOCID',pic:''},{av:'A8255AVDSPRDOC',fld:'AVDSPRDOC',pic:'ZZZZZZZZZ9'},{av:'A7790AVDSPRNDC',fld:'AVDSPRNDC',pic:'ZZZZZZZZZ9'},{av:'A8242AVDSPROBS',fld:'AVDSPROBS',pic:''},{av:'A7518CNDSPRCIA',fld:'CNDSPRCIA',pic:'ZZZZZZZZZ9'},{av:'A7519CNDSPRTDC',fld:'CNDSPRTDC',pic:''},{av:'A7520CNDSPRNDC',fld:'CNDSPRNDC',pic:'ZZZZZZZZZ9'},{av:'A7531CNDSPRALCTR',fld:'CNDSPRALCTR',pic:''},{av:'AV116CNUSERID',fld:'vCNUSERID',pic:'',hsh:true},{av:'AV232paginas',fld:'vPAGINAS',pic:'ZZZ9'},{av:'dynavCatcarid'},{av:'AV367CATCARID',fld:'vCATCARID',pic:'ZZZZZZZZZ9'},{av:'dynavPmcxprelid'},{av:'AV351PMCXPRELID',fld:'vPMCXPRELID',pic:'ZZZZZZZZZ9'},{av:'dynavUnifcncmnmid'},{av:'AV315unifCNCMNMID',fld:'vUNIFCNCMNMID',pic:''},{av:'dynavCncmnmid'},{av:'AV32CNCMNMID',fld:'vCNCMNMID',pic:''}]");
       setEventMetadata("'ULT'",",oparms:[{av:'AV231pagina',fld:'vPAGINA',pic:'ZZZ9'},{av:'dynavCatcarid'},{av:'AV367CATCARID',fld:'vCATCARID',pic:'ZZZZZZZZZ9'},{av:'dynavPmcxprelid'},{av:'AV351PMCXPRELID',fld:'vPMCXPRELID',pic:'ZZZZZZZZZ9'},{av:'dynavUnifcncmnmid'},{av:'AV315unifCNCMNMID',fld:'vUNIFCNCMNMID',pic:''},{av:'dynavCncmnmid'},{av:'AV32CNCMNMID',fld:'vCNCMNMID',pic:''}]}");
       setEventMetadata("'CONSULTARSOC'","{handler:'e41DZ2',iparms:[{av:'AV98PMNumDocOC_G',fld:'vPMNUMDOCOC_G',pic:'ZZZZZZZZZ9',hsh:true},{av:'AV116CNUSERID',fld:'vCNUSERID',pic:'',hsh:true},{av:'AV61PMEmpresa_G',fld:'vPMEMPRESA_G',pic:'ZZZZZZZZZ9',hsh:true},{av:'dynavCatcarid'},{av:'AV367CATCARID',fld:'vCATCARID',pic:'ZZZZZZZZZ9'},{av:'dynavPmcxprelid'},{av:'AV351PMCXPRELID',fld:'vPMCXPRELID',pic:'ZZZZZZZZZ9'},{av:'dynavUnifcncmnmid'},{av:'AV315unifCNCMNMID',fld:'vUNIFCNCMNMID',pic:''},{av:'dynavCncmnmid'},{av:'AV32CNCMNMID',fld:'vCNCMNMID',pic:''}]");
       setEventMetadata("'CONSULTARSOC'",",oparms:[{av:'Innewwindow1_Target',ctrl:'INNEWWINDOW1',prop:'Target'},{av:'Innewwindow1_Height',ctrl:'INNEWWINDOW1',prop:'Height'},{av:'Innewwindow1_Width',ctrl:'INNEWWINDOW1',prop:'Width'},{av:'Innewwindow1_Refreshparentonclose',ctrl:'INNEWWINDOW1',prop:'RefreshParentOnClose'},{av:'Innewwindow1_Name',ctrl:'INNEWWINDOW1',prop:'Name'},{av:'dynavCatcarid'},{av:'AV367CATCARID',fld:'vCATCARID',pic:'ZZZZZZZZZ9'},{av:'dynavPmcxprelid'},{av:'AV351PMCXPRELID',fld:'vPMCXPRELID',pic:'ZZZZZZZZZ9'},{av:'dynavUnifcncmnmid'},{av:'AV315unifCNCMNMID',fld:'vUNIFCNCMNMID',pic:''},{av:'dynavCncmnmid'},{av:'AV32CNCMNMID',fld:'vCNCMNMID',pic:''}]}");
@@ -11257,7 +11362,7 @@ public final  class wcomppg_impl extends GXDataArea
       setEventMetadata("'CONSULTARDETALLE'",",oparms:[{av:'dynavCatcarid'},{av:'AV367CATCARID',fld:'vCATCARID',pic:'ZZZZZZZZZ9'},{av:'dynavPmcxprelid'},{av:'AV351PMCXPRELID',fld:'vPMCXPRELID',pic:'ZZZZZZZZZ9'},{av:'dynavUnifcncmnmid'},{av:'AV315unifCNCMNMID',fld:'vUNIFCNCMNMID',pic:''},{av:'dynavCncmnmid'},{av:'AV32CNCMNMID',fld:'vCNCMNMID',pic:''}]}");
       setEventMetadata("VFCNCD01ID.CONTROLVALUECHANGED","{handler:'e24DZ2',iparms:[{av:'A456CNCD01ID',fld:'CNCD01ID',pic:''},{av:'cmbavFcncd01id'},{av:'AV335fCNCD01ID',fld:'vFCNCD01ID',pic:''},{av:'A2977CNCD01DSC',fld:'CNCD01DSC',pic:''},{av:'AV114CNCDIRNOM_F',fld:'vCNCDIRNOM_F',pic:''},{av:'A194CNCDIRNOM',fld:'CNCDIRNOM',pic:''},{av:'A382CNTPDRID',fld:'CNTPDRID',pic:''},{av:'A46CNCDIRID',fld:'CNCDIRID',pic:'ZZZZZZZZZ9'},{av:'dynavCatcarid'},{av:'AV367CATCARID',fld:'vCATCARID',pic:'ZZZZZZZZZ9'},{av:'dynavPmcxprelid'},{av:'AV351PMCXPRELID',fld:'vPMCXPRELID',pic:'ZZZZZZZZZ9'},{av:'dynavUnifcncmnmid'},{av:'AV315unifCNCMNMID',fld:'vUNIFCNCMNMID',pic:''},{av:'dynavCncmnmid'},{av:'AV32CNCMNMID',fld:'vCNCMNMID',pic:''}]");
       setEventMetadata("VFCNCD01ID.CONTROLVALUECHANGED",",oparms:[{av:'lblTextcncd01id_Caption',ctrl:'TEXTCNCD01ID',prop:'Caption'},{av:'AV108CNCDIRID_F',fld:'vCNCDIRID_F',pic:'ZZZZZZZZZ9'},{av:'AV114CNCDIRNOM_F',fld:'vCNCDIRNOM_F',pic:''},{av:'dynavCatcarid'},{av:'AV367CATCARID',fld:'vCATCARID',pic:'ZZZZZZZZZ9'},{av:'dynavPmcxprelid'},{av:'AV351PMCXPRELID',fld:'vPMCXPRELID',pic:'ZZZZZZZZZ9'},{av:'dynavUnifcncmnmid'},{av:'AV315unifCNCMNMID',fld:'vUNIFCNCMNMID',pic:''},{av:'dynavCncmnmid'},{av:'AV32CNCMNMID',fld:'vCNCMNMID',pic:''}]}");
-      setEventMetadata("'MODIFICARCPG'","{handler:'e42DZ2',iparms:[{av:'GRID1_nFirstRecordOnPage'},{av:'GRID1_nEOF'},{av:'subGrid1_Rows',ctrl:'GRID1',prop:'Rows'},{av:'AV240AbrirBitacora',fld:'vABRIRBITACORA',pic:''},{av:'edtavPmctprdsc_Title',ctrl:'vPMCTPRDSC',prop:'Title'},{av:'edtavPmungid_g_Title',ctrl:'vPMUNGID_G',prop:'Title'},{av:'AV318renglones',fld:'vRENGLONES',pic:'ZZZ9'},{av:'A860PMEmpresa',fld:'PMEMPRESA',pic:'ZZZZZZZZZ9'},{av:'dynavCnciasid_f'},{av:'AV100CNCIASID_F',fld:'vCNCIASID_F',pic:'ZZZZZZZZZ9'},{av:'A3295PROPAGID',fld:'PROPAGID',pic:'ZZZZZZZZZ9'},{av:'AV239PROPAGID_F',fld:'vPROPAGID_F',pic:'ZZZZZZZZZ9'},{av:'A861PMTipoDoc',fld:'PMTIPODOC',pic:''},{av:'cmbavPmtipodoc_f'},{av:'AV197PMTipoDoc_F',fld:'vPMTIPODOC_F',pic:''},{av:'A862PMNumDoc',fld:'PMNUMDOC',pic:'ZZZZZZZZZ9'},{av:'AV133Numero',fld:'vNUMERO',pic:'ZZZZZZZZZ9'},{av:'A863PMProvId',fld:'PMPROVID',pic:'ZZZZZZZZZ9'},{av:'AV108CNCDIRID_F',fld:'vCNCDIRID_F',pic:'ZZZZZZZZZ9'},{av:'A864PMProyId',fld:'PMPROYID',pic:''},{av:'AV7PMCTPRID',fld:'vPMCTPRID',pic:''},{av:'AV111F2',fld:'vF2',pic:''},{av:'A866PMFechFac',fld:'PMFECHFAC',pic:''},{av:'AV110F1',fld:'vF1',pic:''},{av:'A873PMMoneId',fld:'PMMONEID',pic:''},{av:'AV327F6',fld:'vF6',pic:''},{av:'A4090PMCXPFHTRN',fld:'PMCXPFHTRN',pic:'99/99/99 99:99'},{av:'AV326F5',fld:'vF5',pic:''},{av:'AV113F4',fld:'vF4',pic:''},{av:'A867PMFechVen',fld:'PMFECHVEN',pic:''},{av:'AV112F3',fld:'vF3',pic:''},{av:'A2405PMEstatus',fld:'PMESTATUS',pic:''},{av:'cmbavEstatus'},{av:'AV11Estatus',fld:'vESTATUS',pic:''},{av:'AV230Checkoc',fld:'vCHECKOC',pic:'9'},{av:'A908PMNumDocOC',fld:'PMNUMDOCOC',pic:'ZZZZZZZZZ9'},{av:'AV229PMNumDocOc_F',fld:'vPMNUMDOCOC_F',pic:'ZZZZZZZZZ9'},{av:'A2528PMFolioFac',fld:'PMFOLIOFAC',pic:''},{av:'AV159PMFolioFac_F',fld:'vPMFOLIOFAC_F',pic:''},{av:'A905PMPoliz',fld:'PMPOLIZ',pic:'9'},{av:'cmbavPmpoliz_f'},{av:'AV270pmpoliz_f',fld:'vPMPOLIZ_F',pic:'9'},{av:'A10905PMIDREL',fld:'PMIDREL',pic:'ZZZZZZZZZ9'},{av:'AV353arrPMCTPRID',fld:'vARRPMCTPRID',pic:''},{av:'A865PMUngId',fld:'PMUNGID',pic:''},{av:'cmbavCgunngid'},{av:'AV361CGUNNGID',fld:'vCGUNNGID',pic:''},{av:'A17416PMCargo',fld:'PMCARGO',pic:'ZZZZZZZZZ9'},{av:'AV296banload',fld:'vBANLOAD',pic:''},{av:'AV350CNUSERMCXP',fld:'vCNUSERMCXP',pic:'',hsh:true},{av:'A2534PMUsrcap',fld:'PMUSRCAP',pic:'ZZZZZZZZZ9'},{av:'A4599PMLayAsoc',fld:'PMLAYASOC',pic:'9'},{av:'A909PMUuid',fld:'PMUUID',pic:''},{av:'A2871PMPDFDoc',fld:'PMPDFDOC',pic:'ZZZZZZZZZ9'},{av:'A2718PMMonTp',fld:'PMMONTP',pic:'ZZZZZZZZZ9.999999'},{av:'A2862PMMonAmort',fld:'PMMONAMORT',pic:'ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A898PMFechRev',fld:'PMFECHREV',pic:''},{av:'AV203CNCIASMON_F',fld:'vCNCIASMON_F',pic:''},{av:'A899PMMonEx',fld:'PMMONEX',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'AV316tipoCambio',fld:'vTIPOCAMBIO',pic:'ZZZZZZZZZ9.999999'},{av:'A903PMMonEp',fld:'PMMONEP',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A2689PMMonPgE',fld:'PMMONPGE',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A900PMMonEg',fld:'PMMONEG',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A870PMMonNg',fld:'PMMONNG',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A869PMMonNa',fld:'PMMONNA',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A902PMMonNp',fld:'PMMONNP',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A2688PMMonPgN',fld:'PMMONPGN',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A872PMIva',fld:'PMIVA',pic:'ZZZZZZZZZZZZZ9.99'},{av:'A2520PMMonIvaN',fld:'PMMONIVAN',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A2954PMIVAID',fld:'PMIVAID',pic:''},{av:'A2406PMComentarios',fld:'PMCOMENTARIOS',pic:''},{av:'A2521PMMonIvaE',fld:'PMMONIVAE',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A904PMReten',fld:'PMRETEN',pic:'ZZZZZZZZZZZZZ9.99'},{av:'A906PMOrdenD',fld:'PMORDEND',pic:'9'},{av:'A907PMTipoDocOC',fld:'PMTIPODOCOC',pic:''},{av:'A2923PMCTA1',fld:'PMCTA1',pic:''},{av:'A2924PMCTA2',fld:'PMCTA2',pic:''},{av:'A2925PMCTA3',fld:'PMCTA3',pic:''},{av:'A2542PMCuentadeCargo',fld:'PMCUENTADECARGO',pic:''},{av:'A3917PMObsPoliza',fld:'PMOBSPOLIZA',pic:''},{av:'A4395PMPRANT',fld:'PMPRANT',pic:'ZZZZZZ9.99'},{av:'A7899PMTipoAv',fld:'PMTIPOAV',pic:''},{av:'A7900PMNumAv',fld:'PMNUMAV',pic:'ZZZZZZZZZ9'},{av:'A17105PMCuentaPR02',fld:'PMCUENTAPR02',pic:''},{av:'AV319numRenglons',fld:'vNUMRENGLONS',pic:'ZZZ9',hsh:true},{av:'A2059CNPRCMDFT',fld:'CNPRCMDFT',pic:''},{av:'A2054CNCMNOID',fld:'CNCMNOID',pic:''},{av:'AV317CNCMNOID',fld:'vCNCMNOID',pic:''},{av:'A2055CNCMNDID',fld:'CNCMNDID',pic:''},{av:'A2076CNPRCMDVAL',fld:'CNPRCMDVAL',pic:'ZZZ,ZZ9.9999999'},{av:'A2610ESTPAGID',fld:'ESTPAGID',pic:''},{av:'AV123PMEstatus',fld:'vPMESTATUS',pic:'',hsh:true},{av:'A2611ESTPAGDSC',fld:'ESTPAGDSC',pic:''},{av:'AV116CNUSERID',fld:'vCNUSERID',pic:'',hsh:true},{av:'AV62PMTipoDoc_G',fld:'vPMTIPODOC_G',pic:'',hsh:true},{av:'AV63PMNumDoc_G',fld:'vPMNUMDOC_G',pic:'ZZZZZZZZZ9',hsh:true},{av:'AV129EstatusDSC',fld:'vESTATUSDSC',pic:'',hsh:true},{av:'dynavCatcarid'},{av:'AV367CATCARID',fld:'vCATCARID',pic:'ZZZZZZZZZ9'},{av:'dynavPmcxprelid'},{av:'AV351PMCXPRELID',fld:'vPMCXPRELID',pic:'ZZZZZZZZZ9'},{av:'dynavUnifcncmnmid'},{av:'AV315unifCNCMNMID',fld:'vUNIFCNCMNMID',pic:''},{av:'dynavCncmnmid'},{av:'AV32CNCMNMID',fld:'vCNCMNMID',pic:''}]");
+      setEventMetadata("'MODIFICARCPG'","{handler:'e42DZ2',iparms:[{av:'GRID1_nFirstRecordOnPage'},{av:'GRID1_nEOF'},{av:'subGrid1_Rows',ctrl:'GRID1',prop:'Rows'},{av:'AV240AbrirBitacora',fld:'vABRIRBITACORA',pic:''},{av:'edtavPmctprdsc_Title',ctrl:'vPMCTPRDSC',prop:'Title'},{av:'edtavPmungid_g_Title',ctrl:'vPMUNGID_G',prop:'Title'},{av:'AV318renglones',fld:'vRENGLONES',pic:'ZZZ9'},{av:'A860PMEmpresa',fld:'PMEMPRESA',pic:'ZZZZZZZZZ9'},{av:'dynavCnciasid_f'},{av:'AV100CNCIASID_F',fld:'vCNCIASID_F',pic:'ZZZZZZZZZ9'},{av:'A3295PROPAGID',fld:'PROPAGID',pic:'ZZZZZZZZZ9'},{av:'AV239PROPAGID_F',fld:'vPROPAGID_F',pic:'ZZZZZZZZZ9'},{av:'A861PMTipoDoc',fld:'PMTIPODOC',pic:''},{av:'cmbavPmtipodoc_f'},{av:'AV197PMTipoDoc_F',fld:'vPMTIPODOC_F',pic:''},{av:'A862PMNumDoc',fld:'PMNUMDOC',pic:'ZZZZZZZZZ9'},{av:'AV133Numero',fld:'vNUMERO',pic:'ZZZZZZZZZ9'},{av:'A863PMProvId',fld:'PMPROVID',pic:'ZZZZZZZZZ9'},{av:'AV108CNCDIRID_F',fld:'vCNCDIRID_F',pic:'ZZZZZZZZZ9'},{av:'A864PMProyId',fld:'PMPROYID',pic:''},{av:'AV7PMCTPRID',fld:'vPMCTPRID',pic:''},{av:'AV111F2',fld:'vF2',pic:''},{av:'A866PMFechFac',fld:'PMFECHFAC',pic:''},{av:'AV110F1',fld:'vF1',pic:''},{av:'A873PMMoneId',fld:'PMMONEID',pic:''},{av:'AV327F6',fld:'vF6',pic:''},{av:'A4090PMCXPFHTRN',fld:'PMCXPFHTRN',pic:'99/99/99 99:99'},{av:'AV326F5',fld:'vF5',pic:''},{av:'AV113F4',fld:'vF4',pic:''},{av:'A867PMFechVen',fld:'PMFECHVEN',pic:''},{av:'AV112F3',fld:'vF3',pic:''},{av:'A2405PMEstatus',fld:'PMESTATUS',pic:''},{av:'cmbavEstatus'},{av:'AV11Estatus',fld:'vESTATUS',pic:''},{av:'AV230Checkoc',fld:'vCHECKOC',pic:'9'},{av:'A908PMNumDocOC',fld:'PMNUMDOCOC',pic:'ZZZZZZZZZ9'},{av:'AV229PMNumDocOc_F',fld:'vPMNUMDOCOC_F',pic:'ZZZZZZZZZ9'},{av:'A2528PMFolioFac',fld:'PMFOLIOFAC',pic:''},{av:'AV159PMFolioFac_F',fld:'vPMFOLIOFAC_F',pic:''},{av:'A905PMPoliz',fld:'PMPOLIZ',pic:'9'},{av:'cmbavPmpoliz_f'},{av:'AV270pmpoliz_f',fld:'vPMPOLIZ_F',pic:'9'},{av:'A10905PMIDREL',fld:'PMIDREL',pic:'ZZZZZZZZZ9'},{av:'AV353arrPMCTPRID',fld:'vARRPMCTPRID',pic:''},{av:'A865PMUngId',fld:'PMUNGID',pic:''},{av:'cmbavCgunngid'},{av:'AV361CGUNNGID',fld:'vCGUNNGID',pic:''},{av:'A17416PMCargo',fld:'PMCARGO',pic:'ZZZZZZZZZ9'},{av:'AV296banload',fld:'vBANLOAD',pic:''},{av:'AV350CNUSERMCXP',fld:'vCNUSERMCXP',pic:'',hsh:true},{av:'A2534PMUsrcap',fld:'PMUSRCAP',pic:'ZZZZZZZZZ9'},{av:'A4599PMLayAsoc',fld:'PMLAYASOC',pic:'9'},{av:'A909PMUuid',fld:'PMUUID',pic:''},{av:'A2871PMPDFDoc',fld:'PMPDFDOC',pic:'ZZZZZZZZZ9'},{av:'A2718PMMonTp',fld:'PMMONTP',pic:'ZZZZZZZZZ9.999999'},{av:'A2862PMMonAmort',fld:'PMMONAMORT',pic:'ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A898PMFechRev',fld:'PMFECHREV',pic:''},{av:'AV203CNCIASMON_F',fld:'vCNCIASMON_F',pic:''},{av:'A899PMMonEx',fld:'PMMONEX',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'AV316tipoCambio',fld:'vTIPOCAMBIO',pic:'ZZZZZZZZZ9.999999'},{av:'A903PMMonEp',fld:'PMMONEP',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A2689PMMonPgE',fld:'PMMONPGE',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A900PMMonEg',fld:'PMMONEG',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A870PMMonNg',fld:'PMMONNG',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A869PMMonNa',fld:'PMMONNA',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A902PMMonNp',fld:'PMMONNP',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A2688PMMonPgN',fld:'PMMONPGN',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A872PMIva',fld:'PMIVA',pic:'ZZZZZZZZZZZZZ9.99'},{av:'A2520PMMonIvaN',fld:'PMMONIVAN',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A2954PMIVAID',fld:'PMIVAID',pic:''},{av:'A2406PMComentarios',fld:'PMCOMENTARIOS',pic:''},{av:'A2521PMMonIvaE',fld:'PMMONIVAE',pic:'ZZ,ZZZ,ZZZ,ZZZ,ZZ9.99'},{av:'A904PMReten',fld:'PMRETEN',pic:'ZZZZZZZZZZZZZ9.99'},{av:'A906PMOrdenD',fld:'PMORDEND',pic:'9'},{av:'A907PMTipoDocOC',fld:'PMTIPODOCOC',pic:''},{av:'A2923PMCTA1',fld:'PMCTA1',pic:''},{av:'A2924PMCTA2',fld:'PMCTA2',pic:''},{av:'A2925PMCTA3',fld:'PMCTA3',pic:''},{av:'A2542PMCuentadeCargo',fld:'PMCUENTADECARGO',pic:''},{av:'A3917PMObsPoliza',fld:'PMOBSPOLIZA',pic:''},{av:'A4395PMPRANT',fld:'PMPRANT',pic:'ZZZZZZ9.99'},{av:'A7899PMTipoAv',fld:'PMTIPOAV',pic:''},{av:'A7900PMNumAv',fld:'PMNUMAV',pic:'ZZZZZZZZZ9'},{av:'A17105PMCuentaPR02',fld:'PMCUENTAPR02',pic:''},{av:'AV319numRenglons',fld:'vNUMRENGLONS',pic:'ZZZ9',hsh:true},{av:'A2059CNPRCMDFT',fld:'CNPRCMDFT',pic:''},{av:'A2054CNCMNOID',fld:'CNCMNOID',pic:''},{av:'AV317CNCMNOID',fld:'vCNCMNOID',pic:''},{av:'A2055CNCMNDID',fld:'CNCMNDID',pic:''},{av:'A2076CNPRCMDVAL',fld:'CNPRCMDVAL',pic:'ZZZ,ZZ9.9999999'},{av:'A2610ESTPAGID',fld:'ESTPAGID',pic:''},{av:'AV123PMEstatus',fld:'vPMESTATUS',pic:'',hsh:true},{av:'A2611ESTPAGDSC',fld:'ESTPAGDSC',pic:''},{av:'A7789AVDSPRCIA',fld:'AVDSPRCIA',pic:'ZZZZZZZZZ9'},{av:'AV61PMEmpresa_G',fld:'vPMEMPRESA_G',pic:'ZZZZZZZZZ9',hsh:true},{av:'A8295AVDSPRCPPTPC',fld:'AVDSPRCPPTPC',pic:''},{av:'AV62PMTipoDoc_G',fld:'vPMTIPODOC_G',pic:'',hsh:true},{av:'A8296AVDSPRCPPNDC',fld:'AVDSPRCPPNDC',pic:'ZZZZZZZZZ9'},{av:'AV63PMNumDoc_G',fld:'vPMNUMDOC_G',pic:'ZZZZZZZZZ9',hsh:true},{av:'A20CNTDOCID',fld:'CNTDOCID',pic:''},{av:'A8255AVDSPRDOC',fld:'AVDSPRDOC',pic:'ZZZZZZZZZ9'},{av:'A7790AVDSPRNDC',fld:'AVDSPRNDC',pic:'ZZZZZZZZZ9'},{av:'A8242AVDSPROBS',fld:'AVDSPROBS',pic:''},{av:'A7518CNDSPRCIA',fld:'CNDSPRCIA',pic:'ZZZZZZZZZ9'},{av:'A7519CNDSPRTDC',fld:'CNDSPRTDC',pic:''},{av:'A7520CNDSPRNDC',fld:'CNDSPRNDC',pic:'ZZZZZZZZZ9'},{av:'A7531CNDSPRALCTR',fld:'CNDSPRALCTR',pic:''},{av:'AV116CNUSERID',fld:'vCNUSERID',pic:'',hsh:true},{av:'AV129EstatusDSC',fld:'vESTATUSDSC',pic:'',hsh:true},{av:'dynavCatcarid'},{av:'AV367CATCARID',fld:'vCATCARID',pic:'ZZZZZZZZZ9'},{av:'dynavPmcxprelid'},{av:'AV351PMCXPRELID',fld:'vPMCXPRELID',pic:'ZZZZZZZZZ9'},{av:'dynavUnifcncmnmid'},{av:'AV315unifCNCMNMID',fld:'vUNIFCNCMNMID',pic:''},{av:'dynavCncmnmid'},{av:'AV32CNCMNMID',fld:'vCNCMNMID',pic:''}]");
       setEventMetadata("'MODIFICARCPG'",",oparms:[{av:'dynavCatcarid'},{av:'AV367CATCARID',fld:'vCATCARID',pic:'ZZZZZZZZZ9'},{av:'dynavPmcxprelid'},{av:'AV351PMCXPRELID',fld:'vPMCXPRELID',pic:'ZZZZZZZZZ9'},{av:'dynavUnifcncmnmid'},{av:'AV315unifCNCMNMID',fld:'vUNIFCNCMNMID',pic:''},{av:'dynavCncmnmid'},{av:'AV32CNCMNMID',fld:'vCNCMNMID',pic:''}]}");
       setEventMetadata("VCLAGPID.CLICK","{handler:'e25DZ2',iparms:[{av:'dynavClagpid'},{av:'AV352CLAGPID',fld:'vCLAGPID',pic:'ZZZZZZZZZ9'},{av:'AV7PMCTPRID',fld:'vPMCTPRID',pic:''},{av:'A10868PMCTPRCLAGP',fld:'PMCTPRCLAGP',pic:'ZZZZZZZZZ9'},{av:'A171PMCTPRID',fld:'PMCTPRID',pic:''},{av:'dynavCatcarid'},{av:'AV367CATCARID',fld:'vCATCARID',pic:'ZZZZZZZZZ9'},{av:'dynavPmcxprelid'},{av:'AV351PMCXPRELID',fld:'vPMCXPRELID',pic:'ZZZZZZZZZ9'},{av:'dynavUnifcncmnmid'},{av:'AV315unifCNCMNMID',fld:'vUNIFCNCMNMID',pic:''},{av:'dynavCncmnmid'},{av:'AV32CNCMNMID',fld:'vCNCMNMID',pic:''}]");
       setEventMetadata("VCLAGPID.CLICK",",oparms:[{av:'AV7PMCTPRID',fld:'vPMCTPRID',pic:''},{av:'AV353arrPMCTPRID',fld:'vARRPMCTPRID',pic:''},{av:'edtavPmctprid_Enabled',ctrl:'vPMCTPRID',prop:'Enabled'},{av:'dynavCatcarid'},{av:'AV367CATCARID',fld:'vCATCARID',pic:'ZZZZZZZZZ9'},{av:'dynavPmcxprelid'},{av:'AV351PMCXPRELID',fld:'vPMCXPRELID',pic:'ZZZZZZZZZ9'},{av:'dynavUnifcncmnmid'},{av:'AV315unifCNCMNMID',fld:'vUNIFCNCMNMID',pic:''},{av:'dynavCncmnmid'},{av:'AV32CNCMNMID',fld:'vCNCMNMID',pic:''}]}");
@@ -11363,6 +11468,12 @@ public final  class wcomppg_impl extends GXDataArea
       A2610ESTPAGID = "" ;
       AV123PMEstatus = "" ;
       A2611ESTPAGDSC = "" ;
+      A8295AVDSPRCPPTPC = "" ;
+      AV62PMTipoDoc_G = "" ;
+      A20CNTDOCID = "" ;
+      A8242AVDSPROBS = "" ;
+      A7519CNDSPRTDC = "" ;
+      A7531CNDSPRALCTR = "" ;
       GXKey = "" ;
       Form = new com.genexus.webpanels.GXWebForm();
       sDynURL = "" ;
@@ -11376,7 +11487,7 @@ public final  class wcomppg_impl extends GXDataArea
       A883XMLDOCRUT = "" ;
       A876PDFDOCNAM = "" ;
       A878PDFDOCFIL = "" ;
-      AV378Pgmname = "" ;
+      AV383Pgmname = "" ;
       AV336TratPolFol = "" ;
       A456CNCD01ID = "" ;
       AV330ValidarUUIDRel = "" ;
@@ -11470,7 +11581,7 @@ public final  class wcomppg_impl extends GXDataArea
       AV88PMFechRev_G = GXutil.nullDate() ;
       AV68PMFechVen_G = GXutil.nullDate() ;
       AV265GeneroPoliza = "" ;
-      AV406Generopoliza_GXI = "" ;
+      AV413Generopoliza_GXI = "" ;
       AV84PMUuid = "" ;
       AV66PMUngId_G = "" ;
       AV366CATCARDSC = "" ;
@@ -11482,7 +11593,6 @@ public final  class wcomppg_impl extends GXDataArea
       AV78PMMonNp = DecimalUtil.ZERO ;
       AV130PMMonPgN = DecimalUtil.ZERO ;
       AV131PMMonPgE = DecimalUtil.ZERO ;
-      AV62PMTipoDoc_G = "" ;
       AV87PMMonEx = DecimalUtil.ZERO ;
       AV170PMCTA1 = "" ;
       AV171PMCTA3 = "" ;
@@ -11657,91 +11767,111 @@ public final  class wcomppg_impl extends GXDataArea
       AV99PMUuid_G = "" ;
       AV364gPMCuentaPR02 = "" ;
       Grid1Row = new com.genexus.webpanels.GXWebRow();
-      H00DZ13_A382CNTPDRID = new String[] {""} ;
-      H00DZ13_n382CNTPDRID = new boolean[] {false} ;
-      H00DZ13_A194CNCDIRNOM = new String[] {""} ;
-      H00DZ13_n194CNCDIRNOM = new boolean[] {false} ;
-      H00DZ13_A46CNCDIRID = new long[1] ;
+      AV376ACNTDOCID = "" ;
+      AV379AVDSPROBS = "" ;
+      H00DZ13_A7791AVDSPRTDC = new String[] {""} ;
+      H00DZ13_A7792AVDSPRLIN = new java.math.BigDecimal[] {DecimalUtil.ZERO} ;
+      H00DZ13_A8296AVDSPRCPPNDC = new long[1] ;
+      H00DZ13_n8296AVDSPRCPPNDC = new boolean[] {false} ;
+      H00DZ13_A8295AVDSPRCPPTPC = new String[] {""} ;
+      H00DZ13_n8295AVDSPRCPPTPC = new boolean[] {false} ;
+      H00DZ13_A7789AVDSPRCIA = new long[1] ;
+      H00DZ13_A20CNTDOCID = new String[] {""} ;
+      H00DZ13_A8255AVDSPRDOC = new long[1] ;
+      H00DZ13_A7790AVDSPRNDC = new long[1] ;
+      H00DZ13_A8242AVDSPROBS = new String[] {""} ;
+      H00DZ13_n8242AVDSPROBS = new boolean[] {false} ;
+      AV380CNDSPRALCTR = "" ;
+      H00DZ14_A7520CNDSPRNDC = new long[1] ;
+      H00DZ14_A7519CNDSPRTDC = new String[] {""} ;
+      H00DZ14_A7518CNDSPRCIA = new long[1] ;
+      H00DZ14_A7531CNDSPRALCTR = new String[] {""} ;
+      H00DZ14_n7531CNDSPRALCTR = new boolean[] {false} ;
+      H00DZ15_A382CNTPDRID = new String[] {""} ;
+      H00DZ15_n382CNTPDRID = new boolean[] {false} ;
+      H00DZ15_A194CNCDIRNOM = new String[] {""} ;
+      H00DZ15_n194CNCDIRNOM = new boolean[] {false} ;
+      H00DZ15_A46CNCDIRID = new long[1] ;
       AV29window = new com.genexus.webpanels.GXWindow();
-      H00DZ14_A7196MODFECVELIN = new long[1] ;
-      H00DZ14_A7195MODFECVETDC = new String[] {""} ;
-      H00DZ14_A7194MODFECVENDC = new long[1] ;
-      H00DZ14_A7193MODFECVECIA = new long[1] ;
+      H00DZ16_A7196MODFECVELIN = new long[1] ;
+      H00DZ16_A7195MODFECVETDC = new String[] {""} ;
+      H00DZ16_A7194MODFECVENDC = new long[1] ;
+      H00DZ16_A7193MODFECVECIA = new long[1] ;
       AV288RutaCFDI = "" ;
-      H00DZ15_A838XMLDOCUUID = new String[] {""} ;
-      H00DZ15_A855XMLDOCFLNM = new String[] {""} ;
-      H00DZ15_n855XMLDOCFLNM = new boolean[] {false} ;
-      H00DZ15_A883XMLDOCRUT = new String[] {""} ;
-      H00DZ15_n883XMLDOCRUT = new boolean[] {false} ;
+      H00DZ17_A838XMLDOCUUID = new String[] {""} ;
+      H00DZ17_A855XMLDOCFLNM = new String[] {""} ;
+      H00DZ17_n855XMLDOCFLNM = new boolean[] {false} ;
+      H00DZ17_A883XMLDOCRUT = new String[] {""} ;
+      H00DZ17_n883XMLDOCRUT = new boolean[] {false} ;
       AV166XMLDOCFLNM = "" ;
       AV165RUTA = "" ;
       AV290RutaPDF = "" ;
-      H00DZ16_A2870PDFDOCID = new long[1] ;
-      H00DZ16_A876PDFDOCNAM = new String[] {""} ;
-      H00DZ16_n876PDFDOCNAM = new boolean[] {false} ;
-      H00DZ16_A879PDFDOCTIP = new String[] {""} ;
-      H00DZ16_n879PDFDOCTIP = new boolean[] {false} ;
-      H00DZ16_A878PDFDOCFIL = new String[] {""} ;
-      H00DZ16_n878PDFDOCFIL = new boolean[] {false} ;
+      H00DZ18_A2870PDFDOCID = new long[1] ;
+      H00DZ18_A876PDFDOCNAM = new String[] {""} ;
+      H00DZ18_n876PDFDOCNAM = new boolean[] {false} ;
+      H00DZ18_A879PDFDOCTIP = new String[] {""} ;
+      H00DZ18_n879PDFDOCTIP = new boolean[] {false} ;
+      H00DZ18_A878PDFDOCFIL = new String[] {""} ;
+      H00DZ18_n878PDFDOCFIL = new boolean[] {false} ;
       A878PDFDOCFIL_Filename = "" ;
       A879PDFDOCTIP = "" ;
       A878PDFDOCFIL_Filetype = "" ;
       AV334banError = "" ;
-      H00DZ17_A456CNCD01ID = new String[] {""} ;
-      H00DZ17_n456CNCD01ID = new boolean[] {false} ;
-      H00DZ17_A905PMPoliz = new byte[1] ;
-      H00DZ17_n905PMPoliz = new boolean[] {false} ;
-      H00DZ17_A2528PMFolioFac = new String[] {""} ;
-      H00DZ17_n2528PMFolioFac = new boolean[] {false} ;
-      H00DZ17_A908PMNumDocOC = new long[1] ;
-      H00DZ17_n908PMNumDocOC = new boolean[] {false} ;
-      H00DZ17_A2405PMEstatus = new String[] {""} ;
-      H00DZ17_n2405PMEstatus = new boolean[] {false} ;
-      H00DZ17_A898PMFechRev = new java.util.Date[] {GXutil.nullDate()} ;
-      H00DZ17_n898PMFechRev = new boolean[] {false} ;
-      H00DZ17_A867PMFechVen = new java.util.Date[] {GXutil.nullDate()} ;
-      H00DZ17_n867PMFechVen = new boolean[] {false} ;
-      H00DZ17_A873PMMoneId = new String[] {""} ;
-      H00DZ17_n873PMMoneId = new boolean[] {false} ;
-      H00DZ17_A866PMFechFac = new java.util.Date[] {GXutil.nullDate()} ;
-      H00DZ17_n866PMFechFac = new boolean[] {false} ;
-      H00DZ17_A864PMProyId = new String[] {""} ;
-      H00DZ17_n864PMProyId = new boolean[] {false} ;
-      H00DZ17_A863PMProvId = new long[1] ;
-      H00DZ17_n863PMProvId = new boolean[] {false} ;
-      H00DZ17_A862PMNumDoc = new long[1] ;
-      H00DZ17_A861PMTipoDoc = new String[] {""} ;
-      H00DZ17_A3295PROPAGID = new long[1] ;
-      H00DZ17_n3295PROPAGID = new boolean[] {false} ;
-      H00DZ17_A860PMEmpresa = new long[1] ;
-      H00DZ17_A900PMMonEg = new java.math.BigDecimal[] {DecimalUtil.ZERO} ;
-      H00DZ17_n900PMMonEg = new boolean[] {false} ;
-      H00DZ17_A2718PMMonTp = new java.math.BigDecimal[] {DecimalUtil.ZERO} ;
-      H00DZ17_n2718PMMonTp = new boolean[] {false} ;
-      H00DZ17_A2923PMCTA1 = new String[] {""} ;
-      H00DZ17_n2923PMCTA1 = new boolean[] {false} ;
-      H00DZ17_A2924PMCTA2 = new String[] {""} ;
-      H00DZ17_n2924PMCTA2 = new boolean[] {false} ;
-      H00DZ17_A2925PMCTA3 = new String[] {""} ;
-      H00DZ17_n2925PMCTA3 = new boolean[] {false} ;
-      H00DZ17_A2954PMIVAID = new String[] {""} ;
-      H00DZ17_n2954PMIVAID = new boolean[] {false} ;
-      H00DZ17_A872PMIva = new java.math.BigDecimal[] {DecimalUtil.ZERO} ;
-      H00DZ17_n872PMIva = new boolean[] {false} ;
-      H00DZ17_A2521PMMonIvaE = new java.math.BigDecimal[] {DecimalUtil.ZERO} ;
-      H00DZ17_n2521PMMonIvaE = new boolean[] {false} ;
-      H00DZ17_A869PMMonNa = new java.math.BigDecimal[] {DecimalUtil.ZERO} ;
-      H00DZ17_n869PMMonNa = new boolean[] {false} ;
-      H00DZ17_A2520PMMonIvaN = new java.math.BigDecimal[] {DecimalUtil.ZERO} ;
-      H00DZ17_n2520PMMonIvaN = new boolean[] {false} ;
-      H00DZ17_A899PMMonEx = new java.math.BigDecimal[] {DecimalUtil.ZERO} ;
-      H00DZ17_n899PMMonEx = new boolean[] {false} ;
-      H00DZ17_A870PMMonNg = new java.math.BigDecimal[] {DecimalUtil.ZERO} ;
-      H00DZ17_n870PMMonNg = new boolean[] {false} ;
-      H00DZ17_A2542PMCuentadeCargo = new String[] {""} ;
-      H00DZ17_n2542PMCuentadeCargo = new boolean[] {false} ;
-      H00DZ17_A909PMUuid = new String[] {""} ;
-      H00DZ17_n909PMUuid = new boolean[] {false} ;
+      H00DZ19_A456CNCD01ID = new String[] {""} ;
+      H00DZ19_n456CNCD01ID = new boolean[] {false} ;
+      H00DZ19_A905PMPoliz = new byte[1] ;
+      H00DZ19_n905PMPoliz = new boolean[] {false} ;
+      H00DZ19_A2528PMFolioFac = new String[] {""} ;
+      H00DZ19_n2528PMFolioFac = new boolean[] {false} ;
+      H00DZ19_A908PMNumDocOC = new long[1] ;
+      H00DZ19_n908PMNumDocOC = new boolean[] {false} ;
+      H00DZ19_A2405PMEstatus = new String[] {""} ;
+      H00DZ19_n2405PMEstatus = new boolean[] {false} ;
+      H00DZ19_A898PMFechRev = new java.util.Date[] {GXutil.nullDate()} ;
+      H00DZ19_n898PMFechRev = new boolean[] {false} ;
+      H00DZ19_A867PMFechVen = new java.util.Date[] {GXutil.nullDate()} ;
+      H00DZ19_n867PMFechVen = new boolean[] {false} ;
+      H00DZ19_A873PMMoneId = new String[] {""} ;
+      H00DZ19_n873PMMoneId = new boolean[] {false} ;
+      H00DZ19_A866PMFechFac = new java.util.Date[] {GXutil.nullDate()} ;
+      H00DZ19_n866PMFechFac = new boolean[] {false} ;
+      H00DZ19_A864PMProyId = new String[] {""} ;
+      H00DZ19_n864PMProyId = new boolean[] {false} ;
+      H00DZ19_A863PMProvId = new long[1] ;
+      H00DZ19_n863PMProvId = new boolean[] {false} ;
+      H00DZ19_A862PMNumDoc = new long[1] ;
+      H00DZ19_A861PMTipoDoc = new String[] {""} ;
+      H00DZ19_A3295PROPAGID = new long[1] ;
+      H00DZ19_n3295PROPAGID = new boolean[] {false} ;
+      H00DZ19_A860PMEmpresa = new long[1] ;
+      H00DZ19_A900PMMonEg = new java.math.BigDecimal[] {DecimalUtil.ZERO} ;
+      H00DZ19_n900PMMonEg = new boolean[] {false} ;
+      H00DZ19_A2718PMMonTp = new java.math.BigDecimal[] {DecimalUtil.ZERO} ;
+      H00DZ19_n2718PMMonTp = new boolean[] {false} ;
+      H00DZ19_A2923PMCTA1 = new String[] {""} ;
+      H00DZ19_n2923PMCTA1 = new boolean[] {false} ;
+      H00DZ19_A2924PMCTA2 = new String[] {""} ;
+      H00DZ19_n2924PMCTA2 = new boolean[] {false} ;
+      H00DZ19_A2925PMCTA3 = new String[] {""} ;
+      H00DZ19_n2925PMCTA3 = new boolean[] {false} ;
+      H00DZ19_A2954PMIVAID = new String[] {""} ;
+      H00DZ19_n2954PMIVAID = new boolean[] {false} ;
+      H00DZ19_A872PMIva = new java.math.BigDecimal[] {DecimalUtil.ZERO} ;
+      H00DZ19_n872PMIva = new boolean[] {false} ;
+      H00DZ19_A2521PMMonIvaE = new java.math.BigDecimal[] {DecimalUtil.ZERO} ;
+      H00DZ19_n2521PMMonIvaE = new boolean[] {false} ;
+      H00DZ19_A869PMMonNa = new java.math.BigDecimal[] {DecimalUtil.ZERO} ;
+      H00DZ19_n869PMMonNa = new boolean[] {false} ;
+      H00DZ19_A2520PMMonIvaN = new java.math.BigDecimal[] {DecimalUtil.ZERO} ;
+      H00DZ19_n2520PMMonIvaN = new boolean[] {false} ;
+      H00DZ19_A899PMMonEx = new java.math.BigDecimal[] {DecimalUtil.ZERO} ;
+      H00DZ19_n899PMMonEx = new boolean[] {false} ;
+      H00DZ19_A870PMMonNg = new java.math.BigDecimal[] {DecimalUtil.ZERO} ;
+      H00DZ19_n870PMMonNg = new boolean[] {false} ;
+      H00DZ19_A2542PMCuentadeCargo = new String[] {""} ;
+      H00DZ19_n2542PMCuentadeCargo = new boolean[] {false} ;
+      H00DZ19_A909PMUuid = new String[] {""} ;
+      H00DZ19_n909PMUuid = new boolean[] {false} ;
       AV241GPMEstatus = "" ;
       AV277Gcncd01id = "" ;
       GXv_int6 = new byte [1] ;
@@ -11751,24 +11881,24 @@ public final  class wcomppg_impl extends GXDataArea
       AV342iCGUNNGID = "" ;
       AV263msjErr = "" ;
       GXv_int4 = new long [1] ;
-      H00DZ18_A914PMRecepLin = new long[1] ;
-      H00DZ18_A862PMNumDoc = new long[1] ;
-      H00DZ18_A861PMTipoDoc = new String[] {""} ;
-      H00DZ18_A860PMEmpresa = new long[1] ;
-      H00DZ18_A2568PMRecepInsID = new long[1] ;
-      H00DZ18_n2568PMRecepInsID = new boolean[] {false} ;
+      H00DZ20_A914PMRecepLin = new long[1] ;
+      H00DZ20_A862PMNumDoc = new long[1] ;
+      H00DZ20_A861PMTipoDoc = new String[] {""} ;
+      H00DZ20_A860PMEmpresa = new long[1] ;
+      H00DZ20_A2568PMRecepInsID = new long[1] ;
+      H00DZ20_n2568PMRecepInsID = new boolean[] {false} ;
       AV332CGUNNGSEG = "" ;
       GXt_char1 = "" ;
       AV275ASICONTDSC = "" ;
-      H00DZ19_A862PMNumDoc = new long[1] ;
-      H00DZ19_A861PMTipoDoc = new String[] {""} ;
-      H00DZ19_A860PMEmpresa = new long[1] ;
-      H00DZ19_A2878PMImpEstId = new String[] {""} ;
-      H00DZ19_A2879PMImpId = new String[] {""} ;
-      H00DZ19_A2880PMImpMon = new java.math.BigDecimal[] {DecimalUtil.ZERO} ;
-      H00DZ19_n2880PMImpMon = new boolean[] {false} ;
-      H00DZ19_A2881PMImpVal = new java.math.BigDecimal[] {DecimalUtil.ZERO} ;
-      H00DZ19_n2881PMImpVal = new boolean[] {false} ;
+      H00DZ21_A862PMNumDoc = new long[1] ;
+      H00DZ21_A861PMTipoDoc = new String[] {""} ;
+      H00DZ21_A860PMEmpresa = new long[1] ;
+      H00DZ21_A2878PMImpEstId = new String[] {""} ;
+      H00DZ21_A2879PMImpId = new String[] {""} ;
+      H00DZ21_A2880PMImpMon = new java.math.BigDecimal[] {DecimalUtil.ZERO} ;
+      H00DZ21_n2880PMImpMon = new boolean[] {false} ;
+      H00DZ21_A2881PMImpVal = new java.math.BigDecimal[] {DecimalUtil.ZERO} ;
+      H00DZ21_n2881PMImpVal = new boolean[] {false} ;
       AV259GPMImpEstId = "" ;
       AV260GPMImpId = "" ;
       AV261GPMImpMon = DecimalUtil.ZERO ;
@@ -11777,160 +11907,160 @@ public final  class wcomppg_impl extends GXDataArea
       GXv_char2 = new String [1] ;
       GXv_decimal7 = new java.math.BigDecimal [1] ;
       GXv_char8 = new String [1] ;
-      H00DZ20_A5939CNCIASID = new long[1] ;
-      H00DZ20_A19CNCIASMON = new String[] {""} ;
-      H00DZ20_n19CNCIASMON = new boolean[] {false} ;
+      H00DZ22_A5939CNCIASID = new long[1] ;
+      H00DZ22_A19CNCIASMON = new String[] {""} ;
+      H00DZ22_n19CNCIASMON = new boolean[] {false} ;
       ucInnewwindow1 = new com.genexus.webpanels.GXUserControl();
-      H00DZ21_A2610ESTPAGID = new String[] {""} ;
-      H00DZ21_A2611ESTPAGDSC = new String[] {""} ;
-      H00DZ21_n2611ESTPAGDSC = new boolean[] {false} ;
-      H00DZ22_A4053PMPERFILUSR = new String[] {""} ;
-      H00DZ22_A4051PMPERFILID = new String[] {""} ;
+      H00DZ23_A2610ESTPAGID = new String[] {""} ;
+      H00DZ23_A2611ESTPAGDSC = new String[] {""} ;
+      H00DZ23_n2611ESTPAGDSC = new boolean[] {false} ;
+      H00DZ24_A4053PMPERFILUSR = new String[] {""} ;
+      H00DZ24_A4051PMPERFILID = new String[] {""} ;
       A4053PMPERFILUSR = "" ;
       A4051PMPERFILID = "" ;
       AV279PMPERFILID = "" ;
       AV278PROGRAMA = "" ;
-      H00DZ23_A4051PMPERFILID = new String[] {""} ;
-      H00DZ23_A4054KDSPRGID = new String[] {""} ;
-      H00DZ23_A4064KDSPRGLIN = new int[1] ;
-      H00DZ23_A4060KDSCPRPRVALCHAR = new String[] {""} ;
+      H00DZ25_A4051PMPERFILID = new String[] {""} ;
+      H00DZ25_A4054KDSPRGID = new String[] {""} ;
+      H00DZ25_A4064KDSPRGLIN = new int[1] ;
+      H00DZ25_A4060KDSCPRPRVALCHAR = new String[] {""} ;
       A4054KDSPRGID = "" ;
       A4060KDSCPRPRVALCHAR = "" ;
       AV281rutaArchivo = "" ;
-      H00DZ24_A17416PMCargo = new long[1] ;
-      H00DZ24_n17416PMCargo = new boolean[] {false} ;
-      H00DZ24_A865PMUngId = new String[] {""} ;
-      H00DZ24_n865PMUngId = new boolean[] {false} ;
-      H00DZ24_A10905PMIDREL = new long[1] ;
-      H00DZ24_n10905PMIDREL = new boolean[] {false} ;
-      H00DZ24_A905PMPoliz = new byte[1] ;
-      H00DZ24_n905PMPoliz = new boolean[] {false} ;
-      H00DZ24_A2528PMFolioFac = new String[] {""} ;
-      H00DZ24_n2528PMFolioFac = new boolean[] {false} ;
-      H00DZ24_A908PMNumDocOC = new long[1] ;
-      H00DZ24_n908PMNumDocOC = new boolean[] {false} ;
-      H00DZ24_A2405PMEstatus = new String[] {""} ;
-      H00DZ24_n2405PMEstatus = new boolean[] {false} ;
-      H00DZ24_A867PMFechVen = new java.util.Date[] {GXutil.nullDate()} ;
-      H00DZ24_n867PMFechVen = new boolean[] {false} ;
-      H00DZ24_A4090PMCXPFHTRN = new java.util.Date[] {GXutil.nullDate()} ;
-      H00DZ24_n4090PMCXPFHTRN = new boolean[] {false} ;
-      H00DZ24_A873PMMoneId = new String[] {""} ;
-      H00DZ24_n873PMMoneId = new boolean[] {false} ;
-      H00DZ24_A866PMFechFac = new java.util.Date[] {GXutil.nullDate()} ;
-      H00DZ24_n866PMFechFac = new boolean[] {false} ;
-      H00DZ24_A864PMProyId = new String[] {""} ;
-      H00DZ24_n864PMProyId = new boolean[] {false} ;
-      H00DZ24_A863PMProvId = new long[1] ;
-      H00DZ24_n863PMProvId = new boolean[] {false} ;
-      H00DZ24_A862PMNumDoc = new long[1] ;
-      H00DZ24_A861PMTipoDoc = new String[] {""} ;
-      H00DZ24_A3295PROPAGID = new long[1] ;
-      H00DZ24_n3295PROPAGID = new boolean[] {false} ;
-      H00DZ24_A860PMEmpresa = new long[1] ;
-      H00DZ24_A2534PMUsrcap = new long[1] ;
-      H00DZ24_n2534PMUsrcap = new boolean[] {false} ;
-      H00DZ24_A4599PMLayAsoc = new byte[1] ;
-      H00DZ24_n4599PMLayAsoc = new boolean[] {false} ;
-      H00DZ24_A909PMUuid = new String[] {""} ;
-      H00DZ24_n909PMUuid = new boolean[] {false} ;
-      H00DZ24_A2871PMPDFDoc = new long[1] ;
-      H00DZ24_n2871PMPDFDoc = new boolean[] {false} ;
-      H00DZ24_A2718PMMonTp = new java.math.BigDecimal[] {DecimalUtil.ZERO} ;
-      H00DZ24_n2718PMMonTp = new boolean[] {false} ;
-      H00DZ24_A2862PMMonAmort = new java.math.BigDecimal[] {DecimalUtil.ZERO} ;
-      H00DZ24_n2862PMMonAmort = new boolean[] {false} ;
-      H00DZ24_A17105PMCuentaPR02 = new String[] {""} ;
-      H00DZ24_n17105PMCuentaPR02 = new boolean[] {false} ;
-      H00DZ24_A869PMMonNa = new java.math.BigDecimal[] {DecimalUtil.ZERO} ;
-      H00DZ24_n869PMMonNa = new boolean[] {false} ;
-      H00DZ24_A870PMMonNg = new java.math.BigDecimal[] {DecimalUtil.ZERO} ;
-      H00DZ24_n870PMMonNg = new boolean[] {false} ;
-      H00DZ24_A902PMMonNp = new java.math.BigDecimal[] {DecimalUtil.ZERO} ;
-      H00DZ24_n902PMMonNp = new boolean[] {false} ;
-      H00DZ24_A2688PMMonPgN = new java.math.BigDecimal[] {DecimalUtil.ZERO} ;
-      H00DZ24_n2688PMMonPgN = new boolean[] {false} ;
-      H00DZ24_A2520PMMonIvaN = new java.math.BigDecimal[] {DecimalUtil.ZERO} ;
-      H00DZ24_n2520PMMonIvaN = new boolean[] {false} ;
-      H00DZ24_A899PMMonEx = new java.math.BigDecimal[] {DecimalUtil.ZERO} ;
-      H00DZ24_n899PMMonEx = new boolean[] {false} ;
-      H00DZ24_A900PMMonEg = new java.math.BigDecimal[] {DecimalUtil.ZERO} ;
-      H00DZ24_n900PMMonEg = new boolean[] {false} ;
-      H00DZ24_A2689PMMonPgE = new java.math.BigDecimal[] {DecimalUtil.ZERO} ;
-      H00DZ24_n2689PMMonPgE = new boolean[] {false} ;
-      H00DZ24_A903PMMonEp = new java.math.BigDecimal[] {DecimalUtil.ZERO} ;
-      H00DZ24_n903PMMonEp = new boolean[] {false} ;
-      H00DZ24_A2521PMMonIvaE = new java.math.BigDecimal[] {DecimalUtil.ZERO} ;
-      H00DZ24_n2521PMMonIvaE = new boolean[] {false} ;
-      H00DZ24_A872PMIva = new java.math.BigDecimal[] {DecimalUtil.ZERO} ;
-      H00DZ24_n872PMIva = new boolean[] {false} ;
-      H00DZ24_A2954PMIVAID = new String[] {""} ;
-      H00DZ24_n2954PMIVAID = new boolean[] {false} ;
-      H00DZ24_A898PMFechRev = new java.util.Date[] {GXutil.nullDate()} ;
-      H00DZ24_n898PMFechRev = new boolean[] {false} ;
-      H00DZ24_A2406PMComentarios = new String[] {""} ;
-      H00DZ24_n2406PMComentarios = new boolean[] {false} ;
-      H00DZ24_A904PMReten = new java.math.BigDecimal[] {DecimalUtil.ZERO} ;
-      H00DZ24_n904PMReten = new boolean[] {false} ;
-      H00DZ24_A906PMOrdenD = new byte[1] ;
-      H00DZ24_n906PMOrdenD = new boolean[] {false} ;
-      H00DZ24_A907PMTipoDocOC = new String[] {""} ;
-      H00DZ24_n907PMTipoDocOC = new boolean[] {false} ;
-      H00DZ24_A2923PMCTA1 = new String[] {""} ;
-      H00DZ24_n2923PMCTA1 = new boolean[] {false} ;
-      H00DZ24_A2924PMCTA2 = new String[] {""} ;
-      H00DZ24_n2924PMCTA2 = new boolean[] {false} ;
-      H00DZ24_A2925PMCTA3 = new String[] {""} ;
-      H00DZ24_n2925PMCTA3 = new boolean[] {false} ;
-      H00DZ24_A2542PMCuentadeCargo = new String[] {""} ;
-      H00DZ24_n2542PMCuentadeCargo = new boolean[] {false} ;
-      H00DZ24_A3917PMObsPoliza = new String[] {""} ;
-      H00DZ24_n3917PMObsPoliza = new boolean[] {false} ;
-      H00DZ24_A4395PMPRANT = new java.math.BigDecimal[] {DecimalUtil.ZERO} ;
-      H00DZ24_n4395PMPRANT = new boolean[] {false} ;
+      H00DZ26_A17416PMCargo = new long[1] ;
+      H00DZ26_n17416PMCargo = new boolean[] {false} ;
+      H00DZ26_A865PMUngId = new String[] {""} ;
+      H00DZ26_n865PMUngId = new boolean[] {false} ;
+      H00DZ26_A10905PMIDREL = new long[1] ;
+      H00DZ26_n10905PMIDREL = new boolean[] {false} ;
+      H00DZ26_A905PMPoliz = new byte[1] ;
+      H00DZ26_n905PMPoliz = new boolean[] {false} ;
+      H00DZ26_A2528PMFolioFac = new String[] {""} ;
+      H00DZ26_n2528PMFolioFac = new boolean[] {false} ;
+      H00DZ26_A908PMNumDocOC = new long[1] ;
+      H00DZ26_n908PMNumDocOC = new boolean[] {false} ;
+      H00DZ26_A2405PMEstatus = new String[] {""} ;
+      H00DZ26_n2405PMEstatus = new boolean[] {false} ;
+      H00DZ26_A867PMFechVen = new java.util.Date[] {GXutil.nullDate()} ;
+      H00DZ26_n867PMFechVen = new boolean[] {false} ;
+      H00DZ26_A4090PMCXPFHTRN = new java.util.Date[] {GXutil.nullDate()} ;
+      H00DZ26_n4090PMCXPFHTRN = new boolean[] {false} ;
+      H00DZ26_A873PMMoneId = new String[] {""} ;
+      H00DZ26_n873PMMoneId = new boolean[] {false} ;
+      H00DZ26_A866PMFechFac = new java.util.Date[] {GXutil.nullDate()} ;
+      H00DZ26_n866PMFechFac = new boolean[] {false} ;
+      H00DZ26_A864PMProyId = new String[] {""} ;
+      H00DZ26_n864PMProyId = new boolean[] {false} ;
+      H00DZ26_A863PMProvId = new long[1] ;
+      H00DZ26_n863PMProvId = new boolean[] {false} ;
+      H00DZ26_A862PMNumDoc = new long[1] ;
+      H00DZ26_A861PMTipoDoc = new String[] {""} ;
+      H00DZ26_A3295PROPAGID = new long[1] ;
+      H00DZ26_n3295PROPAGID = new boolean[] {false} ;
+      H00DZ26_A860PMEmpresa = new long[1] ;
+      H00DZ26_A2534PMUsrcap = new long[1] ;
+      H00DZ26_n2534PMUsrcap = new boolean[] {false} ;
+      H00DZ26_A4599PMLayAsoc = new byte[1] ;
+      H00DZ26_n4599PMLayAsoc = new boolean[] {false} ;
+      H00DZ26_A909PMUuid = new String[] {""} ;
+      H00DZ26_n909PMUuid = new boolean[] {false} ;
+      H00DZ26_A2871PMPDFDoc = new long[1] ;
+      H00DZ26_n2871PMPDFDoc = new boolean[] {false} ;
+      H00DZ26_A2718PMMonTp = new java.math.BigDecimal[] {DecimalUtil.ZERO} ;
+      H00DZ26_n2718PMMonTp = new boolean[] {false} ;
+      H00DZ26_A2862PMMonAmort = new java.math.BigDecimal[] {DecimalUtil.ZERO} ;
+      H00DZ26_n2862PMMonAmort = new boolean[] {false} ;
+      H00DZ26_A17105PMCuentaPR02 = new String[] {""} ;
+      H00DZ26_n17105PMCuentaPR02 = new boolean[] {false} ;
+      H00DZ26_A869PMMonNa = new java.math.BigDecimal[] {DecimalUtil.ZERO} ;
+      H00DZ26_n869PMMonNa = new boolean[] {false} ;
+      H00DZ26_A870PMMonNg = new java.math.BigDecimal[] {DecimalUtil.ZERO} ;
+      H00DZ26_n870PMMonNg = new boolean[] {false} ;
+      H00DZ26_A902PMMonNp = new java.math.BigDecimal[] {DecimalUtil.ZERO} ;
+      H00DZ26_n902PMMonNp = new boolean[] {false} ;
+      H00DZ26_A2688PMMonPgN = new java.math.BigDecimal[] {DecimalUtil.ZERO} ;
+      H00DZ26_n2688PMMonPgN = new boolean[] {false} ;
+      H00DZ26_A2520PMMonIvaN = new java.math.BigDecimal[] {DecimalUtil.ZERO} ;
+      H00DZ26_n2520PMMonIvaN = new boolean[] {false} ;
+      H00DZ26_A899PMMonEx = new java.math.BigDecimal[] {DecimalUtil.ZERO} ;
+      H00DZ26_n899PMMonEx = new boolean[] {false} ;
+      H00DZ26_A900PMMonEg = new java.math.BigDecimal[] {DecimalUtil.ZERO} ;
+      H00DZ26_n900PMMonEg = new boolean[] {false} ;
+      H00DZ26_A2689PMMonPgE = new java.math.BigDecimal[] {DecimalUtil.ZERO} ;
+      H00DZ26_n2689PMMonPgE = new boolean[] {false} ;
+      H00DZ26_A903PMMonEp = new java.math.BigDecimal[] {DecimalUtil.ZERO} ;
+      H00DZ26_n903PMMonEp = new boolean[] {false} ;
+      H00DZ26_A2521PMMonIvaE = new java.math.BigDecimal[] {DecimalUtil.ZERO} ;
+      H00DZ26_n2521PMMonIvaE = new boolean[] {false} ;
+      H00DZ26_A872PMIva = new java.math.BigDecimal[] {DecimalUtil.ZERO} ;
+      H00DZ26_n872PMIva = new boolean[] {false} ;
+      H00DZ26_A2954PMIVAID = new String[] {""} ;
+      H00DZ26_n2954PMIVAID = new boolean[] {false} ;
+      H00DZ26_A898PMFechRev = new java.util.Date[] {GXutil.nullDate()} ;
+      H00DZ26_n898PMFechRev = new boolean[] {false} ;
+      H00DZ26_A2406PMComentarios = new String[] {""} ;
+      H00DZ26_n2406PMComentarios = new boolean[] {false} ;
+      H00DZ26_A904PMReten = new java.math.BigDecimal[] {DecimalUtil.ZERO} ;
+      H00DZ26_n904PMReten = new boolean[] {false} ;
+      H00DZ26_A906PMOrdenD = new byte[1] ;
+      H00DZ26_n906PMOrdenD = new boolean[] {false} ;
+      H00DZ26_A907PMTipoDocOC = new String[] {""} ;
+      H00DZ26_n907PMTipoDocOC = new boolean[] {false} ;
+      H00DZ26_A2923PMCTA1 = new String[] {""} ;
+      H00DZ26_n2923PMCTA1 = new boolean[] {false} ;
+      H00DZ26_A2924PMCTA2 = new String[] {""} ;
+      H00DZ26_n2924PMCTA2 = new boolean[] {false} ;
+      H00DZ26_A2925PMCTA3 = new String[] {""} ;
+      H00DZ26_n2925PMCTA3 = new boolean[] {false} ;
+      H00DZ26_A2542PMCuentadeCargo = new String[] {""} ;
+      H00DZ26_n2542PMCuentadeCargo = new boolean[] {false} ;
+      H00DZ26_A3917PMObsPoliza = new String[] {""} ;
+      H00DZ26_n3917PMObsPoliza = new boolean[] {false} ;
+      H00DZ26_A4395PMPRANT = new java.math.BigDecimal[] {DecimalUtil.ZERO} ;
+      H00DZ26_n4395PMPRANT = new boolean[] {false} ;
       AV299sdtPMCuentaXPagItem = new com.kdsproyectos.SdtsdtPMCuentaXPag_sdtPMCuentaXPagItem(remoteHandle, context);
       AV301sdtPMCuentaXPagI = new com.kdsproyectos.SdtsdtPMCuentaXPag_sdtPMCuentaXPagItem(remoteHandle, context);
       AV372IVAPOR = DecimalUtil.ZERO ;
-      H00DZ25_A2055CNCMNDID = new String[] {""} ;
-      H00DZ25_A2054CNCMNOID = new String[] {""} ;
-      H00DZ25_A2076CNPRCMDVAL = new java.math.BigDecimal[] {DecimalUtil.ZERO} ;
-      H00DZ25_n2076CNPRCMDVAL = new boolean[] {false} ;
-      H00DZ25_A2059CNPRCMDFT = new java.util.Date[] {GXutil.nullDate()} ;
-      H00DZ26_A2055CNCMNDID = new String[] {""} ;
-      H00DZ26_A2054CNCMNOID = new String[] {""} ;
-      H00DZ26_A2076CNPRCMDVAL = new java.math.BigDecimal[] {DecimalUtil.ZERO} ;
-      H00DZ26_n2076CNPRCMDVAL = new boolean[] {false} ;
-      H00DZ26_A2059CNPRCMDFT = new java.util.Date[] {GXutil.nullDate()} ;
-      H00DZ27_A456CNCD01ID = new String[] {""} ;
-      H00DZ27_n456CNCD01ID = new boolean[] {false} ;
-      H00DZ27_A2977CNCD01DSC = new String[] {""} ;
-      H00DZ27_n2977CNCD01DSC = new boolean[] {false} ;
-      H00DZ28_A456CNCD01ID = new String[] {""} ;
-      H00DZ28_n456CNCD01ID = new boolean[] {false} ;
-      H00DZ28_A2977CNCD01DSC = new String[] {""} ;
-      H00DZ28_n2977CNCD01DSC = new boolean[] {false} ;
-      H00DZ29_A5940CNUSERID = new String[] {""} ;
-      H00DZ29_A10187CNUSERMCXP = new String[] {""} ;
-      H00DZ29_n10187CNUSERMCXP = new boolean[] {false} ;
-      A10187CNUSERMCXP = "" ;
-      H00DZ30_A10868PMCTPRCLAGP = new long[1] ;
-      H00DZ30_n10868PMCTPRCLAGP = new boolean[] {false} ;
-      H00DZ30_A171PMCTPRID = new String[] {""} ;
-      lV358fPMCTPRDSC = "" ;
-      H00DZ31_A177SSUSPREST = new byte[1] ;
+      H00DZ27_A2055CNCMNDID = new String[] {""} ;
+      H00DZ27_A2054CNCMNOID = new String[] {""} ;
+      H00DZ27_A2076CNPRCMDVAL = new java.math.BigDecimal[] {DecimalUtil.ZERO} ;
+      H00DZ27_n2076CNPRCMDVAL = new boolean[] {false} ;
+      H00DZ27_A2059CNPRCMDFT = new java.util.Date[] {GXutil.nullDate()} ;
+      H00DZ28_A2055CNCMNDID = new String[] {""} ;
+      H00DZ28_A2054CNCMNOID = new String[] {""} ;
+      H00DZ28_A2076CNPRCMDVAL = new java.math.BigDecimal[] {DecimalUtil.ZERO} ;
+      H00DZ28_n2076CNPRCMDVAL = new boolean[] {false} ;
+      H00DZ28_A2059CNPRCMDFT = new java.util.Date[] {GXutil.nullDate()} ;
+      H00DZ29_A456CNCD01ID = new String[] {""} ;
+      H00DZ29_n456CNCD01ID = new boolean[] {false} ;
+      H00DZ29_A2977CNCD01DSC = new String[] {""} ;
+      H00DZ29_n2977CNCD01DSC = new boolean[] {false} ;
+      H00DZ30_A456CNCD01ID = new String[] {""} ;
+      H00DZ30_n456CNCD01ID = new boolean[] {false} ;
+      H00DZ30_A2977CNCD01DSC = new String[] {""} ;
+      H00DZ30_n2977CNCD01DSC = new boolean[] {false} ;
       H00DZ31_A5940CNUSERID = new String[] {""} ;
-      H00DZ31_A172PMCTPRDSC = new String[] {""} ;
-      H00DZ31_n172PMCTPRDSC = new boolean[] {false} ;
-      H00DZ31_A171PMCTPRID = new String[] {""} ;
-      H00DZ32_A336CGUNNGDSC = new String[] {""} ;
-      H00DZ32_n336CGUNNGDSC = new boolean[] {false} ;
-      H00DZ32_A93CGUNNGID = new String[] {""} ;
-      H00DZ33_AV360contProy = new short[1] ;
-      H00DZ34_A177SSUSPREST = new byte[1] ;
-      H00DZ34_A5940CNUSERID = new String[] {""} ;
-      H00DZ34_A171PMCTPRID = new String[] {""} ;
-      H00DZ34_A172PMCTPRDSC = new String[] {""} ;
-      H00DZ34_n172PMCTPRDSC = new boolean[] {false} ;
+      H00DZ31_A10187CNUSERMCXP = new String[] {""} ;
+      H00DZ31_n10187CNUSERMCXP = new boolean[] {false} ;
+      A10187CNUSERMCXP = "" ;
+      H00DZ32_A10868PMCTPRCLAGP = new long[1] ;
+      H00DZ32_n10868PMCTPRCLAGP = new boolean[] {false} ;
+      H00DZ32_A171PMCTPRID = new String[] {""} ;
+      lV358fPMCTPRDSC = "" ;
+      H00DZ33_A177SSUSPREST = new byte[1] ;
+      H00DZ33_A5940CNUSERID = new String[] {""} ;
+      H00DZ33_A172PMCTPRDSC = new String[] {""} ;
+      H00DZ33_n172PMCTPRDSC = new boolean[] {false} ;
+      H00DZ33_A171PMCTPRID = new String[] {""} ;
+      H00DZ34_A336CGUNNGDSC = new String[] {""} ;
+      H00DZ34_n336CGUNNGDSC = new boolean[] {false} ;
+      H00DZ34_A93CGUNNGID = new String[] {""} ;
+      H00DZ35_AV360contProy = new short[1] ;
+      H00DZ36_A177SSUSPREST = new byte[1] ;
+      H00DZ36_A5940CNUSERID = new String[] {""} ;
+      H00DZ36_A171PMCTPRID = new String[] {""} ;
+      H00DZ36_A172PMCTPRDSC = new String[] {""} ;
+      H00DZ36_n172PMCTPRDSC = new boolean[] {false} ;
       lblKdsaplicarcriterios2_Jsonclick = "" ;
       lblLbcia_Jsonclick = "" ;
       TempTags = "" ;
@@ -11997,7 +12127,7 @@ public final  class wcomppg_impl extends GXDataArea
       BackMsgLst = new com.genexus.internet.MsgList();
       LclMsgLst = new com.genexus.internet.MsgList();
       GXCCtl = "" ;
-      H00DZ35_A50CNCMNMID = new String[] {""} ;
+      H00DZ37_A50CNCMNMID = new String[] {""} ;
       isValidOutput = new com.genexus.GxUnknownObjectCollection();
       pr_default = new DataStoreProvider(context, remoteHandle, new com.kdsproyectos.wcomppg__default(),
          new Object[] {
@@ -12044,93 +12174,100 @@ public final  class wcomppg_impl extends GXDataArea
             H00DZ12_n7899PMTipoAv, H00DZ12_A7900PMNumAv, H00DZ12_n7900PMNumAv, H00DZ12_A17105PMCuentaPR02, H00DZ12_n17105PMCuentaPR02
             }
             , new Object[] {
-            H00DZ13_A382CNTPDRID, H00DZ13_n382CNTPDRID, H00DZ13_A194CNCDIRNOM, H00DZ13_n194CNCDIRNOM, H00DZ13_A46CNCDIRID
+            H00DZ13_A7791AVDSPRTDC, H00DZ13_A7792AVDSPRLIN, H00DZ13_A8296AVDSPRCPPNDC, H00DZ13_n8296AVDSPRCPPNDC, H00DZ13_A8295AVDSPRCPPTPC, H00DZ13_n8295AVDSPRCPPTPC, H00DZ13_A7789AVDSPRCIA, H00DZ13_A20CNTDOCID, H00DZ13_A8255AVDSPRDOC, H00DZ13_A7790AVDSPRNDC,
+            H00DZ13_A8242AVDSPROBS, H00DZ13_n8242AVDSPROBS
             }
             , new Object[] {
-            H00DZ14_A7196MODFECVELIN, H00DZ14_A7195MODFECVETDC, H00DZ14_A7194MODFECVENDC, H00DZ14_A7193MODFECVECIA
+            H00DZ14_A7520CNDSPRNDC, H00DZ14_A7519CNDSPRTDC, H00DZ14_A7518CNDSPRCIA, H00DZ14_A7531CNDSPRALCTR, H00DZ14_n7531CNDSPRALCTR
             }
             , new Object[] {
-            H00DZ15_A838XMLDOCUUID, H00DZ15_A855XMLDOCFLNM, H00DZ15_n855XMLDOCFLNM, H00DZ15_A883XMLDOCRUT, H00DZ15_n883XMLDOCRUT
+            H00DZ15_A382CNTPDRID, H00DZ15_n382CNTPDRID, H00DZ15_A194CNCDIRNOM, H00DZ15_n194CNCDIRNOM, H00DZ15_A46CNCDIRID
             }
             , new Object[] {
-            H00DZ16_A2870PDFDOCID, H00DZ16_A876PDFDOCNAM, H00DZ16_n876PDFDOCNAM, H00DZ16_A879PDFDOCTIP, H00DZ16_n879PDFDOCTIP, H00DZ16_A878PDFDOCFIL, H00DZ16_n878PDFDOCFIL
+            H00DZ16_A7196MODFECVELIN, H00DZ16_A7195MODFECVETDC, H00DZ16_A7194MODFECVENDC, H00DZ16_A7193MODFECVECIA
             }
             , new Object[] {
-            H00DZ17_A456CNCD01ID, H00DZ17_n456CNCD01ID, H00DZ17_A905PMPoliz, H00DZ17_n905PMPoliz, H00DZ17_A2528PMFolioFac, H00DZ17_n2528PMFolioFac, H00DZ17_A908PMNumDocOC, H00DZ17_n908PMNumDocOC, H00DZ17_A2405PMEstatus, H00DZ17_n2405PMEstatus,
-            H00DZ17_A898PMFechRev, H00DZ17_n898PMFechRev, H00DZ17_A867PMFechVen, H00DZ17_n867PMFechVen, H00DZ17_A873PMMoneId, H00DZ17_n873PMMoneId, H00DZ17_A866PMFechFac, H00DZ17_n866PMFechFac, H00DZ17_A864PMProyId, H00DZ17_n864PMProyId,
-            H00DZ17_A863PMProvId, H00DZ17_n863PMProvId, H00DZ17_A862PMNumDoc, H00DZ17_A861PMTipoDoc, H00DZ17_A3295PROPAGID, H00DZ17_n3295PROPAGID, H00DZ17_A860PMEmpresa, H00DZ17_A900PMMonEg, H00DZ17_n900PMMonEg, H00DZ17_A2718PMMonTp,
-            H00DZ17_n2718PMMonTp, H00DZ17_A2923PMCTA1, H00DZ17_n2923PMCTA1, H00DZ17_A2924PMCTA2, H00DZ17_n2924PMCTA2, H00DZ17_A2925PMCTA3, H00DZ17_n2925PMCTA3, H00DZ17_A2954PMIVAID, H00DZ17_n2954PMIVAID, H00DZ17_A872PMIva,
-            H00DZ17_n872PMIva, H00DZ17_A2521PMMonIvaE, H00DZ17_n2521PMMonIvaE, H00DZ17_A869PMMonNa, H00DZ17_n869PMMonNa, H00DZ17_A2520PMMonIvaN, H00DZ17_n2520PMMonIvaN, H00DZ17_A899PMMonEx, H00DZ17_n899PMMonEx, H00DZ17_A870PMMonNg,
-            H00DZ17_n870PMMonNg, H00DZ17_A2542PMCuentadeCargo, H00DZ17_n2542PMCuentadeCargo, H00DZ17_A909PMUuid, H00DZ17_n909PMUuid
+            H00DZ17_A838XMLDOCUUID, H00DZ17_A855XMLDOCFLNM, H00DZ17_n855XMLDOCFLNM, H00DZ17_A883XMLDOCRUT, H00DZ17_n883XMLDOCRUT
             }
             , new Object[] {
-            H00DZ18_A914PMRecepLin, H00DZ18_A862PMNumDoc, H00DZ18_A861PMTipoDoc, H00DZ18_A860PMEmpresa, H00DZ18_A2568PMRecepInsID, H00DZ18_n2568PMRecepInsID
+            H00DZ18_A2870PDFDOCID, H00DZ18_A876PDFDOCNAM, H00DZ18_n876PDFDOCNAM, H00DZ18_A879PDFDOCTIP, H00DZ18_n879PDFDOCTIP, H00DZ18_A878PDFDOCFIL, H00DZ18_n878PDFDOCFIL
             }
             , new Object[] {
-            H00DZ19_A862PMNumDoc, H00DZ19_A861PMTipoDoc, H00DZ19_A860PMEmpresa, H00DZ19_A2878PMImpEstId, H00DZ19_A2879PMImpId, H00DZ19_A2880PMImpMon, H00DZ19_n2880PMImpMon, H00DZ19_A2881PMImpVal, H00DZ19_n2881PMImpVal
+            H00DZ19_A456CNCD01ID, H00DZ19_n456CNCD01ID, H00DZ19_A905PMPoliz, H00DZ19_n905PMPoliz, H00DZ19_A2528PMFolioFac, H00DZ19_n2528PMFolioFac, H00DZ19_A908PMNumDocOC, H00DZ19_n908PMNumDocOC, H00DZ19_A2405PMEstatus, H00DZ19_n2405PMEstatus,
+            H00DZ19_A898PMFechRev, H00DZ19_n898PMFechRev, H00DZ19_A867PMFechVen, H00DZ19_n867PMFechVen, H00DZ19_A873PMMoneId, H00DZ19_n873PMMoneId, H00DZ19_A866PMFechFac, H00DZ19_n866PMFechFac, H00DZ19_A864PMProyId, H00DZ19_n864PMProyId,
+            H00DZ19_A863PMProvId, H00DZ19_n863PMProvId, H00DZ19_A862PMNumDoc, H00DZ19_A861PMTipoDoc, H00DZ19_A3295PROPAGID, H00DZ19_n3295PROPAGID, H00DZ19_A860PMEmpresa, H00DZ19_A900PMMonEg, H00DZ19_n900PMMonEg, H00DZ19_A2718PMMonTp,
+            H00DZ19_n2718PMMonTp, H00DZ19_A2923PMCTA1, H00DZ19_n2923PMCTA1, H00DZ19_A2924PMCTA2, H00DZ19_n2924PMCTA2, H00DZ19_A2925PMCTA3, H00DZ19_n2925PMCTA3, H00DZ19_A2954PMIVAID, H00DZ19_n2954PMIVAID, H00DZ19_A872PMIva,
+            H00DZ19_n872PMIva, H00DZ19_A2521PMMonIvaE, H00DZ19_n2521PMMonIvaE, H00DZ19_A869PMMonNa, H00DZ19_n869PMMonNa, H00DZ19_A2520PMMonIvaN, H00DZ19_n2520PMMonIvaN, H00DZ19_A899PMMonEx, H00DZ19_n899PMMonEx, H00DZ19_A870PMMonNg,
+            H00DZ19_n870PMMonNg, H00DZ19_A2542PMCuentadeCargo, H00DZ19_n2542PMCuentadeCargo, H00DZ19_A909PMUuid, H00DZ19_n909PMUuid
             }
             , new Object[] {
-            H00DZ20_A5939CNCIASID, H00DZ20_A19CNCIASMON, H00DZ20_n19CNCIASMON
+            H00DZ20_A914PMRecepLin, H00DZ20_A862PMNumDoc, H00DZ20_A861PMTipoDoc, H00DZ20_A860PMEmpresa, H00DZ20_A2568PMRecepInsID, H00DZ20_n2568PMRecepInsID
             }
             , new Object[] {
-            H00DZ21_A2610ESTPAGID, H00DZ21_A2611ESTPAGDSC, H00DZ21_n2611ESTPAGDSC
+            H00DZ21_A862PMNumDoc, H00DZ21_A861PMTipoDoc, H00DZ21_A860PMEmpresa, H00DZ21_A2878PMImpEstId, H00DZ21_A2879PMImpId, H00DZ21_A2880PMImpMon, H00DZ21_n2880PMImpMon, H00DZ21_A2881PMImpVal, H00DZ21_n2881PMImpVal
             }
             , new Object[] {
-            H00DZ22_A4053PMPERFILUSR, H00DZ22_A4051PMPERFILID
+            H00DZ22_A5939CNCIASID, H00DZ22_A19CNCIASMON, H00DZ22_n19CNCIASMON
             }
             , new Object[] {
-            H00DZ23_A4051PMPERFILID, H00DZ23_A4054KDSPRGID, H00DZ23_A4064KDSPRGLIN, H00DZ23_A4060KDSCPRPRVALCHAR
+            H00DZ23_A2610ESTPAGID, H00DZ23_A2611ESTPAGDSC, H00DZ23_n2611ESTPAGDSC
             }
             , new Object[] {
-            H00DZ24_A17416PMCargo, H00DZ24_n17416PMCargo, H00DZ24_A865PMUngId, H00DZ24_n865PMUngId, H00DZ24_A10905PMIDREL, H00DZ24_n10905PMIDREL, H00DZ24_A905PMPoliz, H00DZ24_n905PMPoliz, H00DZ24_A2528PMFolioFac, H00DZ24_n2528PMFolioFac,
-            H00DZ24_A908PMNumDocOC, H00DZ24_n908PMNumDocOC, H00DZ24_A2405PMEstatus, H00DZ24_n2405PMEstatus, H00DZ24_A867PMFechVen, H00DZ24_n867PMFechVen, H00DZ24_A4090PMCXPFHTRN, H00DZ24_n4090PMCXPFHTRN, H00DZ24_A873PMMoneId, H00DZ24_n873PMMoneId,
-            H00DZ24_A866PMFechFac, H00DZ24_n866PMFechFac, H00DZ24_A864PMProyId, H00DZ24_n864PMProyId, H00DZ24_A863PMProvId, H00DZ24_n863PMProvId, H00DZ24_A862PMNumDoc, H00DZ24_A861PMTipoDoc, H00DZ24_A3295PROPAGID, H00DZ24_n3295PROPAGID,
-            H00DZ24_A860PMEmpresa, H00DZ24_A2534PMUsrcap, H00DZ24_n2534PMUsrcap, H00DZ24_A4599PMLayAsoc, H00DZ24_n4599PMLayAsoc, H00DZ24_A909PMUuid, H00DZ24_n909PMUuid, H00DZ24_A2871PMPDFDoc, H00DZ24_n2871PMPDFDoc, H00DZ24_A2718PMMonTp,
-            H00DZ24_n2718PMMonTp, H00DZ24_A2862PMMonAmort, H00DZ24_n2862PMMonAmort, H00DZ24_A17105PMCuentaPR02, H00DZ24_n17105PMCuentaPR02, H00DZ24_A869PMMonNa, H00DZ24_n869PMMonNa, H00DZ24_A870PMMonNg, H00DZ24_n870PMMonNg, H00DZ24_A902PMMonNp,
-            H00DZ24_n902PMMonNp, H00DZ24_A2688PMMonPgN, H00DZ24_n2688PMMonPgN, H00DZ24_A2520PMMonIvaN, H00DZ24_n2520PMMonIvaN, H00DZ24_A899PMMonEx, H00DZ24_n899PMMonEx, H00DZ24_A900PMMonEg, H00DZ24_n900PMMonEg, H00DZ24_A2689PMMonPgE,
-            H00DZ24_n2689PMMonPgE, H00DZ24_A903PMMonEp, H00DZ24_n903PMMonEp, H00DZ24_A2521PMMonIvaE, H00DZ24_n2521PMMonIvaE, H00DZ24_A872PMIva, H00DZ24_n872PMIva, H00DZ24_A2954PMIVAID, H00DZ24_n2954PMIVAID, H00DZ24_A898PMFechRev,
-            H00DZ24_n898PMFechRev, H00DZ24_A2406PMComentarios, H00DZ24_n2406PMComentarios, H00DZ24_A904PMReten, H00DZ24_n904PMReten, H00DZ24_A906PMOrdenD, H00DZ24_n906PMOrdenD, H00DZ24_A907PMTipoDocOC, H00DZ24_n907PMTipoDocOC, H00DZ24_A2923PMCTA1,
-            H00DZ24_n2923PMCTA1, H00DZ24_A2924PMCTA2, H00DZ24_n2924PMCTA2, H00DZ24_A2925PMCTA3, H00DZ24_n2925PMCTA3, H00DZ24_A2542PMCuentadeCargo, H00DZ24_n2542PMCuentadeCargo, H00DZ24_A3917PMObsPoliza, H00DZ24_n3917PMObsPoliza, H00DZ24_A4395PMPRANT,
-            H00DZ24_n4395PMPRANT
+            H00DZ24_A4053PMPERFILUSR, H00DZ24_A4051PMPERFILID
             }
             , new Object[] {
-            H00DZ25_A2055CNCMNDID, H00DZ25_A2054CNCMNOID, H00DZ25_A2076CNPRCMDVAL, H00DZ25_n2076CNPRCMDVAL, H00DZ25_A2059CNPRCMDFT
+            H00DZ25_A4051PMPERFILID, H00DZ25_A4054KDSPRGID, H00DZ25_A4064KDSPRGLIN, H00DZ25_A4060KDSCPRPRVALCHAR
             }
             , new Object[] {
-            H00DZ26_A2055CNCMNDID, H00DZ26_A2054CNCMNOID, H00DZ26_A2076CNPRCMDVAL, H00DZ26_n2076CNPRCMDVAL, H00DZ26_A2059CNPRCMDFT
+            H00DZ26_A17416PMCargo, H00DZ26_n17416PMCargo, H00DZ26_A865PMUngId, H00DZ26_n865PMUngId, H00DZ26_A10905PMIDREL, H00DZ26_n10905PMIDREL, H00DZ26_A905PMPoliz, H00DZ26_n905PMPoliz, H00DZ26_A2528PMFolioFac, H00DZ26_n2528PMFolioFac,
+            H00DZ26_A908PMNumDocOC, H00DZ26_n908PMNumDocOC, H00DZ26_A2405PMEstatus, H00DZ26_n2405PMEstatus, H00DZ26_A867PMFechVen, H00DZ26_n867PMFechVen, H00DZ26_A4090PMCXPFHTRN, H00DZ26_n4090PMCXPFHTRN, H00DZ26_A873PMMoneId, H00DZ26_n873PMMoneId,
+            H00DZ26_A866PMFechFac, H00DZ26_n866PMFechFac, H00DZ26_A864PMProyId, H00DZ26_n864PMProyId, H00DZ26_A863PMProvId, H00DZ26_n863PMProvId, H00DZ26_A862PMNumDoc, H00DZ26_A861PMTipoDoc, H00DZ26_A3295PROPAGID, H00DZ26_n3295PROPAGID,
+            H00DZ26_A860PMEmpresa, H00DZ26_A2534PMUsrcap, H00DZ26_n2534PMUsrcap, H00DZ26_A4599PMLayAsoc, H00DZ26_n4599PMLayAsoc, H00DZ26_A909PMUuid, H00DZ26_n909PMUuid, H00DZ26_A2871PMPDFDoc, H00DZ26_n2871PMPDFDoc, H00DZ26_A2718PMMonTp,
+            H00DZ26_n2718PMMonTp, H00DZ26_A2862PMMonAmort, H00DZ26_n2862PMMonAmort, H00DZ26_A17105PMCuentaPR02, H00DZ26_n17105PMCuentaPR02, H00DZ26_A869PMMonNa, H00DZ26_n869PMMonNa, H00DZ26_A870PMMonNg, H00DZ26_n870PMMonNg, H00DZ26_A902PMMonNp,
+            H00DZ26_n902PMMonNp, H00DZ26_A2688PMMonPgN, H00DZ26_n2688PMMonPgN, H00DZ26_A2520PMMonIvaN, H00DZ26_n2520PMMonIvaN, H00DZ26_A899PMMonEx, H00DZ26_n899PMMonEx, H00DZ26_A900PMMonEg, H00DZ26_n900PMMonEg, H00DZ26_A2689PMMonPgE,
+            H00DZ26_n2689PMMonPgE, H00DZ26_A903PMMonEp, H00DZ26_n903PMMonEp, H00DZ26_A2521PMMonIvaE, H00DZ26_n2521PMMonIvaE, H00DZ26_A872PMIva, H00DZ26_n872PMIva, H00DZ26_A2954PMIVAID, H00DZ26_n2954PMIVAID, H00DZ26_A898PMFechRev,
+            H00DZ26_n898PMFechRev, H00DZ26_A2406PMComentarios, H00DZ26_n2406PMComentarios, H00DZ26_A904PMReten, H00DZ26_n904PMReten, H00DZ26_A906PMOrdenD, H00DZ26_n906PMOrdenD, H00DZ26_A907PMTipoDocOC, H00DZ26_n907PMTipoDocOC, H00DZ26_A2923PMCTA1,
+            H00DZ26_n2923PMCTA1, H00DZ26_A2924PMCTA2, H00DZ26_n2924PMCTA2, H00DZ26_A2925PMCTA3, H00DZ26_n2925PMCTA3, H00DZ26_A2542PMCuentadeCargo, H00DZ26_n2542PMCuentadeCargo, H00DZ26_A3917PMObsPoliza, H00DZ26_n3917PMObsPoliza, H00DZ26_A4395PMPRANT,
+            H00DZ26_n4395PMPRANT
             }
             , new Object[] {
-            H00DZ27_A456CNCD01ID, H00DZ27_A2977CNCD01DSC, H00DZ27_n2977CNCD01DSC
+            H00DZ27_A2055CNCMNDID, H00DZ27_A2054CNCMNOID, H00DZ27_A2076CNPRCMDVAL, H00DZ27_n2076CNPRCMDVAL, H00DZ27_A2059CNPRCMDFT
             }
             , new Object[] {
-            H00DZ28_A456CNCD01ID, H00DZ28_A2977CNCD01DSC, H00DZ28_n2977CNCD01DSC
+            H00DZ28_A2055CNCMNDID, H00DZ28_A2054CNCMNOID, H00DZ28_A2076CNPRCMDVAL, H00DZ28_n2076CNPRCMDVAL, H00DZ28_A2059CNPRCMDFT
             }
             , new Object[] {
-            H00DZ29_A5940CNUSERID, H00DZ29_A10187CNUSERMCXP, H00DZ29_n10187CNUSERMCXP
+            H00DZ29_A456CNCD01ID, H00DZ29_A2977CNCD01DSC, H00DZ29_n2977CNCD01DSC
             }
             , new Object[] {
-            H00DZ30_A10868PMCTPRCLAGP, H00DZ30_n10868PMCTPRCLAGP, H00DZ30_A171PMCTPRID
+            H00DZ30_A456CNCD01ID, H00DZ30_A2977CNCD01DSC, H00DZ30_n2977CNCD01DSC
             }
             , new Object[] {
-            H00DZ31_A177SSUSPREST, H00DZ31_A5940CNUSERID, H00DZ31_A172PMCTPRDSC, H00DZ31_n172PMCTPRDSC, H00DZ31_A171PMCTPRID
+            H00DZ31_A5940CNUSERID, H00DZ31_A10187CNUSERMCXP, H00DZ31_n10187CNUSERMCXP
             }
             , new Object[] {
-            H00DZ32_A336CGUNNGDSC, H00DZ32_n336CGUNNGDSC, H00DZ32_A93CGUNNGID
+            H00DZ32_A10868PMCTPRCLAGP, H00DZ32_n10868PMCTPRCLAGP, H00DZ32_A171PMCTPRID
             }
             , new Object[] {
-            H00DZ33_AV360contProy
+            H00DZ33_A177SSUSPREST, H00DZ33_A5940CNUSERID, H00DZ33_A172PMCTPRDSC, H00DZ33_n172PMCTPRDSC, H00DZ33_A171PMCTPRID
             }
             , new Object[] {
-            H00DZ34_A177SSUSPREST, H00DZ34_A5940CNUSERID, H00DZ34_A171PMCTPRID, H00DZ34_A172PMCTPRDSC, H00DZ34_n172PMCTPRDSC
+            H00DZ34_A336CGUNNGDSC, H00DZ34_n336CGUNNGDSC, H00DZ34_A93CGUNNGID
             }
             , new Object[] {
-            H00DZ35_A50CNCMNMID
+            H00DZ35_AV360contProy
+            }
+            , new Object[] {
+            H00DZ36_A177SSUSPREST, H00DZ36_A5940CNUSERID, H00DZ36_A171PMCTPRID, H00DZ36_A172PMCTPRDSC, H00DZ36_n172PMCTPRDSC
+            }
+            , new Object[] {
+            H00DZ37_A50CNCMNMID
             }
          }
       );
-      AV378Pgmname = "wcomppg" ;
+      AV383Pgmname = "wcomppg" ;
       /* GeneXus formulas. */
-      AV378Pgmname = "wcomppg" ;
+      AV383Pgmname = "wcomppg" ;
       Gx_err = (short)(0) ;
       edtavPagina_Enabled = 0 ;
       edtavPaginas_Enabled = 0 ;
@@ -12229,10 +12366,10 @@ public final  class wcomppg_impl extends GXDataArea
    private byte AV285CNCDIRLAY ;
    private byte AV96PMOrdenD_G ;
    private byte AV238Valido ;
-   private byte AV380GXLvl529 ;
+   private byte AV387GXLvl558 ;
    private byte AV268GPmPoliz ;
    private byte GXv_int6[] ;
-   private byte AV391GXLvl1557 ;
+   private byte AV398GXLvl1586 ;
    private byte subGrid1_Titlebackstyle ;
    private byte subGrid1_Allowselection ;
    private byte subGrid1_Allowhovering ;
@@ -12356,11 +12493,11 @@ public final  class wcomppg_impl extends GXDataArea
    private int AV353arrPMCTPRID_size ;
    private int edtavImgxml_Visible ;
    private int edtavEdi_Visible ;
-   private int AV385GXV1 ;
-   private int AV386GXV2 ;
-   private int AV387GXV3 ;
+   private int AV392GXV1 ;
+   private int AV393GXV2 ;
+   private int AV394GXV3 ;
    private int A4064KDSPRGLIN ;
-   private int AV395GXV4 ;
+   private int AV402GXV4 ;
    private int edtavPmctprid_Enabled ;
    private int edtavPmfoliofac_f_Enabled ;
    private int subGrid1_Titlebackcolor ;
@@ -12453,6 +12590,14 @@ public final  class wcomppg_impl extends GXDataArea
    private long A2534PMUsrcap ;
    private long A2871PMPDFDoc ;
    private long A7900PMNumAv ;
+   private long A7789AVDSPRCIA ;
+   private long AV61PMEmpresa_G ;
+   private long A8296AVDSPRCPPNDC ;
+   private long AV63PMNumDoc_G ;
+   private long A8255AVDSPRDOC ;
+   private long A7790AVDSPRNDC ;
+   private long A7518CNDSPRCIA ;
+   private long A7520CNDSPRNDC ;
    private long A46CNCDIRID ;
    private long A7193MODFECVECIA ;
    private long A7194MODFECVENDC ;
@@ -12465,18 +12610,18 @@ public final  class wcomppg_impl extends GXDataArea
    private long A2568PMRecepInsID ;
    private long A5939CNCIASID ;
    private long A10868PMCTPRCLAGP ;
-   private long AV63PMNumDoc_G ;
    private long AV98PMNumDocOC_G ;
    private long AV160PMPDFDOC ;
    private long AV323PMNumAv_G ;
    private long AV64PMProvId_G ;
-   private long AV61PMEmpresa_G ;
    private long AV352CLAGPID ;
    private long GRID1_nCurrentRecord ;
    private long GRID1_nRecordCount ;
    private long AV356nCNCDIRID ;
    private long AV186PMUsrcap ;
    private long AV365PMCargo ;
+   private long AV377AAVDSPRDOC ;
+   private long AV378AVDSPRNDC ;
    private long GXt_int9 ;
    private long GXv_int4[] ;
    private java.math.BigDecimal A2718PMMonTp ;
@@ -12587,6 +12732,11 @@ public final  class wcomppg_impl extends GXDataArea
    private String A2610ESTPAGID ;
    private String AV123PMEstatus ;
    private String A2611ESTPAGDSC ;
+   private String A8295AVDSPRCPPTPC ;
+   private String AV62PMTipoDoc_G ;
+   private String A20CNTDOCID ;
+   private String A8242AVDSPROBS ;
+   private String A7519CNDSPRTDC ;
    private String GXKey ;
    private String sDynURL ;
    private String FormProcess ;
@@ -12597,7 +12747,7 @@ public final  class wcomppg_impl extends GXDataArea
    private String A855XMLDOCFLNM ;
    private String A883XMLDOCRUT ;
    private String A876PDFDOCNAM ;
-   private String AV378Pgmname ;
+   private String AV383Pgmname ;
    private String AV336TratPolFol ;
    private String A456CNCD01ID ;
    private String AV330ValidarUUIDRel ;
@@ -12712,7 +12862,6 @@ public final  class wcomppg_impl extends GXDataArea
    private String edtavPmmonnp_Internalname ;
    private String edtavPmmonpgn_Internalname ;
    private String edtavPmmonpge_Internalname ;
-   private String AV62PMTipoDoc_G ;
    private String edtavPmtipodoc_g_Internalname ;
    private String edtavPmmonex_Internalname ;
    private String AV170PMCTA1 ;
@@ -12820,6 +12969,8 @@ public final  class wcomppg_impl extends GXDataArea
    private String lV159PMFolioFac_F ;
    private String AV99PMUuid_G ;
    private String AV364gPMCuentaPR02 ;
+   private String AV376ACNTDOCID ;
+   private String AV379AVDSPROBS ;
    private String AV166XMLDOCFLNM ;
    private String AV165RUTA ;
    private String A878PDFDOCFIL_Filename ;
@@ -13134,6 +13285,10 @@ public final  class wcomppg_impl extends GXDataArea
    private boolean n17105PMCuentaPR02 ;
    private boolean n2076CNPRCMDVAL ;
    private boolean n2611ESTPAGDSC ;
+   private boolean n8295AVDSPRCPPTPC ;
+   private boolean n8296AVDSPRCPPNDC ;
+   private boolean n8242AVDSPROBS ;
+   private boolean n7531CNDSPRALCTR ;
    private boolean toggleJsOutput ;
    private boolean Innewwindow1_Refreshparentonclose ;
    private boolean wbLoad ;
@@ -13161,8 +13316,10 @@ public final  class wcomppg_impl extends GXDataArea
    private boolean n336CGUNNGDSC ;
    private boolean AV265GeneroPoliza_IsBlob ;
    private String A3917PMObsPoliza ;
+   private String A7531CNDSPRALCTR ;
    private String AV266PmObsPoliza ;
    private String AV374css ;
+   private String AV380CNDSPRALCTR ;
    private String A878PDFDOCFIL ;
    private String AV240AbrirBitacora ;
    private String AV349modMonto ;
@@ -13174,7 +13331,7 @@ public final  class wcomppg_impl extends GXDataArea
    private String AV162IMGXML ;
    private String AV161IMGPDF ;
    private String AV284IMGXLS ;
-   private String AV406Generopoliza_GXI ;
+   private String AV413Generopoliza_GXI ;
    private String AV288RutaCFDI ;
    private String AV290RutaPDF ;
    private String AV265GeneroPoliza ;
@@ -13328,239 +13485,256 @@ public final  class wcomppg_impl extends GXDataArea
    private boolean[] H00DZ12_n7900PMNumAv ;
    private String[] H00DZ12_A17105PMCuentaPR02 ;
    private boolean[] H00DZ12_n17105PMCuentaPR02 ;
-   private String[] H00DZ13_A382CNTPDRID ;
-   private boolean[] H00DZ13_n382CNTPDRID ;
-   private String[] H00DZ13_A194CNCDIRNOM ;
-   private boolean[] H00DZ13_n194CNCDIRNOM ;
-   private long[] H00DZ13_A46CNCDIRID ;
-   private long[] H00DZ14_A7196MODFECVELIN ;
-   private String[] H00DZ14_A7195MODFECVETDC ;
-   private long[] H00DZ14_A7194MODFECVENDC ;
-   private long[] H00DZ14_A7193MODFECVECIA ;
-   private String[] H00DZ15_A838XMLDOCUUID ;
-   private String[] H00DZ15_A855XMLDOCFLNM ;
-   private boolean[] H00DZ15_n855XMLDOCFLNM ;
-   private String[] H00DZ15_A883XMLDOCRUT ;
-   private boolean[] H00DZ15_n883XMLDOCRUT ;
-   private long[] H00DZ16_A2870PDFDOCID ;
-   private String[] H00DZ16_A876PDFDOCNAM ;
-   private boolean[] H00DZ16_n876PDFDOCNAM ;
-   private String[] H00DZ16_A879PDFDOCTIP ;
-   private boolean[] H00DZ16_n879PDFDOCTIP ;
-   private String[] H00DZ16_A878PDFDOCFIL ;
-   private boolean[] H00DZ16_n878PDFDOCFIL ;
-   private String[] H00DZ17_A456CNCD01ID ;
-   private boolean[] H00DZ17_n456CNCD01ID ;
-   private byte[] H00DZ17_A905PMPoliz ;
-   private boolean[] H00DZ17_n905PMPoliz ;
-   private String[] H00DZ17_A2528PMFolioFac ;
-   private boolean[] H00DZ17_n2528PMFolioFac ;
-   private long[] H00DZ17_A908PMNumDocOC ;
-   private boolean[] H00DZ17_n908PMNumDocOC ;
-   private String[] H00DZ17_A2405PMEstatus ;
-   private boolean[] H00DZ17_n2405PMEstatus ;
-   private java.util.Date[] H00DZ17_A898PMFechRev ;
-   private boolean[] H00DZ17_n898PMFechRev ;
-   private java.util.Date[] H00DZ17_A867PMFechVen ;
-   private boolean[] H00DZ17_n867PMFechVen ;
-   private String[] H00DZ17_A873PMMoneId ;
-   private boolean[] H00DZ17_n873PMMoneId ;
-   private java.util.Date[] H00DZ17_A866PMFechFac ;
-   private boolean[] H00DZ17_n866PMFechFac ;
-   private String[] H00DZ17_A864PMProyId ;
-   private boolean[] H00DZ17_n864PMProyId ;
-   private long[] H00DZ17_A863PMProvId ;
-   private boolean[] H00DZ17_n863PMProvId ;
-   private long[] H00DZ17_A862PMNumDoc ;
-   private String[] H00DZ17_A861PMTipoDoc ;
-   private long[] H00DZ17_A3295PROPAGID ;
-   private boolean[] H00DZ17_n3295PROPAGID ;
-   private long[] H00DZ17_A860PMEmpresa ;
-   private java.math.BigDecimal[] H00DZ17_A900PMMonEg ;
-   private boolean[] H00DZ17_n900PMMonEg ;
-   private java.math.BigDecimal[] H00DZ17_A2718PMMonTp ;
-   private boolean[] H00DZ17_n2718PMMonTp ;
-   private String[] H00DZ17_A2923PMCTA1 ;
-   private boolean[] H00DZ17_n2923PMCTA1 ;
-   private String[] H00DZ17_A2924PMCTA2 ;
-   private boolean[] H00DZ17_n2924PMCTA2 ;
-   private String[] H00DZ17_A2925PMCTA3 ;
-   private boolean[] H00DZ17_n2925PMCTA3 ;
-   private String[] H00DZ17_A2954PMIVAID ;
-   private boolean[] H00DZ17_n2954PMIVAID ;
-   private java.math.BigDecimal[] H00DZ17_A872PMIva ;
-   private boolean[] H00DZ17_n872PMIva ;
-   private java.math.BigDecimal[] H00DZ17_A2521PMMonIvaE ;
-   private boolean[] H00DZ17_n2521PMMonIvaE ;
-   private java.math.BigDecimal[] H00DZ17_A869PMMonNa ;
-   private boolean[] H00DZ17_n869PMMonNa ;
-   private java.math.BigDecimal[] H00DZ17_A2520PMMonIvaN ;
-   private boolean[] H00DZ17_n2520PMMonIvaN ;
-   private java.math.BigDecimal[] H00DZ17_A899PMMonEx ;
-   private boolean[] H00DZ17_n899PMMonEx ;
-   private java.math.BigDecimal[] H00DZ17_A870PMMonNg ;
-   private boolean[] H00DZ17_n870PMMonNg ;
-   private String[] H00DZ17_A2542PMCuentadeCargo ;
-   private boolean[] H00DZ17_n2542PMCuentadeCargo ;
-   private String[] H00DZ17_A909PMUuid ;
-   private boolean[] H00DZ17_n909PMUuid ;
-   private long[] H00DZ18_A914PMRecepLin ;
-   private long[] H00DZ18_A862PMNumDoc ;
-   private String[] H00DZ18_A861PMTipoDoc ;
-   private long[] H00DZ18_A860PMEmpresa ;
-   private long[] H00DZ18_A2568PMRecepInsID ;
-   private boolean[] H00DZ18_n2568PMRecepInsID ;
+   private String[] H00DZ13_A7791AVDSPRTDC ;
+   private java.math.BigDecimal[] H00DZ13_A7792AVDSPRLIN ;
+   private long[] H00DZ13_A8296AVDSPRCPPNDC ;
+   private boolean[] H00DZ13_n8296AVDSPRCPPNDC ;
+   private String[] H00DZ13_A8295AVDSPRCPPTPC ;
+   private boolean[] H00DZ13_n8295AVDSPRCPPTPC ;
+   private long[] H00DZ13_A7789AVDSPRCIA ;
+   private String[] H00DZ13_A20CNTDOCID ;
+   private long[] H00DZ13_A8255AVDSPRDOC ;
+   private long[] H00DZ13_A7790AVDSPRNDC ;
+   private String[] H00DZ13_A8242AVDSPROBS ;
+   private boolean[] H00DZ13_n8242AVDSPROBS ;
+   private long[] H00DZ14_A7520CNDSPRNDC ;
+   private String[] H00DZ14_A7519CNDSPRTDC ;
+   private long[] H00DZ14_A7518CNDSPRCIA ;
+   private String[] H00DZ14_A7531CNDSPRALCTR ;
+   private boolean[] H00DZ14_n7531CNDSPRALCTR ;
+   private String[] H00DZ15_A382CNTPDRID ;
+   private boolean[] H00DZ15_n382CNTPDRID ;
+   private String[] H00DZ15_A194CNCDIRNOM ;
+   private boolean[] H00DZ15_n194CNCDIRNOM ;
+   private long[] H00DZ15_A46CNCDIRID ;
+   private long[] H00DZ16_A7196MODFECVELIN ;
+   private String[] H00DZ16_A7195MODFECVETDC ;
+   private long[] H00DZ16_A7194MODFECVENDC ;
+   private long[] H00DZ16_A7193MODFECVECIA ;
+   private String[] H00DZ17_A838XMLDOCUUID ;
+   private String[] H00DZ17_A855XMLDOCFLNM ;
+   private boolean[] H00DZ17_n855XMLDOCFLNM ;
+   private String[] H00DZ17_A883XMLDOCRUT ;
+   private boolean[] H00DZ17_n883XMLDOCRUT ;
+   private long[] H00DZ18_A2870PDFDOCID ;
+   private String[] H00DZ18_A876PDFDOCNAM ;
+   private boolean[] H00DZ18_n876PDFDOCNAM ;
+   private String[] H00DZ18_A879PDFDOCTIP ;
+   private boolean[] H00DZ18_n879PDFDOCTIP ;
+   private String[] H00DZ18_A878PDFDOCFIL ;
+   private boolean[] H00DZ18_n878PDFDOCFIL ;
+   private String[] H00DZ19_A456CNCD01ID ;
+   private boolean[] H00DZ19_n456CNCD01ID ;
+   private byte[] H00DZ19_A905PMPoliz ;
+   private boolean[] H00DZ19_n905PMPoliz ;
+   private String[] H00DZ19_A2528PMFolioFac ;
+   private boolean[] H00DZ19_n2528PMFolioFac ;
+   private long[] H00DZ19_A908PMNumDocOC ;
+   private boolean[] H00DZ19_n908PMNumDocOC ;
+   private String[] H00DZ19_A2405PMEstatus ;
+   private boolean[] H00DZ19_n2405PMEstatus ;
+   private java.util.Date[] H00DZ19_A898PMFechRev ;
+   private boolean[] H00DZ19_n898PMFechRev ;
+   private java.util.Date[] H00DZ19_A867PMFechVen ;
+   private boolean[] H00DZ19_n867PMFechVen ;
+   private String[] H00DZ19_A873PMMoneId ;
+   private boolean[] H00DZ19_n873PMMoneId ;
+   private java.util.Date[] H00DZ19_A866PMFechFac ;
+   private boolean[] H00DZ19_n866PMFechFac ;
+   private String[] H00DZ19_A864PMProyId ;
+   private boolean[] H00DZ19_n864PMProyId ;
+   private long[] H00DZ19_A863PMProvId ;
+   private boolean[] H00DZ19_n863PMProvId ;
    private long[] H00DZ19_A862PMNumDoc ;
    private String[] H00DZ19_A861PMTipoDoc ;
+   private long[] H00DZ19_A3295PROPAGID ;
+   private boolean[] H00DZ19_n3295PROPAGID ;
    private long[] H00DZ19_A860PMEmpresa ;
-   private String[] H00DZ19_A2878PMImpEstId ;
-   private String[] H00DZ19_A2879PMImpId ;
-   private java.math.BigDecimal[] H00DZ19_A2880PMImpMon ;
-   private boolean[] H00DZ19_n2880PMImpMon ;
-   private java.math.BigDecimal[] H00DZ19_A2881PMImpVal ;
-   private boolean[] H00DZ19_n2881PMImpVal ;
-   private long[] H00DZ20_A5939CNCIASID ;
-   private String[] H00DZ20_A19CNCIASMON ;
-   private boolean[] H00DZ20_n19CNCIASMON ;
-   private String[] H00DZ21_A2610ESTPAGID ;
-   private String[] H00DZ21_A2611ESTPAGDSC ;
-   private boolean[] H00DZ21_n2611ESTPAGDSC ;
-   private String[] H00DZ22_A4053PMPERFILUSR ;
-   private String[] H00DZ22_A4051PMPERFILID ;
-   private String[] H00DZ23_A4051PMPERFILID ;
-   private String[] H00DZ23_A4054KDSPRGID ;
-   private int[] H00DZ23_A4064KDSPRGLIN ;
-   private String[] H00DZ23_A4060KDSCPRPRVALCHAR ;
-   private long[] H00DZ24_A17416PMCargo ;
-   private boolean[] H00DZ24_n17416PMCargo ;
-   private String[] H00DZ24_A865PMUngId ;
-   private boolean[] H00DZ24_n865PMUngId ;
-   private long[] H00DZ24_A10905PMIDREL ;
-   private boolean[] H00DZ24_n10905PMIDREL ;
-   private byte[] H00DZ24_A905PMPoliz ;
-   private boolean[] H00DZ24_n905PMPoliz ;
-   private String[] H00DZ24_A2528PMFolioFac ;
-   private boolean[] H00DZ24_n2528PMFolioFac ;
-   private long[] H00DZ24_A908PMNumDocOC ;
-   private boolean[] H00DZ24_n908PMNumDocOC ;
-   private String[] H00DZ24_A2405PMEstatus ;
-   private boolean[] H00DZ24_n2405PMEstatus ;
-   private java.util.Date[] H00DZ24_A867PMFechVen ;
-   private boolean[] H00DZ24_n867PMFechVen ;
-   private java.util.Date[] H00DZ24_A4090PMCXPFHTRN ;
-   private boolean[] H00DZ24_n4090PMCXPFHTRN ;
-   private String[] H00DZ24_A873PMMoneId ;
-   private boolean[] H00DZ24_n873PMMoneId ;
-   private java.util.Date[] H00DZ24_A866PMFechFac ;
-   private boolean[] H00DZ24_n866PMFechFac ;
-   private String[] H00DZ24_A864PMProyId ;
-   private boolean[] H00DZ24_n864PMProyId ;
-   private long[] H00DZ24_A863PMProvId ;
-   private boolean[] H00DZ24_n863PMProvId ;
-   private long[] H00DZ24_A862PMNumDoc ;
-   private String[] H00DZ24_A861PMTipoDoc ;
-   private long[] H00DZ24_A3295PROPAGID ;
-   private boolean[] H00DZ24_n3295PROPAGID ;
-   private long[] H00DZ24_A860PMEmpresa ;
-   private long[] H00DZ24_A2534PMUsrcap ;
-   private boolean[] H00DZ24_n2534PMUsrcap ;
-   private byte[] H00DZ24_A4599PMLayAsoc ;
-   private boolean[] H00DZ24_n4599PMLayAsoc ;
-   private String[] H00DZ24_A909PMUuid ;
-   private boolean[] H00DZ24_n909PMUuid ;
-   private long[] H00DZ24_A2871PMPDFDoc ;
-   private boolean[] H00DZ24_n2871PMPDFDoc ;
-   private java.math.BigDecimal[] H00DZ24_A2718PMMonTp ;
-   private boolean[] H00DZ24_n2718PMMonTp ;
-   private java.math.BigDecimal[] H00DZ24_A2862PMMonAmort ;
-   private boolean[] H00DZ24_n2862PMMonAmort ;
-   private String[] H00DZ24_A17105PMCuentaPR02 ;
-   private boolean[] H00DZ24_n17105PMCuentaPR02 ;
-   private java.math.BigDecimal[] H00DZ24_A869PMMonNa ;
-   private boolean[] H00DZ24_n869PMMonNa ;
-   private java.math.BigDecimal[] H00DZ24_A870PMMonNg ;
-   private boolean[] H00DZ24_n870PMMonNg ;
-   private java.math.BigDecimal[] H00DZ24_A902PMMonNp ;
-   private boolean[] H00DZ24_n902PMMonNp ;
-   private java.math.BigDecimal[] H00DZ24_A2688PMMonPgN ;
-   private boolean[] H00DZ24_n2688PMMonPgN ;
-   private java.math.BigDecimal[] H00DZ24_A2520PMMonIvaN ;
-   private boolean[] H00DZ24_n2520PMMonIvaN ;
-   private java.math.BigDecimal[] H00DZ24_A899PMMonEx ;
-   private boolean[] H00DZ24_n899PMMonEx ;
-   private java.math.BigDecimal[] H00DZ24_A900PMMonEg ;
-   private boolean[] H00DZ24_n900PMMonEg ;
-   private java.math.BigDecimal[] H00DZ24_A2689PMMonPgE ;
-   private boolean[] H00DZ24_n2689PMMonPgE ;
-   private java.math.BigDecimal[] H00DZ24_A903PMMonEp ;
-   private boolean[] H00DZ24_n903PMMonEp ;
-   private java.math.BigDecimal[] H00DZ24_A2521PMMonIvaE ;
-   private boolean[] H00DZ24_n2521PMMonIvaE ;
-   private java.math.BigDecimal[] H00DZ24_A872PMIva ;
-   private boolean[] H00DZ24_n872PMIva ;
-   private String[] H00DZ24_A2954PMIVAID ;
-   private boolean[] H00DZ24_n2954PMIVAID ;
-   private java.util.Date[] H00DZ24_A898PMFechRev ;
-   private boolean[] H00DZ24_n898PMFechRev ;
-   private String[] H00DZ24_A2406PMComentarios ;
-   private boolean[] H00DZ24_n2406PMComentarios ;
-   private java.math.BigDecimal[] H00DZ24_A904PMReten ;
-   private boolean[] H00DZ24_n904PMReten ;
-   private byte[] H00DZ24_A906PMOrdenD ;
-   private boolean[] H00DZ24_n906PMOrdenD ;
-   private String[] H00DZ24_A907PMTipoDocOC ;
-   private boolean[] H00DZ24_n907PMTipoDocOC ;
-   private String[] H00DZ24_A2923PMCTA1 ;
-   private boolean[] H00DZ24_n2923PMCTA1 ;
-   private String[] H00DZ24_A2924PMCTA2 ;
-   private boolean[] H00DZ24_n2924PMCTA2 ;
-   private String[] H00DZ24_A2925PMCTA3 ;
-   private boolean[] H00DZ24_n2925PMCTA3 ;
-   private String[] H00DZ24_A2542PMCuentadeCargo ;
-   private boolean[] H00DZ24_n2542PMCuentadeCargo ;
-   private String[] H00DZ24_A3917PMObsPoliza ;
-   private boolean[] H00DZ24_n3917PMObsPoliza ;
-   private java.math.BigDecimal[] H00DZ24_A4395PMPRANT ;
-   private boolean[] H00DZ24_n4395PMPRANT ;
-   private String[] H00DZ25_A2055CNCMNDID ;
-   private String[] H00DZ25_A2054CNCMNOID ;
-   private java.math.BigDecimal[] H00DZ25_A2076CNPRCMDVAL ;
-   private boolean[] H00DZ25_n2076CNPRCMDVAL ;
-   private java.util.Date[] H00DZ25_A2059CNPRCMDFT ;
-   private String[] H00DZ26_A2055CNCMNDID ;
-   private String[] H00DZ26_A2054CNCMNOID ;
-   private java.math.BigDecimal[] H00DZ26_A2076CNPRCMDVAL ;
-   private boolean[] H00DZ26_n2076CNPRCMDVAL ;
-   private java.util.Date[] H00DZ26_A2059CNPRCMDFT ;
-   private String[] H00DZ27_A456CNCD01ID ;
-   private boolean[] H00DZ27_n456CNCD01ID ;
-   private String[] H00DZ27_A2977CNCD01DSC ;
-   private boolean[] H00DZ27_n2977CNCD01DSC ;
-   private String[] H00DZ28_A456CNCD01ID ;
-   private boolean[] H00DZ28_n456CNCD01ID ;
-   private String[] H00DZ28_A2977CNCD01DSC ;
-   private boolean[] H00DZ28_n2977CNCD01DSC ;
-   private String[] H00DZ29_A5940CNUSERID ;
-   private String[] H00DZ29_A10187CNUSERMCXP ;
-   private boolean[] H00DZ29_n10187CNUSERMCXP ;
-   private long[] H00DZ30_A10868PMCTPRCLAGP ;
-   private boolean[] H00DZ30_n10868PMCTPRCLAGP ;
-   private String[] H00DZ30_A171PMCTPRID ;
-   private byte[] H00DZ31_A177SSUSPREST ;
+   private java.math.BigDecimal[] H00DZ19_A900PMMonEg ;
+   private boolean[] H00DZ19_n900PMMonEg ;
+   private java.math.BigDecimal[] H00DZ19_A2718PMMonTp ;
+   private boolean[] H00DZ19_n2718PMMonTp ;
+   private String[] H00DZ19_A2923PMCTA1 ;
+   private boolean[] H00DZ19_n2923PMCTA1 ;
+   private String[] H00DZ19_A2924PMCTA2 ;
+   private boolean[] H00DZ19_n2924PMCTA2 ;
+   private String[] H00DZ19_A2925PMCTA3 ;
+   private boolean[] H00DZ19_n2925PMCTA3 ;
+   private String[] H00DZ19_A2954PMIVAID ;
+   private boolean[] H00DZ19_n2954PMIVAID ;
+   private java.math.BigDecimal[] H00DZ19_A872PMIva ;
+   private boolean[] H00DZ19_n872PMIva ;
+   private java.math.BigDecimal[] H00DZ19_A2521PMMonIvaE ;
+   private boolean[] H00DZ19_n2521PMMonIvaE ;
+   private java.math.BigDecimal[] H00DZ19_A869PMMonNa ;
+   private boolean[] H00DZ19_n869PMMonNa ;
+   private java.math.BigDecimal[] H00DZ19_A2520PMMonIvaN ;
+   private boolean[] H00DZ19_n2520PMMonIvaN ;
+   private java.math.BigDecimal[] H00DZ19_A899PMMonEx ;
+   private boolean[] H00DZ19_n899PMMonEx ;
+   private java.math.BigDecimal[] H00DZ19_A870PMMonNg ;
+   private boolean[] H00DZ19_n870PMMonNg ;
+   private String[] H00DZ19_A2542PMCuentadeCargo ;
+   private boolean[] H00DZ19_n2542PMCuentadeCargo ;
+   private String[] H00DZ19_A909PMUuid ;
+   private boolean[] H00DZ19_n909PMUuid ;
+   private long[] H00DZ20_A914PMRecepLin ;
+   private long[] H00DZ20_A862PMNumDoc ;
+   private String[] H00DZ20_A861PMTipoDoc ;
+   private long[] H00DZ20_A860PMEmpresa ;
+   private long[] H00DZ20_A2568PMRecepInsID ;
+   private boolean[] H00DZ20_n2568PMRecepInsID ;
+   private long[] H00DZ21_A862PMNumDoc ;
+   private String[] H00DZ21_A861PMTipoDoc ;
+   private long[] H00DZ21_A860PMEmpresa ;
+   private String[] H00DZ21_A2878PMImpEstId ;
+   private String[] H00DZ21_A2879PMImpId ;
+   private java.math.BigDecimal[] H00DZ21_A2880PMImpMon ;
+   private boolean[] H00DZ21_n2880PMImpMon ;
+   private java.math.BigDecimal[] H00DZ21_A2881PMImpVal ;
+   private boolean[] H00DZ21_n2881PMImpVal ;
+   private long[] H00DZ22_A5939CNCIASID ;
+   private String[] H00DZ22_A19CNCIASMON ;
+   private boolean[] H00DZ22_n19CNCIASMON ;
+   private String[] H00DZ23_A2610ESTPAGID ;
+   private String[] H00DZ23_A2611ESTPAGDSC ;
+   private boolean[] H00DZ23_n2611ESTPAGDSC ;
+   private String[] H00DZ24_A4053PMPERFILUSR ;
+   private String[] H00DZ24_A4051PMPERFILID ;
+   private String[] H00DZ25_A4051PMPERFILID ;
+   private String[] H00DZ25_A4054KDSPRGID ;
+   private int[] H00DZ25_A4064KDSPRGLIN ;
+   private String[] H00DZ25_A4060KDSCPRPRVALCHAR ;
+   private long[] H00DZ26_A17416PMCargo ;
+   private boolean[] H00DZ26_n17416PMCargo ;
+   private String[] H00DZ26_A865PMUngId ;
+   private boolean[] H00DZ26_n865PMUngId ;
+   private long[] H00DZ26_A10905PMIDREL ;
+   private boolean[] H00DZ26_n10905PMIDREL ;
+   private byte[] H00DZ26_A905PMPoliz ;
+   private boolean[] H00DZ26_n905PMPoliz ;
+   private String[] H00DZ26_A2528PMFolioFac ;
+   private boolean[] H00DZ26_n2528PMFolioFac ;
+   private long[] H00DZ26_A908PMNumDocOC ;
+   private boolean[] H00DZ26_n908PMNumDocOC ;
+   private String[] H00DZ26_A2405PMEstatus ;
+   private boolean[] H00DZ26_n2405PMEstatus ;
+   private java.util.Date[] H00DZ26_A867PMFechVen ;
+   private boolean[] H00DZ26_n867PMFechVen ;
+   private java.util.Date[] H00DZ26_A4090PMCXPFHTRN ;
+   private boolean[] H00DZ26_n4090PMCXPFHTRN ;
+   private String[] H00DZ26_A873PMMoneId ;
+   private boolean[] H00DZ26_n873PMMoneId ;
+   private java.util.Date[] H00DZ26_A866PMFechFac ;
+   private boolean[] H00DZ26_n866PMFechFac ;
+   private String[] H00DZ26_A864PMProyId ;
+   private boolean[] H00DZ26_n864PMProyId ;
+   private long[] H00DZ26_A863PMProvId ;
+   private boolean[] H00DZ26_n863PMProvId ;
+   private long[] H00DZ26_A862PMNumDoc ;
+   private String[] H00DZ26_A861PMTipoDoc ;
+   private long[] H00DZ26_A3295PROPAGID ;
+   private boolean[] H00DZ26_n3295PROPAGID ;
+   private long[] H00DZ26_A860PMEmpresa ;
+   private long[] H00DZ26_A2534PMUsrcap ;
+   private boolean[] H00DZ26_n2534PMUsrcap ;
+   private byte[] H00DZ26_A4599PMLayAsoc ;
+   private boolean[] H00DZ26_n4599PMLayAsoc ;
+   private String[] H00DZ26_A909PMUuid ;
+   private boolean[] H00DZ26_n909PMUuid ;
+   private long[] H00DZ26_A2871PMPDFDoc ;
+   private boolean[] H00DZ26_n2871PMPDFDoc ;
+   private java.math.BigDecimal[] H00DZ26_A2718PMMonTp ;
+   private boolean[] H00DZ26_n2718PMMonTp ;
+   private java.math.BigDecimal[] H00DZ26_A2862PMMonAmort ;
+   private boolean[] H00DZ26_n2862PMMonAmort ;
+   private String[] H00DZ26_A17105PMCuentaPR02 ;
+   private boolean[] H00DZ26_n17105PMCuentaPR02 ;
+   private java.math.BigDecimal[] H00DZ26_A869PMMonNa ;
+   private boolean[] H00DZ26_n869PMMonNa ;
+   private java.math.BigDecimal[] H00DZ26_A870PMMonNg ;
+   private boolean[] H00DZ26_n870PMMonNg ;
+   private java.math.BigDecimal[] H00DZ26_A902PMMonNp ;
+   private boolean[] H00DZ26_n902PMMonNp ;
+   private java.math.BigDecimal[] H00DZ26_A2688PMMonPgN ;
+   private boolean[] H00DZ26_n2688PMMonPgN ;
+   private java.math.BigDecimal[] H00DZ26_A2520PMMonIvaN ;
+   private boolean[] H00DZ26_n2520PMMonIvaN ;
+   private java.math.BigDecimal[] H00DZ26_A899PMMonEx ;
+   private boolean[] H00DZ26_n899PMMonEx ;
+   private java.math.BigDecimal[] H00DZ26_A900PMMonEg ;
+   private boolean[] H00DZ26_n900PMMonEg ;
+   private java.math.BigDecimal[] H00DZ26_A2689PMMonPgE ;
+   private boolean[] H00DZ26_n2689PMMonPgE ;
+   private java.math.BigDecimal[] H00DZ26_A903PMMonEp ;
+   private boolean[] H00DZ26_n903PMMonEp ;
+   private java.math.BigDecimal[] H00DZ26_A2521PMMonIvaE ;
+   private boolean[] H00DZ26_n2521PMMonIvaE ;
+   private java.math.BigDecimal[] H00DZ26_A872PMIva ;
+   private boolean[] H00DZ26_n872PMIva ;
+   private String[] H00DZ26_A2954PMIVAID ;
+   private boolean[] H00DZ26_n2954PMIVAID ;
+   private java.util.Date[] H00DZ26_A898PMFechRev ;
+   private boolean[] H00DZ26_n898PMFechRev ;
+   private String[] H00DZ26_A2406PMComentarios ;
+   private boolean[] H00DZ26_n2406PMComentarios ;
+   private java.math.BigDecimal[] H00DZ26_A904PMReten ;
+   private boolean[] H00DZ26_n904PMReten ;
+   private byte[] H00DZ26_A906PMOrdenD ;
+   private boolean[] H00DZ26_n906PMOrdenD ;
+   private String[] H00DZ26_A907PMTipoDocOC ;
+   private boolean[] H00DZ26_n907PMTipoDocOC ;
+   private String[] H00DZ26_A2923PMCTA1 ;
+   private boolean[] H00DZ26_n2923PMCTA1 ;
+   private String[] H00DZ26_A2924PMCTA2 ;
+   private boolean[] H00DZ26_n2924PMCTA2 ;
+   private String[] H00DZ26_A2925PMCTA3 ;
+   private boolean[] H00DZ26_n2925PMCTA3 ;
+   private String[] H00DZ26_A2542PMCuentadeCargo ;
+   private boolean[] H00DZ26_n2542PMCuentadeCargo ;
+   private String[] H00DZ26_A3917PMObsPoliza ;
+   private boolean[] H00DZ26_n3917PMObsPoliza ;
+   private java.math.BigDecimal[] H00DZ26_A4395PMPRANT ;
+   private boolean[] H00DZ26_n4395PMPRANT ;
+   private String[] H00DZ27_A2055CNCMNDID ;
+   private String[] H00DZ27_A2054CNCMNOID ;
+   private java.math.BigDecimal[] H00DZ27_A2076CNPRCMDVAL ;
+   private boolean[] H00DZ27_n2076CNPRCMDVAL ;
+   private java.util.Date[] H00DZ27_A2059CNPRCMDFT ;
+   private String[] H00DZ28_A2055CNCMNDID ;
+   private String[] H00DZ28_A2054CNCMNOID ;
+   private java.math.BigDecimal[] H00DZ28_A2076CNPRCMDVAL ;
+   private boolean[] H00DZ28_n2076CNPRCMDVAL ;
+   private java.util.Date[] H00DZ28_A2059CNPRCMDFT ;
+   private String[] H00DZ29_A456CNCD01ID ;
+   private boolean[] H00DZ29_n456CNCD01ID ;
+   private String[] H00DZ29_A2977CNCD01DSC ;
+   private boolean[] H00DZ29_n2977CNCD01DSC ;
+   private String[] H00DZ30_A456CNCD01ID ;
+   private boolean[] H00DZ30_n456CNCD01ID ;
+   private String[] H00DZ30_A2977CNCD01DSC ;
+   private boolean[] H00DZ30_n2977CNCD01DSC ;
    private String[] H00DZ31_A5940CNUSERID ;
-   private String[] H00DZ31_A172PMCTPRDSC ;
-   private boolean[] H00DZ31_n172PMCTPRDSC ;
-   private String[] H00DZ31_A171PMCTPRID ;
-   private String[] H00DZ32_A336CGUNNGDSC ;
-   private boolean[] H00DZ32_n336CGUNNGDSC ;
-   private String[] H00DZ32_A93CGUNNGID ;
-   private short[] H00DZ33_AV360contProy ;
-   private byte[] H00DZ34_A177SSUSPREST ;
-   private String[] H00DZ34_A5940CNUSERID ;
-   private String[] H00DZ34_A171PMCTPRID ;
-   private String[] H00DZ34_A172PMCTPRDSC ;
-   private boolean[] H00DZ34_n172PMCTPRDSC ;
-   private String[] H00DZ35_A50CNCMNMID ;
+   private String[] H00DZ31_A10187CNUSERMCXP ;
+   private boolean[] H00DZ31_n10187CNUSERMCXP ;
+   private long[] H00DZ32_A10868PMCTPRCLAGP ;
+   private boolean[] H00DZ32_n10868PMCTPRCLAGP ;
+   private String[] H00DZ32_A171PMCTPRID ;
+   private byte[] H00DZ33_A177SSUSPREST ;
+   private String[] H00DZ33_A5940CNUSERID ;
+   private String[] H00DZ33_A172PMCTPRDSC ;
+   private boolean[] H00DZ33_n172PMCTPRDSC ;
+   private String[] H00DZ33_A171PMCTPRID ;
+   private String[] H00DZ34_A336CGUNNGDSC ;
+   private boolean[] H00DZ34_n336CGUNNGDSC ;
+   private String[] H00DZ34_A93CGUNNGID ;
+   private short[] H00DZ35_AV360contProy ;
+   private byte[] H00DZ36_A177SSUSPREST ;
+   private String[] H00DZ36_A5940CNUSERID ;
+   private String[] H00DZ36_A171PMCTPRID ;
+   private String[] H00DZ36_A172PMCTPRDSC ;
+   private boolean[] H00DZ36_n172PMCTPRDSC ;
+   private String[] H00DZ37_A50CNCMNMID ;
    private com.genexus.webpanels.GXWebForm Form ;
    private GXSimpleCollection<String> AV353arrPMCTPRID ;
    private GXSimpleCollection<String> AV344cCGUNNGID ;
@@ -13799,7 +13973,7 @@ final  class wcomppg__default extends DataStoreHelperBase implements ILocalDataS
       return GXv_Object11 ;
    }
 
-   protected Object[] conditional_H00DZ17( ModelContext context ,
+   protected Object[] conditional_H00DZ19( ModelContext context ,
                                            int remoteHandle ,
                                            com.genexus.internet.HttpContext httpContext ,
                                            long AV239PROPAGID_F ,
@@ -14014,7 +14188,7 @@ final  class wcomppg__default extends DataStoreHelperBase implements ILocalDataS
       return GXv_Object14 ;
    }
 
-   protected Object[] conditional_H00DZ24( ModelContext context ,
+   protected Object[] conditional_H00DZ26( ModelContext context ,
                                            int remoteHandle ,
                                            com.genexus.internet.HttpContext httpContext ,
                                            String A864PMProyId ,
@@ -14241,7 +14415,7 @@ final  class wcomppg__default extends DataStoreHelperBase implements ILocalDataS
       return GXv_Object16 ;
    }
 
-   protected Object[] conditional_H00DZ28( ModelContext context ,
+   protected Object[] conditional_H00DZ30( ModelContext context ,
                                            int remoteHandle ,
                                            com.genexus.internet.HttpContext httpContext ,
                                            String AV280CNCD01ID_F ,
@@ -14280,12 +14454,12 @@ final  class wcomppg__default extends DataStoreHelperBase implements ILocalDataS
       {
             case 10 :
                   return conditional_H00DZ12(context, remoteHandle, httpContext, (String)dynConstraints[0] , (GXSimpleCollection<String>)dynConstraints[1] , ((Number) dynConstraints[2]).longValue() , (String)dynConstraints[3] , ((Number) dynConstraints[4]).longValue() , ((Number) dynConstraints[5]).longValue() , (String)dynConstraints[6] , (java.util.Date)dynConstraints[7] , (java.util.Date)dynConstraints[8] , (String)dynConstraints[9] , (java.util.Date)dynConstraints[10] , (java.util.Date)dynConstraints[11] , (String)dynConstraints[12] , ((Number) dynConstraints[13]).byteValue() , ((Number) dynConstraints[14]).longValue() , (String)dynConstraints[15] , ((Number) dynConstraints[16]).byteValue() , ((Number) dynConstraints[17]).longValue() , ((Number) dynConstraints[18]).intValue() , (String)dynConstraints[19] , ((Number) dynConstraints[20]).longValue() , ((Number) dynConstraints[21]).longValue() , (String)dynConstraints[22] , ((Number) dynConstraints[23]).longValue() , ((Number) dynConstraints[24]).longValue() , (java.util.Date)dynConstraints[25] , (String)dynConstraints[26] , (String)dynConstraints[27] , (java.util.Date)dynConstraints[28] , (String)dynConstraints[29] , ((Number) dynConstraints[30]).longValue() , (String)dynConstraints[31] , ((Number) dynConstraints[32]).byteValue() , ((Number) dynConstraints[33]).longValue() , (String)dynConstraints[34] , ((Number) dynConstraints[35]).longValue() , (java.util.Date)dynConstraints[36] , (java.util.Date)dynConstraints[37] , (java.util.Date)dynConstraints[38] , (String)dynConstraints[39] , ((Number) dynConstraints[40]).longValue() , ((Number) dynConstraints[41]).longValue() );
-            case 15 :
-                  return conditional_H00DZ17(context, remoteHandle, httpContext, ((Number) dynConstraints[0]).longValue() , (String)dynConstraints[1] , ((Number) dynConstraints[2]).longValue() , ((Number) dynConstraints[3]).longValue() , (String)dynConstraints[4] , (java.util.Date)dynConstraints[5] , (java.util.Date)dynConstraints[6] , (String)dynConstraints[7] , (java.util.Date)dynConstraints[8] , (java.util.Date)dynConstraints[9] , (java.util.Date)dynConstraints[10] , (java.util.Date)dynConstraints[11] , (String)dynConstraints[12] , ((Number) dynConstraints[13]).byteValue() , ((Number) dynConstraints[14]).longValue() , (String)dynConstraints[15] , ((Number) dynConstraints[16]).byteValue() , ((Number) dynConstraints[17]).longValue() , (String)dynConstraints[18] , ((Number) dynConstraints[19]).longValue() , ((Number) dynConstraints[20]).longValue() , (String)dynConstraints[21] , (java.util.Date)dynConstraints[22] , (String)dynConstraints[23] , (java.util.Date)dynConstraints[24] , (java.util.Date)dynConstraints[25] , (String)dynConstraints[26] , ((Number) dynConstraints[27]).longValue() , (String)dynConstraints[28] , ((Number) dynConstraints[29]).byteValue() , (String)dynConstraints[30] , (String)dynConstraints[31] , ((Number) dynConstraints[32]).longValue() , ((Number) dynConstraints[33]).longValue() );
-            case 22 :
-                  return conditional_H00DZ24(context, remoteHandle, httpContext, (String)dynConstraints[0] , (GXSimpleCollection<String>)dynConstraints[1] , ((Number) dynConstraints[2]).longValue() , (String)dynConstraints[3] , ((Number) dynConstraints[4]).longValue() , ((Number) dynConstraints[5]).longValue() , (String)dynConstraints[6] , (java.util.Date)dynConstraints[7] , (java.util.Date)dynConstraints[8] , (String)dynConstraints[9] , (java.util.Date)dynConstraints[10] , (java.util.Date)dynConstraints[11] , (String)dynConstraints[12] , ((Number) dynConstraints[13]).byteValue() , ((Number) dynConstraints[14]).longValue() , (String)dynConstraints[15] , ((Number) dynConstraints[16]).byteValue() , ((Number) dynConstraints[17]).longValue() , ((Number) dynConstraints[18]).intValue() , (String)dynConstraints[19] , ((Number) dynConstraints[20]).longValue() , ((Number) dynConstraints[21]).longValue() , (String)dynConstraints[22] , ((Number) dynConstraints[23]).longValue() , ((Number) dynConstraints[24]).longValue() , (java.util.Date)dynConstraints[25] , (String)dynConstraints[26] , (String)dynConstraints[27] , (java.util.Date)dynConstraints[28] , (String)dynConstraints[29] , ((Number) dynConstraints[30]).longValue() , (String)dynConstraints[31] , ((Number) dynConstraints[32]).byteValue() , ((Number) dynConstraints[33]).longValue() , (String)dynConstraints[34] , ((Number) dynConstraints[35]).longValue() , (java.util.Date)dynConstraints[36] , (java.util.Date)dynConstraints[37] , (java.util.Date)dynConstraints[38] , (String)dynConstraints[39] , ((Number) dynConstraints[40]).longValue() , ((Number) dynConstraints[41]).longValue() );
-            case 26 :
-                  return conditional_H00DZ28(context, remoteHandle, httpContext, (String)dynConstraints[0] , (String)dynConstraints[1] );
+            case 17 :
+                  return conditional_H00DZ19(context, remoteHandle, httpContext, ((Number) dynConstraints[0]).longValue() , (String)dynConstraints[1] , ((Number) dynConstraints[2]).longValue() , ((Number) dynConstraints[3]).longValue() , (String)dynConstraints[4] , (java.util.Date)dynConstraints[5] , (java.util.Date)dynConstraints[6] , (String)dynConstraints[7] , (java.util.Date)dynConstraints[8] , (java.util.Date)dynConstraints[9] , (java.util.Date)dynConstraints[10] , (java.util.Date)dynConstraints[11] , (String)dynConstraints[12] , ((Number) dynConstraints[13]).byteValue() , ((Number) dynConstraints[14]).longValue() , (String)dynConstraints[15] , ((Number) dynConstraints[16]).byteValue() , ((Number) dynConstraints[17]).longValue() , (String)dynConstraints[18] , ((Number) dynConstraints[19]).longValue() , ((Number) dynConstraints[20]).longValue() , (String)dynConstraints[21] , (java.util.Date)dynConstraints[22] , (String)dynConstraints[23] , (java.util.Date)dynConstraints[24] , (java.util.Date)dynConstraints[25] , (String)dynConstraints[26] , ((Number) dynConstraints[27]).longValue() , (String)dynConstraints[28] , ((Number) dynConstraints[29]).byteValue() , (String)dynConstraints[30] , (String)dynConstraints[31] , ((Number) dynConstraints[32]).longValue() , ((Number) dynConstraints[33]).longValue() );
+            case 24 :
+                  return conditional_H00DZ26(context, remoteHandle, httpContext, (String)dynConstraints[0] , (GXSimpleCollection<String>)dynConstraints[1] , ((Number) dynConstraints[2]).longValue() , (String)dynConstraints[3] , ((Number) dynConstraints[4]).longValue() , ((Number) dynConstraints[5]).longValue() , (String)dynConstraints[6] , (java.util.Date)dynConstraints[7] , (java.util.Date)dynConstraints[8] , (String)dynConstraints[9] , (java.util.Date)dynConstraints[10] , (java.util.Date)dynConstraints[11] , (String)dynConstraints[12] , ((Number) dynConstraints[13]).byteValue() , ((Number) dynConstraints[14]).longValue() , (String)dynConstraints[15] , ((Number) dynConstraints[16]).byteValue() , ((Number) dynConstraints[17]).longValue() , ((Number) dynConstraints[18]).intValue() , (String)dynConstraints[19] , ((Number) dynConstraints[20]).longValue() , ((Number) dynConstraints[21]).longValue() , (String)dynConstraints[22] , ((Number) dynConstraints[23]).longValue() , ((Number) dynConstraints[24]).longValue() , (java.util.Date)dynConstraints[25] , (String)dynConstraints[26] , (String)dynConstraints[27] , (java.util.Date)dynConstraints[28] , (String)dynConstraints[29] , ((Number) dynConstraints[30]).longValue() , (String)dynConstraints[31] , ((Number) dynConstraints[32]).byteValue() , ((Number) dynConstraints[33]).longValue() , (String)dynConstraints[34] , ((Number) dynConstraints[35]).longValue() , (java.util.Date)dynConstraints[36] , (java.util.Date)dynConstraints[37] , (java.util.Date)dynConstraints[38] , (String)dynConstraints[39] , ((Number) dynConstraints[40]).longValue() , ((Number) dynConstraints[41]).longValue() );
+            case 28 :
+                  return conditional_H00DZ30(context, remoteHandle, httpContext, (String)dynConstraints[0] , (String)dynConstraints[1] );
       }
       return super.getDynamicStatement(cursor, context, remoteHandle, httpContext, dynConstraints);
    }
@@ -14304,29 +14478,31 @@ final  class wcomppg__default extends DataStoreHelperBase implements ILocalDataS
          ,new ForEachCursor("H00DZ10", "SELECT CNCMNMID, CNCMNMDSC FROM CNCMNM WHERE CNCMNMID = ( 'MXP') ORDER BY CNCMNMDSC ",false, GX_NOMASK + GX_MASKLOOPLOCK, false, this,0,0,false )
          ,new ForEachCursor("H00DZ11", "SELECT CNCMNMID FROM CNCMNM ORDER BY CNCMNMID ",false, GX_NOMASK + GX_MASKLOOPLOCK, false, this,0,0,false )
          ,new ForEachCursor("H00DZ12", "scmdbuf",false, GX_NOMASK + GX_MASKLOOPLOCK, false, this,100,0,false )
-         ,new ForEachCursor("H00DZ13", "SELECT CNTPDRID, CNCDIRNOM, CNCDIRID FROM CNCDIR WHERE (CNTPDRID = ( 'PR')) AND (CNCDIRNOM = ( ?)) ORDER BY CNTPDRID ",false, GX_NOMASK + GX_MASKLOOPLOCK, false, this,100,0,false )
-         ,new ForEachCursor("H00DZ14", "SELECT MODFECVELIN, MODFECVETDC, MODFECVENDC, MODFECVECIA FROM MODFECVE WHERE MODFECVECIA = ? and MODFECVENDC = ? and MODFECVETDC = ( ?) ORDER BY MODFECVECIA, MODFECVENDC, MODFECVETDC  LIMIT 1",false, GX_NOMASK + GX_MASKLOOPLOCK, false, this,1,0,true )
-         ,new ForEachCursor("H00DZ15", "SELECT XMLDOCUUID, XMLDOCFLNM, XMLDOCRUT FROM XMLDOC WHERE XMLDOCUUID = ( ?) ORDER BY XMLDOCUUID  LIMIT 1",false, GX_NOMASK + GX_MASKLOOPLOCK, false, this,1,0,true )
-         ,new ForEachCursor("H00DZ16", "SELECT PDFDOCID, PDFDOCNAM, PDFDOCTIP, PDFDOCFIL FROM PDFDOC WHERE PDFDOCID = ? ORDER BY PDFDOCID  LIMIT 1",false, GX_NOMASK + GX_MASKLOOPLOCK, false, this,1,0,true )
-         ,new ForEachCursor("H00DZ17", "scmdbuf",false, GX_NOMASK + GX_MASKLOOPLOCK, false, this,100,0,false )
-         ,new ForEachCursor("H00DZ18", "SELECT PMRecepLin, PMNumDoc, PMTipoDoc, PMEmpresa, PMRecepInsID FROM PMRecep WHERE PMEmpresa = ? and PMTipoDoc = ( ?) and PMNumDoc = ? ORDER BY PMEmpresa, PMTipoDoc, PMNumDoc ",false, GX_NOMASK + GX_MASKLOOPLOCK, false, this,100,0,false )
-         ,new ForEachCursor("H00DZ19", "SELECT PMNumDoc, PMTipoDoc, PMEmpresa, PMImpEstId, PMImpId, PMImpMon, PMImpVal FROM PMImp WHERE PMEmpresa = ? and PMTipoDoc = ( ?) and PMNumDoc = ? ORDER BY PMEmpresa, PMTipoDoc, PMNumDoc ",false, GX_NOMASK + GX_MASKLOOPLOCK, false, this,100,0,false )
-         ,new ForEachCursor("H00DZ20", "SELECT CNCIASID, CNCIASMON FROM CNCIAS WHERE CNCIASID = ? ORDER BY CNCIASID ",false, GX_NOMASK + GX_MASKLOOPLOCK, false, this,1,0,true )
-         ,new ForEachCursor("H00DZ21", "SELECT ESTPAGID, ESTPAGDSC FROM ESTPAG WHERE ESTPAGID = ( ?) ORDER BY ESTPAGID ",false, GX_NOMASK + GX_MASKLOOPLOCK, false, this,1,0,true )
-         ,new ForEachCursor("H00DZ22", "SELECT PMPERFILUSR, PMPERFILID FROM PMPERFIL1 WHERE PMPERFILUSR = ( ?) ORDER BY PMPERFILID, PMPERFILUSR  LIMIT 1",false, GX_NOMASK + GX_MASKLOOPLOCK, false, this,1,0,true )
-         ,new ForEachCursor("H00DZ23", "SELECT PMPERFILID, KDSPRGID, KDSPRGLIN, KDSCPRPRVALCHAR FROM KDSCPRPR WHERE (KDSPRGID = ( ?)) AND (PMPERFILID = ( ?)) ORDER BY KDSPRGID ",false, GX_NOMASK + GX_MASKLOOPLOCK, false, this,100,0,false )
-         ,new ForEachCursor("H00DZ24", "scmdbuf",false, GX_NOMASK + GX_MASKLOOPLOCK, false, this,100,0,false )
-         ,new ForEachCursor("H00DZ25", "SELECT CNCMNDID, CNCMNOID, CNPRCMDVAL, CNPRCMDFT FROM CNPRCMD1 WHERE CNCMNOID = ( ?) and CNCMNDID = ( 'USD') ORDER BY CNCMNOID DESC, CNCMNDID DESC, CNPRCMDFT DESC  LIMIT 1",false, GX_NOMASK + GX_MASKLOOPLOCK, false, this,1,0,true )
-         ,new ForEachCursor("H00DZ26", "SELECT CNCMNDID, CNCMNOID, CNPRCMDVAL, CNPRCMDFT FROM CNPRCMD1 WHERE CNCMNOID = ( ?) and CNCMNDID = ( 'EUR') ORDER BY CNCMNOID DESC, CNCMNDID DESC, CNPRCMDFT DESC  LIMIT 1",false, GX_NOMASK + GX_MASKLOOPLOCK, false, this,1,0,true )
-         ,new ForEachCursor("H00DZ27", "SELECT CNCD01ID, CNCD01DSC FROM CNCD01 WHERE CNCD01ID = ( ?) ORDER BY CNCD01ID ",false, GX_NOMASK + GX_MASKLOOPLOCK, false, this,1,0,true )
-         ,new ForEachCursor("H00DZ28", "scmdbuf",false, GX_NOMASK + GX_MASKLOOPLOCK, false, this,100,0,false )
-         ,new ForEachCursor("H00DZ29", "SELECT CNUSERID, CNUSERMCXP FROM CNUSER WHERE CNUSERID = ( ?) ORDER BY CNUSERID ",false, GX_NOMASK + GX_MASKLOOPLOCK, false, this,1,0,true )
-         ,new ForEachCursor("H00DZ30", "SELECT PMCTPRCLAGP, PMCTPRID FROM PMCTPR WHERE PMCTPRCLAGP = ? ORDER BY PMCTPRID ",false, GX_NOMASK + GX_MASKLOOPLOCK, false, this,100,0,false )
-         ,new ForEachCursor("H00DZ31", "SELECT T2.SSUSPREST, T1.CNUSERID, T2.PMCTPRDSC, T1.PMCTPRID FROM (SSUSPR T1 INNER JOIN PMCTPR T2 ON T2.PMCTPRID = T1.PMCTPRID) WHERE (T1.CNUSERID = ( ?)) AND (T2.PMCTPRDSC like '%' || ?) AND (T2.SSUSPREST = 1) ORDER BY T1.CNUSERID ",false, GX_NOMASK + GX_MASKLOOPLOCK, false, this,100,0,false )
-         ,new ForEachCursor("H00DZ32", "SELECT CGUNNGDSC, CGUNNGID FROM CGUNNG ORDER BY CGUNNGID ",false, GX_NOMASK + GX_MASKLOOPLOCK, false, this,100,0,false )
-         ,new ForEachCursor("H00DZ33", "SELECT COUNT(*) FROM (SSUSPR T1 INNER JOIN PMCTPR T2 ON T2.PMCTPRID = T1.PMCTPRID) WHERE (T1.CNUSERID = ( ?)) AND (T2.PMCTPRDSC like '%' || ?) AND (T2.SSUSPREST = 1) ",false, GX_NOMASK + GX_MASKLOOPLOCK, false, this,1,0,false )
-         ,new ForEachCursor("H00DZ34", "SELECT T2.SSUSPREST, T1.CNUSERID, T1.PMCTPRID, T2.PMCTPRDSC FROM (SSUSPR T1 INNER JOIN PMCTPR T2 ON T2.PMCTPRID = T1.PMCTPRID) WHERE (T1.CNUSERID = ( ?) and T1.PMCTPRID = ( ?)) AND (T2.SSUSPREST = 1) ORDER BY T1.CNUSERID, T1.PMCTPRID  LIMIT 1",false, GX_NOMASK + GX_MASKLOOPLOCK, false, this,1,0,true )
-         ,new ForEachCursor("H00DZ35", "SELECT CNCMNMID FROM CNCMNM ORDER BY CNCMNMID ",false, GX_NOMASK + GX_MASKLOOPLOCK, false, this,0,0,false )
+         ,new ForEachCursor("H00DZ13", "SELECT AVDSPRTDC, AVDSPRLIN, AVDSPRCPPNDC, AVDSPRCPPTPC, AVDSPRCIA, CNTDOCID, AVDSPRDOC, AVDSPRNDC, AVDSPROBS FROM AVDSPR WHERE (AVDSPRCIA = ?) AND (AVDSPRCPPTPC = ( ?)) AND (AVDSPRCPPNDC = ?) ORDER BY AVDSPRCIA ",false, GX_NOMASK + GX_MASKLOOPLOCK, false, this,100,0,false )
+         ,new ForEachCursor("H00DZ14", "SELECT CNDSPRNDC, CNDSPRTDC, CNDSPRCIA, CNDSPRALCTR FROM CNDSPR WHERE CNDSPRCIA = ? and CNDSPRTDC = ( ?) and CNDSPRNDC = ? ORDER BY CNDSPRCIA, CNDSPRTDC, CNDSPRNDC ",false, GX_NOMASK + GX_MASKLOOPLOCK, false, this,1,0,true )
+         ,new ForEachCursor("H00DZ15", "SELECT CNTPDRID, CNCDIRNOM, CNCDIRID FROM CNCDIR WHERE (CNTPDRID = ( 'PR')) AND (CNCDIRNOM = ( ?)) ORDER BY CNTPDRID ",false, GX_NOMASK + GX_MASKLOOPLOCK, false, this,100,0,false )
+         ,new ForEachCursor("H00DZ16", "SELECT MODFECVELIN, MODFECVETDC, MODFECVENDC, MODFECVECIA FROM MODFECVE WHERE MODFECVECIA = ? and MODFECVENDC = ? and MODFECVETDC = ( ?) ORDER BY MODFECVECIA, MODFECVENDC, MODFECVETDC  LIMIT 1",false, GX_NOMASK + GX_MASKLOOPLOCK, false, this,1,0,true )
+         ,new ForEachCursor("H00DZ17", "SELECT XMLDOCUUID, XMLDOCFLNM, XMLDOCRUT FROM XMLDOC WHERE XMLDOCUUID = ( ?) ORDER BY XMLDOCUUID  LIMIT 1",false, GX_NOMASK + GX_MASKLOOPLOCK, false, this,1,0,true )
+         ,new ForEachCursor("H00DZ18", "SELECT PDFDOCID, PDFDOCNAM, PDFDOCTIP, PDFDOCFIL FROM PDFDOC WHERE PDFDOCID = ? ORDER BY PDFDOCID  LIMIT 1",false, GX_NOMASK + GX_MASKLOOPLOCK, false, this,1,0,true )
+         ,new ForEachCursor("H00DZ19", "scmdbuf",false, GX_NOMASK + GX_MASKLOOPLOCK, false, this,100,0,false )
+         ,new ForEachCursor("H00DZ20", "SELECT PMRecepLin, PMNumDoc, PMTipoDoc, PMEmpresa, PMRecepInsID FROM PMRecep WHERE PMEmpresa = ? and PMTipoDoc = ( ?) and PMNumDoc = ? ORDER BY PMEmpresa, PMTipoDoc, PMNumDoc ",false, GX_NOMASK + GX_MASKLOOPLOCK, false, this,100,0,false )
+         ,new ForEachCursor("H00DZ21", "SELECT PMNumDoc, PMTipoDoc, PMEmpresa, PMImpEstId, PMImpId, PMImpMon, PMImpVal FROM PMImp WHERE PMEmpresa = ? and PMTipoDoc = ( ?) and PMNumDoc = ? ORDER BY PMEmpresa, PMTipoDoc, PMNumDoc ",false, GX_NOMASK + GX_MASKLOOPLOCK, false, this,100,0,false )
+         ,new ForEachCursor("H00DZ22", "SELECT CNCIASID, CNCIASMON FROM CNCIAS WHERE CNCIASID = ? ORDER BY CNCIASID ",false, GX_NOMASK + GX_MASKLOOPLOCK, false, this,1,0,true )
+         ,new ForEachCursor("H00DZ23", "SELECT ESTPAGID, ESTPAGDSC FROM ESTPAG WHERE ESTPAGID = ( ?) ORDER BY ESTPAGID ",false, GX_NOMASK + GX_MASKLOOPLOCK, false, this,1,0,true )
+         ,new ForEachCursor("H00DZ24", "SELECT PMPERFILUSR, PMPERFILID FROM PMPERFIL1 WHERE PMPERFILUSR = ( ?) ORDER BY PMPERFILID, PMPERFILUSR  LIMIT 1",false, GX_NOMASK + GX_MASKLOOPLOCK, false, this,1,0,true )
+         ,new ForEachCursor("H00DZ25", "SELECT PMPERFILID, KDSPRGID, KDSPRGLIN, KDSCPRPRVALCHAR FROM KDSCPRPR WHERE (KDSPRGID = ( ?)) AND (PMPERFILID = ( ?)) ORDER BY KDSPRGID ",false, GX_NOMASK + GX_MASKLOOPLOCK, false, this,100,0,false )
+         ,new ForEachCursor("H00DZ26", "scmdbuf",false, GX_NOMASK + GX_MASKLOOPLOCK, false, this,100,0,false )
+         ,new ForEachCursor("H00DZ27", "SELECT CNCMNDID, CNCMNOID, CNPRCMDVAL, CNPRCMDFT FROM CNPRCMD1 WHERE CNCMNOID = ( ?) and CNCMNDID = ( 'USD') ORDER BY CNCMNOID DESC, CNCMNDID DESC, CNPRCMDFT DESC  LIMIT 1",false, GX_NOMASK + GX_MASKLOOPLOCK, false, this,1,0,true )
+         ,new ForEachCursor("H00DZ28", "SELECT CNCMNDID, CNCMNOID, CNPRCMDVAL, CNPRCMDFT FROM CNPRCMD1 WHERE CNCMNOID = ( ?) and CNCMNDID = ( 'EUR') ORDER BY CNCMNOID DESC, CNCMNDID DESC, CNPRCMDFT DESC  LIMIT 1",false, GX_NOMASK + GX_MASKLOOPLOCK, false, this,1,0,true )
+         ,new ForEachCursor("H00DZ29", "SELECT CNCD01ID, CNCD01DSC FROM CNCD01 WHERE CNCD01ID = ( ?) ORDER BY CNCD01ID ",false, GX_NOMASK + GX_MASKLOOPLOCK, false, this,1,0,true )
+         ,new ForEachCursor("H00DZ30", "scmdbuf",false, GX_NOMASK + GX_MASKLOOPLOCK, false, this,100,0,false )
+         ,new ForEachCursor("H00DZ31", "SELECT CNUSERID, CNUSERMCXP FROM CNUSER WHERE CNUSERID = ( ?) ORDER BY CNUSERID ",false, GX_NOMASK + GX_MASKLOOPLOCK, false, this,1,0,true )
+         ,new ForEachCursor("H00DZ32", "SELECT PMCTPRCLAGP, PMCTPRID FROM PMCTPR WHERE PMCTPRCLAGP = ? ORDER BY PMCTPRID ",false, GX_NOMASK + GX_MASKLOOPLOCK, false, this,100,0,false )
+         ,new ForEachCursor("H00DZ33", "SELECT T2.SSUSPREST, T1.CNUSERID, T2.PMCTPRDSC, T1.PMCTPRID FROM (SSUSPR T1 INNER JOIN PMCTPR T2 ON T2.PMCTPRID = T1.PMCTPRID) WHERE (T1.CNUSERID = ( ?)) AND (T2.PMCTPRDSC like '%' || ?) AND (T2.SSUSPREST = 1) ORDER BY T1.CNUSERID ",false, GX_NOMASK + GX_MASKLOOPLOCK, false, this,100,0,false )
+         ,new ForEachCursor("H00DZ34", "SELECT CGUNNGDSC, CGUNNGID FROM CGUNNG ORDER BY CGUNNGID ",false, GX_NOMASK + GX_MASKLOOPLOCK, false, this,100,0,false )
+         ,new ForEachCursor("H00DZ35", "SELECT COUNT(*) FROM (SSUSPR T1 INNER JOIN PMCTPR T2 ON T2.PMCTPRID = T1.PMCTPRID) WHERE (T1.CNUSERID = ( ?)) AND (T2.PMCTPRDSC like '%' || ?) AND (T2.SSUSPREST = 1) ",false, GX_NOMASK + GX_MASKLOOPLOCK, false, this,1,0,false )
+         ,new ForEachCursor("H00DZ36", "SELECT T2.SSUSPREST, T1.CNUSERID, T1.PMCTPRID, T2.PMCTPRDSC FROM (SSUSPR T1 INNER JOIN PMCTPR T2 ON T2.PMCTPRID = T1.PMCTPRID) WHERE (T1.CNUSERID = ( ?) and T1.PMCTPRID = ( ?)) AND (T2.SSUSPREST = 1) ORDER BY T1.CNUSERID, T1.PMCTPRID  LIMIT 1",false, GX_NOMASK + GX_MASKLOOPLOCK, false, this,1,0,true )
+         ,new ForEachCursor("H00DZ37", "SELECT CNCMNMID FROM CNCMNM ORDER BY CNCMNMID ",false, GX_NOMASK + GX_MASKLOOPLOCK, false, this,0,0,false )
       };
    }
 
@@ -14480,26 +14656,47 @@ final  class wcomppg__default extends DataStoreHelperBase implements ILocalDataS
                ((boolean[]) buf[94])[0] = rslt.wasNull();
                return;
             case 11 :
+               ((String[]) buf[0])[0] = rslt.getString(1, 3) ;
+               ((java.math.BigDecimal[]) buf[1])[0] = rslt.getBigDecimal(2,3) ;
+               ((long[]) buf[2])[0] = rslt.getLong(3) ;
+               ((boolean[]) buf[3])[0] = rslt.wasNull();
+               ((String[]) buf[4])[0] = rslt.getString(4, 3) ;
+               ((boolean[]) buf[5])[0] = rslt.wasNull();
+               ((long[]) buf[6])[0] = rslt.getLong(5) ;
+               ((String[]) buf[7])[0] = rslt.getString(6, 3) ;
+               ((long[]) buf[8])[0] = rslt.getLong(7) ;
+               ((long[]) buf[9])[0] = rslt.getLong(8) ;
+               ((String[]) buf[10])[0] = rslt.getString(9, 300) ;
+               ((boolean[]) buf[11])[0] = rslt.wasNull();
+               return;
+            case 12 :
+               ((long[]) buf[0])[0] = rslt.getLong(1) ;
+               ((String[]) buf[1])[0] = rslt.getString(2, 3) ;
+               ((long[]) buf[2])[0] = rslt.getLong(3) ;
+               ((String[]) buf[3])[0] = rslt.getLongVarchar(4) ;
+               ((boolean[]) buf[4])[0] = rslt.wasNull();
+               return;
+            case 13 :
                ((String[]) buf[0])[0] = rslt.getString(1, 2) ;
                ((boolean[]) buf[1])[0] = rslt.wasNull();
                ((String[]) buf[2])[0] = rslt.getString(2, 250) ;
                ((boolean[]) buf[3])[0] = rslt.wasNull();
                ((long[]) buf[4])[0] = rslt.getLong(3) ;
                return;
-            case 12 :
+            case 14 :
                ((long[]) buf[0])[0] = rslt.getLong(1) ;
                ((String[]) buf[1])[0] = rslt.getString(2, 3) ;
                ((long[]) buf[2])[0] = rslt.getLong(3) ;
                ((long[]) buf[3])[0] = rslt.getLong(4) ;
                return;
-            case 13 :
+            case 15 :
                ((String[]) buf[0])[0] = rslt.getString(1, 50) ;
                ((String[]) buf[1])[0] = rslt.getString(2, 250) ;
                ((boolean[]) buf[2])[0] = rslt.wasNull();
                ((String[]) buf[3])[0] = rslt.getString(3, 250) ;
                ((boolean[]) buf[4])[0] = rslt.wasNull();
                return;
-            case 14 :
+            case 16 :
                ((long[]) buf[0])[0] = rslt.getLong(1) ;
                ((String[]) buf[1])[0] = rslt.getString(2, 120) ;
                ((boolean[]) buf[2])[0] = rslt.wasNull();
@@ -14508,7 +14705,7 @@ final  class wcomppg__default extends DataStoreHelperBase implements ILocalDataS
                ((String[]) buf[5])[0] = rslt.getBLOBFile(4, rslt.getString(3, 10), rslt.getString(2, 120)) ;
                ((boolean[]) buf[6])[0] = rslt.wasNull();
                return;
-            case 15 :
+            case 17 :
                ((String[]) buf[0])[0] = rslt.getString(1, 10) ;
                ((boolean[]) buf[1])[0] = rslt.wasNull();
                ((byte[]) buf[2])[0] = rslt.getByte(2) ;
@@ -14565,7 +14762,7 @@ final  class wcomppg__default extends DataStoreHelperBase implements ILocalDataS
                ((String[]) buf[53])[0] = rslt.getString(29, 40) ;
                ((boolean[]) buf[54])[0] = rslt.wasNull();
                return;
-            case 16 :
+            case 18 :
                ((long[]) buf[0])[0] = rslt.getLong(1) ;
                ((long[]) buf[1])[0] = rslt.getLong(2) ;
                ((String[]) buf[2])[0] = rslt.getString(3, 3) ;
@@ -14573,7 +14770,7 @@ final  class wcomppg__default extends DataStoreHelperBase implements ILocalDataS
                ((long[]) buf[4])[0] = rslt.getLong(5) ;
                ((boolean[]) buf[5])[0] = rslt.wasNull();
                return;
-            case 17 :
+            case 19 :
                ((long[]) buf[0])[0] = rslt.getLong(1) ;
                ((String[]) buf[1])[0] = rslt.getString(2, 3) ;
                ((long[]) buf[2])[0] = rslt.getLong(3) ;
@@ -14584,27 +14781,27 @@ final  class wcomppg__default extends DataStoreHelperBase implements ILocalDataS
                ((java.math.BigDecimal[]) buf[7])[0] = rslt.getBigDecimal(7,6) ;
                ((boolean[]) buf[8])[0] = rslt.wasNull();
                return;
-            case 18 :
+            case 20 :
                ((long[]) buf[0])[0] = rslt.getLong(1) ;
                ((String[]) buf[1])[0] = rslt.getString(2, 3) ;
                ((boolean[]) buf[2])[0] = rslt.wasNull();
                return;
-            case 19 :
+            case 21 :
                ((String[]) buf[0])[0] = rslt.getString(1, 3) ;
                ((String[]) buf[1])[0] = rslt.getString(2, 50) ;
                ((boolean[]) buf[2])[0] = rslt.wasNull();
                return;
-            case 20 :
+            case 22 :
                ((String[]) buf[0])[0] = rslt.getString(1, 15) ;
                ((String[]) buf[1])[0] = rslt.getString(2, 10) ;
                return;
-            case 21 :
+            case 23 :
                ((String[]) buf[0])[0] = rslt.getString(1, 10) ;
                ((String[]) buf[1])[0] = rslt.getString(2, 10) ;
                ((int[]) buf[2])[0] = rslt.getInt(3) ;
                ((String[]) buf[3])[0] = rslt.getString(4, 80) ;
                return;
-            case 22 :
+            case 24 :
                ((long[]) buf[0])[0] = rslt.getLong(1) ;
                ((boolean[]) buf[1])[0] = rslt.wasNull();
                ((String[]) buf[2])[0] = rslt.getString(2, 15) ;
@@ -14697,46 +14894,34 @@ final  class wcomppg__default extends DataStoreHelperBase implements ILocalDataS
                ((java.math.BigDecimal[]) buf[89])[0] = rslt.getBigDecimal(47,2) ;
                ((boolean[]) buf[90])[0] = rslt.wasNull();
                return;
-            case 23 :
-               ((String[]) buf[0])[0] = rslt.getString(1, 3) ;
-               ((String[]) buf[1])[0] = rslt.getString(2, 3) ;
-               ((java.math.BigDecimal[]) buf[2])[0] = rslt.getBigDecimal(3,7) ;
-               ((boolean[]) buf[3])[0] = rslt.wasNull();
-               ((java.util.Date[]) buf[4])[0] = rslt.getGXDate(4) ;
-               return;
-            case 24 :
-               ((String[]) buf[0])[0] = rslt.getString(1, 3) ;
-               ((String[]) buf[1])[0] = rslt.getString(2, 3) ;
-               ((java.math.BigDecimal[]) buf[2])[0] = rslt.getBigDecimal(3,7) ;
-               ((boolean[]) buf[3])[0] = rslt.wasNull();
-               ((java.util.Date[]) buf[4])[0] = rslt.getGXDate(4) ;
-               return;
             case 25 :
-               ((String[]) buf[0])[0] = rslt.getString(1, 10) ;
-               ((String[]) buf[1])[0] = rslt.getString(2, 40) ;
-               ((boolean[]) buf[2])[0] = rslt.wasNull();
+               ((String[]) buf[0])[0] = rslt.getString(1, 3) ;
+               ((String[]) buf[1])[0] = rslt.getString(2, 3) ;
+               ((java.math.BigDecimal[]) buf[2])[0] = rslt.getBigDecimal(3,7) ;
+               ((boolean[]) buf[3])[0] = rslt.wasNull();
+               ((java.util.Date[]) buf[4])[0] = rslt.getGXDate(4) ;
                return;
             case 26 :
-               ((String[]) buf[0])[0] = rslt.getString(1, 10) ;
-               ((String[]) buf[1])[0] = rslt.getString(2, 40) ;
-               ((boolean[]) buf[2])[0] = rslt.wasNull();
+               ((String[]) buf[0])[0] = rslt.getString(1, 3) ;
+               ((String[]) buf[1])[0] = rslt.getString(2, 3) ;
+               ((java.math.BigDecimal[]) buf[2])[0] = rslt.getBigDecimal(3,7) ;
+               ((boolean[]) buf[3])[0] = rslt.wasNull();
+               ((java.util.Date[]) buf[4])[0] = rslt.getGXDate(4) ;
                return;
             case 27 :
                ((String[]) buf[0])[0] = rslt.getString(1, 10) ;
-               ((String[]) buf[1])[0] = rslt.getString(2, 1) ;
+               ((String[]) buf[1])[0] = rslt.getString(2, 40) ;
                ((boolean[]) buf[2])[0] = rslt.wasNull();
                return;
             case 28 :
-               ((long[]) buf[0])[0] = rslt.getLong(1) ;
-               ((boolean[]) buf[1])[0] = rslt.wasNull();
-               ((String[]) buf[2])[0] = rslt.getString(2, 10) ;
+               ((String[]) buf[0])[0] = rslt.getString(1, 10) ;
+               ((String[]) buf[1])[0] = rslt.getString(2, 40) ;
+               ((boolean[]) buf[2])[0] = rslt.wasNull();
                return;
             case 29 :
-               ((byte[]) buf[0])[0] = rslt.getByte(1) ;
-               ((String[]) buf[1])[0] = rslt.getString(2, 10) ;
-               ((String[]) buf[2])[0] = rslt.getString(3, 200) ;
-               ((boolean[]) buf[3])[0] = rslt.wasNull();
-               ((String[]) buf[4])[0] = rslt.getString(4, 10) ;
+               ((String[]) buf[0])[0] = rslt.getString(1, 10) ;
+               ((String[]) buf[1])[0] = rslt.getString(2, 1) ;
+               ((boolean[]) buf[2])[0] = rslt.wasNull();
                return;
       }
       getresults30( cursor, rslt, buf) ;
@@ -14749,21 +14934,33 @@ final  class wcomppg__default extends DataStoreHelperBase implements ILocalDataS
       switch ( cursor )
       {
             case 30 :
+               ((long[]) buf[0])[0] = rslt.getLong(1) ;
+               ((boolean[]) buf[1])[0] = rslt.wasNull();
+               ((String[]) buf[2])[0] = rslt.getString(2, 10) ;
+               return;
+            case 31 :
+               ((byte[]) buf[0])[0] = rslt.getByte(1) ;
+               ((String[]) buf[1])[0] = rslt.getString(2, 10) ;
+               ((String[]) buf[2])[0] = rslt.getString(3, 200) ;
+               ((boolean[]) buf[3])[0] = rslt.wasNull();
+               ((String[]) buf[4])[0] = rslt.getString(4, 10) ;
+               return;
+            case 32 :
                ((String[]) buf[0])[0] = rslt.getString(1, 60) ;
                ((boolean[]) buf[1])[0] = rslt.wasNull();
                ((String[]) buf[2])[0] = rslt.getString(2, 15) ;
                return;
-            case 31 :
+            case 33 :
                ((short[]) buf[0])[0] = rslt.getShort(1) ;
                return;
-            case 32 :
+            case 34 :
                ((byte[]) buf[0])[0] = rslt.getByte(1) ;
                ((String[]) buf[1])[0] = rslt.getString(2, 10) ;
                ((String[]) buf[2])[0] = rslt.getString(3, 10) ;
                ((String[]) buf[3])[0] = rslt.getString(4, 200) ;
                ((boolean[]) buf[4])[0] = rslt.wasNull();
                return;
-            case 33 :
+            case 35 :
                ((String[]) buf[0])[0] = rslt.getString(1, 3) ;
                return;
       }
@@ -14902,20 +15099,30 @@ final  class wcomppg__default extends DataStoreHelperBase implements ILocalDataS
                }
                return;
             case 11 :
-               stmt.setString(1, (String)parms[0], 250);
+               stmt.setLong(1, ((Number) parms[0]).longValue());
+               stmt.setString(2, (String)parms[1], 3);
+               stmt.setLong(3, ((Number) parms[2]).longValue());
                return;
             case 12 :
+               stmt.setLong(1, ((Number) parms[0]).longValue());
+               stmt.setString(2, (String)parms[1], 3);
+               stmt.setLong(3, ((Number) parms[2]).longValue());
+               return;
+            case 13 :
+               stmt.setString(1, (String)parms[0], 250);
+               return;
+            case 14 :
                stmt.setLong(1, ((Number) parms[0]).longValue());
                stmt.setLong(2, ((Number) parms[1]).longValue());
                stmt.setString(3, (String)parms[2], 3);
                return;
-            case 13 :
+            case 15 :
                stmt.setString(1, (String)parms[0], 40);
                return;
-            case 14 :
+            case 16 :
                stmt.setLong(1, ((Number) parms[0]).longValue());
                return;
-            case 15 :
+            case 17 :
                sIdx = (short)(0) ;
                if ( ((Number) parms[0]).byteValue() == 0 )
                {
@@ -15023,30 +15230,30 @@ final  class wcomppg__default extends DataStoreHelperBase implements ILocalDataS
                   stmt.setByte(sIdx, ((Number) parms[41]).byteValue());
                }
                return;
-            case 16 :
-               stmt.setLong(1, ((Number) parms[0]).longValue());
-               stmt.setString(2, (String)parms[1], 3);
-               stmt.setLong(3, ((Number) parms[2]).longValue());
-               return;
-            case 17 :
-               stmt.setLong(1, ((Number) parms[0]).longValue());
-               stmt.setString(2, (String)parms[1], 3);
-               stmt.setLong(3, ((Number) parms[2]).longValue());
-               return;
             case 18 :
                stmt.setLong(1, ((Number) parms[0]).longValue());
+               stmt.setString(2, (String)parms[1], 3);
+               stmt.setLong(3, ((Number) parms[2]).longValue());
                return;
             case 19 :
-               stmt.setString(1, (String)parms[0], 10);
+               stmt.setLong(1, ((Number) parms[0]).longValue());
+               stmt.setString(2, (String)parms[1], 3);
+               stmt.setLong(3, ((Number) parms[2]).longValue());
                return;
             case 20 :
-               stmt.setString(1, (String)parms[0], 10);
+               stmt.setLong(1, ((Number) parms[0]).longValue());
                return;
             case 21 :
                stmt.setString(1, (String)parms[0], 10);
-               stmt.setString(2, (String)parms[1], 10);
                return;
             case 22 :
+               stmt.setString(1, (String)parms[0], 10);
+               return;
+            case 23 :
+               stmt.setString(1, (String)parms[0], 10);
+               stmt.setString(2, (String)parms[1], 10);
+               return;
+            case 24 :
                sIdx = (short)(0) ;
                if ( ((Number) parms[0]).byteValue() == 0 )
                {
@@ -15154,16 +15361,16 @@ final  class wcomppg__default extends DataStoreHelperBase implements ILocalDataS
                   stmt.setLong(sIdx, ((Number) parms[41]).longValue());
                }
                return;
-            case 23 :
-               stmt.setString(1, (String)parms[0], 3);
-               return;
-            case 24 :
-               stmt.setString(1, (String)parms[0], 3);
-               return;
             case 25 :
-               stmt.setString(1, (String)parms[0], 10);
+               stmt.setString(1, (String)parms[0], 3);
                return;
             case 26 :
+               stmt.setString(1, (String)parms[0], 3);
+               return;
+            case 27 :
+               stmt.setString(1, (String)parms[0], 10);
+               return;
+            case 28 :
                sIdx = (short)(0) ;
                if ( ((Number) parms[0]).byteValue() == 0 )
                {
@@ -15171,21 +15378,32 @@ final  class wcomppg__default extends DataStoreHelperBase implements ILocalDataS
                   stmt.setString(sIdx, (String)parms[1], 10);
                }
                return;
-            case 27 :
-               stmt.setString(1, (String)parms[0], 10);
-               return;
-            case 28 :
-               stmt.setLong(1, ((Number) parms[0]).longValue());
-               return;
             case 29 :
                stmt.setString(1, (String)parms[0], 10);
-               stmt.setString(2, (String)parms[1], 200);
+               return;
+      }
+      setparameters30( cursor, stmt, parms) ;
+   }
+
+   public void setparameters30( int cursor ,
+                                IFieldSetter stmt ,
+                                Object[] parms ) throws SQLException
+   {
+      short sIdx ;
+      switch ( cursor )
+      {
+            case 30 :
+               stmt.setLong(1, ((Number) parms[0]).longValue());
                return;
             case 31 :
                stmt.setString(1, (String)parms[0], 10);
                stmt.setString(2, (String)parms[1], 200);
                return;
-            case 32 :
+            case 33 :
+               stmt.setString(1, (String)parms[0], 10);
+               stmt.setString(2, (String)parms[1], 200);
+               return;
+            case 34 :
                stmt.setString(1, (String)parms[0], 10);
                stmt.setString(2, (String)parms[1], 10);
                return;

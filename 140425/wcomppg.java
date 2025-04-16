@@ -2,7 +2,7 @@
                File: wcomppg
         Description: Seguimiento de Cuentas por Pagar
              Author: GeneXus Java Generator version 16_0_1-129648
-       Generated on: April 14, 2025 22:21:0.6
+       Generated on: April 15, 2025 19:41:58.91
        Program type: Callable routine
           Main DBMS: PostgreSQL
 */
