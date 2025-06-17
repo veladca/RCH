@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Dependencies type="guid" guid="d82f00e0-85f4-403c-89b1-991a071e8365">
+  <Table name="BANCO" />
+  <Table name="PMCTPR" />
+  <Table name="CNCIAS" />
+  <Table name="CNCTE" />
+  <Table name="SATREGFIS" />
+  <Table name="SATTIPCOM" />
+  <Table name="SATUSOCOM" />
+  <Table name="SATFORPAG" />
+  <Table name="SATMETPAG" />
+  <Table name="SATPROSER" />
+  <Table name="SATUNDMED" />
+  <Table name="SATIMPTIP" />
+  <Table name="FACTXML" />
+  <Table name="FACTXML3" />
+  <Table name="SATTIPREL" />
+  <Table name="FACTCOM" />
+  <Table name="SATPAIS" />
+  <Table name="SATESTADO" />
+  <Table name="SATCOLONIA" />
+  <Table name="SATMUNICIPIO" />
+  <Table name="FACTXML1" />
+  <Table name="FACTXML2" />
+  <Table name="TEMREL" />
+  <Table name="FACTAMO1" />
+  <Table name="SATOBJIMP" />
+  <Table name="SATLOCAL" />
+  <Table name="CNCMNM" />
+</Dependencies>
